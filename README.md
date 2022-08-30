@@ -19,7 +19,8 @@
 - run ```git push -u origin <branch name>```
 
 ### Cloning an existing Git LFS Repository
-- run ```git lfs clone <https://github.com/USERNAME/REPOSITORY.git>```
+- run ```git lfs clone <https://github.com/USERNAME/REPOSITORY.git>``` 
+  - for this repository: https://github.com/andreabeatrice/Project_Lyssa.git
 
 ### To Commit New Code
 - ```git add .```
