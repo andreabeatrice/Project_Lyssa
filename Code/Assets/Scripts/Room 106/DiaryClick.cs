@@ -5,7 +5,12 @@ using TMPro;
 using UnityEngine.UI;
 
 public class DiaryClick : MonoBehaviour
+
 {
+    public AudioSources allAudio;
+    public AudioSource clickSound;
+    public AudioSource pageTurn;
+    public AudioSource bookClose;
     public GameObject _HUD;
 
     public GameObject diary_sprite;
@@ -40,7 +45,9 @@ public class DiaryClick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //clickSound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
+        //pageTurn = GameObject.Find("pageTurn").GetComponentInChildren<AudioSource>();
+        //bookClose = GameObject.Find("bookClose").GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -50,7 +57,10 @@ public class DiaryClick : MonoBehaviour
     }
 
     void OnMouseDown(){
+
         diary_dialog.SetActive(true);
+        //clickSound.Play();
+       allAudio.playClickSound();
 
         animator_diary.SetBool("isOpen", true);
 
@@ -69,6 +79,8 @@ public class DiaryClick : MonoBehaviour
     }
 
     public void nextpage(){
+       // pageTurn.Play();
+        allAudio.playPageTurn();
         next_page_button.SetActive(false);
         prev_page_button.SetActive(true);
         hide_diary_button.SetActive(true);
@@ -80,6 +92,8 @@ public class DiaryClick : MonoBehaviour
     }
 
     public void previouspage(){
+        //pageTurn.Play();
+        allAudio.playPageTurn();
         prev_page_button.SetActive(false);
         next_page_button.SetActive(true);
         hide_diary_button.SetActive(false);
@@ -91,8 +105,11 @@ public class DiaryClick : MonoBehaviour
     }
 
     public void HideDiary(){
+        //bookClose.Play();
+        allAudio.playBookClose();
         animator_diary.SetBool("isOpen", false);
-        diary_sprite.SetActive(false);
+        diary_sprite.GetComponent<Renderer>().enabled = false;
+        DestroyImmediate(diary_sprite.GetComponent<PolygonCollider2D>());;
         StartCoroutine(PopupClose());
 
         FindObjectOfType<ChoiceHandler>().InventoryEnqueue("HER diary");

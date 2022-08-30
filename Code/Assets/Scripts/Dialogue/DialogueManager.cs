@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour {
     public GameObject skipButton;
 
     public AudioSource clickSound;
+
     public AudioSource talking;
 
     private string[] choices;
@@ -199,19 +200,19 @@ public class DialogueManager : MonoBehaviour {
             {
                 if (i == 1)
                 {
-                    clickSound.Play();
+                   // clickSound.Play(); //makes click sound going into faded area and going into janitors closet
                     choice1.SetActive(true);
                     choice1.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
                 }
                 if (i == 2)
                 {
-                   clickSound.Play();
+                    //clickSound.Play();
                     choice2.SetActive(true);
                     choice2.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
                 }
                 if (i == 3)
                 {
-                    clickSound.Play();
+                    //clickSound.Play();
                     choice3.SetActive(true);
                     choice3.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
                 }

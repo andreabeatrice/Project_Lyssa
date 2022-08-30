@@ -20,7 +20,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Globals.paused)
+                if (Globals.paused)
             {
                 Resume();
             }

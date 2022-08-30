@@ -9,7 +9,8 @@ public class Enter106 : MonoBehaviour
     public Dialogue[] before_dialog;
     public Dialogue[] after_dialog;
 
-    private AudioSource clickSound;
+   public AudioSources allAudio;
+
 
     public string[] before_choices, after_choices;
 
@@ -29,7 +30,7 @@ public class Enter106 : MonoBehaviour
     void Start()
     {
 
-        clickSound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
+       // clickSound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
         
         //Option 1: switch case
         foreach(Dialogue di in before_dialog){
@@ -55,11 +56,12 @@ public class Enter106 : MonoBehaviour
             else
                 numInteractions = (int) typeof(InteractionsCounter).GetField("infinite").GetValue(this);
             
-            if(clickSound!=null)
-                clickSound.Play();
+          //  if(clickSound!=null)
+                //clickSound.Play();
 
 
             if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && FindObjectOfType<DialogueManager>().inConversation == false){
+                allAudio.playErrorSound();
 
                 if(Globals.StorageRoom == false){
                     TriggerBeforeDialogue();
@@ -95,8 +97,8 @@ public class Enter106 : MonoBehaviour
             else
                 numInteractions = (int) typeof(InteractionsCounter).GetField("infinite").GetValue(this);
             
-            if(clickSound!=null)
-                clickSound.Play();
+            //if(clickSound!=null)
+               // clickSound.Play();
 
             if(Globals.StorageRoom == false){
                 TriggerBeforeDialogue();

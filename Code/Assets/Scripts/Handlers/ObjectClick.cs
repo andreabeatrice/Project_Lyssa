@@ -60,8 +60,6 @@ public class ObjectClick : MonoBehaviour
 
             FindObjectOfType<LevelLoader>().LoadNextLevel("Janitors_Closet", "crossfade_start");
 
-            
-
         }
 
     public void handle(){

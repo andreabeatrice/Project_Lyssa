@@ -699,6 +699,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickSound: {fileID: 0}
   closeDoorSound: {fileID: 0}
+  allAudio: {fileID: 0}
   hud: {fileID: 1609823569}
   dialogBox: {fileID: 408369242}
   dialogHeading: {fileID: 1179738500}
@@ -1253,6 +1254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickSound: {fileID: 1748960272}
   closeDoorSound: {fileID: 0}
+  allAudio: {fileID: 1408100800}
   hud: {fileID: 1609823569}
   dialogBox: {fileID: 408369242}
   dialogHeading: {fileID: 1179738500}
@@ -1347,6 +1349,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cfff369e8bfd6834e9d2c19fd0c2c017, type: 3}
   - {fileID: 21300000, guid: 84d1e6c75116242488de2cbfe26a2065, type: 3}
   - {fileID: 21300000, guid: 514410d6c4264514682456452c880896, type: 3}
+  test: 0
 --- !u!114 &194301026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1713,6 +1716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickSound: {fileID: 0}
   closeDoorSound: {fileID: 0}
+  allAudio: {fileID: 0}
   hud: {fileID: 1609823569}
   dialogBox: {fileID: 408369242}
   dialogHeading: {fileID: 1179738500}
@@ -9856,6 +9860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickSound: {fileID: 0}
   closeDoorSound: {fileID: 0}
+  allAudio: {fileID: 0}
   hud: {fileID: 1609823569}
   dialogBox: {fileID: 408369242}
   dialogHeading: {fileID: 1179738500}
@@ -10253,6 +10258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickSound: {fileID: 0}
   closeDoorSound: {fileID: 0}
+  allAudio: {fileID: 0}
   hud: {fileID: 1609823569}
   dialogBox: {fileID: 408369242}
   dialogHeading: {fileID: 1179738500}
@@ -11443,6 +11449,7 @@ MonoBehaviour:
     textcolor:
       serializedVersion: 2
       rgba: 4294967295
+  allAudio: {fileID: 1408100800}
   before_choices:
   - Return Later
   after_choices:
@@ -28223,6 +28230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc5e1a78384f854a86161c34d5f3b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allAudio: {fileID: 0}
   PlayerCollider: {fileID: 735131236}
   ObjectAreaCollider: {fileID: 1415308055}
   HeadsUpDisplay: {fileID: 1609823569}
@@ -30662,6 +30670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickSound: {fileID: 1748960272}
   closeDoorSound: {fileID: 0}
+  allAudio: {fileID: 0}
   hud: {fileID: 1609823569}
   dialogBox: {fileID: 408369242}
   dialogHeading: {fileID: 1179738500}
@@ -31523,6 +31532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc5e1a78384f854a86161c34d5f3b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allAudio: {fileID: 1408100800}
   PlayerCollider: {fileID: 735131236}
   ObjectAreaCollider: {fileID: 1987307151}
   HeadsUpDisplay: {fileID: 1609823569}
@@ -33180,9 +33190,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 194301017}
     m_Modifications:
+    - target: {fileID: 104980793845213098, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 104980793845213098, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: m_Volume
+      value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 104980793845213098, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d37a95aa13816646975177b1bb82f95, type: 3}
     - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33228,6 +33250,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 176746942924713599, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942924713599, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1157ebd3637f56b42bb6386685fc05c0, type: 3}
+    - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: m_Volume
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7056287914481973668, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: m_Name
+      value: Crickets
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
 --- !u!1001 &2567069016436478114
@@ -33247,7 +33285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3042767717631320286, guid: 6de5f1d2f4b11184ebcd5d18705f9238, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3042767717631320286, guid: 6de5f1d2f4b11184ebcd5d18705f9238, type: 3}
       propertyPath: m_LocalPosition.x

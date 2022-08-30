@@ -44,8 +44,6 @@ public class PlayerClickHandler : MonoBehaviour
         }
     }
 
-    
-
     public void OnMouseOver() {
         if (Input.GetMouseButtonDown(Globals.primaryMouseButton) && !Globals.paused && !open)
         {

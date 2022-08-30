@@ -15,7 +15,7 @@ using System;
 public class DialogueClick : MonoBehaviour
 {
     public Dialogue[] dialog;
-    private AudioSource clickSound;
+    private AudioSource clickSound; //don't want clicksound before audio
 
     public GameObject HeadsUpDisplay;
 
@@ -73,7 +73,7 @@ public class DialogueClick : MonoBehaviour
                 numInteractions = (int) typeof(InteractionsCounter).GetField("infinite").GetValue(this);
             
             if(clickSound!=null)
-                clickSound.Play();
+               // clickSound.Play();
 
 
             if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && FindObjectOfType<DialogueManager>().inConversation == false){
@@ -107,7 +107,7 @@ public class DialogueClick : MonoBehaviour
                 numInteractions = (int) typeof(InteractionsCounter).GetField("infinite").GetValue(this);
             
             if(clickSound!=null)
-                clickSound.Play();
+               clickSound.Play();//adds click sound to broom and mop ect
 
             TriggerDialogue();
           

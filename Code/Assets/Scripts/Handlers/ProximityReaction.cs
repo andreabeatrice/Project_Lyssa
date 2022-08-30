@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ProximityReaction : MonoBehaviour
 {
+    public AudioSources allAudio;
     public Collider2D PlayerCollider;
     public Collider2D ObjectAreaCollider;
     public GameObject HeadsUpDisplay;
@@ -31,6 +32,7 @@ public class ProximityReaction : MonoBehaviour
                                 reaction("Damn, why didn't I pick the mop?", "Are you even a janitor?");
                             }
                             else if (item.Equals("Mop")){
+                                
                                 reaction("Good thing I didn't choose the broom!", "Mop it up");
                             }
                             else {
@@ -63,12 +65,11 @@ public class ProximityReaction : MonoBehaviour
         Dialogue dialog = new Dialogue(sentences, "Fern", c);
 
         FindObjectOfType<DialogueManager>().StartDialogue(dialog, react, ChoiceButton, false);
+        //allAudio.playMoppingSound();//need to move
     }
 
     public void reaction_extended(string[] prox, string react ){
         HeadsUpDisplay.SetActive(true);
-
-                    
         Dialogue dialog = new Dialogue(prox, "Fern", c);
 
         FindObjectOfType<DialogueManager>().StartDialogue(dialog, react, ChoiceButton, false);

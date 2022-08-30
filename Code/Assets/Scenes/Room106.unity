@@ -2247,6 +2247,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+        m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
+        m_MethodName: playClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &538515372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3408,6 +3420,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d42446214b0cec4aa99ccc10d467293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allAudio: {fileID: 1705003580}
+  clickSound: {fileID: 0}
+  pageTurn: {fileID: 0}
+  bookClose: {fileID: 0}
   _HUD: {fileID: 1698870049}
   diary_sprite: {fileID: 1001007203}
   dialogHeading: {fileID: 1726695877}
@@ -4488,6 +4504,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1360844120 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7521320971508099391, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1413781467
 GameObject:
   m_ObjectHideFlags: 0
@@ -5147,6 +5168,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1683823574 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1698870049
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,6 +5406,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: page_turn
+      value: 
+      objectReference: {fileID: 1360844120}
+    - target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: book_close
+      value: 
+      objectReference: {fileID: 1842476724}
+    - target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: background106
+      value: 
+      objectReference: {fileID: 1683823574}
+    - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: m_Volume
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 91acb2573eb791a45a89e446a00ba06d, type: 3}
+    - target: {fileID: 7514803825967726811, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
 --- !u!4 &1705003577 stripped
@@ -5397,6 +5447,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 2657309576819361042, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
   m_PrefabInstance: {fileID: 1705003576}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1705003580 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1724761810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6504,6 +6565,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782090768}
   m_CullTransparentMesh: 1
+--- !u!82 &1842476724 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5351476601720383963, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1852345446
 GameObject:
   m_ObjectHideFlags: 0

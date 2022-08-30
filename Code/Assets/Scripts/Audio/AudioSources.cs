@@ -13,12 +13,17 @@ public class AudioSources : MonoBehaviour
     public AudioSource fern_voice;
     public AudioSource background_music;
     public AudioSource menu_background_with_crickets;
-    public AudioSource crickets_no_music;
+    public AudioSource crickets;
     public AudioSource pick_up_object;
     public AudioSource release_object;
     public AudioSource janitors_closet_background_music;
     public AudioSource close_door;
-    public AudioSource vent_drip;
+    public AudioSource vent_dripp;
+    public AudioSource page_turn;
+    public AudioSource book_close;
+    public AudioSource background106;
+    public AudioSource mopping_sound;
+    public AudioSource error_sound;
     private AudioSource[] allAudioSources;
 
 
@@ -27,7 +32,7 @@ public class AudioSources : MonoBehaviour
         allAudioSources = FindObjectsOfType<AudioSource>();
         string scenename = SceneManager.GetActiveScene().name;
 
-        switch(scenename){
+        switch(scenename){//background noises
             case "MainMenu":
                 menu_background_with_crickets.Play();
             break;
@@ -37,27 +42,59 @@ public class AudioSources : MonoBehaviour
             break;
             case "Janitors_Closet":
                 StopAllAudio();
-                janitors_closet_background_music.Play();
-                vent_drip.Play();
+               janitors_closet_background_music.Play();
+                vent_dripp.Play();
             break;
             case "mainMenu_Settings":
-                crickets_no_music.Play();
+                StopAllAudio();
+                crickets.Play();
             break;
             case "mainMenu_Help":
-                crickets_no_music.Play();
+                StopAllAudio();
+                crickets.Play();
             break;
+            case "Room106":
+                StopAllAudio();
+                background106.Play();
+                break;
+            case "Tutorial_Skip":
+                StopAllAudio();
+                crickets.Play();
+                break;
             default:
 
             break;
         }
     }
 
-
-    public void playClickSound(){
+    public void playClickSound(){//other noises where is the babble method?
+       // click_sound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
         click_sound.Play();
     }
+    public void playPageTurn()
+    {
+        page_turn = GameObject.Find("pageTurn").GetComponentInChildren<AudioSource>();
+        page_turn.Play();
+    }
+    public void playBookClose()
+    {
+        book_close = GameObject.Find("bookClose").GetComponentInChildren<AudioSource>();
+        book_close.Play();
+    }
+    public void playMoppingSound()
+    {
+        mopping_sound.Play();
+    }
+    public void playErrorSound()
+    {
+        error_sound.Play();
+    }
+    public void playOpenDoor()
+    {
+       open_door.Play();
+    }
 
-     public void StopAllAudio() {
+    public void StopAllAudio() {
         foreach (AudioSource audioS in allAudioSources) {
             audioS.Stop();
         }

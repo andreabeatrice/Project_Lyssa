@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class ChoiceHandler : MonoBehaviour
 {
     public AudioSource clickSound;
-    public AudioSource closeDoorSound; 
+    public AudioSource closeDoorSound;
+    public AudioSources allAudio;
 
     public GameObject hud;
 
@@ -253,12 +254,14 @@ public class ChoiceHandler : MonoBehaviour
         }
 
     public void enter106(){
+        allAudio.playOpenDoor();
         Globals.insanity += 3;
         FindObjectOfType<LevelLoader>().LoadNextLevel("Room106", "crossfade_start");
 
     }
 
     public void mopitup(){
+        allAudio.playMoppingSound();
         GameObject.Find("WaterDispenser").GetComponent<Animator>().enabled = false;
         GameObject.Find("WaterDispenser").GetComponent<SpriteRenderer>().sprite = cleanWaterDispenser;
     }
