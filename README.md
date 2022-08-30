@@ -23,6 +23,7 @@
   - for this repository: https://github.com/andreabeatrice/Project_Lyssa.git
 
 ### To Commit New Code
+- Change to a non-main branch (create them on GitHub): ```git switch <branch_name>```
 - ```git add <directory/file/*> ```
 - ```git commit -m "commit message"```
 - ```git push origin <branch name>```
