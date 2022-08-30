@@ -9,7 +9,7 @@
   
   
 ### Creating a New Git LFS Repository
-- run ```git init``
+- run ```git init```
 - run ```git lfs track "*.psd"```
 - open the ```.gitattributes``` file created by the previous command
   - paste the text from [this GitHub repository](https://gist.github.com/Srfigie/77b5c15bc5eb61733a74d34d10b3ed87)
