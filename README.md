@@ -31,5 +31,5 @@ Use ```git pull``` in the project folder to ensure the code you have locally is 
 - ```git commit -m "commit message"```
 - ```git push origin <branch name>```
 
-###To Commit New Sprites
--Just use Github Desktop
+### To Commit New Sprites
+- Just use Github Desktop
