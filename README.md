@@ -23,6 +23,6 @@
   - for this repository: https://github.com/andreabeatrice/Project_Lyssa.git
 
 ### To Commit New Code
-- ```git add .```
+- ```git add <directory/file/*> ```
 - ```git commit -m "commit message"```
 - ```git push origin <branch name>```
