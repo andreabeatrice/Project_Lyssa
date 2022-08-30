@@ -21,6 +21,8 @@
 ### Cloning an existing Git LFS Repository
 - run ```git lfs clone <https://github.com/USERNAME/REPOSITORY.git>``` 
   - for this repository: https://github.com/andreabeatrice/Project_Lyssa.git
+  
+Use ```git pull``` in the project folder to ensure the code you have locally is up-to-date
 
 ### To Commit New Code
 - make sure you're in the repository folder (for this project, you should be in Project_Lyssa)
