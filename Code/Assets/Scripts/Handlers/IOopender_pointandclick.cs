@@ -28,7 +28,6 @@ public class IOopender_pointandclick : MonoBehaviour
         }
         
         if (Input.GetKeyDown(KeyCode.I) && !inventoryAndObjectives.activeSelf){
-            Debug.Log("check-1");
             PopupOpen();
         }
     }

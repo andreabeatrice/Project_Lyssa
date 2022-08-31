@@ -28,6 +28,10 @@ public class ChoiceHandler : MonoBehaviour
 
     public Sprite cleanWaterDispenser;
 
+    void Start(){
+        Globals.paused = false;
+    }
+
     //InventoryEnqueue(string item): Helper Method- Takes the name of an item to be added to the inventory & checks if the item is already in the inventory
         //if the item isn't already in the inventory, it adds it to the Globals.inventory queue
         public void InventoryEnqueue(string item)
