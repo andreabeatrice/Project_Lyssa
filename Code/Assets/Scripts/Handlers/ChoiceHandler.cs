@@ -32,49 +32,7 @@ public class ChoiceHandler : MonoBehaviour
         Globals.paused = false;
     }
 
-    //InventoryEnqueue(string item): Helper Method- Takes the name of an item to be added to the inventory & checks if the item is already in the inventory
-        //if the item isn't already in the inventory, it adds it to the Globals.inventory queue
-        public void InventoryEnqueue(string item)
-        {
-            foreach (string existingItem in Globals.inventory)
-            {
-                if (existingItem == item)
-                {
-                    return;
-                }
-            }
 
-            Globals.inventory.Enqueue(item);
-        }
-
-    //ObjectivesEnqueue(string task): Helper Method- Takes the name of a task to be added to the player's objectives & checks if it's already been added
-        //if the task in the list is the "default" task, it replaces that task
-        //if the task has already been added, it doesn't add it again
-        //if the task has not been added, it adds it to the Globals.objectives queue
-        public void ObjectivesEnqueue(string task)
-        {
-            foreach (string existingTask in Globals.objectives)
-            {
-                if (existingTask == "You haven't been told to do anything yet. Maybe try talking to people?")
-                {
-                    Globals.objectives.Dequeue();
-                    break;
-                }
-                if (existingTask == task)
-                {
-                    return;
-                }
-            }
-
-            Globals.objectives.Enqueue(task);
-        }
-
-        public void ObjectivesDequeue(string completedTask){
-                if (Globals.objectives.Peek() == completedTask)
-                {
-                    Globals.objectives.Dequeue();
-                }
-        }
 
     //removeButtons(): Helper Method- hides all buttons in the scene tagged with "ChoiceButton"
         //tags are set in the inspector
@@ -101,7 +59,7 @@ public class ChoiceHandler : MonoBehaviour
             
             if (temp == 1)
             {
-                ObjectivesEnqueue("Go to the storage closet for supplies");
+                HelperMethods.ObjectivesEnqueue("Go to the storage closet for supplies");
 
                 hud.SetActive(false);
 
@@ -148,9 +106,9 @@ public class ChoiceHandler : MonoBehaviour
     //TutorialSkipMop(): The onClick() method that adds the Mop to the player's inventory & corrects their objectives, without them having to play the tutorial
         public void TutorialSkipMop()
         {
-            InventoryEnqueue("Mop");
-            ObjectivesDequeue("Go to the storage closet for supplies");
-            ObjectivesEnqueue("Go clean the patients' rooms");
+            HelperMethods.InventoryEnqueue("Mop");
+            HelperMethods.ObjectivesDequeue("Go to the storage closet for supplies");
+            HelperMethods.ObjectivesEnqueue("Go clean the patients' rooms");
             SceneManager.LoadScene("Hallway");
             Globals.StorageRoom = true;
         }
@@ -158,9 +116,9 @@ public class ChoiceHandler : MonoBehaviour
     //TutorialSkipBroom(): The onClick() method that adds the broom to the player's inventory & corrects their objectives, without them having to play the tutorial
         public void TutorialSkipBroom()
         {
-            InventoryEnqueue("Broom");
-            ObjectivesDequeue("Go to the storage closet for supplies");
-            ObjectivesEnqueue("Go clean the patients' rooms");
+            HelperMethods.InventoryEnqueue("Broom");
+            HelperMethods.ObjectivesDequeue("Go to the storage closet for supplies");
+            HelperMethods.ObjectivesEnqueue("Go clean the patients' rooms");
             SceneManager.LoadScene("Hallway");
             Globals.StorageRoom = true;
         }
@@ -180,7 +138,7 @@ public class ChoiceHandler : MonoBehaviour
 
             if (took.Contains("broom"))
             {
-                InventoryEnqueue("Broom");
+                HelperMethods.InventoryEnqueue("Broom");
 
                 toRemove = GameObject.Find("broom");
 
@@ -191,7 +149,7 @@ public class ChoiceHandler : MonoBehaviour
             }
             else
             {
-                InventoryEnqueue("Mop");
+                HelperMethods.InventoryEnqueue("Mop");
 
                 toRemove = GameObject.Find("mop");
 
@@ -238,8 +196,8 @@ public class ChoiceHandler : MonoBehaviour
         {
             
             Globals.StorageRoom = true;
-            ObjectivesDequeue("Go to the storage closet for supplies");
-            ObjectivesEnqueue("Go clean the patients' rooms");
+            HelperMethods.ObjectivesDequeue("Go to the storage closet for supplies");
+            HelperMethods.ObjectivesEnqueue("Go clean the patients' rooms");
             closeDoorSound.Play();
             SceneManager.LoadScene("Hallway");
         }
