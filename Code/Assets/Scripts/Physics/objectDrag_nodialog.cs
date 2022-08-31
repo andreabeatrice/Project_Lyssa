@@ -15,19 +15,8 @@ public class objectDrag_nodialog : MonoBehaviour
     public AudioSource dragSound;
     public AudioSource puttingDown;
     public bool canDrag = false;
-
-    public Dialogue[] dialog;
     public GameObject HeadsUpDisplay;
 
-    public string[] choices;
-
-    public GameObject[] choiceButtons = new GameObject[3];
-
-    public bool speech;
-
-    public int numInteractions = 0;
-
-    private bool bucketTalk = true;
 
 
     // Update is called once per frame
@@ -64,7 +53,6 @@ public class objectDrag_nodialog : MonoBehaviour
             if (HeadsUpDisplay != null)
                 HeadsUpDisplay.SetActive(true);
 
-            numInteractions++;
 
         }
 
@@ -77,7 +65,6 @@ public class objectDrag_nodialog : MonoBehaviour
             isBeingHeld = false;
             //disable click
             //this.gameObject.transform.GetComponent<ObjectDrag>().enabled = false;
-            bucketTalk = false;
         }
 
     }
