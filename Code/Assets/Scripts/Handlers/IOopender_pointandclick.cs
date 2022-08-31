@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class KeybindHandler : MonoBehaviour
+public class IOopender_pointandclick : MonoBehaviour
 {
 
         //This is assigned to the UI Text Mesh Pro Text object inventory_body
@@ -17,40 +16,29 @@ public class KeybindHandler : MonoBehaviour
 
     public AudioSource clickSound;
 
-    public Animator animatorForIO;
-
     private bool open = false;
+
     void Update(){
         if(Input.GetKeyDown(KeyCode.I) && inventoryAndObjectives.activeSelf){
-             StartCoroutine(PopupClose());
+            PopupClose();
         }
         
         if (Input.GetKeyDown(KeyCode.I) && !inventoryAndObjectives.activeSelf){
             PopupOpen();
-           
         }
     }
 
-    IEnumerator PopupClose()
-    {
-        animatorForIO.SetBool("isOpen", false);
-        yield return new WaitForSeconds(0.4f);
-        inventoryAndObjectives.SetActive(false);
-    }
 
     public void PopupOpen(){
-         clickSound.Play();
+        clickSound.Play();
 
-            //If the player has clicked on the Player sprite, it reveals the the UI game object inventory_and_objectives
-            inventoryAndObjectives.SetActive(true);
-
-            animatorForIO.SetBool("isOpen", true);
-
-            //Resets objectives_body and inventory_body so that the list doesn't repeat
+        //Resets objectives_body and inventory_body so that the list doesn't repeat
             objectivesText.text = "";
             inventoryText.text = "";
 
-            //Loops through each string the the objects Queue and adds it to the objectives_body text box so the player can view it
+        this.open = true;
+
+        //Loops through each string the the objects Queue and adds it to the objectives_body text box so the player can view it
             foreach (string sentence in Globals.objectives)
             {
                 objectivesText.text = objectivesText.text + "* " + sentence + "\n";
@@ -62,6 +50,10 @@ public class KeybindHandler : MonoBehaviour
                 inventoryText.text = inventoryText.text + "* " + sentence + "\n";
             }
 
-            open = true;
+    }
+
+    public void PopupClose(){
+        inventoryAndObjectives.SetActive(false);
+        this.open = false;
     }
 }
