@@ -11,7 +11,7 @@ public class LevelLoader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Globals.paused = false;
     }
 
     // Update is called once per frame

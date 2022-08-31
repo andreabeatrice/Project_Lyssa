@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class IOopender_pointandclick : MonoBehaviour
 {
@@ -18,23 +19,28 @@ public class IOopender_pointandclick : MonoBehaviour
 
     private bool open = false;
 
+    public GameObject HeadsUpDisplay;
+
     void Update(){
         if(Input.GetKeyDown(KeyCode.I) && inventoryAndObjectives.activeSelf){
-            PopupClose();
+           
+            StartCoroutine(PopupClose());
         }
         
         if (Input.GetKeyDown(KeyCode.I) && !inventoryAndObjectives.activeSelf){
+            Debug.Log("check-1");
             PopupOpen();
         }
     }
 
 
     public void PopupOpen(){
+        inventoryAndObjectives.SetActive(true);
         clickSound.Play();
 
         //Resets objectives_body and inventory_body so that the list doesn't repeat
-            objectivesText.text = "";
-            inventoryText.text = "";
+        objectivesText.text = "";
+        inventoryText.text = "";
 
         this.open = true;
 
@@ -50,10 +56,14 @@ public class IOopender_pointandclick : MonoBehaviour
                 inventoryText.text = inventoryText.text + "* " + sentence + "\n";
             }
 
+        HeadsUpDisplay.GetComponent<CanvasGroup>().alpha = 0;
+
     }
 
-    public void PopupClose(){
+    IEnumerator PopupClose()
+    {
+        yield return new WaitForSeconds(0.0001f);
         inventoryAndObjectives.SetActive(false);
-        this.open = false;
+       HeadsUpDisplay.GetComponent<CanvasGroup>().alpha = 1;
     }
 }
