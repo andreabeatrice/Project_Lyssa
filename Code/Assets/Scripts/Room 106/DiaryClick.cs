@@ -59,8 +59,8 @@ public class DiaryClick : MonoBehaviour
     void OnMouseDown(){
 
         diary_dialog.SetActive(true);
-        //clickSound.Play();
-       allAudio.playClickSound();
+        clickSound.Play();
+       //allAudio.playClickSound();
 
         animator_diary.SetBool("isOpen", true);
 
@@ -112,10 +112,10 @@ public class DiaryClick : MonoBehaviour
         DestroyImmediate(diary_sprite.GetComponent<PolygonCollider2D>());;
         StartCoroutine(PopupClose());
 
-        FindObjectOfType<ChoiceHandler>().InventoryEnqueue("HER diary");
-        FindObjectOfType<ChoiceHandler>().ObjectivesDequeue("Go clean the patients' rooms");
-        FindObjectOfType<ChoiceHandler>().ObjectivesEnqueue("Find the note from Otto");
-        FindObjectOfType<ChoiceHandler>().ObjectivesEnqueue("Find the nurse's key card");
+        HelperMethods.InventoryEnqueue("HER diary");
+        HelperMethods.ObjectivesDequeue("Go clean the patients' rooms");
+        HelperMethods.ObjectivesEnqueue("Find the note from Otto");
+        HelperMethods.ObjectivesEnqueue("Find the nurse's key card");
     }
 
     

@@ -50,9 +50,6 @@ public class objectDrag_nodialog : MonoBehaviour
             isBeingHeld = true;
 
 
-            if (HeadsUpDisplay != null)
-                HeadsUpDisplay.SetActive(true);
-
 
         }
 
@@ -63,8 +60,6 @@ public class objectDrag_nodialog : MonoBehaviour
         if (isBeingHeld){
             puttingDown.Play();
             isBeingHeld = false;
-            //disable click
-            //this.gameObject.transform.GetComponent<ObjectDrag>().enabled = false;
         }
 
     }

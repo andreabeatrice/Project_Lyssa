@@ -15,4 +15,17 @@ public class Room106_ChoiceHandler : MonoBehaviour
     {
         
     }
+
+    public void keep_antipsychotics(){
+
+        HelperMethods.InventoryEnqueue("antipsychotic pill");
+
+        GameObject.Find("Pill").SetActive(false);
+
+        FindObjectOfType<DialogueBoxHandler>().clearHUD();
+    }
+
+    public void leave_antipsychotics(){
+        FindObjectOfType<DialogueBoxHandler>().clearHUD();
+    }
 }
