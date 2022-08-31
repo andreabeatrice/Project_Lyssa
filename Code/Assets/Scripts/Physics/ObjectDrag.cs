@@ -48,7 +48,7 @@ public class ObjectDrag : MonoBehaviour
     void OnMouseDown()
     {
 
-        if (Input.GetMouseButtonDown(0) && canDrag && !Globals.paused)
+        if (Input.GetMouseButtonDown(Globals.primaryMouseButton) && canDrag && !Globals.paused)
         {
             dragSound.Play();
             Vector3 mousePos;
