@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 16260409}
   - component: {fileID: 16260410}
   - component: {fileID: 16260412}
+  - component: {fileID: 16260413}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -446,6 +447,42 @@ MonoBehaviour:
   inventoryAndObjectives: {fileID: 1945917128}
   clickSound: {fileID: 1393739590}
   animatorForIO: {fileID: 1662542611}
+--- !u!114 &16260413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16260403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5fdb19cb5ca74948a692c708b3391ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meter_image: {fileID: 935670124}
+  meter_sprites:
+  - {fileID: 21300000, guid: 0346cd8782ae1f04687a72b07d3e9736, type: 3}
+  - {fileID: 21300000, guid: e1625950d73347740b1b220a45804eb8, type: 3}
+  - {fileID: 21300000, guid: 12e14882470e3b54fb686b93199d0827, type: 3}
+  - {fileID: 21300000, guid: 66074fd4eabfe1947805724c2b8bfd0b, type: 3}
+  - {fileID: 21300000, guid: fcee7f2ee0624d3419bf84d4d143dfa5, type: 3}
+  - {fileID: 21300000, guid: b5fefa4a00b9bac4bbac39d0ee430138, type: 3}
+  - {fileID: 21300000, guid: f21a72dbaa960cf43a21335f111fbeb7, type: 3}
+  - {fileID: 21300000, guid: 9b4ec8e61d6544b4093ad0962c6150c3, type: 3}
+  - {fileID: 21300000, guid: 93cea10360a299b4a89fce4c7d87afff, type: 3}
+  - {fileID: 21300000, guid: 4e6b025c90f56a04fb6a9c026d3ec8db, type: 3}
+  - {fileID: 21300000, guid: c676e44672d98284c906b37906a47ba1, type: 3}
+  - {fileID: 21300000, guid: 267efd6c495054744b66c503648766af, type: 3}
+  - {fileID: 21300000, guid: 5fc6c915de5e68c4e85c849ac57c0d12, type: 3}
+  - {fileID: 21300000, guid: 9a9c4a70b509eee46b19ca3bcf2df23a, type: 3}
+  - {fileID: 21300000, guid: 7fd73610e04f4344586ffb45e7e523bc, type: 3}
+  - {fileID: 21300000, guid: 327b6033d15d028468e67fa4577f8990, type: 3}
+  - {fileID: 21300000, guid: 3816a5338f50a7f488d13a76eedcff99, type: 3}
+  - {fileID: 21300000, guid: 7789343dba72a084ba5fcc6ed05f3be5, type: 3}
+  - {fileID: 21300000, guid: cfff369e8bfd6834e9d2c19fd0c2c017, type: 3}
+  - {fileID: 21300000, guid: 84d1e6c75116242488de2cbfe26a2065, type: 3}
+  - {fileID: 21300000, guid: 514410d6c4264514682456452c880896, type: 3}
+  test: 0
 --- !u!82 &62847365 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 3436577539561314929, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}

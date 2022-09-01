@@ -111,8 +111,6 @@ public class DialogueClick : MonoBehaviour
 
             TriggerDialogue();
           
-            if (HeadsUpDisplay != null)
-                HeadsUpDisplay.SetActive(true);
 
             numInteractions++;
 
@@ -126,6 +124,9 @@ public class DialogueClick : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        if (HeadsUpDisplay != null)
+                HeadsUpDisplay.SetActive(true);
+
         int diCount = dialog.Length - 1;
         if (numInteractions <= diCount)
         {

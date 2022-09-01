@@ -7,7 +7,7 @@ public class Room106_ChoiceHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Globals.insanity = 4;
     }
 
     // Update is called once per frame
@@ -18,27 +18,41 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
     public void keep_antipsychotics(){
 
-        HelperMethods.InventoryEnqueue("antipsychotic pill");
+        HelperMethods.InventoryEnqueue("Antipyschotic Pill");
 
         GameObject.Find("Pill").SetActive(false);
 
         FindObjectOfType<DialogueBoxHandler>().clearHUD();
     }
 
-    public void leave_antipsychotics(){
+    public void leave_object(){
         FindObjectOfType<DialogueBoxHandler>().clearHUD();
     }
 
-    void OnMouseDown(){
-         Vector3 location = Input.mousePosition;
+    public void keep_keycard(){
+        HelperMethods.InventoryEnqueue("Nurse's Keycard");
 
-        var collider = GetComponent<Collider>();
+        HelperMethods.ObjectivesDequeue("Find the note from Otto");
+        HelperMethods.ObjectivesDequeue("Find the nurse's key card");
 
-        if (!collider)
-        {
-            return; // nothing to do without a collider
-        }
+        //change draw sprite 2 without keycard
 
-        Vector3 closestPoint = collider.ClosestPoint(location);
+        //play footsteps noise + dialogue
+
+        //wait two seconds
+
+        //change scene?
+
+
     }
+
+    public void investigate_writing(){
+        Globals.insanity +=1;
+        DestroyImmediate(GameObject.Find("writing on the walls").GetComponent<Collider2D>());
+        FindObjectOfType<DialogueBoxHandler>().clearHUD();
+    }
+
+
+
+        
 }
