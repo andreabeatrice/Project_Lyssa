@@ -11,6 +11,10 @@ public class SeveralCollidersSingleObjectClick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    void Update(){
         objectsColliders = thisObject.GetComponentsInChildren<Collider2D>();
     }
 
@@ -19,12 +23,12 @@ public class SeveralCollidersSingleObjectClick : MonoBehaviour
         mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 
-        Debug.Log(objectsColliders[1].bounds);
-        Debug.Log(mousePos);
 
         foreach(Collider2D item in objectsColliders){
+            
             if(mousePos.x <= (item.bounds.center.x + 0.5) && mousePos.x >= (item.bounds.center.x - 0.5)){
                 //if object has 
+                Debug.Log(item.name);
 
                  if(item.GetComponent<DialogueClick>() != null && item.GetComponent<DialogueClick>().canClick == true){
                     item.GetComponent<DialogueClick>().TriggerDialogue();

@@ -29,6 +29,8 @@ public static class Globals
 
     public static float typingSpeed = 0.03f;
 
+    public static Color32 fernspeech = new Color32(135, 206, 253, 255);
+
     
 }
 

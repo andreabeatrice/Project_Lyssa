@@ -20,9 +20,6 @@ public class DialogueAutoStart : MonoBehaviour
     // Start(): is called before the first frame update - calls TriggerDialogue() or TriggerDialogueNoWait()
         void Start()
         {
-            if (wait)
-                StartCoroutine(TriggerDialogue());
-            else
                 TriggerDialogueNoWait();
         }
 

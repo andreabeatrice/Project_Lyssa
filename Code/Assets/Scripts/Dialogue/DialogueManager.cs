@@ -37,9 +37,6 @@ public class DialogueManager : MonoBehaviour {
     {
         //sentences 
         Globals.currentScene = SceneManager.GetActiveScene().name;
-
-        Debug.Log(Globals.currentScene);
-        Debug.Log(Globals.primaryMouseButton);
     }
 
     void Update(){
@@ -172,7 +169,7 @@ public class DialogueManager : MonoBehaviour {
 
     }
 
-    private IEnumerator TypeSentence(string sentence) //each sentence
+    public IEnumerator TypeSentence(string sentence) //each sentence
     {
         dialogText.text = "";
 
@@ -194,7 +191,7 @@ public class DialogueManager : MonoBehaviour {
         //Debug.Log("End of conversation");
         skipButton.SetActive(false);
 
-        if (choices != null)
+        if (choices != null && choices[0] != "")
         {
             for (int i = 1; i <= choices.Length; i++)
             {

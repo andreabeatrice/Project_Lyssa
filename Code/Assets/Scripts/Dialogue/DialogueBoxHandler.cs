@@ -25,6 +25,16 @@ public class DialogueBoxHandler : MonoBehaviour
         FindObjectOfType<DialogueManager>().setConversationStatus(false);
     }
 
+    public void clearChoiceButtons(){
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("ChoiceButton");
+
+        foreach (GameObject go in gos)
+        {
+            go.SetActive(false);
+        }
+    }
+
     public void RemoveHeadsUpDisplayAfterXTime(float f){
         StartCoroutine(ClearHUDAfter(f));
     }

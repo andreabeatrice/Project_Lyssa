@@ -94,6 +94,11 @@ public class AudioSources : MonoBehaviour
        open_door.Play();
     }
 
+    public void playFootsteps()
+    {
+       footsteps.Play();
+    }
+
     public void StopAllAudio() {
         foreach (AudioSource audioS in allAudioSources) {
             audioS.Stop();
