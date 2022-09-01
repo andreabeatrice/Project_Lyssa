@@ -191,7 +191,7 @@ public class DialogueManager : MonoBehaviour {
         //Debug.Log("End of conversation");
         skipButton.SetActive(false);
 
-        if (choices != null && choices[0] != "")
+        if (choices != null && choice1 != null)
         {
             for (int i = 1; i <= choices.Length; i++)
             {

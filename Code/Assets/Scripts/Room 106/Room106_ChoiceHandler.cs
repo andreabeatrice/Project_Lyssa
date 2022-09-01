@@ -54,6 +54,31 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
     }
 
+        public void keep_note(){
+        HelperMethods.InventoryEnqueue("Note from Otto");
+
+        HelperMethods.ObjectivesDequeue("Find the note from Otto");
+        HelperMethods.ObjectivesDequeue("Find the nurse's key card");
+
+        GameObject.Find("Note").SetActive(false);
+
+        //play footsteps noise + dialogue
+        FindObjectOfType<AudioSources>().StopAllAudio();
+        FindObjectOfType<AudioSources>().playFootsteps();
+        //FindObjectOfType<DialogueManager>().TypeSentence("Someone's coming!");
+
+        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
+
+        string[] s = {"Someone's coming!"};
+
+        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, null, Globals.fernspeech), "", null, false);
+
+        StartCoroutine(NurseScene());
+
+
+    }
+
+
     public void investigate_writing(){
         Globals.insanity +=1;
         DestroyImmediate(GameObject.Find("writing on the walls").GetComponent<Collider2D>());

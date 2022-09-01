@@ -20,7 +20,7 @@ public class DialogueAutoStart : MonoBehaviour
     // Start(): is called before the first frame update - calls TriggerDialogue() or TriggerDialogueNoWait()
         void Start()
         {
-                TriggerDialogueNoWait();
+            StartCoroutine(TriggerDialogue());
         }
 
     //TriggerDialogue(): Waits for 1.5 seconds to be sure that the scene transition is done
