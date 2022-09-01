@@ -116,6 +116,18 @@ public class DiaryClick : MonoBehaviour
         HelperMethods.ObjectivesDequeue("Go clean the patients' rooms");
         HelperMethods.ObjectivesEnqueue("Find the note from Otto");
         HelperMethods.ObjectivesEnqueue("Find the nurse's key card");
+
+        DialogueClick[] arr = GameObject.FindObjectsOfType<DialogueClick>();
+
+        foreach(DialogueClick item in arr){
+            item.canClick = true;
+        }
+
+        objectDrag_nodialog[] nda = GameObject.FindObjectsOfType<objectDrag_nodialog>();
+
+        foreach(objectDrag_nodialog item in nda){
+            item.canDrag = true;
+        }
     }
 
     

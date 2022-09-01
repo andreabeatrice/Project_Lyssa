@@ -18,15 +18,36 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
     public void keep_antipsychotics(){
 
-        HelperMethods.InventoryEnqueue("antipsychotic pill");
+        HelperMethods.InventoryEnqueue("Antipyschotic Pill");
 
         GameObject.Find("Pill").SetActive(false);
 
         FindObjectOfType<DialogueBoxHandler>().clearHUD();
     }
 
-    public void leave_antipsychotics(){
+    public void leave_object(){
         FindObjectOfType<DialogueBoxHandler>().clearHUD();
+    }
+
+    public void keep_keycard(){
+        HelperMethods.InventoryEnqueue("Nurse's Keycard");
+
+        HelperMethods.ObjectivesDequeue("Find the note from Otto");
+        HelperMethods.ObjectivesDequeue("Find the nurse's key card");
+
+        //change draw sprite 2 without keycard
+
+        //play footsteps noise + dialogue
+
+        //wait two seconds
+
+        //change scene?
+
+
+    }
+
+    public void investigate_writing(){
+        Globals.insanity +=1;
     }
 
 
