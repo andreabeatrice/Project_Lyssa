@@ -14,11 +14,6 @@ public class SeveralCollidersSingleObjectClick : MonoBehaviour
         objectsColliders = thisObject.GetComponentsInChildren<Collider2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-    //USE SUB-GAMEOBJECTS INSTEAD
+
 }
