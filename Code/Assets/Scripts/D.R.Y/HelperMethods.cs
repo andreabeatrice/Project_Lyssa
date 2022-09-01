@@ -46,4 +46,23 @@ public static class HelperMethods{
                     Globals.objectives.Dequeue();
                 }
         }
+
+        public static void InventoryDequeue(string item)
+        {
+            Queue<string> temp = new Queue<string>();
+            foreach (string existingItem in Globals.inventory)
+            {
+                if (existingItem == item)
+                {
+                    //
+                }
+                else {
+                    temp.Enqueue(Globals.inventory.Dequeue());
+                }
+            }
+
+            foreach(string it in temp){
+                Globals.inventory.Enqueue(it);
+            }
+        }
 }
