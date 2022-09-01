@@ -29,16 +29,7 @@ public class Room106_ChoiceHandler : MonoBehaviour
         FindObjectOfType<DialogueBoxHandler>().clearHUD();
     }
 
-    void OnMouseDown(){
-         Vector3 location = Input.mousePosition;
 
-        var collider = GetComponent<Collider>();
 
-        if (!collider)
-        {
-            return; // nothing to do without a collider
-        }
-
-        Vector3 closestPoint = collider.ClosestPoint(location);
-    }
+        
 }

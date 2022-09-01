@@ -166,7 +166,7 @@ public class DialogueManager : MonoBehaviour {
         {
             EndDialogue();
 
-            Debug.Log(skipButton.activeSelf);
+            //Debug.Log(skipButton.activeSelf);
             return;
         }
 
