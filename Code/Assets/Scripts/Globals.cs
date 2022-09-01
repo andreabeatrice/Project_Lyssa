@@ -31,6 +31,8 @@ public static class Globals
 
     public static Color32 fernspeech = new Color32(135, 206, 253, 255);
 
+    public static bool mopped;
+
     
 }
 

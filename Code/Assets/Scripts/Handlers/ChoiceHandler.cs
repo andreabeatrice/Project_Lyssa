@@ -223,9 +223,14 @@ public class ChoiceHandler : MonoBehaviour
     }
 
     public void mopitup(){
+        Globals.mopped = true;
         allAudio.playMoppingSound();
         GameObject.Find("WaterDispenser").GetComponent<Animator>().enabled = false;
         GameObject.Find("WaterDispenser").GetComponent<SpriteRenderer>().sprite = cleanWaterDispenser;
+    }
+
+    public void cannotmop(){
+        Globals.mopped = false;
     }
 
 

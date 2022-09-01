@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,8 +11,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseButton;
 
     public GameObject settingsPanel;
+
+    public static string path;
+
     void Start()
     {
+        path = Application.persistentDataPath + "/player.save";
         PauseMenuUI.SetActive(false);
         PauseButton.SetActive(true);
     }
@@ -67,6 +72,18 @@ public class PauseMenu : MonoBehaviour
 
     public void closeSettings(){
         settingsPanel.SetActive(false);
+    }
+
+    public void restart(){
+        if(File.Exists(path)){
+            //popup
+
+            File.Delete(path);
+        }
+
+        SceneManager.LoadScene("MainMenu");
+
+
     }
 
 

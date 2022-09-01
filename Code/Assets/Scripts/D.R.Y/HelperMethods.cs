@@ -50,9 +50,12 @@ public static class HelperMethods{
         public static void InventoryDequeue(string item)
         {
             Queue<string> temp = new Queue<string>();
-            foreach (string existingItem in Globals.inventory)
+
+            // Drain (empty) the queue, one element at a time
+            while (Globals.inventory.Count > 0)
             {
-                if (existingItem == item)
+                string xisting = Globals.inventory.Dequeue();
+                if (xisting.Contains(item))
                 {
                     //
                 }

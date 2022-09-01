@@ -210,6 +210,9 @@ public class Room106_ChoiceHandler : MonoBehaviour
             if(i.Contains("Note")){
                 choicePhrases[0] = "It's porbably around here (+0)";
                 choicePhrases[1] = "Nope, haven't seen it (+0)";
+
+                FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr"), choicePhrases, keycardResponseChoices, true);
+
                 break;
             }
         }
