@@ -7,7 +7,7 @@ public class Room106_ChoiceHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Globals.insanity = 4;
     }
 
     // Update is called once per frame
@@ -48,6 +48,8 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
     public void investigate_writing(){
         Globals.insanity +=1;
+        DestroyImmediate(GameObject.Find("writing on the walls").GetComponent<Collider2D>());
+        FindObjectOfType<DialogueBoxHandler>().clearHUD();
     }
 
 

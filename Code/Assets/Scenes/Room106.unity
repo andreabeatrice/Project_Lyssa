@@ -439,7 +439,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.6853386, y: 0.87147975}
@@ -851,7 +851,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.03430748, y: -0.66327596}
@@ -1531,6 +1531,7 @@ GameObject:
   - component: {fileID: 375198775}
   - component: {fileID: 375198776}
   - component: {fileID: 375198777}
+  - component: {fileID: 375198778}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -1652,6 +1653,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7604b24b190494eb1a1bccd4672f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &375198778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375198770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5fdb19cb5ca74948a692c708b3391ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meter_image: {fileID: 1586006827}
+  meter_sprites:
+  - {fileID: 21300000, guid: 0346cd8782ae1f04687a72b07d3e9736, type: 3}
+  - {fileID: 21300000, guid: e1625950d73347740b1b220a45804eb8, type: 3}
+  - {fileID: 21300000, guid: 12e14882470e3b54fb686b93199d0827, type: 3}
+  - {fileID: 21300000, guid: 66074fd4eabfe1947805724c2b8bfd0b, type: 3}
+  - {fileID: 21300000, guid: fcee7f2ee0624d3419bf84d4d143dfa5, type: 3}
+  - {fileID: 21300000, guid: b5fefa4a00b9bac4bbac39d0ee430138, type: 3}
+  - {fileID: 21300000, guid: f21a72dbaa960cf43a21335f111fbeb7, type: 3}
+  - {fileID: 21300000, guid: 9b4ec8e61d6544b4093ad0962c6150c3, type: 3}
+  - {fileID: 21300000, guid: 93cea10360a299b4a89fce4c7d87afff, type: 3}
+  - {fileID: 21300000, guid: 4e6b025c90f56a04fb6a9c026d3ec8db, type: 3}
+  - {fileID: 21300000, guid: c676e44672d98284c906b37906a47ba1, type: 3}
+  - {fileID: 21300000, guid: 267efd6c495054744b66c503648766af, type: 3}
+  - {fileID: 21300000, guid: 5fc6c915de5e68c4e85c849ac57c0d12, type: 3}
+  - {fileID: 21300000, guid: 9a9c4a70b509eee46b19ca3bcf2df23a, type: 3}
+  - {fileID: 21300000, guid: 7fd73610e04f4344586ffb45e7e523bc, type: 3}
+  - {fileID: 21300000, guid: 327b6033d15d028468e67fa4577f8990, type: 3}
+  - {fileID: 21300000, guid: 3816a5338f50a7f488d13a76eedcff99, type: 3}
+  - {fileID: 21300000, guid: 7789343dba72a084ba5fcc6ed05f3be5, type: 3}
+  - {fileID: 21300000, guid: cfff369e8bfd6834e9d2c19fd0c2c017, type: 3}
+  - {fileID: 21300000, guid: 84d1e6c75116242488de2cbfe26a2065, type: 3}
+  - {fileID: 21300000, guid: 514410d6c4264514682456452c880896, type: 3}
+  test: 0
 --- !u!82 &388535185 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
@@ -3179,6 +3216,7 @@ GameObject:
   m_Component:
   - component: {fileID: 736845152}
   - component: {fileID: 736845151}
+  - component: {fileID: 736845153}
   m_Layer: 0
   m_Name: Sink
   m_TagString: Untagged
@@ -3253,6 +3291,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &736845153
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736845150}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.968084, y: 0.027804375}
+  - {x: 1.1627146, y: 0.027804375}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &755918808
 GameObject:
   m_ObjectHideFlags: 0
@@ -5288,7 +5348,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5441,7 +5501,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.7530262, y: 0.87994075}
@@ -6293,6 +6353,7 @@ GameObject:
   - component: {fileID: 1358733641}
   - component: {fileID: 1358733642}
   - component: {fileID: 1358733643}
+  - component: {fileID: 1358733644}
   m_Layer: 0
   m_Name: writing on the walls
   m_TagString: Untagged
@@ -6412,22 +6473,42 @@ MonoBehaviour:
     textcolor:
       serializedVersion: 2
       rgba: 0
-  HeadsUpDisplay: {fileID: 0}
+  HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
-  - Try to understand (+1)
+  - Try understand (+1)
   choiceButtons:
   - {fileID: 1432194063}
-  - {fileID: 0}
+  - {fileID: 1217105320}
   - {fileID: 0}
   speech: 0
   fern: 1
-  identifier: 
+  identifier: infinite
   canClick: 1
   enableProximityReactions: 0
   PlayerCollider: {fileID: 0}
   ObjectAreaCollider: {fileID: 0}
---- !u!114 &1358733643
+--- !u!95 &1358733643
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358733638}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4eccc50b382f0a9488b104873b0bc84d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1358733644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6439,10 +6520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f83687803764e947a6f5a1f2673f0e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  this_image: {fileID: 1358733638}
-  variations:
-  - {fileID: 21300000, guid: 6439624bcec3cbd4b873ea2d4de94975, type: 3}
-  switches: 05000000
+  this_animator: {fileID: 1358733643}
 --- !u!82 &1360844120 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7521320971508099391, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
@@ -7252,30 +7330,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bad1cd1ef6e2e846b89f238855b0e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meter_image: {fileID: 1586006827}
-  meter_sprites:
-  - {fileID: 21300000, guid: 0346cd8782ae1f04687a72b07d3e9736, type: 3}
-  - {fileID: 21300000, guid: e1625950d73347740b1b220a45804eb8, type: 3}
-  - {fileID: 21300000, guid: 12e14882470e3b54fb686b93199d0827, type: 3}
-  - {fileID: 21300000, guid: 66074fd4eabfe1947805724c2b8bfd0b, type: 3}
-  - {fileID: 21300000, guid: fcee7f2ee0624d3419bf84d4d143dfa5, type: 3}
-  - {fileID: 21300000, guid: b5fefa4a00b9bac4bbac39d0ee430138, type: 3}
-  - {fileID: 21300000, guid: f21a72dbaa960cf43a21335f111fbeb7, type: 3}
-  - {fileID: 21300000, guid: 9b4ec8e61d6544b4093ad0962c6150c3, type: 3}
-  - {fileID: 21300000, guid: 93cea10360a299b4a89fce4c7d87afff, type: 3}
-  - {fileID: 21300000, guid: 4e6b025c90f56a04fb6a9c026d3ec8db, type: 3}
-  - {fileID: 21300000, guid: c676e44672d98284c906b37906a47ba1, type: 3}
-  - {fileID: 21300000, guid: 267efd6c495054744b66c503648766af, type: 3}
-  - {fileID: 21300000, guid: 5fc6c915de5e68c4e85c849ac57c0d12, type: 3}
-  - {fileID: 21300000, guid: 9a9c4a70b509eee46b19ca3bcf2df23a, type: 3}
-  - {fileID: 21300000, guid: 7fd73610e04f4344586ffb45e7e523bc, type: 3}
-  - {fileID: 21300000, guid: 327b6033d15d028468e67fa4577f8990, type: 3}
-  - {fileID: 21300000, guid: 3816a5338f50a7f488d13a76eedcff99, type: 3}
-  - {fileID: 21300000, guid: 7789343dba72a084ba5fcc6ed05f3be5, type: 3}
-  - {fileID: 21300000, guid: cfff369e8bfd6834e9d2c19fd0c2c017, type: 3}
-  - {fileID: 21300000, guid: 84d1e6c75116242488de2cbfe26a2065, type: 3}
-  - {fileID: 21300000, guid: 514410d6c4264514682456452c880896, type: 3}
-  test: 1
 --- !u!114 &1586006830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9927,7 +9981,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
