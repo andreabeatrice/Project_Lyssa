@@ -13,7 +13,7 @@ public class watercoolerdeath : MonoBehaviour
     Color32 c = new Color32(135, 206, 253, 255);
     void Update()
     {
-        if (PlayerCollider.IsTouching(ObjectAreaCollider))
+        if (PlayerCollider.IsTouching(ObjectAreaCollider) && !Globals.mopped)
         {
 
             FindObjectOfType<LevelLoader>().LoadNextLevel("watercooler_death", "crossfade_start");
