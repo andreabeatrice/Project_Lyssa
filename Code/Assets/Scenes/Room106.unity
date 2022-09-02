@@ -1568,7 +1568,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563f66cd54692394ba90e7f58a086e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 388535185}
   closeDoorSound: {fileID: 984796068}
   allAudio: {fileID: 1705003580}
   hud: {fileID: 1698870049}
@@ -1624,7 +1623,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1125294141}
   dialogText: {fileID: 1766698141}
-  allAudio: {fileID: 0}
   skipButton: {fileID: 1322063541}
   clickSound: {fileID: 388535185}
   talking: {fileID: 1311853892}
@@ -1656,6 +1654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keycardResponseChoices_lie: []
   keycardResponseChoices: []
+  allAudio: {fileID: 0}
   leaveroombutton: {fileID: 0}
 --- !u!114 &375198778
 MonoBehaviour:
@@ -3783,6 +3782,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - She did that on her first day here... I can't believe they never fixed it.
+    voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
@@ -5716,6 +5716,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - Is that even legal...?
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -6245,6 +6246,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - If she was sleeping with this under her pillow, it must be important!
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -6805,6 +6807,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - That makes no sense to me.
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -7584,6 +7587,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - Gross! There's a worm in it!
+    voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
@@ -8289,7 +8293,7 @@ PrefabInstance:
     - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 91acb2573eb791a45a89e446a00ba06d, type: 3}
+      objectReference: {fileID: 8300000, guid: c739a6a2e95e158459c8f89a490e068b, type: 3}
     - target: {fileID: 7514803825967726811, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -9582,6 +9586,7 @@ MonoBehaviour:
       as delusions and hallucinations
     - 'Patients who take antipsychotics while not needing them may start to display
       symptoms of psychosis. '
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -9785,6 +9790,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - I shouldn't be touching that!
+    voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
@@ -10307,6 +10313,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - It's a nurse's access card!
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2

@@ -65,7 +65,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue di, string[] c, GameObject[] choiceButtons, bool speech)
     {
-        if(talking!=null)
+        if(di.voice!=null)
         {
             talking = di.voice;
         }
@@ -115,7 +115,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue di, string choice, GameObject c1, bool speech)
     {
-        if (talking != null)
+        if (di.voice!= null)
         {
             talking = di.voice;
         }

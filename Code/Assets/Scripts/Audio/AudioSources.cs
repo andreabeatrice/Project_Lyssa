@@ -23,6 +23,7 @@ public class AudioSources : MonoBehaviour
     public AudioSource page_turn;
     public AudioSource book_close;
     public AudioSource background106;
+    public AudioSource intercom;
     public AudioSource mopping_sound;
     public AudioSource error_sound;
     public AudioSource puff;
@@ -68,19 +69,21 @@ public class AudioSources : MonoBehaviour
         }
     }
 
-    public void playClickSound(){//other noises where is the babble method?
-       // click_sound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
+    public void playClickSound(){
+        click_sound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
         click_sound.Play();
     }
     public void playPageTurn()
     {
-        page_turn = GameObject.Find("pageTurn").GetComponentInChildren<AudioSource>();
         page_turn.Play();
     }
     public void playBookClose()
     {
-        book_close = GameObject.Find("bookClose").GetComponentInChildren<AudioSource>();
         book_close.Play();
+    }
+    public void playIntercom()
+    {
+       intercom.Play();
     }
     public void playMoppingSound()
     {
