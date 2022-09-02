@@ -44,7 +44,7 @@ public class DialogueClick : MonoBehaviour
     void Start()
     {
 
-        clickSound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
+        clickSound = GameObject.Find("click_sound").GetComponentInChildren<AudioSource>();
         
         //Option 1: switch case
         if(fern){
