@@ -11354,6 +11354,7 @@ GameObject:
   - component: {fileID: 1043216655}
   - component: {fileID: 1043216654}
   - component: {fileID: 1043216657}
+  - component: {fileID: 1043216658}
   m_Layer: 0
   m_Name: Room106
   m_TagString: rnd
@@ -11487,6 +11488,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &1043216658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043216652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4781808da1ea20945ae90f32f34c3aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeadsUpDisplay: {fileID: 1609823569}
+  before_dialog:
+  - sentences:
+    - The receptionist is watching me, I can't go in right now...
+    voice: {fileID: 0}
+    name: Fern
+    textcolor:
+      serializedVersion: 2
+      rgba: 0
+  after_dialog:
+  - sentences:
+    - There's caution tape and a "No Entry" sign. This seems like a bad idea. Are
+      you going to do it anyway?
+    voice: {fileID: 0}
+    name: Fern
+    textcolor:
+      serializedVersion: 2
+      rgba: 0
+  allAudio: {fileID: 1408100800}
+  before_choices:
+  - Come back later
+  after_choices:
+  - Enter anyway (+3)
+  before_choiceButtons:
+  - {fileID: 978924752}
+  - {fileID: 0}
+  - {fileID: 0}
+  after_choiceButtons:
+  - {fileID: 306470422}
+  - {fileID: 0}
+  - {fileID: 0}
+  identifier: infinite
+  enableProximityReactions: 1
+  PlayerCollider: {fileID: 735131236}
+  ObjectAreaCollider: {fileID: 1043216654}
 --- !u!1 &1058645384
 GameObject:
   m_ObjectHideFlags: 0
@@ -31967,9 +32015,8 @@ GameObject:
   - component: {fileID: 1987307149}
   - component: {fileID: 1987307153}
   - component: {fileID: 1987307151}
-  - component: {fileID: 1987307152}
-  - component: {fileID: 1987307155}
   - component: {fileID: 1987307154}
+  - component: {fileID: 1987307155}
   m_Layer: 0
   m_Name: WaterDispenser
   m_TagString: rnd
@@ -32080,25 +32127,6 @@ CircleCollider2D:
   m_Offset: {x: -0.5, y: -3}
   serializedVersion: 2
   m_Radius: 4
---- !u!114 &1987307152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987307146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc5e1a78384f854a86161c34d5f3b32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1408100800}
-  PlayerCollider: {fileID: 735131236}
-  ObjectAreaCollider: {fileID: 1987307151}
-  HeadsUpDisplay: {fileID: 1609823569}
-  ChoiceButton_none: {fileID: 978924752}
-  ChoiceButton_mop: {fileID: 932319021}
-  ChoiceButton_broom: {fileID: 1434439053}
 --- !u!60 &1987307153
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -32179,7 +32207,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987307146}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1f4cd41e01485f48837e506cda07ef9, type: 3}
   m_Name: 
@@ -32196,10 +32224,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1987307146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b1a75684eeeca04ea051f03cdf0e5d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fc5e1a78384f854a86161c34d5f3b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cleanWaterDispenser: {fileID: 0}
+  allAudio: {fileID: 1408100800}
+  PlayerCollider: {fileID: 735131236}
+  ObjectAreaCollider: {fileID: 1987307151}
+  HeadsUpDisplay: {fileID: 854919153}
+  ChoiceButton_none: {fileID: 978924752}
+  ChoiceButton_mop: {fileID: 932319021}
+  ChoiceButton_broom: {fileID: 1434439053}
 --- !u!1 &1990228311
 GameObject:
   m_ObjectHideFlags: 0

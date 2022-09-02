@@ -47,6 +47,8 @@ public class MainMenuScript : MonoBehaviour
         GameObject.Find("Start").SetActive(false);
         GameObject.Find("LoadSave").SetActive(false);
         GameObject.Find("Settings").SetActive(false);
+
+        //Reset globals in case player wants to retry
     }
 
     public void LoadGame()

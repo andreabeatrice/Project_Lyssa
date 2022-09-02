@@ -8129,7 +8129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601331721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 993170c460844dd4bbd987b34c3518ca, type: 3}
   m_Name: 
@@ -11441,7 +11441,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043216652}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4781808da1ea20945ae90f32f34c3aea, type: 3}
   m_Name: 
@@ -31969,6 +31969,8 @@ GameObject:
   - component: {fileID: 1987307153}
   - component: {fileID: 1987307151}
   - component: {fileID: 1987307152}
+  - component: {fileID: 1987307155}
+  - component: {fileID: 1987307154}
   m_Layer: 0
   m_Name: WaterDispenser
   m_TagString: rnd
@@ -32086,7 +32088,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987307146}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fc5e1a78384f854a86161c34d5f3b32, type: 3}
   m_Name: 
@@ -32171,6 +32173,34 @@ PolygonCollider2D:
       - {x: -0.85999995, y: 3.3}
       - {x: -0.82, y: 3.26}
       - {x: -0.9, y: 3.3}
+--- !u!114 &1987307154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987307146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1a75684eeeca04ea051f03cdf0e5d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cleanWaterDispenser: {fileID: 21300000, guid: 8279ae384df41ec499651418608cc350, type: 3}
+--- !u!114 &1987307155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987307146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f4cd41e01485f48837e506cda07ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allAudio: {fileID: 1408100800}
+  PlayerCollider: {fileID: 735131236}
+  ObjectAreaCollider: {fileID: 1987307151}
 --- !u!1 &1990228311
 GameObject:
   m_ObjectHideFlags: 0
