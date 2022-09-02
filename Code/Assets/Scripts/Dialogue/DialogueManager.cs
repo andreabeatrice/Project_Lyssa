@@ -65,11 +65,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue di, string[] c, GameObject[] choiceButtons, bool speech)
     {
-<<<<<<< HEAD
         if(di.voice!=null)
-=======
-        if(di.voice !=null)
->>>>>>> d3f112d3f9d1916710f64e36c60763ba35a945fe
         {
             talking = di.voice;
         }
@@ -119,11 +115,7 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue di, string choice, GameObject c1, bool speech)
     {
-<<<<<<< HEAD
         if (di.voice!= null)
-=======
-        if (di.voice != null)
->>>>>>> d3f112d3f9d1916710f64e36c60763ba35a945fe
         {
             talking = di.voice;
         }

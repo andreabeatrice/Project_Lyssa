@@ -62,6 +62,6 @@ public class KeybindHandler : MonoBehaviour
                 inventoryText.text = inventoryText.text + "* " + sentence + "\n";
             }
 
-            open = true;
+            //open = true;
     }
 }

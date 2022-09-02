@@ -104,7 +104,9 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
         string[] s = {"Yes! She specifically told me that this room needed to be cleaned out!"};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, allAudio.fern_voice), "", null, false);
+        Debug.Log(FindObjectOfType<AudioSources>().fern_voice);
+
+        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, FindObjectOfType<AudioSources>().fern_voice), "", null, false);
 
         StartCoroutine(nurse_response_receptionist());
     }
@@ -116,7 +118,7 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
         string[] s = {"There are rats around, I was trying to catch one."};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, allAudio.fern_voice), "", null, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, FindObjectOfType<AudioSources>().fern_voice), "", null, false);
 
         StartCoroutine(nurse_response_rats());
     }
