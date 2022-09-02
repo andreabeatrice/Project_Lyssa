@@ -45,4 +45,8 @@ public class DialogueBoxHandler : MonoBehaviour
             
             clearHUD();
         }
+
+    public void showHUD(){
+        HeadsUpDisplay.SetActive(true);
+    }
 }

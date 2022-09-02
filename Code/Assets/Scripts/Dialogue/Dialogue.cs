@@ -43,6 +43,10 @@ public class Dialogue
                 sentences[i] = s;
                 i++;
             }
+
+            if(n.Contains("Fern")){
+                this.makeFern();
+            }
         }
 
     //Dialogue(string[] sent, string n, Color32 cl): Constructor overload that creates a Dialogue object so that DialogueManager can be called from a script 
@@ -61,6 +65,10 @@ public class Dialogue
             {
                 sentences[i] = s;
                 i++;
+            }
+
+            if(n.Contains("Fern")){
+                this.makeFern();
             }
         }
 
