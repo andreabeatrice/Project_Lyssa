@@ -12,6 +12,7 @@ public class ObjectDrag : MonoBehaviour
     private float startPosX;
     private float startPosY;
     private bool isBeingHeld = false;
+    public AudioSources allAudio;
     public AudioSource dragSound;
     public AudioSource puttingDown;
     public bool canDrag = false;
@@ -54,7 +55,6 @@ public class ObjectDrag : MonoBehaviour
             Vector3 mousePos;
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
-
 
             startPosX = mousePos.x -  this.transform.localPosition.x;
             startPosY = mousePos.y - this.transform.localPosition.y;

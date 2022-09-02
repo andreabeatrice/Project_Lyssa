@@ -539,7 +539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 1705003581}
   puttingDown: {fileID: 0}
   dragAnimator: {fileID: 127273731}
 --- !u!114 &127273733
@@ -931,8 +931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 1705003579}
-  puttingDown: {fileID: 1705003578}
+  dragSound: {fileID: 1705003581}
+  puttingDown: {fileID: 0}
   dragAnimator: {fileID: 210047899}
 --- !u!114 &210047903
 MonoBehaviour:
@@ -1486,7 +1486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 1705003581}
   puttingDown: {fileID: 0}
   dragAnimator: {fileID: 362337416}
 --- !u!114 &362337418
@@ -1570,7 +1570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickSound: {fileID: 388535185}
   closeDoorSound: {fileID: 984796068}
-  allAudio: {fileID: 0}
+  allAudio: {fileID: 1705003580}
   hud: {fileID: 1698870049}
   dialogBox: {fileID: 1506348461}
   dialogHeading: {fileID: 0}
@@ -1624,9 +1624,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1125294141}
   dialogText: {fileID: 1766698141}
+  allAudio: {fileID: 0}
   skipButton: {fileID: 1322063541}
   clickSound: {fileID: 388535185}
-  talking: {fileID: 0}
+  talking: {fileID: 1311853892}
   inConversation: 0
 --- !u!114 &375198776
 MonoBehaviour:
@@ -1653,6 +1654,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7604b24b190494eb1a1bccd4672f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keycardResponseChoices_lie: []
+  keycardResponseChoices: []
+  leaveroombutton: {fileID: 0}
 --- !u!114 &375198778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5876,7 +5880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 1705003581}
   puttingDown: {fileID: 0}
   dragAnimator: {fileID: 1195694113}
 --- !u!114 &1195694115
@@ -6336,6 +6340,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1224491899}
   m_CullTransparentMesh: 1
+--- !u!82 &1311853892 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8661605048657298932, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1322063541
 GameObject:
   m_ObjectHideFlags: 0
@@ -8275,7 +8284,7 @@ PrefabInstance:
       objectReference: {fileID: 1683823574}
     - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_Volume
-      value: 0.24
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_audioClip
@@ -8313,6 +8322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1705003581 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2136626542117941155, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1724761810
 PrefabInstance:
   m_ObjectHideFlags: 0

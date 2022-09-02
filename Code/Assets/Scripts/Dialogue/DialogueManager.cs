@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour {
     public TMP_Text nameText;
 
     public TMP_Text dialogText;
-
+   // public AudioSources allAudio;
     public GameObject skipButton;
 
     public AudioSource clickSound;
@@ -65,6 +65,11 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue di, string[] c, GameObject[] choiceButtons, bool speech)
     {
+        if(talking!=null)
+        {
+            talking = di.voice;
+        }
+        
         inConversation = true;
 
         this.choices = c;
@@ -110,6 +115,10 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue di, string choice, GameObject c1, bool speech)
     {
+        if (talking != null)
+        {
+            talking = di.voice;
+        }
         inConversation = true;
 
         this.choices = new string[] { choice };
@@ -197,19 +206,16 @@ public class DialogueManager : MonoBehaviour {
             {
                 if (i == 1)
                 {
-                   // clickSound.Play(); //makes click sound going into faded area and going into janitors closet
                     choice1.SetActive(true);
                     choice1.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
                 }
                 if (i == 2)
                 {
-                    //clickSound.Play();
                     choice2.SetActive(true);
                     choice2.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
                 }
                 if (i == 3)
                 {
-                    //clickSound.Play();
                     choice3.SetActive(true);
                     choice3.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
                 }

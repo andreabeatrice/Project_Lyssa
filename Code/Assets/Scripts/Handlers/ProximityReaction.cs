@@ -62,7 +62,7 @@ public class ProximityReaction : MonoBehaviour
 
         sentences =  new string[] {prox};
                     
-        Dialogue dialog = new Dialogue(sentences, "Fern", c);
+        Dialogue dialog = new Dialogue(sentences, "Fern", c, null);
 
         FindObjectOfType<DialogueManager>().StartDialogue(dialog, react, btn, false);
         //allAudio.playMoppingSound();//need to move
@@ -70,7 +70,7 @@ public class ProximityReaction : MonoBehaviour
 
     public void reaction_extended(string[] prox, string react, GameObject btn){
         HeadsUpDisplay.SetActive(true);
-        Dialogue dialog = new Dialogue(prox, "Fern", c);
+        Dialogue dialog = new Dialogue(prox, "Fern", c, null);
 
         FindObjectOfType<DialogueManager>().StartDialogue(dialog, react, btn, false);
     }

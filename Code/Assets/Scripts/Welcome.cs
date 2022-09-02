@@ -28,7 +28,7 @@ public class Welcome : MonoBehaviour
 
 
         //Instantiates a Dialogue object which contains the sentences from the WelcomeStrings array
-        dialog = new Dialogue(WelcomeStrings, null);
+        dialog = new Dialogue(WelcomeStrings, null, null);
 
         choices[0] = "I got this.";
 
