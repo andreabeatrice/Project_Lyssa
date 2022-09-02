@@ -9,6 +9,7 @@ using UnityEngine;
 public class DialogueBoxHandler : MonoBehaviour
 {
     public GameObject HeadsUpDisplay;
+    
 
     public void clearHUD()
     {

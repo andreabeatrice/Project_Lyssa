@@ -18,6 +18,8 @@ public class Dialogue
         [TextArea(3, 10)]
         public string[] sentences;
 
+        public AudioSource voice;
+
         //Not assigned for the narration
         public string name;
 
@@ -27,8 +29,12 @@ public class Dialogue
     
     //Dialogue(string[] sent, string n): Constructor that creates a Dialogue object so that DialogueManager can be called from a script.
     //Auto-assigns text colour to white
-        public Dialogue(string[] sent, string n)
+        public Dialogue(string[] sent, string n, AudioSource v)
         {
+            if(v != null)
+        {
+            voice = v;
+        }
             textcolor = new Color32(255, 255, 255, 255);
 
             name = n;
@@ -51,9 +57,14 @@ public class Dialogue
 
     //Dialogue(string[] sent, string n, Color32 cl): Constructor overload that creates a Dialogue object so that DialogueManager can be called from a script 
     //&& lets a programmer assign a text colour
-        public Dialogue(string[] sent, string n, Color32 cl)
+        public Dialogue(string[] sent, string n, Color32 cl, AudioSource v)
         {
-            textcolor = cl;
+        if (v != null)
+        {
+            voice = v;
+        }
+
+        textcolor = cl;
 
             name = n;
 
@@ -72,8 +83,12 @@ public class Dialogue
             }
         }
 
+    }
+
+
         public void makeFern(){
             textcolor = new Color32(135, 206, 253, 255);
             name = "Fern";
+            //voice = get fern talking
         }
 }

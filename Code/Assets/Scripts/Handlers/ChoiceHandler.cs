@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 //This class is attached to any choice button, and each method is a different button's OnClick() method
 public class ChoiceHandler : MonoBehaviour
 {
-    public AudioSource clickSound;
+    //public AudioSource clickSound;
     public AudioSource closeDoorSound;
     public AudioSources allAudio;
 
@@ -170,7 +170,7 @@ public class ChoiceHandler : MonoBehaviour
                                                     "Try now by dragging the bucket on the shelf."};
 
             //Calls the Dialogue class constructor in order to display the bucketSentences
-            Dialogue bucketDialogue = new Dialogue(bucketSentences, null);
+            Dialogue bucketDialogue = new Dialogue(bucketSentences, null, null);
 
             FindObjectOfType<DialogueManager>().StartDialogue(bucketDialogue, "", null, false);
 
@@ -224,7 +224,8 @@ public class ChoiceHandler : MonoBehaviour
 
     public void mopitup(){
         Globals.mopped = true;
-        allAudio.playMoppingSound();
+
+        allAudio.playMoppingSound();//shouldn't play when coming out of 106
         GameObject.Find("WaterDispenser").GetComponent<Animator>().enabled = false;
         GameObject.Find("WaterDispenser").GetComponent<SpriteRenderer>().sprite = cleanWaterDispenser;
     }

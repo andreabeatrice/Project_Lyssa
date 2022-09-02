@@ -1313,7 +1313,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563f66cd54692394ba90e7f58a086e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 388535185}
   closeDoorSound: {fileID: 984796068}
   allAudio: {fileID: 0}
   hud: {fileID: 1698870049}
@@ -1406,6 +1405,7 @@ MonoBehaviour:
   - {fileID: 1685466695}
   - {fileID: 1218429545}
   - {fileID: 0}
+  allAudio: {fileID: 1705003580}
   leaveroombutton: {fileID: 1217105320}
 --- !u!114 &375198778
 MonoBehaviour:
@@ -3284,6 +3284,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - She did that on her first day here... I can't believe they never fixed it.
+    voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
@@ -4733,6 +4734,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - Is that even legal...?
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -5694,6 +5696,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - That makes no sense to me.
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -6236,6 +6239,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - Gross! There's a worm in it!
+    voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
@@ -7109,6 +7113,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1705003581 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5728989063601355317, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1713674551
 GameObject:
   m_ObjectHideFlags: 0
@@ -7213,6 +7222,7 @@ MonoBehaviour:
       instructed to stay away from this room. '
     - It's that new receptionist, isn't it? I knew she was inccompetent. We never
       should have hired her.
+    voice: {fileID: 1705003581}
     name: Nurse Tarr
     textcolor:
       serializedVersion: 2
@@ -7995,6 +8005,7 @@ MonoBehaviour:
       as delusions and hallucinations
     - 'Patients who take antipsychotics while not needing them may start to display
       symptoms of psychosis. '
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -8063,6 +8074,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - I shouldn't be touching that!
+    voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2

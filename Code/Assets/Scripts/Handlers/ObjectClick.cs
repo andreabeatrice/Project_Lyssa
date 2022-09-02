@@ -83,7 +83,7 @@ public class ObjectClick : MonoBehaviour
 
                             Color32 c = new Color32(135, 206, 253, 255);
 
-                            Dialogue dialog = new Dialogue(sentences, "Fern", c);
+                            Dialogue dialog = new Dialogue(sentences, "Fern", c, null);
 
                             FindObjectOfType<DialogueManager>().StartDialogue(dialog, "Okay", noaction, false);
                         }

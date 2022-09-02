@@ -11,6 +11,7 @@ public class AudioSources : MonoBehaviour
     public AudioSource hallway_sounds;
     public AudioSource receptionist_voice;
     public AudioSource fern_voice;
+    public AudioSource nurse_voice;
     public AudioSource background_music;
     public AudioSource menu_background_with_crickets;
     public AudioSource crickets;
@@ -18,18 +19,106 @@ public class AudioSources : MonoBehaviour
     public AudioSource release_object;
     public AudioSource janitors_closet_background_music;
     public AudioSource close_door;
-    public AudioSource vent_dripp;
+    public AudioSource vent_drip;
     public AudioSource page_turn;
     public AudioSource book_close;
     public AudioSource background106;
+    public AudioSource intercom;
     public AudioSource mopping_sound;
     public AudioSource error_sound;
+    public AudioSource puff;
+    public AudioSource drawer_open;
+    public AudioSource drawer_close;
     private AudioSource[] allAudioSources;
 
 
     public void Start()
     {
         allAudioSources = FindObjectsOfType<AudioSource>();
+
+
+        foreach(AudioSource sound in allAudioSources){
+            switch(sound.name){
+                case "click_sound":
+                    click_sound = sound;
+                break;
+                case "open_door":
+                    open_door = sound;
+                break;
+                case "footsteps":
+                    footsteps = sound;
+                break;
+                case "hallway_sounds":
+                    hallway_sounds = sound;
+                break;
+                case "receptionist_voice":
+                    receptionist_voice = sound;
+                break;
+                case "fern_voice":
+                    fern_voice = sound;
+                break;
+
+                case "nurse_voice":
+                    nurse_voice = sound;
+                break;
+                case "background_music":
+                    background_music = sound;
+                break;
+                case "menu_background_with_crickets":
+                    menu_background_with_crickets = sound;
+                break;
+                case "crickets":
+                    crickets = sound;
+                break;
+                case "pick_up_object":
+                    pick_up_object = sound;
+                break;
+                case "release_object":
+                    release_object = sound;
+                break;
+
+                case "janitors_closet_background_music":
+                    janitors_closet_background_music = sound;
+                break;
+                case "close_door":
+                    close_door = sound;
+                break;
+                case "vent_drip":
+                    vent_drip = sound;
+                break;
+                case "page_turn":
+                    page_turn = sound;
+                break;
+                case "book_close":
+                    book_close = sound;
+                break;
+                case "background106":
+                    background106 = sound;
+                break;
+
+                case "intercom":
+                    intercom = sound;
+                break;
+                case "mopping_sound":
+                    mopping_sound = sound;
+                break;
+                case "error_sound":
+                    error_sound = sound;
+                break;
+                case "puff":
+                    puff = sound;
+                break;
+                case "drawer_open":
+                    drawer_open = sound;
+                break;
+                case "drawer_close":
+                    drawer_close = sound;
+                break;
+            }
+        }
+
+
+
         string scenename = SceneManager.GetActiveScene().name;
 
         switch(scenename){//background noises
@@ -42,8 +131,8 @@ public class AudioSources : MonoBehaviour
             break;
             case "Janitors_Closet":
                 StopAllAudio();
-               janitors_closet_background_music.Play();
-                vent_dripp.Play();
+                janitors_closet_background_music.Play();
+                vent_drip.Play();
             break;
             case "mainMenu_Settings":
                 StopAllAudio();
@@ -57,29 +146,31 @@ public class AudioSources : MonoBehaviour
                 StopAllAudio();
                 background106.Play();
                 break;
-            case "Tutorial_Skip":
+            case "Hallway_Post106":
                 StopAllAudio();
-                crickets.Play();
+                intercom.Play();
                 break;
+
             default:
 
             break;
         }
     }
 
-    public void playClickSound(){//other noises where is the babble method?
-       // click_sound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
+    public void playClickSound(){
         click_sound.Play();
     }
     public void playPageTurn()
     {
-        page_turn = GameObject.Find("pageTurn").GetComponentInChildren<AudioSource>();
         page_turn.Play();
     }
     public void playBookClose()
     {
-        book_close = GameObject.Find("bookClose").GetComponentInChildren<AudioSource>();
         book_close.Play();
+    }
+    public void playIntercom()
+    {
+       intercom.Play();
     }
     public void playMoppingSound()
     {
@@ -89,11 +180,26 @@ public class AudioSources : MonoBehaviour
     {
         error_sound.Play();
     }
+    public void playNurseTalking()
+    {
+        nurse_voice.Play();
+    }
     public void playOpenDoor()
     {
        open_door.Play();
     }
-
+    public void playPuff()
+    {
+       puff.Play();
+    }
+    public void playDrawerClose()
+    {
+        drawer_close.Play();
+    }
+    public void playDrawerOpen()
+    {
+        drawer_open.Play();
+    }
     public void playFootsteps()
     {
        footsteps.Play();
@@ -103,5 +209,7 @@ public class AudioSources : MonoBehaviour
         foreach (AudioSource audioS in allAudioSources) {
             audioS.Stop();
         }
- }
+    }
+
+
 }
