@@ -55,7 +55,12 @@ public class Dialogue
     //&& lets a programmer assign a text colour
         public Dialogue(string[] sent, string n, Color32 cl, AudioSource v)
         {
-            textcolor = cl;
+        if (v != null)
+        {
+            voice = v;
+        }
+
+        textcolor = cl;
 
             name = n;
 
@@ -69,10 +74,7 @@ public class Dialogue
                 i++;
             }
 
-        if (v != null)
-        {
-            voice = v;
-        }
+
     }
 
         public void makeFern(){

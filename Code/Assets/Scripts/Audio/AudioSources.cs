@@ -146,7 +146,11 @@ public class AudioSources : MonoBehaviour
                 StopAllAudio();
                 background106.Play();
                 break;
-           
+            case "Hallway_Post106":
+                StopAllAudio();
+                intercom.Play();
+                break;
+
             default:
 
             break;
@@ -154,7 +158,6 @@ public class AudioSources : MonoBehaviour
     }
 
     public void playClickSound(){
-        click_sound = GameObject.Find("click_sound").GetComponentInChildren<AudioSource>();
         click_sound.Play();
     }
     public void playPageTurn()
