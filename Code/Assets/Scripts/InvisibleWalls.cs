@@ -85,7 +85,7 @@ public class InvisibleWalls : MonoBehaviour
 
             hud.SetActive(true);
 
-            string[] sentences = new string[] { "I'm definitely not allowed into Dr Krause's office! He doesn't even let anyone else clean it!." };
+            string[] sentences = new string[] { "I'm definitely not allowed into Dr Krause's office! He doesn't even let anyone else clean it!" };
 
             Color32 c = new Color32(135, 206, 253, 255);
 

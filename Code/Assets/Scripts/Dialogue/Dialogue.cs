@@ -50,7 +50,7 @@ public class Dialogue
                 i++;
             }
 
-            if(n.Contains("Fern")){
+            if(n != null && n.Contains("Fern")){
                 this.makeFern();
             }
         }
@@ -78,11 +78,9 @@ public class Dialogue
                 i++;
             }
 
-            if(n.Contains("Fern")){
+            if(n != null && n.Contains("Fern")){
                 this.makeFern();
             }
-        }
-
     }
 
 

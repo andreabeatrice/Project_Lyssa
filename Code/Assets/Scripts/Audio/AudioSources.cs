@@ -116,10 +116,15 @@ public class AudioSources : MonoBehaviour
                 break;
             }
         }
-
-
-
+        
         string scenename = SceneManager.GetActiveScene().name;
+
+
+        if (scenename.Contains("Room1") && !scenename.Contains("106")){
+            background106.Play();
+        }
+
+
 
         switch(scenename){//background noises
             case "MainMenu":

@@ -363,7 +363,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563f66cd54692394ba90e7f58a086e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 1393739590}
   closeDoorSound: {fileID: 1853999959}
   allAudio: {fileID: 0}
   hud: {fileID: 1671563377}
@@ -417,6 +416,7 @@ MonoBehaviour:
     sentences:
     - This is your... office. It's kinda small, and there's a funny smell comming
       from the vent.
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -1426,19 +1426,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allAudio: {fileID: 0}
   dragSound: {fileID: 1393739589}
   puttingDown: {fileID: 1393739588}
   canDrag: 0
   dialog:
   - sentences:
-    - If there's rats around, you should  be putting some more effort into your job.
+    - If there ARE rats around, you should  be putting some more effort into your
+      job.
     - You've completed the tutorial! You should really get to cleaning now.
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
       rgba: 4294967295
   - sentences:
     - You've completed the tutorial! You should really get to cleaning now.
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -1765,6 +1769,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - When you click on objects, you might be offered a choice.
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -3254,6 +3259,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - When you click on objects, you might be offered a choice.
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -3431,6 +3437,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - That comes in handy around here...
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -3628,12 +3635,14 @@ MonoBehaviour:
   dialog:
   - sentences:
     - You poked the rat, but it's so tame it just sits there...
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
       rgba: 4294967295
   - sentences:
     - The rat looks annoyed.
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -3896,6 +3905,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - The glass is covered in a fine layer of dust...
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -6342,6 +6352,7 @@ MonoBehaviour:
   - sentences:
     - No rats. No smokes. No outside food. No phones. No knives. No messes. God,
       this place is dull.
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -7094,12 +7105,14 @@ MonoBehaviour:
   dialog:
   - sentences:
     - It's a vent...
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
       rgba: 4294967295
   - sentences:
     - The air coming from it smells kinda like formaldehyde.
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2

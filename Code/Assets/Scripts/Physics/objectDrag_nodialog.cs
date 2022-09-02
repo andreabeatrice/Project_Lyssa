@@ -48,9 +48,6 @@ public class objectDrag_nodialog : MonoBehaviour
             startPosX = mousePos.x -  this.transform.localPosition.x;
             startPosY = mousePos.y - this.transform.localPosition.y;
             isBeingHeld = true;
-
-
-
         }
 
     }
