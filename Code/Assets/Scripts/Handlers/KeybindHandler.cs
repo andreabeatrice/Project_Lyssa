@@ -19,7 +19,7 @@ public class KeybindHandler : MonoBehaviour
 
     public Animator animatorForIO;
 
-    private bool open = false;
+    //private bool open = false;
     void Update(){
         if(Input.GetKeyDown(KeyCode.I) && inventoryAndObjectives.activeSelf){
              StartCoroutine(PopupClose());

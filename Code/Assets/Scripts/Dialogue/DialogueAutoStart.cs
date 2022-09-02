@@ -26,6 +26,8 @@ public class DialogueAutoStart : MonoBehaviour
     //TriggerDialogue(): Waits for 1.5 seconds to be sure that the scene transition is done
         IEnumerator TriggerDialogue()
         {
+            Debug.Log(dialog.voice);
+            
             yield return new WaitForSeconds(0.5f);
             
             if (HeadsUpDisplay != null)
