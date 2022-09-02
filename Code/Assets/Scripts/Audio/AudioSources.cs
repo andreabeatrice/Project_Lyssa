@@ -11,6 +11,7 @@ public class AudioSources : MonoBehaviour
     public AudioSource hallway_sounds;
     public AudioSource receptionist_voice;
     public AudioSource fern_voice;
+    public AudioSource nurse_voice;
     public AudioSource background_music;
     public AudioSource menu_background_with_crickets;
     public AudioSource crickets;
@@ -22,8 +23,12 @@ public class AudioSources : MonoBehaviour
     public AudioSource page_turn;
     public AudioSource book_close;
     public AudioSource background106;
+    public AudioSource intercom;
     public AudioSource mopping_sound;
     public AudioSource error_sound;
+    public AudioSource puff;
+    public AudioSource drawer_open;
+    public AudioSource drawer_close;
     private AudioSource[] allAudioSources;
 
 
@@ -57,29 +62,28 @@ public class AudioSources : MonoBehaviour
                 StopAllAudio();
                 background106.Play();
                 break;
-            case "Tutorial_Skip":
-                StopAllAudio();
-                crickets.Play();
-                break;
+           
             default:
 
             break;
         }
     }
 
-    public void playClickSound(){//other noises where is the babble method?
-       // click_sound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
+    public void playClickSound(){
+        click_sound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
         click_sound.Play();
     }
     public void playPageTurn()
     {
-        page_turn = GameObject.Find("pageTurn").GetComponentInChildren<AudioSource>();
         page_turn.Play();
     }
     public void playBookClose()
     {
-        book_close = GameObject.Find("bookClose").GetComponentInChildren<AudioSource>();
         book_close.Play();
+    }
+    public void playIntercom()
+    {
+       intercom.Play();
     }
     public void playMoppingSound()
     {
@@ -89,11 +93,26 @@ public class AudioSources : MonoBehaviour
     {
         error_sound.Play();
     }
+    public void playNurseTalking()
+    {
+        nurse_voice.Play();
+    }
     public void playOpenDoor()
     {
        open_door.Play();
     }
-
+    public void playPuff()
+    {
+       puff.Play();
+    }
+    public void playDrawerClose()
+    {
+        drawer_close.Play();
+    }
+    public void playDrawerOpen()
+    {
+        drawer_open.Play();
+    }
     public void playFootsteps()
     {
        footsteps.Play();

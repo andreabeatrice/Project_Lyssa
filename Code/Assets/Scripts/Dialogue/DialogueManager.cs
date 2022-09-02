@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour {
     public TMP_Text nameText;
 
     public TMP_Text dialogText;
-
+   // public AudioSources allAudio;
     public GameObject skipButton;
 
     public AudioSource clickSound;
@@ -65,6 +65,15 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue di, string[] c, GameObject[] choiceButtons, bool speech)
     {
+<<<<<<< HEAD
+        if(di.voice!=null)
+=======
+        if(di.voice !=null)
+>>>>>>> d3f112d3f9d1916710f64e36c60763ba35a945fe
+        {
+            talking = di.voice;
+        }
+        
         inConversation = true;
 
         this.choices = c;
@@ -110,6 +119,14 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue di, string choice, GameObject c1, bool speech)
     {
+<<<<<<< HEAD
+        if (di.voice!= null)
+=======
+        if (di.voice != null)
+>>>>>>> d3f112d3f9d1916710f64e36c60763ba35a945fe
+        {
+            talking = di.voice;
+        }
         inConversation = true;
 
         this.choices = new string[] { choice };
@@ -197,19 +214,16 @@ public class DialogueManager : MonoBehaviour {
             {
                 if (i == 1)
                 {
-                   // clickSound.Play(); //makes click sound going into faded area and going into janitors closet
                     choice1.SetActive(true);
                     choice1.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
                 }
                 if (i == 2)
                 {
-                    //clickSound.Play();
                     choice2.SetActive(true);
                     choice2.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
                 }
                 if (i == 3)
                 {
-                    //clickSound.Play();
                     choice3.SetActive(true);
                     choice3.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
                 }
