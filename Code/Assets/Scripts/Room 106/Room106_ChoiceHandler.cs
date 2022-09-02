@@ -100,11 +100,14 @@ public class Room106_ChoiceHandler : MonoBehaviour
     public void blamed_receptionist(){
         Globals.insanity += 2;
 
+        allAudio.StopAllAudio();
+
         FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
         string[] s = {"Yes! She specifically told me that this room needed to be cleaned out!"};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, allAudio.fern_voice), "", null, false);
+
+        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, allAudio.fern_voice), "", null, true);
 
         StartCoroutine(nurse_response_receptionist());
     }
@@ -116,8 +119,8 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
         string[] s = {"There are rats around, I was trying to catch one."};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, allAudio.fern_voice), "", null, false);
-
+        //FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, FindObjectOfType<AudioSources>().fern_voice), "", null, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, allAudio.fern_voice), "", null, true);
         StartCoroutine(nurse_response_rats());
     }
 
@@ -125,6 +128,9 @@ public class Room106_ChoiceHandler : MonoBehaviour
     {
 
         yield return new WaitForSeconds(2.5f);
+
+       Debug.Log("check1");
+
 
         FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
@@ -165,7 +171,7 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
         string[] s = {"Ugh, it will be a mission to get to the basement without it.", "Are you still here? Get back to work!"};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", allAudio.nurse_voice), "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice), "Yes, nurse", leaveroombutton, true);
 
         HelperMethods.ObjectivesEnqueue("Investigate the basement");
     }
@@ -179,7 +185,7 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
         HelperMethods.InventoryEnqueue("Note from Otto");
         
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", allAudio.nurse_voice), "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice), "Yes, nurse", leaveroombutton, true);
 
         HelperMethods.ObjectivesEnqueue("Find the note writer");
     }
@@ -189,12 +195,14 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
         string[] s = {"Ugh, it's probably around here somewhere. Go get back to work!"};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", allAudio.nurse_voice), "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice), "Yes, nurse", leaveroombutton, true);
 
         HelperMethods.ObjectivesEnqueue("Find the note writer");
     }
 
     public void determineChoices(string[] s){
+        
+        Debug.Log(FindObjectOfType<AudioSources>().nurse_voice);
         string[] choicePhrases =  new string[2];
 
         foreach(string i in Globals.inventory){
@@ -202,7 +210,7 @@ public class Room106_ChoiceHandler : MonoBehaviour
                 choicePhrases[0] = "Yes, I have it here (+0)";
                 choicePhrases[1] = "Nope, haven't seen it (+1)";
 
-                FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", allAudio.nurse_voice), choicePhrases, keycardResponseChoices_lie, true);
+                FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice), choicePhrases, keycardResponseChoices_lie, true);
 
                 break;
 
@@ -211,11 +219,12 @@ public class Room106_ChoiceHandler : MonoBehaviour
                 choicePhrases[0] = "It's porbably around here (+0)";
                 choicePhrases[1] = "Nope, haven't seen it (+0)";
 
-                FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", allAudio.nurse_voice), choicePhrases, keycardResponseChoices, true);
+                FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice), choicePhrases, keycardResponseChoices, true);
 
                 break;
             }
         }
+        Debug.Log("check3");
 
     }
 

@@ -162,24 +162,24 @@ Transform:
   - {fileID: 176746941063478362}
   - {fileID: 176746942485358976}
   - {fileID: 176746942924713536}
-  - {fileID: 7346001235600370301}
   - {fileID: 977213574902583339}
+  - {fileID: 3675066959782508244}
+  - {fileID: 7346001235600370301}
+  - {fileID: 5956991626701082461}
+  - {fileID: 4408937281283285186}
   - {fileID: 675942473059087491}
   - {fileID: 5885477721162420924}
   - {fileID: 5854599162981191138}
   - {fileID: 1729995936089925810}
-  - {fileID: 7980635608974794705}
-  - {fileID: 4408937281283285186}
-  - {fileID: 5956991626701082461}
   - {fileID: 3877572514362823034}
   - {fileID: 8839223044562393139}
   - {fileID: 1766788608517776601}
   - {fileID: 7649393338687028709}
+  - {fileID: 7980635608974794705}
   - {fileID: 6100662922196588243}
-  - {fileID: 3243760243278302304}
   - {fileID: 2749771227353598261}
-  - {fileID: 3675066959782508244}
   - {fileID: 3357236128373707279}
+  - {fileID: 3243760243278302304}
   - {fileID: 6107388246132630251}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -210,10 +210,11 @@ MonoBehaviour:
   release_object: {fileID: 5671338687068651481}
   janitors_closet_background_music: {fileID: 7216591662516046404}
   close_door: {fileID: 7660517941654832150}
-  vent_dripp: {fileID: 3436577539561314929}
+  vent_drip: {fileID: 0}
   page_turn: {fileID: 7521320971508099391}
   book_close: {fileID: 5351476601720383963}
   background106: {fileID: 4831553427263184785}
+  intercom: {fileID: 0}
   mopping_sound: {fileID: 7514803825967726811}
   error_sound: {fileID: 1410994927247879076}
   puff: {fileID: 6546284172831626183}
@@ -230,7 +231,7 @@ GameObject:
   - component: {fileID: 176746942485358976}
   - component: {fileID: 176746942485359039}
   m_Layer: 0
-  m_Name: HallwaySounds
+  m_Name: hallway_sounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -358,7 +359,7 @@ GameObject:
   - component: {fileID: 176746942602008976}
   - component: {fileID: 176746942602008975}
   m_Layer: 0
-  m_Name: clickSound
+  m_Name: click_sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -486,7 +487,7 @@ GameObject:
   - component: {fileID: 176746942691156602}
   - component: {fileID: 176746942691156601}
   m_Layer: 0
-  m_Name: openDoor
+  m_Name: open_door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -614,7 +615,7 @@ GameObject:
   - component: {fileID: 176746942924713536}
   - component: {fileID: 176746942924713599}
   m_Layer: 0
-  m_Name: receptionistTalking
+  m_Name: receptionist_voice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -742,7 +743,7 @@ GameObject:
   - component: {fileID: 6100662922196588243}
   - component: {fileID: 7514803825967726811}
   m_Layer: 0
-  m_Name: mopping
+  m_Name: mopping_sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -761,7 +762,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &7514803825967726811
 AudioSource:
@@ -774,7 +775,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 09171812bd1b52546bde47eb9fd1b38f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -870,7 +871,7 @@ GameObject:
   - component: {fileID: 8839223044562393139}
   - component: {fileID: 7521320971508099391}
   m_Layer: 0
-  m_Name: pageTurn
+  m_Name: page_turn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -998,7 +999,7 @@ GameObject:
   - component: {fileID: 5956991626701082461}
   - component: {fileID: 8722813571960551357}
   m_Layer: 0
-  m_Name: menuBacktrackWithCrickets
+  m_Name: menu_background_with_crickets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1017,7 +1018,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 13
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &8722813571960551357
 AudioSource:
@@ -1126,7 +1127,7 @@ GameObject:
   - component: {fileID: 3877572514362823034}
   - component: {fileID: 3436577539561314929}
   m_Layer: 0
-  m_Name: ventDrip
+  m_Name: vent_drip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1254,7 +1255,7 @@ GameObject:
   - component: {fileID: 2749771227353598261}
   - component: {fileID: 1410994927247879076}
   m_Layer: 0
-  m_Name: error
+  m_Name: error_sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1382,7 +1383,7 @@ GameObject:
   - component: {fileID: 5885477721162420924}
   - component: {fileID: 5671338687068651481}
   m_Layer: 0
-  m_Name: putDown
+  m_Name: release_object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1401,7 +1402,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &5671338687068651481
 AudioSource:
@@ -1529,7 +1530,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &6546284172831626183
 AudioSource:
@@ -1638,7 +1639,7 @@ GameObject:
   - component: {fileID: 7346001235600370301}
   - component: {fileID: 525905005691732263}
   m_Layer: 0
-  m_Name: backgroundSong
+  m_Name: background_music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1657,7 +1658,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &525905005691732263
 AudioSource:
@@ -1766,7 +1767,7 @@ GameObject:
   - component: {fileID: 3675066959782508244}
   - component: {fileID: 5728989063601355317}
   m_Layer: 0
-  m_Name: nurseTalking
+  m_Name: nurse_voice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1785,7 +1786,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 21
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &5728989063601355317
 AudioSource:
@@ -1894,7 +1895,7 @@ GameObject:
   - component: {fileID: 1729995936089925810}
   - component: {fileID: 7660517941654832150}
   m_Layer: 0
-  m_Name: closeDoor
+  m_Name: close_door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1913,7 +1914,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &7660517941654832150
 AudioSource:
@@ -2022,7 +2023,7 @@ GameObject:
   - component: {fileID: 977213574902583339}
   - component: {fileID: 8661605048657298932}
   m_Layer: 0
-  m_Name: fernVoice
+  m_Name: fern_voice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2041,7 +2042,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &8661605048657298932
 AudioSource:
@@ -2150,7 +2151,7 @@ GameObject:
   - component: {fileID: 3243760243278302304}
   - component: {fileID: 4831561464328245731}
   m_Layer: 0
-  m_Name: drawerOpen
+  m_Name: drawer_open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2169,7 +2170,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 19
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &4831561464328245731
 AudioSource:
@@ -2182,7 +2183,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7091436b43a11f84887fbe326a7203eb, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2278,7 +2279,7 @@ GameObject:
   - component: {fileID: 7649393338687028709}
   - component: {fileID: 4831553427263184785}
   m_Layer: 0
-  m_Name: 106Background
+  m_Name: background106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2406,7 +2407,7 @@ GameObject:
   - component: {fileID: 6107388246132630251}
   - component: {fileID: 2136626542117941155}
   m_Layer: 0
-  m_Name: drawerClose
+  m_Name: drawer_close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2438,7 +2439,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 347b9b654d273a6409c71a42b5f2ebcc, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2534,7 +2535,7 @@ GameObject:
   - component: {fileID: 5854599162981191138}
   - component: {fileID: 7216591662516046404}
   m_Layer: 0
-  m_Name: janitor's background
+  m_Name: janitors_closet_background_music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2553,7 +2554,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &7216591662516046404
 AudioSource:
@@ -2681,7 +2682,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &104980793845213098
 AudioSource:
@@ -2790,7 +2791,7 @@ GameObject:
   - component: {fileID: 675942473059087491}
   - component: {fileID: 2657309576819361042}
   m_Layer: 0
-  m_Name: pickUp
+  m_Name: pick_up_object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2809,7 +2810,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &2657309576819361042
 AudioSource:
@@ -2918,7 +2919,7 @@ GameObject:
   - component: {fileID: 1766788608517776601}
   - component: {fileID: 5351476601720383963}
   m_Layer: 0
-  m_Name: bookClose
+  m_Name: book_close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3065,7 +3066,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176746942238241824}
-  m_RootOrder: 11
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &7924453795905760821
 AudioSource:
