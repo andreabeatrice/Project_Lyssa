@@ -9,6 +9,8 @@ public class SettingsMenu : MonoBehaviour
 
     public AudioMixer audioMixer;
 
+    public GameObject pausepopup;
+
     public void setVolume(float volume){
 
         audioMixer.SetFloat("Volume", volume);
@@ -21,6 +23,7 @@ public class SettingsMenu : MonoBehaviour
     public void setTypingSpeed(float ts){
         Debug.Log(ts);
        Globals.typingSpeed = ts;
+       //TODO: FOR SHOWING WHOLE SENTENCE: TYPINGSPEED = 0?
         
     }
 
@@ -32,6 +35,7 @@ public class SettingsMenu : MonoBehaviour
     public void apply(){
         SaveSystem.SavePlayer(true);
         Debug.Log(Globals.typingSpeed);
+        pausepopup.SetActive(false);
     }
 
     public void invertMouse(bool ticked){

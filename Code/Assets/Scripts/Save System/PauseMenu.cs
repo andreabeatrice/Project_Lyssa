@@ -17,8 +17,8 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         path = Application.persistentDataPath + "/player.save";
-        PauseMenuUI.SetActive(false);
-        PauseButton.SetActive(true);
+        //PauseMenuUI.SetActive(false);
+        //PauseButton.SetActive(true);
     }
 
     void Update()
@@ -48,10 +48,11 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         PauseMenuUI.SetActive(true);
-        PauseButton.SetActive(false);
+        
         settingsPanel.SetActive(false);
         Time.timeScale = 0f;
         Globals.paused = true;
+        PauseButton.SetActive(false);
     }
 
     public void SavePlayer(){

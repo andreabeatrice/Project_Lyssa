@@ -1181,7 +1181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563f66cd54692394ba90e7f58a086e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickSound: {fileID: 388535185}
   closeDoorSound: {fileID: 984796068}
   allAudio: {fileID: 0}
   hud: {fileID: 1698870049}
@@ -1268,6 +1267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keycardResponseChoices_lie: []
   keycardResponseChoices: []
+  allAudio: {fileID: 0}
   leaveroombutton: {fileID: 0}
 --- !u!114 &375198778
 MonoBehaviour:
@@ -1964,7 +1964,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: cb62b27d3f8eb7a44b29c3e59a45b47c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2482,7 +2482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 1705003579}
   puttingDown: {fileID: 1705003578}
-  canDrag: 0
+  canDrag: 1
   HeadsUpDisplay: {fileID: 1698870049}
 --- !u!225 &508875306
 CanvasGroup:
@@ -3253,6 +3253,8 @@ GameObject:
   m_Component:
   - component: {fileID: 805494661}
   - component: {fileID: 805494660}
+  - component: {fileID: 805494663}
+  - component: {fileID: 805494662}
   m_Layer: 0
   m_Name: picture
   m_TagString: Untagged
@@ -3327,6 +3329,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &805494662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805494659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+  - sentences:
+    - That's so creepy!
+    voice: {fileID: 1705003581}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  HeadsUpDisplay: {fileID: 0}
+  choices: []
+  choiceButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  speech: 0
+  fern: 1
+  identifier: infinite
+  canClick: 1
+  enableProximityReactions: 0
+  PlayerCollider: {fileID: 0}
+  ObjectAreaCollider: {fileID: 0}
+--- !u!60 &805494663
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805494659}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8, y: 8}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -2.5625, y: 3.0625}
+      - {x: -2.6875, y: 2.9375}
+      - {x: -2.6875, y: -3.0625}
+      - {x: -2.5625, y: -3.1875}
+      - {x: 1.6875, y: -3.1875}
+      - {x: 1.8125, y: -3.0625}
+      - {x: 1.8125, y: 2.9375}
+      - {x: 1.6875, y: 3.0625}
 --- !u!1 &817519649
 GameObject:
   m_ObjectHideFlags: 0
@@ -4989,6 +5057,7 @@ MonoBehaviour:
   dialog:
   - sentences:
     - Is that even legal...?
+    voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
@@ -6255,6 +6324,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9dd9cb77f9f28d459ad9ab4e600c72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerCollider: {fileID: 0}
+  ObjectAreaCollider: {fileID: 0}
 --- !u!114 &1497677271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7203,6 +7274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1705003581 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8661605048657298932, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1724761810
 PrefabInstance:
   m_ObjectHideFlags: 0
