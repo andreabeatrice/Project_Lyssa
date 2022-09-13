@@ -20,4 +20,9 @@ public class CursorManager : MonoBehaviour
         //FindObjectOfType<DialogueManager>().setConversationStatus(false);
     }
 
+    public void OnMouseUp()
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+    }
+
 }
