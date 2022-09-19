@@ -1275,8 +1275,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1727503203}
-        m_TargetAssemblyTypeName: ChoiceHandler, Assembly-CSharp
+      - m_Target: {fileID: 1727503208}
+        m_TargetAssemblyTypeName: Tutorial_SkipChoiceHandler, Assembly-CSharp
         m_MethodName: TutorialSkipBroom
         m_Mode: 1
         m_Arguments:
@@ -1290,6 +1290,18 @@ MonoBehaviour:
       - m_Target: {fileID: 571845395}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1727503204}
+        m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+        m_MethodName: OnMouseExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1703,8 +1715,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1727503203}
-        m_TargetAssemblyTypeName: ChoiceHandler, Assembly-CSharp
+      - m_Target: {fileID: 571845395}
+        m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
+        m_MethodName: playClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1727503208}
+        m_TargetAssemblyTypeName: Tutorial_SkipChoiceHandler, Assembly-CSharp
         m_MethodName: TutorialSkipMop
         m_Mode: 1
         m_Arguments:
@@ -1715,9 +1739,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 571845395}
-        m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
-        m_MethodName: playClickSound
+      - m_Target: {fileID: 1727503204}
+        m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+        m_MethodName: OnMouseExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1820,11 +1844,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1727503202}
   - component: {fileID: 1727503201}
-  - component: {fileID: 1727503203}
   - component: {fileID: 1727503204}
   - component: {fileID: 1727503205}
-  - component: {fileID: 1727503206}
   - component: {fileID: 1727503207}
+  - component: {fileID: 1727503208}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -1868,29 +1891,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1727503203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727503200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563f66cd54692394ba90e7f58a086e0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeDoorSound: {fileID: 0}
-  allAudio: {fileID: 0}
-  hud: {fileID: 0}
-  dialogBox: {fileID: 0}
-  dialogHeading: {fileID: 0}
-  dialogBody: {fileID: 0}
-  popUpChoice1: {fileID: 1587005221}
-  popUpChoice2: {fileID: 1011065201}
-  firstInteraction: 0
-  insanityMeter: {fileID: 0}
-  cleanWaterDispenser: {fileID: 0}
 --- !u!114 &1727503204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1936,19 +1936,6 @@ MonoBehaviour:
   - {fileID: 0}
   wait: 0
   speech: 0
---- !u!114 &1727503206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1727503200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a92a27e64b077a94fa3f9c31d41c547c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
 --- !u!114 &1727503207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1962,6 +1949,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HeadsUpDisplay: {fileID: 0}
+--- !u!114 &1727503208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1727503200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8497b4eb070fd5a4da960b8d75e015bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2048885229
 GameObject:
   m_ObjectHideFlags: 0

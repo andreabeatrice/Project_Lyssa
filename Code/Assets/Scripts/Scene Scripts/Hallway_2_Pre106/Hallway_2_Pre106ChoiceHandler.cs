@@ -3,21 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class Hallway_2_Pre106ChoiceHandler : MonoBehaviour
 {
-    
-    public GameObject HeadsUpDisplay;
+    public AudioSources allAudio;
 
-    public GameObject dialogBox;
-
-    public TMP_Text dialogHeading;
-
-    public TMP_Text dialogBody;
-
-    public Button popUpChoice1, popUpChoice2;
-    public bool firstInteraction = true;
+    public Sprite cleanWaterDispenser;
 
     void Start(){
         Globals.paused = false;
@@ -39,5 +30,17 @@ public class Hallway_2_Pre106ChoiceHandler : MonoBehaviour
             FindObjectOfType<DialogueManager>().setConversationStatus(false);
 
         }
+
+    public void mopitup(){
+        Globals.mopped = true;
+
+        allAudio.playMoppingSound();//shouldn't play when coming out of 106
+        GameObject.Find("WaterDispenser").GetComponent<Animator>().enabled = false;
+        GameObject.Find("WaterDispenser").GetComponent<SpriteRenderer>().sprite = cleanWaterDispenser;
+    }
+
+    public void cannotmop(){
+        Globals.mopped = false;
+    }
 
 }

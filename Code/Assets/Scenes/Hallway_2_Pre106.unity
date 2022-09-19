@@ -811,8 +811,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChoiceHandler, Assembly-CSharp
+      - m_Target: {fileID: 479703410}
+        m_TargetAssemblyTypeName: Hallway_2_Pre106ChoiceHandler, Assembly-CSharp
         m_MethodName: cannotmop
         m_Mode: 1
         m_Arguments:
@@ -14954,8 +14954,6 @@ GameObject:
   m_Component:
   - component: {fileID: 315246430}
   - component: {fileID: 315246433}
-  - component: {fileID: 315246432}
-  - component: {fileID: 315246431}
   m_Layer: 0
   m_Name: KeepOutTape
   m_TagString: rnd
@@ -14978,51 +14976,6 @@ Transform:
   m_Father: {fileID: 769087672}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &315246431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315246429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc5e1a78384f854a86161c34d5f3b32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 0}
-  PlayerCollider: {fileID: 1629585508}
-  ObjectAreaCollider: {fileID: 315246432}
-  HeadsUpDisplay: {fileID: 1133166374}
-  ChoiceButton_none: {fileID: 0}
-  ChoiceButton_mop: {fileID: 0}
-  ChoiceButton_broom: {fileID: 0}
---- !u!61 &315246432
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 315246429}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -4}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.4}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6.4, y: 6.4}
-  m_EdgeRadius: 0
 --- !u!212 &315246433
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15350,8 +15303,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChoiceHandler, Assembly-CSharp
+      - m_Target: {fileID: 479703410}
+        m_TargetAssemblyTypeName: Hallway_2_Pre106ChoiceHandler, Assembly-CSharp
         m_MethodName: mopitup
         m_Mode: 1
         m_Arguments:
@@ -18409,6 +18362,8 @@ GameObject:
   - component: {fileID: 479703407}
   - component: {fileID: 479703406}
   - component: {fileID: 479703405}
+  - component: {fileID: 479703409}
+  - component: {fileID: 479703410}
   m_Layer: 0
   m_Name: GlobalManagers
   m_TagString: Untagged
@@ -18564,6 +18519,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e99153859f7b143b85cf85e5c1fb98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &479703409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479703398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52a22ac4187d2a44a670bcaac63dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testing: 0
+--- !u!114 &479703410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479703398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f039f439bd06dac4f8964fd7f436912f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allAudio: {fileID: 616691240}
+  cleanWaterDispenser: {fileID: 21300000, guid: 8279ae384df41ec499651418608cc350, type: 3}
 --- !u!1 &495902161
 GameObject:
   m_ObjectHideFlags: 0
@@ -25337,7 +25319,7 @@ GameObject:
   - component: {fileID: 822386351}
   - component: {fileID: 822386350}
   - component: {fileID: 822386349}
-  - component: {fileID: 822386348}
+  - component: {fileID: 822386352}
   - component: {fileID: 822386347}
   - component: {fileID: 822386346}
   m_Layer: 0
@@ -25376,7 +25358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allAudio: {fileID: 616691240}
   PlayerCollider: {fileID: 1629585508}
-  ObjectAreaCollider: {fileID: 822386348}
+  ObjectAreaCollider: {fileID: 822386352}
   HeadsUpDisplay: {fileID: 1226583195}
   ChoiceButton_none: {fileID: 2024920646}
   ChoiceButton_mop: {fileID: 325173489}
@@ -25395,23 +25377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allAudio: {fileID: 616691240}
   PlayerCollider: {fileID: 1629585508}
-  ObjectAreaCollider: {fileID: 822386348}
---- !u!58 &822386348
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 822386344}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: -3}
-  serializedVersion: 2
-  m_Radius: 4
+  ObjectAreaCollider: {fileID: 822386352}
 --- !u!60 &822386349
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -25557,6 +25523,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &822386352
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822386344}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0773983, y: -2.40253}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 12.44, y: 10.04}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.8107185, y: 2.947803}
+  m_EdgeRadius: 0
 --- !u!1 &860392793
 GameObject:
   m_ObjectHideFlags: 0
