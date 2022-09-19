@@ -15,7 +15,6 @@ public class Room106Entry : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        after_dialog.makeFern();      
     }
 
     // Update is called once per frame
