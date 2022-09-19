@@ -30,15 +30,13 @@ public class Enter106 : MonoBehaviour
     void Start()
     {
 
-       // clickSound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
-        
         //Option 1: switch case
         foreach(Dialogue di in before_dialog){
             di.makeFern();   
         }
 
         if(identifier == null){
-            identifier = "infintie";
+            identifier = "infinite";
         }
 
         if (HeadsUpDisplay != null)

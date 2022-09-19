@@ -199,7 +199,7 @@ public class ChoiceHandler : MonoBehaviour
             HelperMethods.ObjectivesDequeue("Go to the storage closet for supplies");
             HelperMethods.ObjectivesEnqueue("Go clean the patients' rooms");
             closeDoorSound.Play();
-            SceneManager.LoadScene("Hallway");
+            SceneManager.LoadScene("Hallway_2_Pre106");
         }
 
     //ratChoice(): An easter egg - lets the player up their insanity by 1 by poking the rat twice

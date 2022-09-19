@@ -92,7 +92,7 @@ public class MainMenuScript : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway", "crossfade_start");
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_1_PreTutorial", "crossfade_start");
     }
 
     public void OpenSettings(){

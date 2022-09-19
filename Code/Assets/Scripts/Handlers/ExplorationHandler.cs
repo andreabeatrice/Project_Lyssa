@@ -18,8 +18,6 @@ public class ExplorationHandler : MonoBehaviour
     {
         allAudio = FindObjectOfType<AudioSources>();
         silent_agreement = GameObject.Find("basement_agreement");
-
-        
     }
 
     // Update is called once per frame
