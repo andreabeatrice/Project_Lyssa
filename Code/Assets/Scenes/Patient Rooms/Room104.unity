@@ -272,8 +272,9 @@ GameObject:
   - component: {fileID: 185328112}
   - component: {fileID: 185328111}
   - component: {fileID: 185328110}
+  - component: {fileID: 185328114}
   m_Layer: 0
-  m_Name: teddy
+  m_Name: elephant_teddy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,6 +451,19 @@ PolygonCollider2D:
       - {x: 3.375, y: -2.8125}
       - {x: 3.4375, y: -2.125}
       - {x: 1.9375, y: -0.5}
+--- !u!114 &185328114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185328107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92a27e64b077a94fa3f9c31d41c547c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
 --- !u!1 &199138897
 GameObject:
   m_ObjectHideFlags: 0
