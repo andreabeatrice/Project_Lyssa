@@ -1565,7 +1565,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375198771}
-  - component: {fileID: 375198772}
   - component: {fileID: 375198773}
   - component: {fileID: 375198774}
   - component: {fileID: 375198775}
@@ -1596,31 +1595,8 @@ Transform:
   - {fileID: 1705003577}
   - {fileID: 322313336}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &375198772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375198770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563f66cd54692394ba90e7f58a086e0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeDoorSound: {fileID: 984796068}
-  allAudio: {fileID: 0}
-  hud: {fileID: 1698870049}
-  dialogBox: {fileID: 0}
-  dialogHeading: {fileID: 0}
-  dialogBody: {fileID: 0}
-  popUpChoice1: {fileID: 0}
-  popUpChoice2: {fileID: 0}
-  firstInteraction: 1
-  insanityMeter: {fileID: 1586006827}
-  cleanWaterDispenser: {fileID: 0}
 --- !u!114 &375198773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2340,11 +2316,10 @@ GameObject:
   m_Component:
   - component: {fileID: 508875299}
   - component: {fileID: 508875298}
+  - component: {fileID: 508875303}
   - component: {fileID: 508875300}
   - component: {fileID: 508875302}
-  - component: {fileID: 508875303}
   - component: {fileID: 508875305}
-  - component: {fileID: 508875306}
   - component: {fileID: 508875307}
   m_Layer: 0
   m_Name: Pillow
@@ -2413,8 +2388,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508875297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.26, y: -1.31, z: -2}
-  m_LocalScale: {x: 0.89393, y: 0.89393, z: 0.89393}
+  m_LocalPosition: {x: 3.6, y: -1.31, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2511,18 +2486,6 @@ MonoBehaviour:
   puttingDown: {fileID: 1705003578}
   canDrag: 1
   HeadsUpDisplay: {fileID: 1698870049}
---- !u!225 &508875306
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 508875297}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!114 &508875307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3661,7 +3624,7 @@ Camera:
   m_GameObject: {fileID: 787072640}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -3677,10 +3640,10 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 47
   orthographic: 1
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -3708,7 +3671,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &817519649
 GameObject:
@@ -4051,11 +4014,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!82 &984796068 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7660517941654832150, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 1705003576}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1022587593
 GameObject:
   m_ObjectHideFlags: 0
@@ -4868,7 +4826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191464811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7, y: 3.31, z: 0}
+  m_LocalPosition: {x: -6.7, y: 2.99, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5408,7 +5366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382958424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.02, y: -2.19, z: 0}
+  m_LocalPosition: {x: 5.02, y: -2.34, z: 0}
   m_LocalScale: {x: 0.69064, y: 0.69064, z: 0.69064}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7793,8 +7751,8 @@ Canvas:
   m_GameObject: {fileID: 2065235189}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 787072642}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -7803,7 +7761,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &2065235193
 RectTransform:
