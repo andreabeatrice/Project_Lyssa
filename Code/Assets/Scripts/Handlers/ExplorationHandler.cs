@@ -48,6 +48,6 @@ public class ExplorationHandler : MonoBehaviour
 
     public void BackToHall(){
         allAudio.playOpenDoor();
-        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway", "crossfade_start");
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_2_Pre106", "crossfade_start");
     }
 }
