@@ -14,11 +14,11 @@ public class MoveableObject
         this.item = i;
         this.name= item.name;
         this.position =item.transform.position;
-        this.state = false;
+        //this.state = false;
 
     }
 
-    public string ToString(){
+    public override  string ToString(){
         string s = "name: " + name + " | position: " + position + " | state: " + state + "\n";
         return s;
     }

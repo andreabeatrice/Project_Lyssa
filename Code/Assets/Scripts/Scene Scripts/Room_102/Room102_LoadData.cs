@@ -22,16 +22,61 @@ public class Room102_LoadData : MonoBehaviour
                 i++;
             }
 
+             i = 0;
+            foreach (GameObject go in drawers)
+            {
+                Room_102_SaveData.drawers[i] = new MoveableObject(go);
+                Debug.Log(Room_102_SaveData.drawers[i].ToString());
+                i++;
+            }
+
+             i = 0;
+            foreach (GameObject go in dusts)
+            {
+                Room_102_SaveData.dust[i] = new MoveableObject(go);
+                Debug.Log(Room_102_SaveData.dust[i].ToString());
+                i++;
+            }
+
             Room_102_SaveData.visited = true;
             
         }
         else {
-
             foreach (GameObject go in moveables)
             {
                 for (int i = 0; i < moveables.Length; i++){
                     if (go.name == Room_102_SaveData.moveables[i].name){
                         go.transform.position = Room_102_SaveData.moveables[i].position;
+                    }
+                }
+            }
+
+            foreach (GameObject go in dusts)
+            {
+                for (int i = 0; i < dusts.Length; i++){
+                    if (go.name == Room_102_SaveData.dust[i].name){
+                        //go.transform.position = Room_102_SaveData.dust[i].position;
+
+                        if (Room_102_SaveData.dust[i].state){ //cleaned == true
+                            //
+                            go.GetComponent<Animator>().SetBool("cleaned", true);
+                            go.SetActive(false);
+                        }
+                    }
+                }
+            }
+
+            foreach (GameObject go in drawers)
+            {
+                for (int i = 0; i < drawers.Length; i++){
+                    if (go.name == Room_102_SaveData.drawers[i].name){
+                        //go.transform.position = Room_102_SaveData.dust[i].position;
+
+                        if (Room_102_SaveData.drawers[i].state){ //opened == true
+                            //go.SetActive(false);
+                            go.GetComponent<Animator>().SetFloat("mouseDirection", -5);
+                        }
+
                     }
                 }
             }
@@ -47,6 +92,28 @@ public class Room102_LoadData : MonoBehaviour
                     Room_102_SaveData.moveables[i].position = go.transform.position;
                 }
              }
+        }
+
+        foreach (GameObject go in dusts){
+            for (int i = 0; i < dusts.Length; i++){
+                if (go.name == Room_102_SaveData.dust[i].name){
+                    Room_102_SaveData.dust[i].state = go.GetComponent<Animator>().GetBool("cleaned");
+                }
+            }
+        }
+
+        foreach (GameObject go in drawers){
+            for (int i = 0; i < drawers.Length; i++){
+                if (go.name == Room_102_SaveData.drawers[i].name){
+                    if (go.GetComponent<Animator>().GetFloat("mouseDirection") < 0){
+                        Room_102_SaveData.drawers[i].state = true;
+                    }
+                    else {
+                        Room_102_SaveData.drawers[i].state = false;
+                    }
+                    
+                }
+            }
         }
     }
 }
