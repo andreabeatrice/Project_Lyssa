@@ -29,6 +29,7 @@ public class AudioSources : MonoBehaviour
     public AudioSource puff;
     public AudioSource drawer_open;
     public AudioSource drawer_close;
+    public AudioSource mirror_squeak;
     private AudioSource[] allAudioSources;
 
 
@@ -113,6 +114,9 @@ public class AudioSources : MonoBehaviour
                 break;
                 case "drawer_close":
                     drawer_close = sound;
+                break;
+                case "mirror_squeak":
+                    mirror_squeak = sound;
                 break;
             }
         }
@@ -208,6 +212,11 @@ public class AudioSources : MonoBehaviour
     public void playFootsteps()
     {
        footsteps.Play();
+    }
+
+    public void playSqueak()
+    {
+       mirror_squeak.Play();
     }
 
     public void StopAllAudio() {
