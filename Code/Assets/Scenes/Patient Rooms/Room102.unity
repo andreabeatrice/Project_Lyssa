@@ -1130,9 +1130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragSound: {fileID: 1705003579}
-  puttingDown: {fileID: 1705003578}
+  dropSound: {fileID: 1705003578}
   canDrag: 1
-  HeadsUpDisplay: {fileID: 1698870049}
 --- !u!114 &294077511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2482,10 +2481,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 1705003579}
-  puttingDown: {fileID: 1705003578}
+  dragSound: {fileID: 1195692374}
+  dropSound: {fileID: 1705003581}
   canDrag: 1
-  HeadsUpDisplay: {fileID: 1698870049}
 --- !u!114 &508875307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2594,7 +2592,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      - m_Target: {fileID: 1705003580}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
         m_Mode: 1
@@ -2705,7 +2703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 1832371742}
   puttingDown: {fileID: 0}
   dragAnimator: {fileID: 565921353}
 --- !u!95 &565921353
@@ -3083,7 +3081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 1832371742}
   puttingDown: {fileID: 0}
   dragAnimator: {fileID: 663783806}
 --- !u!95 &663783806
@@ -3368,9 +3366,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragSound: {fileID: 1705003579}
-  puttingDown: {fileID: 1705003578}
+  dropSound: {fileID: 1705003578}
   canDrag: 1
-  HeadsUpDisplay: {fileID: 1698870049}
 --- !u!114 &671845089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4226,7 +4223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 1832371742}
   puttingDown: {fileID: 0}
   dragAnimator: {fileID: 1051350754}
 --- !u!95 &1051350754
@@ -4932,6 +4929,11 @@ MonoBehaviour:
   enableProximityReactions: 0
   PlayerCollider: {fileID: 0}
   ObjectAreaCollider: {fileID: 0}
+--- !u!82 &1195692374 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2288145045806619492, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1224491899
 GameObject:
   m_ObjectHideFlags: 0
@@ -5845,7 +5847,7 @@ RectTransform:
   m_GameObject: {fileID: 1634722531}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.336875, y: 0.26399425, z: 1}
+  m_LocalScale: {x: 1.336875, y: 0.30689332, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1698870050}
@@ -5853,8 +5855,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -360}
-  m_SizeDelta: {x: 1156, y: 595}
+  m_AnchoredPosition: {x: 0, y: -370}
+  m_SizeDelta: {x: 1156, y: 590}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1634722533
 MonoBehaviour:
@@ -6254,6 +6256,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1705003581 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 712669620306944424, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1713388715
 GameObject:
   m_ObjectHideFlags: 0
@@ -6331,7 +6338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 1832371742}
   puttingDown: {fileID: 0}
   dragAnimator: {fileID: 1713388720}
 --- !u!95 &1713388720
@@ -7146,9 +7153,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragSound: {fileID: 1705003579}
-  puttingDown: {fileID: 1705003578}
+  dropSound: {fileID: 1705003578}
   canDrag: 1
-  HeadsUpDisplay: {fileID: 1698870049}
+--- !u!82 &1832371742 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4831561464328245731, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &1842476724 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5351476601720383963, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}

@@ -13,9 +13,8 @@ public class objectDrag_nodialog : MonoBehaviour
     private float startPosY;
     private bool isBeingHeld = false;
     public AudioSource dragSound;
-    public AudioSource puttingDown;
+    public AudioSource dropSound;
     public bool canDrag = false;
-    public GameObject HeadsUpDisplay;
 
 
 
@@ -39,7 +38,9 @@ public class objectDrag_nodialog : MonoBehaviour
 
         if (Input.GetMouseButtonDown(Globals.primaryMouseButton) && canDrag && !Globals.paused)
         {
-            dragSound.Play();
+            if (dragSound != null)
+                dragSound.Play();
+
             Vector3 mousePos;
             mousePos = Input.mousePosition;
             mousePos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -55,7 +56,9 @@ public class objectDrag_nodialog : MonoBehaviour
     void OnMouseUp()
     {
         if (isBeingHeld){
-            puttingDown.Play();
+            if (dropSound != null)
+                dropSound.Play();
+
             isBeingHeld = false;
         }
 

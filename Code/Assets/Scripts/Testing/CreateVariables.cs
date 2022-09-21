@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CreateVariables : MonoBehaviour
 {
-
+    public Rigidbody2D rb;
     public bool testing =false;
 
     private bool check = false;
@@ -32,6 +32,8 @@ public class CreateVariables : MonoBehaviour
                     foreach(string s in Globals.inventory){
                         Debug.Log(s);
                     }
+
+                    rb.position = new Vector2(-34, -10);
                     check = true;
                 break;
             }

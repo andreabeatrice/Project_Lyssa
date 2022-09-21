@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class Room103_LoadData : MonoBehaviour
 {
-    private GameObject pillow;
-    private GameObject[] drawers;
+    private GameObject[] moveables, drawers, dusts;
     // Start is called before the first frame update
     void Start()
     {
+        moveables = GameObject.FindGameObjectsWithTag("moveable_object");
         drawers = GameObject.FindGameObjectsWithTag("draw");
-        pillow = GameObject.FindGameObjectsWithTag("moveable_object")[0];
+        dusts = GameObject.FindGameObjectsWithTag("dust");
 
         if (Room_103_SaveData.visited == false){
-
-            Room_103_SaveData.pillow = new MoveableObject(pillow);
-
             int i = 0;
+
+            foreach (GameObject go in moveables)
+            {
+                Room_103_SaveData.moveables[i] = new MoveableObject(go);
+                Debug.Log(Room_103_SaveData.moveables[i].ToString());
+                i++;
+            }
+
+             i = 0;
             foreach (GameObject go in drawers)
             {
                 Room_103_SaveData.drawers[i] = new MoveableObject(go);
@@ -24,12 +30,41 @@ public class Room103_LoadData : MonoBehaviour
                 i++;
             }
 
+             i = 0;
+            foreach (GameObject go in dusts)
+            {
+                Room_103_SaveData.dust[i] = new MoveableObject(go);
+                Debug.Log(Room_103_SaveData.dust[i].ToString());
+                i++;
+            }
+
             Room_103_SaveData.visited = true;
             
         }
         else {
+            foreach (GameObject go in moveables)
+            {
+                for (int i = 0; i < moveables.Length; i++){
+                    if (go.name == Room_103_SaveData.moveables[i].name){
+                        go.transform.position = Room_103_SaveData.moveables[i].position;
+                    }
+                }
+            }
 
-            pillow.transform.position = Room_103_SaveData.pillow.position;
+            foreach (GameObject go in dusts)
+            {
+                for (int i = 0; i < dusts.Length; i++){
+                    if (go.name == Room_103_SaveData.dust[i].name){
+                        //go.transform.position = Room_103_SaveData.dust[i].position;
+
+                        if (Room_103_SaveData.dust[i].state){ //cleaned == true
+                            //
+                            go.GetComponent<Animator>().SetBool("cleaned", true);
+                            go.SetActive(false);
+                        }
+                    }
+                }
+            }
 
             foreach (GameObject go in drawers)
             {
@@ -51,7 +86,21 @@ public class Room103_LoadData : MonoBehaviour
 
     void Update()
     {
-        Room_103_SaveData.pillow.position = pillow.transform.position;
+        foreach (GameObject go in moveables){
+            for (int i = 0; i < moveables.Length; i++){
+                if (go.name == Room_103_SaveData.moveables[i].name){
+                    Room_103_SaveData.moveables[i].position = go.transform.position;
+                }
+             }
+        }
+
+        foreach (GameObject go in dusts){
+            for (int i = 0; i < dusts.Length; i++){
+                if (go.name == Room_103_SaveData.dust[i].name){
+                    Room_103_SaveData.dust[i].state = go.GetComponent<Animator>().GetBool("cleaned");
+                }
+            }
+        }
 
         foreach (GameObject go in drawers){
             for (int i = 0; i < drawers.Length; i++){
