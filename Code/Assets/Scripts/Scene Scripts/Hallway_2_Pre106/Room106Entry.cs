@@ -32,7 +32,7 @@ public class Room106Entry : MonoBehaviour
     }
 
     public void OnMouseOver() {
-        if (Input.GetMouseButtonDown(Globals.primaryMouseButton) && !Globals.paused){
+        if (Input.GetMouseButtonDown(Globals.primaryMouseButton) && !Globals.paused && PlayerCollider.IsTouching(ObjectAreaCollider) ){
             TriggerAfterDialogue();
 
             if (HeadsUpDisplay != null)
