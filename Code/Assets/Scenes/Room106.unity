@@ -980,7 +980,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &276018369
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2596,11 +2596,11 @@ GameObject:
   - component: {fileID: 507303436}
   m_Layer: 5
   m_Name: leave_room_tl
-  m_TagString: Untagged
+  m_TagString: ChoiceButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &507303435
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2964,9 +2964,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragSound: {fileID: 1705003579}
-  puttingDown: {fileID: 1705003578}
+  dropSound: {fileID: 0}
   canDrag: 0
-  HeadsUpDisplay: {fileID: 1698870049}
 --- !u!225 &508875306
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5456,7 +5455,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1156987369
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7468,7 +7467,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1506348462
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8409,11 +8408,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
   m_PrefabInstance: {fileID: 1705003576}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &1705003578 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5671338687068651481, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 1705003576}
-  m_PrefabAsset: {fileID: 0}
 --- !u!82 &1705003579 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2657309576819361042, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
@@ -8937,11 +8931,11 @@ GameObject:
   - component: {fileID: 1732980823}
   m_Layer: 5
   m_Name: HideDiary
-  m_TagString: Untagged
+  m_TagString: ChoiceButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1732980819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9986,8 +9980,8 @@ Canvas:
   m_GameObject: {fileID: 2065235189}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 787072642}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -9995,8 +9989,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1084629717
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &2065235193
 RectTransform:

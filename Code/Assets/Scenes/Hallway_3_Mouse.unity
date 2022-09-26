@@ -1316,7 +1316,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1084629717
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &243715969
@@ -1337,6 +1337,7 @@ GameObject:
   - component: {fileID: 243715976}
   - component: {fileID: 243715975}
   - component: {fileID: 243715980}
+  - component: {fileID: 243715981}
   m_Layer: 0
   m_Name: GlobalManagers
   m_TagString: Untagged
@@ -1518,6 +1519,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf0b44b72e19a34d84cd806f84806aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &243715981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243715969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4c4dc781cb8d947bfa4c954f917c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    sentences:
+    - You can't just leave that rat to run around.
+    - You'll be fired for sure if any of the nurses or Dr Krause see it.
+    - You'll have to follow it in
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  HeadsUpDisplay: {fileID: 1023093939}
+  choices:
+  - Enter Room 106 (+0)
+  choiceButtons:
+  - {fileID: 1642415799}
+  - {fileID: 0}
+  - {fileID: 0}
+  wait: 1
+  speech: 0
+  waitfor: 4.07
 --- !u!1 &388837538
 GameObject:
   m_ObjectHideFlags: 0
@@ -2698,7 +2731,6 @@ GameObject:
   - component: {fileID: 699973060}
   - component: {fileID: 699973059}
   - component: {fileID: 699973058}
-  - component: {fileID: 699973057}
   m_Layer: 0
   m_Name: Room106
   m_TagString: rnd
@@ -2721,19 +2753,6 @@ Transform:
   m_Father: {fileID: 1747773792}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &699973057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 699973054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a92a27e64b077a94fa3f9c31d41c547c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
 --- !u!61 &699973058
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7704,7 +7723,6 @@ GameObject:
   - component: {fileID: 1642415806}
   - component: {fileID: 1642415805}
   - component: {fileID: 1642415804}
-  - component: {fileID: 1642415803}
   - component: {fileID: 1642415802}
   - component: {fileID: 1642415801}
   m_Layer: 5
@@ -7876,29 +7894,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &1642415803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642415799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563f66cd54692394ba90e7f58a086e0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeDoorSound: {fileID: 0}
-  allAudio: {fileID: 0}
-  hud: {fileID: 1023093939}
-  dialogBox: {fileID: 1054817161}
-  dialogHeading: {fileID: 2097870290}
-  dialogBody: {fileID: 1812010509}
-  popUpChoice1: {fileID: 47193805}
-  popUpChoice2: {fileID: 98330686}
-  firstInteraction: 1
-  insanityMeter: {fileID: 0}
-  cleanWaterDispenser: {fileID: 0}
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 243715970}
+          m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1642415804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7967,8 +7978,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ChoiceHandler, Assembly-CSharp
+      - m_Target: {fileID: 243715980}
+        m_TargetAssemblyTypeName: Hallway_3_MouseChoiceHandler, Assembly-CSharp
         m_MethodName: enter106
         m_Mode: 1
         m_Arguments:
@@ -8114,11 +8125,6 @@ AudioSource:
 --- !u!4 &1647875456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 1647875454}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1647875457 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 176746941063478361, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
   m_PrefabInstance: {fileID: 1647875454}
   m_PrefabAsset: {fileID: 0}
 --- !u!82 &1647875458 stripped
@@ -8943,7 +8949,6 @@ GameObject:
   - component: {fileID: 1794185598}
   - component: {fileID: 1794185597}
   - component: {fileID: 1794185591}
-  - component: {fileID: 1794185596}
   - component: {fileID: 1794185595}
   - component: {fileID: 1794185594}
   - component: {fileID: 1794185593}
@@ -9047,22 +9052,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1794185596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1794185590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de389411d6b5fe44fa36f3b41ce5e11e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movespeed: 6
-  rb: {fileID: 1794185597}
-  animator: {fileID: 1794185595}
-  audiosrc: {fileID: 1647875457}
 --- !u!50 &1794185597
 Rigidbody2D:
   serializedVersion: 4
