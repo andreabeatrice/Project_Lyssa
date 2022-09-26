@@ -29,11 +29,11 @@ public class ProximityReaction : MonoBehaviour
                     foreach (string item in Globals.inventory)
                     {
                         if (item.Equals("Broom")){
-                                reaction("Damn, why didn't I pick the mop?", "Are you even a janitor?", ChoiceButton_broom);
+                                reaction("Damn, why didn't I pick the mop?", "Regret choice (+0)", ChoiceButton_broom);
                             }
                             else if (item.Equals("Mop")){
                                 
-                                reaction("Good thing I didn't choose the broom!", "Mop it up", ChoiceButton_mop);
+                                reaction("Good thing I didn't choose the broom!", "Mop it up (+0)", ChoiceButton_mop);
                             }
                             else {
                                 HeadsUpDisplay.SetActive(false);
@@ -42,7 +42,7 @@ public class ProximityReaction : MonoBehaviour
                     }
                 break;
                 case "KeepOutTape":
-                    reaction("Is SHE okay?? What's going on???", "Continue", ChoiceButton_none);
+                    reaction("Caution tape seems like a bad sign... maybe I should check on her?", "Continue", ChoiceButton_none);
                 break;
 
             }

@@ -165,6 +165,7 @@ public class DialogueManager : MonoBehaviour {
         dialogText.text = sentence;
 
         StopAllCoroutines();
+        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
         StartCoroutine(TypeSentence(sentence));
 

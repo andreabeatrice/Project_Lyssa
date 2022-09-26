@@ -36,6 +36,24 @@ public class CreateVariables : MonoBehaviour
                     rb.position = new Vector2(-34, -10);
                     check = true;
                 break;
+                case "Hallway_6_Slip":
+                    foreach(string s in Globals.objectives){
+                        Globals.objectives.Dequeue();
+                    }
+
+                    foreach(string s in Globals.inventory){
+                        Globals.inventory.Dequeue();
+                    }
+
+                    HelperMethods.InventoryEnqueue("Broom");
+                    HelperMethods.InventoryEnqueue("HER Diary");
+                    HelperMethods.InventoryEnqueue("Note from Otto");
+
+                    HelperMethods.ObjectivesEnqueue("Find the note writer.");
+
+                    rb.position = new Vector2(-34, -10);
+                    check = true;
+                break;
             }
 
         }

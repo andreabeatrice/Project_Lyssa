@@ -8223,7 +8223,7 @@ MonoBehaviour:
   PlayerCollider: {fileID: 2145307541}
   ObjectAreaCollider: {fileID: 1126430017}
   HeadsUpDisplay: {fileID: 1274136855}
-  ChoiceButton_none: {fileID: 0}
+  ChoiceButton_none: {fileID: 1989235842}
   ChoiceButton_mop: {fileID: 0}
   ChoiceButton_broom: {fileID: 0}
 --- !u!61 &1126430017
@@ -8293,7 +8293,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 733eb217390453743bf38e92a4d8fe4d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8301,7 +8301,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1141927525
@@ -29964,7 +29964,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1659444558}
   - component: {fileID: 1659444563}
-  - component: {fileID: 1659444562}
   - component: {fileID: 1659444561}
   - component: {fileID: 1659444560}
   - component: {fileID: 1659444564}
@@ -30029,26 +30028,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 12.295158}
   m_EdgeRadius: 0
---- !u!95 &1659444562
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659444557}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e204cf0e71799084b95f1a86d121269c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &1659444563
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30090,7 +30069,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a932278a451c3e141af0afea5df736d5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7f5cd3078747f5442b1ce0ac0104c077, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -31288,6 +31267,22 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1172500437}
+          m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:

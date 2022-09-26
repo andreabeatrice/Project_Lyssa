@@ -43,4 +43,16 @@ public class Hallway_2_Pre106ChoiceHandler : MonoBehaviour
         Globals.mopped = false;
     }
 
+    public void enter106(){
+        allAudio.playOpenDoor();
+        Globals.insanity += 3;
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Room106", "crossfade_start");
+
+    }
+
+    public void maybedont_106(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_3_Mouse", "crossfade_start");
+
+    }
+
 }
