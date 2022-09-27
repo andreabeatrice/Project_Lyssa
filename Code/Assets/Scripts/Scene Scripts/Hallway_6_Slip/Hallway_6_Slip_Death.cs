@@ -25,7 +25,7 @@ public class Hallway_6_Slip_Death : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "Hallway_6_Slip" && PlayerCollider.IsTouching(ObjectAreaCollider) && !Globals.mopped)
         {
             Globals.direction = Event.current.keyCode;
-            FindObjectOfType<LevelLoader>().LoadNextLevel("watercooler_death", "crossfade_start");
+            FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_6_Slip", "crossfade_start");
 
 
         }

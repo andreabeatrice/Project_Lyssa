@@ -68,4 +68,14 @@ public static class HelperMethods{
                 Globals.inventory.Enqueue(it);
             }
         }
+
+        public static bool CheckInventory(string lookFor){
+            foreach(string item in Globals.inventory){
+                if (Globals.inventory.Contains(lookFor)){
+                    return true;
+                }
+            }
+            return false;
+            
+        }
 }
