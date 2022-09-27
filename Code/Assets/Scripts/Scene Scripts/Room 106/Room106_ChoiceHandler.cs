@@ -11,9 +11,13 @@ public class Room106_ChoiceHandler : MonoBehaviour
     void Start()
     {
         //Globals.insanity = 4;
-        foreach(string s in Globals.objectives){
-            Globals.objectives.Dequeue();
-        }
+        // foreach(string s in Globals.objectives){
+        //     Globals.objectives.Dequeue();
+        // }
+
+        HelperMethods.PrintObjectives();
+
+        HelperMethods.ObjectivesDequeue("Go clean the patients' rooms.");
 
         HelperMethods.ObjectivesEnqueue("Don't get fired");
 
@@ -46,8 +50,8 @@ public class Room106_ChoiceHandler : MonoBehaviour
     public void keep_keycard(){
         HelperMethods.InventoryEnqueue("Nurse's Keycard");
 
-        HelperMethods.ObjectivesDequeue("Find the note from Otto");
-        HelperMethods.ObjectivesDequeue("Find the nurse's key card");
+        //HelperMethods.ObjectivesDequeue("Find the note from Otto");
+        //HelperMethods.ObjectivesDequeue("Find the nurse's key card");
 
         GameObject.Find("keycard collider").SetActive(false);
 

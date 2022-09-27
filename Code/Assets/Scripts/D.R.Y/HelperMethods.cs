@@ -41,10 +41,26 @@ public static class HelperMethods{
         }
 
         public static void ObjectivesDequeue(string completedTask){
-                if (Globals.objectives.Peek() == completedTask)
-                {
+            Queue<string> tempO = new Queue<string>();
+
+            if (Globals.objectives.Peek() == completedTask){
                     Globals.objectives.Dequeue();
+            }
+            else {
+                foreach(string s in Globals.objectives){
+                    if(Globals.objectives.Peek() != completedTask){
+                        tempO.Enqueue(s);
+                    }
+                    else{ 
+                        Debug.Log(s);
+                    }
                 }
+            }
+
+            // foreach(string s in tempO){
+            //     Globals.objectives.Enqueue(s);
+
+            // }
         }
 
         public static void InventoryDequeue(string item)
@@ -71,11 +87,17 @@ public static class HelperMethods{
 
         public static bool CheckInventory(string lookFor){
             foreach(string item in Globals.inventory){
-                if (Globals.inventory.Contains(lookFor)){
+                if (item.Contains(lookFor)){
                     return true;
                 }
             }
             return false;
             
+        }
+
+        public static void PrintObjectives(){
+            foreach(string item in Globals.objectives){
+                Debug.Log(item);
+            }
         }
 }

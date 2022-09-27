@@ -24,8 +24,14 @@ public class Hallway_6_Slip_Death : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name != "Hallway_6_Slip" && PlayerCollider.IsTouching(ObjectAreaCollider) && !Globals.mopped)
         {
-            Globals.direction = Event.current.keyCode;
-            FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_6_Slip", "crossfade_start");
+            if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)){
+                Globals.direction = "left";
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)){
+                Globals.direction = "right";
+            }
+            
+            SceneManager.LoadScene("Hallway_6_Slip");
 
 
         }

@@ -25040,10 +25040,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1738794573}
   - component: {fileID: 1738794572}
+  - component: {fileID: 1738794569}
   - component: {fileID: 1738794571}
   - component: {fileID: 1738794570}
-  - component: {fileID: 1738794569}
-  - component: {fileID: 1738794568}
   m_Layer: 0
   m_Name: WaterDispenser
   m_TagString: rnd
@@ -25051,25 +25050,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1738794568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1738794567}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fc5e1a78384f854a86161c34d5f3b32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 0}
-  PlayerCollider: {fileID: 0}
-  ObjectAreaCollider: {fileID: 1738794569}
-  HeadsUpDisplay: {fileID: 0}
-  ChoiceButton_none: {fileID: 0}
-  ChoiceButton_mop: {fileID: 0}
-  ChoiceButton_broom: {fileID: 0}
 --- !u!61 &1738794569
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30020,7 +30000,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1930653508}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Welcome, Assembly-CSharp
         m_MethodName: WelcomeOver
         m_Mode: 1
@@ -30522,11 +30502,9 @@ GameObject:
   - component: {fileID: 1930653507}
   - component: {fileID: 1930653504}
   - component: {fileID: 1930653506}
-  - component: {fileID: 1930653512}
   - component: {fileID: 1930653511}
-  - component: {fileID: 1930653508}
   - component: {fileID: 1930653510}
-  - component: {fileID: 1930653509}
+  - component: {fileID: 1930653514}
   m_Layer: 0
   m_Name: GlobalManagers
   m_TagString: Untagged
@@ -30595,42 +30573,6 @@ MonoBehaviour:
   clickSound: {fileID: 145486666}
   talking: {fileID: 145486663}
   inConversation: 0
---- !u!114 &1930653508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930653503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f02fb694ecbb8224f84e0da5c8db5b87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HeadsUpDisplay: {fileID: 1564090237}
-  choiceButtons:
-  - {fileID: 1884886005}
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &1930653509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930653503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1760af59194883846925928fbbde41b1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HeadsUpDisplay: {fileID: 1564090237}
-  dialogBox: {fileID: 275045764}
-  dialogHeading: {fileID: 1461308229}
-  dialogBody: {fileID: 1616379329}
-  popUpChoice1: {fileID: 219754813}
-  popUpChoice2: {fileID: 818181623}
-  firstInteraction: 1
 --- !u!114 &1930653510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30682,30 +30624,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 84d1e6c75116242488de2cbfe26a2065, type: 3}
   - {fileID: 21300000, guid: 514410d6c4264514682456452c880896, type: 3}
   test: 0
---- !u!114 &1930653512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930653503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05c09747cc54dde499b958f1abb7b339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCollider: {fileID: 44398240}
-  basementDoorCollider: {fileID: 2015064338}
-  recreationAreaCollider: {fileID: 2126504940}
-  diningHallCollider: {fileID: 2004848370}
-  krauseOfficeCollider: {fileID: 702095020}
-  basement_agreement: {fileID: 326374777}
-  poppedB: 0
-  poppedD: 0
-  poppedR: 0
-  poppedK: 0
-  hud: {fileID: 1564090237}
-  speech: 0
 --- !u!114 &1930653513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30718,6 +30636,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e99153859f7b143b85cf85e5c1fb98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1930653514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930653503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f360490d8723ad4ca76c2c67d100a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allAudio: {fileID: 145486661}
+  PlayerCollider: {fileID: 44398240}
+  ObjectAreaCollider: {fileID: 1738794569}
+  watercooler_animator: {fileID: 1738794571}
 --- !u!1 &1942806260
 GameObject:
   m_ObjectHideFlags: 0
