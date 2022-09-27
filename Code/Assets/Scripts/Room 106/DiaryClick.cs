@@ -29,6 +29,8 @@ public class DiaryClick : MonoBehaviour
 
     public GameObject hide_diary_button;
 
+    public GameObject pillow, keycard;
+
     //this is the OnClick() action of the io_close button
     public void closeDiary()
     {
@@ -45,9 +47,6 @@ public class DiaryClick : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //clickSound = GameObject.Find("clickSound").GetComponentInChildren<AudioSource>();
-        //pageTurn = GameObject.Find("pageTurn").GetComponentInChildren<AudioSource>();
-        //bookClose = GameObject.Find("bookClose").GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -117,17 +116,9 @@ public class DiaryClick : MonoBehaviour
         HelperMethods.ObjectivesEnqueue("Find the note from Otto");
         HelperMethods.ObjectivesEnqueue("Find the nurse's key card");
 
-        DialogueClick[] arr = GameObject.FindObjectsOfType<DialogueClick>();
+        keycard.GetComponentsInChildren<DialogueClick>()[0].canClick = true;
 
-        foreach(DialogueClick item in arr){
-            item.canClick = true;
-        }
-
-        objectDrag_nodialog[] nda = GameObject.FindObjectsOfType<objectDrag_nodialog>();
-
-        foreach(objectDrag_nodialog item in nda){
-            item.canDrag = true;
-        }
+       pillow.GetComponentsInChildren<objectDrag_nodialog>()[0].canDrag =true;
     }
 
     

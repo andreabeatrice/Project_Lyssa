@@ -33,6 +33,8 @@ public static class Globals
 
     public static bool mopped;
 
+    public static KeyCode direction;
+
     
 }
 

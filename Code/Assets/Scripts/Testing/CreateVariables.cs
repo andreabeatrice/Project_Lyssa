@@ -19,7 +19,7 @@ public class CreateVariables : MonoBehaviour
     void Update()
     {
         if (testing == true && check == false){
-
+            Globals.StorageRoom = true;
             switch (SceneManager.GetActiveScene().name){
                 case "Hallway_2_Pre106":
                     //assign variables
@@ -34,6 +34,10 @@ public class CreateVariables : MonoBehaviour
                     }
 
                     rb.position = new Vector2(-34, -10);
+                    check = true;
+                break;
+                case "Room106":
+                    HelperMethods.InventoryEnqueue("Broom");
                     check = true;
                 break;
                 case "Hallway_6_Slip":

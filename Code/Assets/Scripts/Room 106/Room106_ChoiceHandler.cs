@@ -13,6 +13,17 @@ public class Room106_ChoiceHandler : MonoBehaviour
     void Start()
     {
         //Globals.insanity = 4;
+        foreach(string s in Globals.objectives){
+            Globals.objectives.Dequeue();
+        }
+
+        HelperMethods.ObjectivesEnqueue("Don't get fired");
+
+        if (Globals.insanity < 3){
+            HelperMethods.ObjectivesEnqueue("Find the rat?");
+        }
+
+        HelperMethods.ObjectivesEnqueue("Find HER");
     }
 
     // Update is called once per frame

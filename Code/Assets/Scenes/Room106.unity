@@ -1532,6 +1532,7 @@ GameObject:
   - component: {fileID: 375198776}
   - component: {fileID: 375198777}
   - component: {fileID: 375198778}
+  - component: {fileID: 375198779}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -1692,6 +1693,20 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 84d1e6c75116242488de2cbfe26a2065, type: 3}
   - {fileID: 21300000, guid: 514410d6c4264514682456452c880896, type: 3}
   test: 0
+--- !u!114 &375198779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375198770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52a22ac4187d2a44a670bcaac63dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  testing: 0
 --- !u!82 &388535185 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
@@ -2783,11 +2798,11 @@ GameObject:
   m_Component:
   - component: {fileID: 508875299}
   - component: {fileID: 508875298}
+  - component: {fileID: 508875305}
   - component: {fileID: 508875300}
   - component: {fileID: 508875302}
   - component: {fileID: 508875303}
   - component: {fileID: 508875304}
-  - component: {fileID: 508875305}
   - component: {fileID: 508875306}
   m_Layer: 0
   m_Name: Pillow
@@ -4922,6 +4937,8 @@ MonoBehaviour:
   next_page_button: {fileID: 276018368}
   prev_page_button: {fileID: 1156987368}
   hide_diary_button: {fileID: 1732980818}
+  pillow: {fileID: 508875297}
+  keycard: {fileID: 2109133765}
 --- !u!1 &1022587593
 GameObject:
   m_ObjectHideFlags: 0
@@ -5334,7 +5351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -593, y: -340}
+  m_AnchoredPosition: {x: -593, y: -360.89993}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1125294141
@@ -6319,7 +6336,7 @@ GameObject:
   - component: {fileID: 1217644116}
   m_Layer: 0
   m_Name: Note
-  m_TagString: Untagged
+  m_TagString: 106_objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6600,7 +6617,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 256, y: -400}
+  m_AnchoredPosition: {x: 256, y: -420.89993}
   m_SizeDelta: {x: 80, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322063544
@@ -7746,7 +7763,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 766, y: -419}
+  m_AnchoredPosition: {x: 766, y: -448.25214}
   m_SizeDelta: {x: 128, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1586006830
@@ -7822,7 +7839,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -369}
+  m_AnchoredPosition: {x: 0, y: -389.89993}
   m_SizeDelta: {x: 1156, y: 595}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1634722533
@@ -8155,7 +8172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1698870050
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9266,7 +9283,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50.496323, y: -337.00006}
+  m_AnchoredPosition: {x: -50.496323, y: -357.9}
   m_SizeDelta: {x: 510.9409, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766698141
@@ -10225,7 +10242,7 @@ GameObject:
   - component: {fileID: 2109133770}
   m_Layer: 0
   m_Name: keycard collider
-  m_TagString: Untagged
+  m_TagString: 106_objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
