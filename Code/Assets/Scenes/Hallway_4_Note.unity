@@ -31106,7 +31106,6 @@ GameObject:
   - component: {fileID: 2061082320}
   - component: {fileID: 2061082319}
   - component: {fileID: 2061082318}
-  - component: {fileID: 2061082317}
   m_Layer: 0
   m_Name: Room106
   m_TagString: rnd
@@ -31129,37 +31128,6 @@ Transform:
   m_Father: {fileID: 1308136368}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2061082317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061082315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00bc883f17a6da843a9235345b6b4079, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 2043224352}
-  HeadsUpDisplay: {fileID: 2129288828}
-  before_dialog:
-    sentences:
-    - The receptionist is watching me, I can't go in right now...
-    voice: {fileID: 0}
-    name: Fern
-    textcolor:
-      serializedVersion: 2
-      rgba: 0
-  before_choices:
-  - Come back later
-  before_choiceButtons:
-  - {fileID: 1719124345}
-  - {fileID: 0}
-  - {fileID: 0}
-  enableProximityReactions: 1
-  PlayerCollider: {fileID: 222411943}
-  ObjectAreaCollider: {fileID: 2061082319}
 --- !u!114 &2061082318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31452,6 +31420,7 @@ MonoBehaviour:
   PlayerCollider: {fileID: 222411943}
   ObjectAreaCollider: {fileID: 528652885}
   watercooler_animator: {fileID: 528652887}
+  WaterCooler: {fileID: 0}
 --- !u!1 &2090186099
 GameObject:
   m_ObjectHideFlags: 0
