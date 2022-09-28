@@ -38,6 +38,8 @@ public class MainMenuScript : MonoBehaviour
             File.Delete(path);
         }
 
+        HelperMethods.ResetGlobals();
+
         gate_animator.Play("gate_opening_anim");
         
         opened = true;

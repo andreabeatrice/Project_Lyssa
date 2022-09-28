@@ -56,11 +56,6 @@ public static class HelperMethods{
                     }
                 }
             }
-
-            // foreach(string s in tempO){
-            //     Globals.objectives.Enqueue(s);
-
-            // }
         }
 
         public static void InventoryDequeue(string item)
@@ -99,5 +94,28 @@ public static class HelperMethods{
             foreach(string item in Globals.objectives){
                 Debug.Log(item);
             }
+        }
+
+        public static void ResetGlobals(){
+            Globals.insanity = 0;
+
+            Globals.inventory = new Queue<string>();
+            Globals.objectives = new Queue<string>();
+            Globals.playerPositionOnMap = new Vector3(0, 3, 0);
+            Globals.paused = false;
+
+            Globals.canClick = false;
+
+            Globals.currentScene = "";
+
+            //Used to determine whether player has completed the Janitors_Closet scene in the tutorial
+            Globals.StorageRoom = false;
+
+
+            Globals.mopped = false;
+
+            Globals.direction = "";
+
+            Globals.playedTime = 0.0f;
         }
 }
