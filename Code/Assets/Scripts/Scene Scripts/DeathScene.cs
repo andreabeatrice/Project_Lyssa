@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Linq;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.IO;
 
 public class DeathScene : MonoBehaviour
 {
@@ -13,10 +16,13 @@ public class DeathScene : MonoBehaviour
 
     string causeOfDeath_str, timeOfDeath_str; 
 
+    public static string path;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        path = Application.persistentDataPath + "/player.save";
         StartDialogue();
     }
 
@@ -67,5 +73,34 @@ public class DeathScene : MonoBehaviour
 
         StartCoroutine(TypeSentence(timeOfDeath_str, timeOfDeath));
     }
+
+    public void StartGame(){
+        if(File.Exists(path)){
+            File.Delete(path);
+        }
+
+        HelperMethods.ResetGlobals();
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_1_PreTutorial", "crossfade_start");
+    }
+
+    public void MainMenu(){
+        if(File.Exists(path)){
+            File.Delete(path);
+        }
+
+        HelperMethods.ResetGlobals();
+        FindObjectOfType<LevelLoader>().LoadNextLevel("MainMenu", "crossfade_start");
+    }
+
+    public void QuitGame(){
+        if(File.Exists(path)){
+            File.Delete(path);
+        }
+
+        HelperMethods.ResetGlobals();
+
+        Application.Quit();
+    }
+
 
 }
