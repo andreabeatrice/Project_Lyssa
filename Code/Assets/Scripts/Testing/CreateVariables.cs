@@ -58,7 +58,7 @@ public class CreateVariables : MonoBehaviour
                     HelperMethods.ObjectivesEnqueue("Don't get fired");
                     HelperMethods.ObjectivesEnqueue("Find HER");
                     HelperMethods.ObjectivesEnqueue("Investigate the basement");
-                    rb.position = new Vector2(-34, -10);
+                    rb.position = new Vector2(0, -78);
                     check = true;
                 break;
                 case "Hallway_6_Slip":
