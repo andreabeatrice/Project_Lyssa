@@ -30,13 +30,20 @@ public class AudioSources : MonoBehaviour
     public AudioSource drawer_open;
     public AudioSource drawer_close;
     public AudioSource mirror_squeak;
+    public AudioSource cabinet_Open;
+    public AudioSource cabinet_Close;
+    public AudioSource glass_Clink;
+    public AudioSource basement_Background;
+    public AudioSource pickUpBook;
+    public AudioSource putDownBook;
+    public AudioSource light_Switch;
+    public AudioSource footsteps_Concrete;
     private AudioSource[] allAudioSources;
 
 
     public void Start()
     {
         allAudioSources = FindObjectsOfType<AudioSource>();
-
 
         foreach(AudioSource sound in allAudioSources){
             switch(sound.name){
@@ -117,6 +124,30 @@ public class AudioSources : MonoBehaviour
                 break;
                 case "mirror_squeak":
                     mirror_squeak = sound;
+                    break;
+                case "cabinet_Open":
+                    cabinet_Open = sound;
+                    break;
+                case "cabinet_Close":
+                    cabinet_Close = sound;
+                break;
+                 case "light_Switch":
+                    light_Switch = sound;
+                break;
+                 case "pickUpBook":
+                    pickUpBook = sound;
+                break;
+                 case "PutDownBook":
+                    putDownBook = sound;
+                break;
+                 case "basement_Background":
+                    cabinet_Close = sound;
+                break;
+                 case "glassClink":
+                    glass_Clink = sound;
+                break;
+                case "footsteps_Concrete":
+                    footsteps_Concrete = sound;
                 break;
             }
         }
@@ -134,7 +165,27 @@ public class AudioSources : MonoBehaviour
             case "MainMenu":
                 menu_background_with_crickets.Play();
             break;
-            case "Hallway":
+            case "Hallway_1_PreTutorial":
+                StopAllAudio();
+                hallway_sounds.Play();
+            break;
+            case "Hallway_2_Pre106":
+                StopAllAudio();
+                hallway_sounds.Play();
+            break;
+            case "Hallway_3_Mouse":
+                StopAllAudio();
+                hallway_sounds.Play();
+            break;
+            case "Hallway_4_Note":
+                StopAllAudio();
+                hallway_sounds.Play();
+            break;
+            case "Hallway_5_Keycard":
+                StopAllAudio();
+                hallway_sounds.Play();
+            break;
+            case "Hallway_6_Slip":
                 StopAllAudio();
                 hallway_sounds.Play();
             break;
@@ -158,6 +209,10 @@ public class AudioSources : MonoBehaviour
             case "Hallway_Post106":
                 StopAllAudio();
                 intercom.Play();
+                break;
+            case "Room106_Nurse":
+                StopAllAudio();
+                background106.Play();
                 break;
 
             default:
