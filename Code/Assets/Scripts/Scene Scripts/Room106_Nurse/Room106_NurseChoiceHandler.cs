@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Room106_NurseChoiceHandler : MonoBehaviour
 {
@@ -9,6 +10,15 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
     public GameObject[] keycardResponseChoices;
     public AudioSources allAudio;
     public GameObject leaveroombutton;
+
+    public GameObject grafitti; 
+    public Sprite insaneGrafitti;
+
+    public void Start(){
+        if (Globals.insanity > 4){
+            grafitti.GetComponent<Image>().sprite = insaneGrafitti;
+        }
+    }
 
     public void blamed_receptionist(){
         Globals.insanity += 2;
