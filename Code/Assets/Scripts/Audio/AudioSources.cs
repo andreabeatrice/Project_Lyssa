@@ -12,6 +12,8 @@ public class AudioSources : MonoBehaviour
     public AudioSource receptionist_voice;
     public AudioSource fern_voice;
     public AudioSource nurse_voice;
+    public AudioSource nurse_voice_2;
+    public AudioSource nurse_voice_3;
     public AudioSource background_music;
     public AudioSource menu_background_with_crickets;
     public AudioSource crickets;
@@ -68,6 +70,12 @@ public class AudioSources : MonoBehaviour
 
                 case "nurse_voice":
                     nurse_voice = sound;
+                break;
+                case "nurse_voice_2":
+                    nurse_voice_2 = sound;
+                break;
+                case "nurse_voice_3":
+                    nurse_voice_3 = sound;
                 break;
                 case "background_music":
                     background_music = sound;

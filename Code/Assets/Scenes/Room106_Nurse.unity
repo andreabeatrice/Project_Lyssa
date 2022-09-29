@@ -1029,6 +1029,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257713983}
   m_CullTransparentMesh: 1
+--- !u!82 &285080283 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2798499300600135434, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &285080284 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1592945172560053609, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &322313335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1458,6 +1468,8 @@ MonoBehaviour:
   - {fileID: 0}
   allAudio: {fileID: 1705003580}
   leaveroombutton: {fileID: 1217105320}
+  grafitti: {fileID: 0}
+  insaneGrafitti: {fileID: 0}
 --- !u!114 &375198780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7058,6 +7070,14 @@ PrefabInstance:
       propertyPath: background106
       value: 
       objectReference: {fileID: 1683823574}
+    - target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: nurse_voice_2
+      value: 
+      objectReference: {fileID: 285080284}
+    - target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: nurse_voice_3
+      value: 
+      objectReference: {fileID: 285080283}
     - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_Volume
       value: 0.24
