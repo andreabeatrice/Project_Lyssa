@@ -1252,6 +1252,7 @@ GameObject:
   - component: {fileID: 375198779}
   - component: {fileID: 375198780}
   - component: {fileID: 375198781}
+  - component: {fileID: 375198782}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -1426,6 +1427,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d938942b721a042ba17c99bddebb16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &375198782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375198770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcce22b6beb55eb4ab69352bb7a357dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseMenuUI: {fileID: 135031727}
+  PauseButton: {fileID: 538515369}
+  settingsPanel: {fileID: 1462906783}
 --- !u!1 &376895586
 GameObject:
   m_ObjectHideFlags: 0
