@@ -94,7 +94,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
         string[] s = {"Ugh, it will be a mission to get to the basement without it.", "Are you still here? Get back to work!"};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice), "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice_2), "Yes, nurse", leaveroombutton, true);
 
         HelperMethods.ObjectivesEnqueue("Investigate the basement");
     }
@@ -108,7 +108,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
         HelperMethods.InventoryEnqueue("Note from Otto");
         
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice), "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice_2), "Yes, nurse", leaveroombutton, true);
 
         HelperMethods.ObjectivesEnqueue("Find the note writer");
     }
@@ -118,14 +118,14 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
         string[] s = {"Ugh, it's probably around here somewhere. Go get back to work!"};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice), "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice_2), "Yes, nurse", leaveroombutton, true);
 
         HelperMethods.ObjectivesEnqueue("Find the note writer");
     }
 
     public void determineChoices(string[] s){
         
-        Debug.Log(FindObjectOfType<AudioSources>().nurse_voice);
+        Debug.Log(FindObjectOfType<AudioSources>().nurse_voice_2);
         string[] choicePhrases =  new string[2];
 
         foreach(string i in Globals.inventory){
@@ -133,7 +133,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
                 choicePhrases[0] = "Yes, I have it here (+0)";
                 choicePhrases[1] = "Nope, haven't seen it (+1)";
 
-                FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice), choicePhrases, keycardResponseChoices_lie, true);
+                FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice_3), choicePhrases, keycardResponseChoices_lie, true);
 
                 break;
 
@@ -142,7 +142,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
                 choicePhrases[0] = "No clue (+0)";
                 choicePhrases[1] = "Nope, haven't seen it (+0)";
 
-                FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice), choicePhrases, keycardResponseChoices, true);
+                FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice_3), choicePhrases, keycardResponseChoices, true);
 
                 break;
             }
