@@ -40,21 +40,25 @@ public static class HelperMethods{
             Globals.objectives.Enqueue(task);
         }
 
-        public static void ObjectivesDequeue(string completedTask){
-            Queue<string> tempO = new Queue<string>();
+        public static void ObjectivesDequeue(string task)
+        {
+            Queue<string> temp = new Queue<string>();
 
-            if (Globals.objectives.Peek() == completedTask){
-                    Globals.objectives.Dequeue();
-            }
-            else {
-                foreach(string s in Globals.objectives){
-                    if(Globals.objectives.Peek() != completedTask){
-                        tempO.Enqueue(s);
-                    }
-                    else{ 
-                        Debug.Log(s);
-                    }
+            // Drain (empty) the queue, one element at a time
+            while (Globals.objectives.Count > 0)
+            {
+                string xisting = Globals.objectives.Dequeue();
+                if (xisting.Contains(task))
+                {
+                    //
                 }
+                else {
+                    temp.Enqueue(xisting);
+                }
+            }
+
+            foreach(string it in temp){
+                Globals.objectives.Enqueue(it);
             }
         }
 
@@ -71,7 +75,7 @@ public static class HelperMethods{
                     //
                 }
                 else {
-                    temp.Enqueue(Globals.inventory.Dequeue());
+                    temp.Enqueue(xisting);
                 }
             }
 
