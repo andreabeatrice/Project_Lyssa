@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 127273733}
   m_Layer: 0
   m_Name: TopLeftDraw
-  m_TagString: Untagged
+  m_TagString: draw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -799,7 +799,7 @@ GameObject:
   - component: {fileID: 210047904}
   m_Layer: 0
   m_Name: BottomDraw
-  m_TagString: Untagged
+  m_TagString: draw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1355,7 +1355,7 @@ GameObject:
   - component: {fileID: 362337419}
   m_Layer: 0
   m_Name: MiddleDraw
-  m_TagString: Untagged
+  m_TagString: draw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1533,6 +1533,7 @@ GameObject:
   - component: {fileID: 375198778}
   - component: {fileID: 375198779}
   - component: {fileID: 375198780}
+  - component: {fileID: 375198781}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -1692,6 +1693,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7d938942b721a042ba17c99bddebb16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &375198781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375198770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8985bc2e391ce2f4c91f376e03d0c513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &388535185 stripped
@@ -2431,7 +2444,7 @@ GameObject:
   - component: {fileID: 472517584}
   m_Layer: 0
   m_Name: dust pile
-  m_TagString: Untagged
+  m_TagString: dust
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2601,7 +2614,7 @@ GameObject:
   - component: {fileID: 508875306}
   m_Layer: 0
   m_Name: Pillow
-  m_TagString: Untagged
+  m_TagString: moveable_object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3148,7 +3161,6 @@ GameObject:
   - component: {fileID: 587332313}
   - component: {fileID: 587332312}
   - component: {fileID: 587332314}
-  - component: {fileID: 587332315}
   m_Layer: 0
   m_Name: Books
   m_TagString: Untagged
@@ -3254,19 +3266,6 @@ PolygonCollider2D:
       - {x: 0.62857145, y: -0.51428574}
       - {x: 0.62857145, y: 0.42857143}
       - {x: 0.6, y: 0.45714286}
---- !u!114 &587332315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587332311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a92a27e64b077a94fa3f9c31d41c547c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
 --- !u!1 &723038006
 GameObject:
   m_ObjectHideFlags: 0
@@ -3521,6 +3520,7 @@ GameObject:
   - component: {fileID: 755918810}
   - component: {fileID: 755918809}
   - component: {fileID: 755918812}
+  - component: {fileID: 755918813}
   m_Layer: 0
   m_Name: PictureFrame
   m_TagString: Untagged
@@ -3640,6 +3640,40 @@ PolygonCollider2D:
       - {x: 0.35999998, y: -0.35999998}
       - {x: 0.35999998, y: 0.38}
       - {x: 0.32, y: 0.42}
+--- !u!114 &755918813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755918808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+  - sentences:
+    - I'm glad they let her keep this picture in here. She never stopped caring.
+    voice: {fileID: 0}
+    name: Fern
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  HeadsUpDisplay: {fileID: 1698870049}
+  choices:
+  - Keep looking around
+  choiceButtons:
+  - {fileID: 1432194063}
+  - {fileID: 0}
+  - {fileID: 0}
+  speech: 0
+  fern: 1
+  identifier: infinite
+  canClick: 1
+  enableProximityReactions: 0
+  PlayerCollider: {fileID: 0}
+  ObjectAreaCollider: {fileID: 0}
 --- !u!1 &774691324
 GameObject:
   m_ObjectHideFlags: 0
@@ -5626,7 +5660,7 @@ GameObject:
   - component: {fileID: 1195694115}
   m_Layer: 0
   m_Name: TopRightDraw
-  m_TagString: Untagged
+  m_TagString: draw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
