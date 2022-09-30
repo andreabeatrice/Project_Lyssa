@@ -1276,11 +1276,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4c4dc781cb8d947bfa4c954f917c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    sentences:
-    - There's absolutely no light in here.
-    - You'll have to go turn them on.
-    - The switch is in Dr Kraus's office...
+  interaction:
+  - words: It's pitch black down here. You can't see your hand in front of your face.
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  - words: You'll have to go turn the lights on...
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  - words: on the switchboard in Dr Kraus' office.
     voice: {fileID: 0}
     name: 
     textcolor:

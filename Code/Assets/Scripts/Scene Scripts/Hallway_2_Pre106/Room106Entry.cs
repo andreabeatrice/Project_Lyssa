@@ -6,7 +6,7 @@ public class Room106Entry : MonoBehaviour
 {
     public AudioSources allAudio;
     public GameObject HeadsUpDisplay;
-    public Dialogue after_dialog;
+    public Sentence[] after_dialog;
     public string[] after_choices;
     public GameObject[] after_choiceButtons = new GameObject[3];
     public bool enableProximityReactions;

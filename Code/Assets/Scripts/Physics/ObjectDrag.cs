@@ -17,7 +17,7 @@ public class ObjectDrag : MonoBehaviour
     public AudioSource puttingDown;
     public bool canDrag = false;
 
-    public Dialogue[] dialog;
+    public Sentence[] interactions;
     public GameObject HeadsUpDisplay;
 
     public string[] choices;
@@ -85,21 +85,7 @@ public class ObjectDrag : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        int diCount = dialog.Length - 1;
-        if (numInteractions <= diCount)
-        {
-            if (bucketTalk)
-                FindObjectOfType<DialogueManager>().StartDialogue(dialog[numInteractions], choices, choiceButtons, speech);
-            else
-                FindObjectOfType<DialogueManager>().StartDialogueNoAnimation(dialog[numInteractions], choices, choiceButtons, speech);
-        }
-        else
-        {
-            if (bucketTalk)
-                FindObjectOfType<DialogueManager>().StartDialogue(dialog[diCount], choices, choiceButtons, speech);
-            else
-                FindObjectOfType<DialogueManager>().StartDialogueNoAnimation(dialog[diCount], choices, choiceButtons, speech);
-        }
+        FindObjectOfType<DialogueManager>().StartDialogue(interactions, choices, choiceButtons, speech);
 
     }
 }

@@ -62,9 +62,9 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
         FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
-        string[] s = {"Someone's coming!"};
+        Sentence[] se = new Sentence[]{new Sentence("Someone's coming!", null, "Fern", ColorCodes.fern)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, null, Globals.fernspeech, null), "", null, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(se, "", null, false);
 
         StartCoroutine(NurseScene());
 
@@ -86,9 +86,9 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
         FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
-        string[] s = {"Someone's coming!"};
+        Sentence[] se = new Sentence[]{new Sentence("Someone's coming!", null, "Fern", ColorCodes.fern)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, null, Globals.fernspeech, null), "", null, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(se, "", null, false);
 
         StartCoroutine(NurseScene());
 

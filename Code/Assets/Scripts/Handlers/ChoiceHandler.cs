@@ -163,16 +163,18 @@ public class ChoiceHandler : MonoBehaviour
             insanityMeter.SetActive(true);
 
             //Explains the insanity meter to the player
-            //Explains dragging
+            //Explains dragging     
             string[] bucketSentences = new string[] {"The value next to each choice indicates the insanity level of your choice. If your insanity becomes too high, you might get into trouble...",
                                                     "...but if your insanity is too low, you might not understand what's happening around you.",
                                                     "You can also drag objects to learn more information about them.",
                                                     "Try now by dragging the bucket on the shelf."};
 
-            //Calls the Dialogue class constructor in order to display the bucketSentences
-            Dialogue bucketDialogue = new Dialogue(bucketSentences, null, null);
-
-            FindObjectOfType<DialogueManager>().StartDialogue(bucketDialogue, "", null, false);
+            Sentence [] sentences = new Sentence [4];
+            for(int i = 0; i < 4; i++){
+                sentences[i] = new Sentence(bucketSentences[i]);
+            }
+            
+            FindObjectOfType<DialogueManager>().StartDialogue(sentences, "", null, false);
 
             //Enables dragging
             FindObjectOfType<ObjectDrag>().canDrag = true;

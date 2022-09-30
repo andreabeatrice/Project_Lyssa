@@ -740,7 +740,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &92637829
 MonoBehaviour:
@@ -932,15 +932,15 @@ RectTransform:
   m_GameObject: {fileID: 151073638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.74368, y: 0.74368, z: 0.74368}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1482931955}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 813.42993, y: -438}
+  m_AnchoredPosition: {x: 813.42993, y: -461}
   m_SizeDelta: {x: 400, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151073640
@@ -18569,11 +18569,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Dr Kraus isn't in his office right now...
-    - You've been working here for months. You have no idea what it even looks like.
-    - You could find out... just a quick peek
+  interaction:
+  - words: Dr Kraus is up at reception with Mrs Pattel...
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  - words: ...you've been working here for months, and you don't even know what it
+      looks like.
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  - words: It couldn't hurt to take a quick look.
     voice: {fileID: 0}
     name: 
     textcolor:
@@ -18594,6 +18604,82 @@ MonoBehaviour:
   enableProximityReactions: 1
   PlayerCollider: {fileID: 1088111250}
   ObjectAreaCollider: {fileID: 702095020}
+--- !u!1 &705579752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705579753}
+  - component: {fileID: 705579755}
+  - component: {fileID: 705579754}
+  m_Layer: 5
+  m_Name: InsanityMeter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &705579753
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705579752}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5075368, y: 1.5075368, z: 1.5075368}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1482931955}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 837, y: -358}
+  m_SizeDelta: {x: 128, y: 64}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &705579754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705579752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0346cd8782ae1f04687a72b07d3e9736, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &705579755
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705579752}
+  m_CullTransparentMesh: 1
 --- !u!1 &705745046
 GameObject:
   m_ObjectHideFlags: 0
@@ -18660,7 +18746,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705820170
 GameObject:
@@ -19322,15 +19408,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - They'll let me rest soon.
+  interaction:
+  - words: They'll let me rest soon.
     voice: {fileID: 0}
     name: Patient #4
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
-  HeadsUpDisplay: {fileID: 0}
+      rgba: 4281951066
+  HeadsUpDisplay: {fileID: 1564090237}
   choices:
   - Leave him be (+0)
   choiceButtons:
@@ -19471,7 +19556,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &912761976
 GameObject:
@@ -20018,6 +20103,7 @@ MonoBehaviour:
   rb: {fileID: 1088111256}
   animator: {fileID: 1088111254}
   audiosrc: {fileID: 145486664}
+  frozen: 0
 --- !u!50 &1088111256
 Rigidbody2D:
   serializedVersion: 4
@@ -20105,7 +20191,7 @@ Transform:
   m_Children:
   - {fileID: 2053004173}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1093767691
 GameObject:
@@ -21137,6 +21223,184 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1155262508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1155262510}
+  - component: {fileID: 1155262509}
+  - component: {fileID: 1155262511}
+  - component: {fileID: 1155262512}
+  - component: {fileID: 1155262513}
+  - component: {fileID: 1155262514}
+  m_Layer: 0
+  m_Name: Doctor Kraus
+  m_TagString: rnd
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1155262509
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155262508}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 3b7ec9ea823de0d4b9deda8d1602eda1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1155262510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155262508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.29, y: -18.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1155262511
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155262508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.3618133, y: -2.781414}
+  m_Size: {x: 34.38315, y: 15.115337}
+  m_Direction: 1
+--- !u!58 &1155262512
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155262508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.8148513, y: -3.3328357}
+  serializedVersion: 2
+  m_Radius: 6.7281384
+--- !u!114 &1155262513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155262508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0376713ea07de1848bee1203a651e066, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllAudio: {fileID: 145486661}
+  PlayerCollider: {fileID: 1088111250}
+  ObjectAreaCollider: {fileID: 1155262511}
+  HeadsUpDisplay: {fileID: 1564090237}
+  DialogueVariable:
+  - words: We run a very tight ship here, Mrs Pattel. And your incompetence this
+      morning put our entire operation at risk.
+    voice: {fileID: 0}
+    name: Dr Kraus
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294566347
+  - words: I'm afraid I'm going to have to ask you to pack up your desk. I want you
+      out of here within the hour.
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294566347
+  Choices: []
+  ChoiceButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  played: 0
+  speech: 0
+--- !u!95 &1155262514
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155262508}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 427bc592a3abc094aaa578cfc0d2e461, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1165402296
 GameObject:
   m_ObjectHideFlags: 0
@@ -21149,6 +21413,8 @@ GameObject:
   - component: {fileID: 1165402299}
   - component: {fileID: 1165402298}
   - component: {fileID: 1165402297}
+  - component: {fileID: 1165402301}
+  - component: {fileID: 1165402302}
   m_Layer: 10
   m_Name: Staring Patient
   m_TagString: rnd
@@ -21257,8 +21523,67 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1165402301
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165402296}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.34873056, y: -2.0579367}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.979952, y: 4.631384}
+  m_EdgeRadius: 0
+--- !u!114 &1165402302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165402296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interaction:
+  - words: Do you think she'll ever accept my proposal?
+    voice: {fileID: 0}
+    name: Patient #11
+    textcolor:
+      serializedVersion: 2
+      rgba: 4281951066
+  HeadsUpDisplay: {fileID: 1564090237}
+  choices:
+  - Leave him be (+0)
+  choiceButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  speech: 1
+  fern: 0
+  identifier: infinite
+  canClick: 1
+  enableProximityReactions: 1
+  PlayerCollider: {fileID: 1088111250}
+  ObjectAreaCollider: {fileID: 1165402301}
 --- !u!1 &1173146933
 GameObject:
   m_ObjectHideFlags: 0
@@ -22940,7 +23265,7 @@ Transform:
   - {fileID: 702095019}
   - {fileID: 2126504939}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1384022426
 GameObject:
@@ -23725,8 +24050,9 @@ RectTransform:
   - {fileID: 275045765}
   - {fileID: 2123636128}
   - {fileID: 448663178}
+  - {fileID: 705579753}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -23794,6 +24120,194 @@ Canvas:
   m_SortingLayerID: -1084629717
   m_SortingOrder: 10
   m_TargetDisplay: 0
+--- !u!1 &1491536023
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491536032}
+  - component: {fileID: 1491536031}
+  - component: {fileID: 1491536030}
+  - component: {fileID: 1491536029}
+  - component: {fileID: 1491536028}
+  - component: {fileID: 1491536027}
+  - component: {fileID: 1491536026}
+  m_Layer: 10
+  m_Name: Receptionist
+  m_TagString: rnd
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &1491536026
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491536023}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!58 &1491536027
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491536023}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2, y: -2.6}
+  serializedVersion: 2
+  m_Radius: 0.6
+--- !u!61 &1491536028
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491536023}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.4, y: 6.4}
+    newSize: {x: 6.4, y: 6.4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 6.6}
+  m_EdgeRadius: 0
+--- !u!95 &1491536029
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491536023}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b9c274efb418894eab7aa4837414e24, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &1491536030
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491536023}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 6
+--- !u!212 &1491536031
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491536023}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 63d42aedc2055d14b9152ad457f6f140, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 6.4, y: 6.4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1491536032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491536023}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.62, y: -20.57, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1497895664
 GameObject:
   m_ObjectHideFlags: 0
@@ -24165,18 +24679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - The base of the statue says that Lyssa was the spirit of mad rage, frenzy,
-      and rabies in animals
-    - 'She took a temperate, measured approach to her role, professing "not to use
-      her powers in anger against friends, nor to have any joy in visiting the homes
-      of men." '
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294823559
+  interaction: []
   HeadsUpDisplay: {fileID: 1564090237}
   choices:
   - Interesting
@@ -24510,7 +25013,7 @@ GameObject:
   - component: {fileID: 1564090238}
   - component: {fileID: 1564090239}
   m_Layer: 5
-  m_Name: HUDelements
+  m_Name: Dialogue Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25758,7 +26261,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1779135889
 GameObject:
@@ -30472,7 +30975,7 @@ Transform:
   - {fileID: 1566259177}
   - {fileID: 1682733458}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1930653503
 GameObject:
@@ -30493,6 +30996,7 @@ GameObject:
   - component: {fileID: 1930653515}
   - component: {fileID: 1930653516}
   - component: {fileID: 1930653517}
+  - component: {fileID: 1930653518}
   m_Layer: 0
   m_Name: GlobalManagers
   m_TagString: Untagged
@@ -30684,6 +31188,24 @@ MonoBehaviour:
   PlayerCollider: {fileID: 1088111250}
   OfficeDoor: {fileID: 702095020}
   played: 0
+--- !u!114 &1930653518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930653503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6870ad9c8b9e443a2f2524ca7a87c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 1971666185}
+  dialogText: {fileID: 600381217}
+  skipButton: {fileID: 601066047}
+  clickSound: {fileID: 145486666}
+  talking: {fileID: 0}
+  inConversation: 0
 --- !u!1 &1942806260
 GameObject:
   m_ObjectHideFlags: 0
@@ -31189,7 +31711,7 @@ Transform:
   - {fileID: 1820032178}
   - {fileID: 450475593}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2042264906
 GameObject:
@@ -31235,7 +31757,7 @@ Transform:
   - {fileID: 1606902258}
   - {fileID: 227841812}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2053004172
 GameObject:
@@ -31660,7 +32182,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2085363317
 GameObject:

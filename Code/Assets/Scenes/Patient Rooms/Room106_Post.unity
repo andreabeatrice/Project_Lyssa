@@ -1010,14 +1010,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Is that even legal...?
+  interaction:
+  - words: Is that even legal?
     voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 16777215
   HeadsUpDisplay: {fileID: 741515064}
   choices:
   - Keep looking around
@@ -1790,14 +1789,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - I shouldn't be touching that!
+  interaction:
+  - words: I shouldn't be touching those!
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 741515064}
   choices:
   - Keep looking around
@@ -7091,7 +7089,6 @@ GameObject:
   - component: {fileID: 1193657091}
   - component: {fileID: 1193657090}
   - component: {fileID: 1193657089}
-  - component: {fileID: 1193657088}
   - component: {fileID: 1193657087}
   - component: {fileID: 1193657086}
   m_Layer: 0
@@ -7134,41 +7131,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1193657088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1193657085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - That makes no sense to me.
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 0
-  HeadsUpDisplay: {fileID: 741515064}
-  choices:
-  - Keep looking around
-  - Try understand (+1)
-  choiceButtons:
-  - {fileID: 1116762783}
-  - {fileID: 1786620363}
-  - {fileID: 0}
-  speech: 0
-  fern: 1
-  identifier: infinite
-  canClick: 1
-  enableProximityReactions: 0
-  PlayerCollider: {fileID: 0}
-  ObjectAreaCollider: {fileID: 0}
 --- !u!61 &1193657089
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8513,14 +8475,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Gross! There's a worm in it!
+  interaction:
+  - words: Gross! There's a worm in it! I'm not touching it!
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 741515064}
   choices:
   - Keep looking around
@@ -9419,14 +9380,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - She did that on her first day here... I can't believe they never fixed it.
+  interaction:
+  - words: It makes me nervous just looking at it
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 741515064}
   choices:
   - Keep looking around
@@ -12820,14 +12780,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - I'm glad they let her keep this picture in here. She never stopped caring.
+  interaction:
+  - words: I'm glad they let her keep it. I hope she's okay.
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 741515064}
   choices:
   - Keep looking around

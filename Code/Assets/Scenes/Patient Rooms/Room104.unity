@@ -904,14 +904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - I shouldn't be touching that!
-    voice: {fileID: 0}
-    name: Fern
-    textcolor:
-      serializedVersion: 2
-      rgba: 0
+  interaction: []
   HeadsUpDisplay: {fileID: 0}
   choices:
   - Keep looking around
@@ -1785,14 +1778,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Last time I cleaned that off, they screamed for weeks.
+  interaction:
+  - words: Last time I cleaned that off, they screamed for weeks.
     voice: {fileID: 0}
-    name: 
+    name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -2971,14 +2963,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Well, that's not creepy at all...
-    voice: {fileID: 1705003581}
-    name: 
+  interaction:
+  - words: Well, that's just a little creepy.
+    voice: {fileID: 0}
+    name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -4311,9 +4302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Is that even legal...?
+  interaction:
+  - words: Is that even legal...?
     voice: {fileID: 0}
     name: 
     textcolor:
@@ -5770,11 +5760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1705003581 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 8661605048657298932, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 1705003576}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1724761810
 PrefabInstance:
   m_ObjectHideFlags: 0
