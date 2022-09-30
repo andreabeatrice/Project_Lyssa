@@ -6,16 +6,11 @@ public class Enter106 : MonoBehaviour
 {
 
     public GameObject HeadsUpDisplay;
-    public Dialogue[] before_dialog;
-    public Dialogue[] after_dialog;
+    public Sentence[] after_dialog;
 
    public AudioSources allAudio;
 
-
-    public string[] before_choices, after_choices;
-
-    public GameObject[] before_choiceButtons = new GameObject[3];
-
+    public string[] after_choices;
     public GameObject[] after_choiceButtons = new GameObject[3];
 
     private int numInteractions;
@@ -29,11 +24,6 @@ public class Enter106 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        //Option 1: switch case
-        foreach(Dialogue di in before_dialog){
-            di.makeFern();   
-        }
 
         if(identifier == null){
             identifier = "infinite";
@@ -61,14 +51,8 @@ public class Enter106 : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && FindObjectOfType<DialogueManager>().inConversation == false){
                 allAudio.playErrorSound();
 
-                if(Globals.StorageRoom == false){
-                    TriggerBeforeDialogue();
-                }
-                else {
-                    TriggerAfterDialogue();
-                }
+                TriggerAfterDialogue();
                 
-          
                 if (HeadsUpDisplay != null)
                     HeadsUpDisplay.SetActive(true);
 
@@ -95,15 +79,7 @@ public class Enter106 : MonoBehaviour
             else
                 numInteractions = (int) typeof(InteractionsCounter).GetField("infinite").GetValue(this);
             
-            //if(clickSound!=null)
-               // clickSound.Play();
-
-            if(Globals.StorageRoom == false){
-                TriggerBeforeDialogue();
-            }
-            else {
-                TriggerAfterDialogue();
-            }
+            TriggerAfterDialogue();
           
             if (HeadsUpDisplay != null)
                 HeadsUpDisplay.SetActive(true);
@@ -117,23 +93,8 @@ public class Enter106 : MonoBehaviour
         }
     }
 
-
-    public void TriggerBeforeDialogue()
-    {
-        int diCount = before_dialog.Length - 1;
-        if (numInteractions <= diCount)
-        {
-            FindObjectOfType<DialogueManager>().StartDialogue(before_dialog[0], before_choices, before_choiceButtons, false);
-        }
-        else
-        {
-            FindObjectOfType<DialogueManager>().StartDialogue(before_dialog[1], before_choices, before_choiceButtons, false);
-        }
-        
-    }
-
     public void TriggerAfterDialogue(){
-        FindObjectOfType<DialogueManager>().StartDialogue(after_dialog[0], after_choices,after_choiceButtons, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(after_dialog, after_choices,after_choiceButtons, false);
         
         
     }

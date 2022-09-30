@@ -27,12 +27,16 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
         FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
-        string[] s = {"Yes! She specifically told me that this room needed to be cleaned out!"};
+        //string[] s = {"Yes! She specifically told me that this room needed to be cleaned out!"};
+        Sentence[] s = new Sentence[3];
+        
+        s[0] = new Sentence("Yes! She specifically told me that this room needed to be cleaned out!", 1);
+        s[1] = new Sentence("I knew it! I'll have to speak to Dr Kraus about her.");
+        s[2] = new Sentence("Say, since you're in here anyway, have you seen my key card?");
 
+        FindObjectOfType<DialogueManager>().StartDialogue(s, determineChoicesStrings(), determineChoicesButtons(), true);
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, allAudio.fern_voice), "", null, true);
-
-        StartCoroutine(nurse_response_receptionist());
+        //StartCoroutine(nurse_response_receptionist());
     }
 
     public void be_honest(){
@@ -40,61 +44,34 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
         FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
-        string[] s = {"There are rats around, I was trying to catch one."};
-
-        //FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, FindObjectOfType<AudioSources>().fern_voice), "", null, false);
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Fern", Globals.fernspeech, allAudio.fern_voice), "", null, true);
-        StartCoroutine(nurse_response_rats());
-    }
-
-    public IEnumerator nurse_response_receptionist() //each sentence
-    {
-
-        yield return new WaitForSeconds(2.5f);
-
-       Debug.Log("check1");
-
-
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
-
-        string[] s = {"I knew it! I'll have to speak to Dr Kraus about her.", "Say, since you're in here anyway, have you seen my key card?"};
-
-        determineChoices(s);
-    }
-
-    public IEnumerator nurse_response_rats() //each sentence
-    {
-
-        yield return new WaitForSeconds(2.5f);
-
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
-
-        string[] s;
+        Sentence[] s;
 
         if(Globals.insanity >= 5){
-            s = new string[3];
-            s[0] = "God, you're really the worst janitor, Fern.";
-            s[1] = "<i> and you have always been a bit of an idiot.</i>";
-            s[2] = "Say, since you're in here anyway, have you seen my key card?";
+            s = new Sentence[4];
+            s[0] = new Sentence("There are rats around, I was trying to catch one.", 1);
+            s[1] = new Sentence("God, you're really the worst janitor, Fern");
+            s[1] = new Sentence("... though I'm not really surprised. She's a bit of an idiot.");
+            s[2] = new Sentence("Say, since you're in here anyway, have you seen my key card?");
         } 
         else {
-            s = new string[2];
-            s[0] = "God, you're really the worst janitor, Fern.";
-            s[1] = "Say, since you're in here anyway, have you seen my key card?";
+            s = new Sentence[3];
+            s[0] = new Sentence("There are rats around, I was trying to catch one.", 1);
+            s[1] = new Sentence("God, you're really the worst janitor, Fern.");
+            s[2] = new Sentence("Say, since you're in here anyway, have you seen my key card?");
         }
 
-
-        determineChoices(s);
-        
+        FindObjectOfType<DialogueManager>().StartDialogue(s, determineChoicesStrings(), determineChoicesButtons(), true);
+    
     }
 
     public void keycardlie(){
         FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
+
         Globals.insanity += 1;
 
-        string[] s = {"Ugh, it will be a mission to get to the basement without it.", "Are you still here? Get back to work!"};
+        Sentence[] s = new Sentence[]{new Sentence("Ugh, it will be a mission to get to the basement without it."), new Sentence("Are you still here? Get back to work!")};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice_2), "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yes, nurse", leaveroombutton, true);
 
         HelperMethods.ObjectivesEnqueue("Investigate the basement");
     }
@@ -104,11 +81,11 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
         FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
-        string[] s = {"Oh, brilliant! We can't have anyone getting into the basement. Now get back to work!", "Oh, and take this piece of paper with you!"};
+        Sentence[] s = new Sentence[]{new Sentence("Oh, brilliant! We can't have anyone getting into the basement. Now get back to work!"), new Sentence("Oh, and take this trash she was keeping under her pillow with you!")};
 
         HelperMethods.InventoryEnqueue("Note from Otto");
         
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice_2), "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yes, nurse", leaveroombutton, true);
 
         HelperMethods.ObjectivesEnqueue("Find the note writer");
     }
@@ -116,37 +93,45 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
     public void keycardtruth(){
         FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
-        string[] s = {"Ugh, it's probably around here somewhere. Go get back to work!"};
+       Sentence[] s = new Sentence[]{new Sentence("Ugh, it's probably around here somewhere."), new Sentence("Are you still here? Get back to work!")};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice_2), "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yes, nurse", leaveroombutton, true);
 
         HelperMethods.ObjectivesEnqueue("Find the note writer");
     }
 
-    public void determineChoices(string[] s){
+    public GameObject[] determineChoicesButtons(){
         
-        Debug.Log(FindObjectOfType<AudioSources>().nurse_voice_2);
+        foreach(string i in Globals.inventory){
+            if(i.Contains("Keycard")){
+                return keycardResponseChoices_lie;
+            }
+            if(i.Contains("Note")){
+
+                return keycardResponseChoices;
+
+            }
+        }
+        return null;
+
+    }
+
+    public string[] determineChoicesStrings(){
+        
         string[] choicePhrases =  new string[2];
 
         foreach(string i in Globals.inventory){
             if(i.Contains("Keycard")){
-                choicePhrases[0] = "Yes, I have it here (+0)";
+                choicePhrases[0] = "Yes, it's right here (+0)";
                 choicePhrases[1] = "Nope, haven't seen it (+1)";
-
-                FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice_3), choicePhrases, keycardResponseChoices_lie, true);
-
-                break;
-
             }
             if(i.Contains("Note")){
                 choicePhrases[0] = "No clue (+0)";
                 choicePhrases[1] = "Nope, haven't seen it (+0)";
 
-                FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, "Nurse Tarr", FindObjectOfType<AudioSources>().nurse_voice_3), choicePhrases, keycardResponseChoices, true);
-
-                break;
             }
         }
+        return choicePhrases;
 
     }
 

@@ -6,7 +6,7 @@ public class Room106Interaction : MonoBehaviour
 {
     public AudioSources allAudio;
     public GameObject HeadsUpDisplay;
-    public Dialogue before_dialog;
+    public Sentence[] before_dialog;
     public string[] before_choices;
     public GameObject[] before_choiceButtons = new GameObject[3];
     public bool enableProximityReactions;
@@ -15,7 +15,6 @@ public class Room106Interaction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        before_dialog.makeFern();      
     }
 
     // Update is called once per frame
@@ -45,6 +44,9 @@ public class Room106Interaction : MonoBehaviour
 
     public void TriggerBeforeDialogue()
     {
+        foreach(Sentence s in before_dialog)
+            s.makeFern();
+
         FindObjectOfType<DialogueManager>().StartDialogue(before_dialog, before_choices, before_choiceButtons, false);   
     }
 }

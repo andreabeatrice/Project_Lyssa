@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour { 
 
     //Queue is FIFO so sentences will be in order even if they play dialogue many times
-    private Queue<string> sentences = new Queue<string>();
+    private Queue<Sentence> sentences = new Queue<Sentence>();
 
     public TMP_Text nameText;
 
@@ -28,9 +28,6 @@ public class DialogueManager : MonoBehaviour {
     private bool speech;
 
     public bool inConversation = false;
-
-    
-
 
     // Start is called before the first frame update
     void Start()
@@ -63,17 +60,12 @@ public class DialogueManager : MonoBehaviour {
         inConversation = s;
     }
 
-    public void StartDialogue(Dialogue di, string[] c, GameObject[] choiceButtons, bool speech)
+    public void StartDialogue(Sentence[] di, string[] c, GameObject[] choiceButtons, bool speech)
     {
-        if(di.voice!=null)
-        {
-            talking = di.voice;
-        }
         
         inConversation = true;
 
         this.choices = c;
-
 
         if (choiceButtons[0] != null)
             this.choice1 = choiceButtons[0];
@@ -99,30 +91,18 @@ public class DialogueManager : MonoBehaviour {
 
         sentences.Clear();
 
-        if (nameText != null) {
-            nameText.color = di.textcolor;
-            nameText.text = di.name;
-        }
-
-        dialogText.color = di.textcolor;
-
-
-
-        foreach (string sentence in di.sentences)
+        foreach (Sentence s in di)
         {
-            sentences.Enqueue(sentence);
+            sentences.Enqueue(s);
         }
 
         DisplayNextSentence();
 
     }
 
-    public void StartDialogue(Dialogue di, string choice, GameObject c1, bool speech)
+    public void StartDialogue(Sentence[] di, string choice, GameObject c1, bool speech)
     {
-        if (di.voice!= null)
-        {
-            talking = di.voice;
-        }
+
         inConversation = true;
 
         this.choices = new string[] { choice };
@@ -138,18 +118,15 @@ public class DialogueManager : MonoBehaviour {
 
         this.speech = speech;
 
-        if (nameText != null)
+        skipButton.SetActive(true);
+
+        sentences.Clear();
+
+        foreach (Sentence s in di)
         {
-            nameText.color = di.textcolor;
-            nameText.text = di.name;
+            sentences.Enqueue(s);
         }
 
-        dialogText.color = di.textcolor;
-
-        foreach (string sentence in di.sentences)
-        {
-            sentences.Enqueue(sentence);
-        }
 
         DisplayNextSentence();
 
@@ -159,12 +136,31 @@ public class DialogueManager : MonoBehaviour {
     public void DisplayNextSentence()
     {
 
+        Sentence s = sentences.Dequeue();
+
+        if(s.voice !=null)
+        {
+            talking = s.voice;
+        }
+
         if(talking!=null && this.speech)
         {
+        
+            talking.time = Random.Range(0.01f, talking.clip.length);
+
             talking.Play();// plays for all direct dialogue
         }
 
-        string sentence = sentences.Dequeue();
+        string sentence = s.words;
+
+        
+        dialogText.color = s.textcolor;
+
+        if (nameText != null){
+            nameText.text = s.name;
+            nameText.color = s.textcolor;
+        }
+            
 
         dialogText.text = sentence;
 
@@ -226,6 +222,9 @@ public class DialogueManager : MonoBehaviour {
                 }
             }
         }
+        else {
+            StartCoroutine(ClearHeadsUp());
+        }
 
         
     }
@@ -233,27 +232,43 @@ public class DialogueManager : MonoBehaviour {
     //Add to a skip button
     public void DisplayNextSentenceNoAnimation()
     {
-                if(talking!=null && this.speech)
-                {
-                    talking.Play();// plays for all direct dialogue
-                }
-                
-                string sentence = sentences.Dequeue();
+        Sentence s = sentences.Dequeue();
 
-                dialogText.text = sentence;
+        if(s.voice !=null)
+        {
+            talking = s.voice;
+        }
 
-                if (sentences.Count == 0)
-                {
-                    EndDialogue();
-                    return;
-                }
+        if(talking!=null && this.speech)
+        {
+            talking.Play();// plays for all direct dialogue
+        }
 
+        string sentence = s.words;
+
+        
+        dialogText.color = s.textcolor;
+
+        if (nameText != null){
+            nameText.text = s.name;
+            nameText.color = s.textcolor;
+        }
+            
+        dialogText.text = sentence;
+
+        if (sentences.Count == 0)
+        {
+            EndDialogue();
+
+            //Debug.Log(skipButton.activeSelf);
+            return;
+        }
     }
 
     //StartDialogueNoAnimation(Dialogue di, string[] c, GameObject[] choiceButtons, bool speech)
-    public void StartDialogueNoAnimation(Dialogue di, string[] c, GameObject[] choiceButtons, bool speech)
+    public void StartDialogueNoAnimation(Sentence[] di, string[] c, GameObject[] choiceButtons, bool speech)
     {
-            inConversation = true;
+        inConversation = true;
 
         this.choices = c;
 
@@ -278,21 +293,26 @@ public class DialogueManager : MonoBehaviour {
 
         sentences.Clear();
 
-        if (nameText != null) {
-            nameText.color = di.textcolor;
-            nameText.text = di.name;
-        }
+        this.speech = speech;
 
-        dialogText.color = di.textcolor;
+        skipButton.SetActive(true);
 
+        sentences.Clear();
 
-
-        foreach (string sentence in di.sentences)
+        foreach (Sentence s in di)
         {
-            sentences.Enqueue(sentence);
+            sentences.Enqueue(s);
         }
 
-            DisplayNextSentenceNoAnimation();
+        DisplayNextSentenceNoAnimation();
 
     }
+
+    public IEnumerator ClearHeadsUp(){
+        yield return new WaitForSeconds(4f);
+
+        FindObjectOfType<DialogueBoxHandler>().clearHUD();
+    }
+
+
 }

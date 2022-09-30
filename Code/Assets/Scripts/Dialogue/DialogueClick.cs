@@ -14,7 +14,7 @@ using System;
 //Can be assigned to any object/sprite you want to be able to click on to start a dialogue
 public class DialogueClick : MonoBehaviour
 {
-    public Dialogue[] dialog;
+    public Sentence[] interaction;
     private AudioSource clickSound; //don't want clicksound before audio
 
     public GameObject HeadsUpDisplay;
@@ -48,8 +48,8 @@ public class DialogueClick : MonoBehaviour
         
         //Option 1: switch case
         if(fern){
-            foreach(Dialogue di in dialog){
-                di.makeFern();
+            foreach(Sentence s in interaction){
+                s.makeFern();
             }
         }
 
@@ -127,14 +127,14 @@ public class DialogueClick : MonoBehaviour
         if (HeadsUpDisplay != null)
                 HeadsUpDisplay.SetActive(true);
 
-        int diCount = dialog.Length - 1;
+        int diCount = interaction.Length - 1;
         if (numInteractions <= diCount)
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialog[numInteractions], choices, choiceButtons, speech);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech);
         }
         else
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(dialog[diCount], choices, choiceButtons, speech);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech);
         }
         
     }

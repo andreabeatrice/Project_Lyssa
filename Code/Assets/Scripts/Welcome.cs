@@ -7,7 +7,7 @@ using UnityEngine;
 //they haven't been in the scene before
 public class Welcome : MonoBehaviour
 {
-    private Dialogue dialog;
+    private Sentence[] welcomespeech = new Sentence[3];
     
     //Needs to be assigned in the Inspector
     public GameObject HeadsUpDisplay;
@@ -28,7 +28,9 @@ public class Welcome : MonoBehaviour
 
 
         //Instantiates a Dialogue object which contains the sentences from the WelcomeStrings array
-        dialog = new Dialogue(WelcomeStrings, null, null);
+        for (int i = 0; i < 3; i++){
+            welcomespeech[i] = new Sentence(WelcomeStrings[i]);
+        }
 
         choices[0] = "I got this.";
 
@@ -54,7 +56,7 @@ public class Welcome : MonoBehaviour
         if (HeadsUpDisplay != null)
             HeadsUpDisplay.SetActive(true);
 
-        FindObjectOfType<DialogueManager>().StartDialogue(dialog, choices, choiceButtons, speech);
+        FindObjectOfType<DialogueManager>().StartDialogue(welcomespeech, choices, choiceButtons, speech);
     }
 
     //Starts the dialogue immediately
@@ -63,7 +65,7 @@ public class Welcome : MonoBehaviour
         if (HeadsUpDisplay != null)
             HeadsUpDisplay.SetActive(true);
 
-        FindObjectOfType<DialogueManager>().StartDialogue(dialog, choices, choiceButtons, speech);
+        FindObjectOfType<DialogueManager>().StartDialogue(welcomespeech, choices, choiceButtons, speech);
     }
 
     public void WelcomeOver(){

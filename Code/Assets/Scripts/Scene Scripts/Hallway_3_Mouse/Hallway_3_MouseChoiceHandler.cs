@@ -5,7 +5,7 @@ using UnityEngine;
 public class Hallway_3_MouseChoiceHandler : MonoBehaviour
 {
 
-    public Dialogue di;
+    public Sentence[] di;
     public GameObject ChoiceBtn;
 
     public GameObject HeadsUpDisplay;

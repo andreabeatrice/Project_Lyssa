@@ -47,53 +47,53 @@ public class Room106_ChoiceHandler : MonoBehaviour
         FindObjectOfType<DialogueBoxHandler>().clearHUD();
     }
 
-    public void keep_keycard(){
-        HelperMethods.InventoryEnqueue("Nurse's Keycard");
+    // public void keep_keycard(){
+    //     HelperMethods.InventoryEnqueue("Nurse's Keycard");
 
-        HelperMethods.ObjectivesDequeue("Find the note from Otto");
-        HelperMethods.ObjectivesDequeue("Find the nurse's key card");
+    //     HelperMethods.ObjectivesDequeue("Find the note from Otto");
+    //     HelperMethods.ObjectivesDequeue("Find the nurse's key card");
 
-        GameObject.Find("keycard collider").SetActive(false);
+    //     GameObject.Find("keycard collider").SetActive(false);
 
-        //play footsteps noise + dialogue
-        FindObjectOfType<AudioSources>().StopAllAudio();
-        FindObjectOfType<AudioSources>().playFootsteps();
-        //FindObjectOfType<DialogueManager>().TypeSentence("Someone's coming!");
+    //     //play footsteps noise + dialogue
+    //     FindObjectOfType<AudioSources>().StopAllAudio();
+    //     FindObjectOfType<AudioSources>().playFootsteps();
+    //     //FindObjectOfType<DialogueManager>().TypeSentence("Someone's coming!");
 
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
+    //     FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
-        string[] s = {"Someone's coming!"};
+    //     string[] s = {"Someone's coming!"};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, null, Globals.fernspeech, null), "", null, false);
+    //     FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, null, Globals.fernspeech, null), "", null, false);
 
-        StartCoroutine(NurseScene());
-
-
-    }
-
-    public void keep_note(){
-        HelperMethods.InventoryEnqueue("Note from Otto");
-
-        HelperMethods.ObjectivesDequeue("Find the note from Otto");
-        HelperMethods.ObjectivesDequeue("Find the nurse's key card");
-
-        GameObject.Find("Note").SetActive(false);
-
-        //play footsteps noise + dialogue
-        FindObjectOfType<AudioSources>().StopAllAudio();
-        FindObjectOfType<AudioSources>().playFootsteps();
-        //FindObjectOfType<DialogueManager>().TypeSentence("Someone's coming!");
-
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
-
-        string[] s = {"Someone's coming!"};
-
-        FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, null, Globals.fernspeech, null), "", null, false);
-
-        StartCoroutine(NurseScene());
+    //     StartCoroutine(NurseScene());
 
 
-    }
+    // }
+
+    // public void keep_note(){
+    //     HelperMethods.InventoryEnqueue("Note from Otto");
+
+    //     HelperMethods.ObjectivesDequeue("Find the note from Otto");
+    //     HelperMethods.ObjectivesDequeue("Find the nurse's key card");
+
+    //     GameObject.Find("Note").SetActive(false);
+
+    //     //play footsteps noise + dialogue
+    //     FindObjectOfType<AudioSources>().StopAllAudio();
+    //     FindObjectOfType<AudioSources>().playFootsteps();
+    //     //FindObjectOfType<DialogueManager>().TypeSentence("Someone's coming!");
+
+    //     FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
+
+    //     string[] s = {"Someone's coming!"};
+
+    //     FindObjectOfType<DialogueManager>().StartDialogue(new Dialogue(s, null, Globals.fernspeech, null), "", null, false);
+
+    //     StartCoroutine(NurseScene());
+
+
+    // }
 
     public void investigate_writing(){
         Globals.insanity +=1;

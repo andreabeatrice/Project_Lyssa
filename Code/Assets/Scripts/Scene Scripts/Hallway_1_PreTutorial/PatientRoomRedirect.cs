@@ -26,11 +26,11 @@ public class PatientRoomRedirect : MonoBehaviour
     {
         FindObjectOfType<DialogueBoxHandler>().showHUD();
         
-        string[] bucketSentences = new string[] {"I should go get cleaning supplies first"};
+        string[] bucketSentences = new string[] {};
 
-        Dialogue bucketDialogue = new Dialogue(bucketSentences, "Fern", null);
+        Sentence[] s = new Sentence[]{new Sentence("I should go get cleaning supplies first",1)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(bucketDialogue, "Yeah, okay", NoActionChoiceButton, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yeah, okay", NoActionChoiceButton, false);
 
         allAudio.playErrorSound();
     }

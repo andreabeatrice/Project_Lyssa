@@ -83,9 +83,10 @@ public class ObjectClick : MonoBehaviour
 
                             Color32 c = new Color32(135, 206, 253, 255);
 
-                            Dialogue dialog = new Dialogue(sentences, "Fern", c, null);
+                            Sentence[] interaction = new Sentence[] {new Sentence("I should go get cleaning supplies first")};
 
-                            FindObjectOfType<DialogueManager>().StartDialogue(dialog, "Okay", noaction, false);
+                            FindObjectOfType<DialogueManager>().StartDialogue(interaction, "Okay", noaction, false);
+
                         }
                         
                         break;

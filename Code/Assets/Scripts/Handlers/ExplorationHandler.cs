@@ -35,12 +35,9 @@ public class ExplorationHandler : MonoBehaviour
         }
         else {
             FindObjectOfType<DialogueBoxHandler>().showHUD();
-            string[] bucketSentences = new string[] {"I should go get cleaning supplies first"};
+            Sentence[] interaction = new Sentence[] {new Sentence("I should go get cleaning supplies first", 1)};
 
-            //Calls the Dialogue class constructor in order to display the bucketSentences
-            Dialogue bucketDialogue = new Dialogue(bucketSentences, "Fern", null);
-
-            FindObjectOfType<DialogueManager>().StartDialogue(bucketDialogue, "Yeah, okay", silent_agreement, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction, "Yeah, okay", silent_agreement, false);
 
             allAudio.playErrorSound();
         }
