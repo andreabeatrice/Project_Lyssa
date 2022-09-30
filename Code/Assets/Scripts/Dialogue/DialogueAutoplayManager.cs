@@ -169,6 +169,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
 
         if(talking!=null && this.speech)
         {
+            talking.time = Random.Range(0.01f, talking.clip.length);
             talking.Play();// plays for all direct dialogue
         }
 
