@@ -61,6 +61,15 @@ public class CreateVariables : MonoBehaviour
                     rb.position = new Vector2(0, -78);
                     check = true;
                 break;
+                case "Hallway_7_LightSwitch":
+                    HelperMethods.InventoryEnqueue("Broom");
+                    HelperMethods.InventoryEnqueue("HER Diary");
+                    HelperMethods.ObjectivesEnqueue("Don't get fired");
+                    HelperMethods.ObjectivesEnqueue("Find HER");
+                    HelperMethods.ObjectivesEnqueue("Turn the basement light on");
+                    rb.position = new Vector2(0, -78);
+                    check = true;
+                break;
                 case "Hallway_6_Slip":
                     foreach(string s in Globals.objectives){
                         Globals.objectives.Dequeue();
