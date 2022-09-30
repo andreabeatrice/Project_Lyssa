@@ -848,7 +848,6 @@ GameObject:
   - component: {fileID: 194097522}
   - component: {fileID: 194097521}
   - component: {fileID: 194097520}
-  - component: {fileID: 194097519}
   - component: {fileID: 194097518}
   m_Layer: 0
   m_Name: WaterDispenser
@@ -891,18 +890,6 @@ MonoBehaviour:
   ChoiceButton_none: {fileID: 473796974}
   ChoiceButton_mop: {fileID: 1534720763}
   ChoiceButton_broom: {fileID: 1418137028}
---- !u!114 &194097519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194097516}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1f4cd41e01485f48837e506cda07ef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &194097520
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1248,7 +1235,7 @@ RectTransform:
   - {fileID: 887173142}
   - {fileID: 1782482362}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1518,14 +1505,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   di:
-    sentences:
-    - Are you really trying to leave right now? Without dealing with the mess you've
-      caused?
+  - words: 
     voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 0
+  - words: 
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 0
+  - words: 
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 0
+  - words: 
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 0
   ChoiceBtn: {fileID: 1642415799}
   HeadsUpDisplay: {fileID: 1023093939}
 --- !u!114 &243715981
@@ -1540,11 +1543,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4c4dc781cb8d947bfa4c954f917c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-    sentences:
-    - You can't just leave that rat to run around.
-    - You'll be fired for sure if any of the nurses or Dr Krause see it.
-    - You'll have to follow it in
+  interaction:
+  - words: You can't just leave that rat to run around.
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  - words: You'll definitely be fired if anyone else sees it. And you can't let that
+      happen. You have to be here.
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  - words: You'll have to follow it in.
     voice: {fileID: 0}
     name: 
     textcolor:
@@ -1778,14 +1791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - My word, you're so slow! Hurry up already!
-    voice: {fileID: 1647875455}
-    name: Receptionist
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
+  interaction: []
   HeadsUpDisplay: {fileID: 1023093939}
   choices:
   - Apologize (+0)
@@ -1977,7 +1983,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434162989
 GameObject:
@@ -4135,7 +4141,7 @@ Transform:
   - {fileID: 399444048}
   - {fileID: 1147656830}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &929196546
 GameObject:
@@ -5100,7 +5106,7 @@ Transform:
   - {fileID: 1209478424}
   - {fileID: 2096190258}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1108583793
 GameObject:
@@ -8811,7 +8817,7 @@ Transform:
   - {fileID: 699973055}
   - {fileID: 610381165}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782482361
 GameObject:
@@ -9045,7 +9051,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.4, y: 6.8}
+    oldSize: {x: 6.4, y: 6.4}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9158,10 +9164,9 @@ Transform:
   m_LocalPosition: {x: -34.48, y: -6.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1922444156}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1794185600
 MonoBehaviour:
@@ -9221,7 +9226,7 @@ Transform:
   - {fileID: 780290088}
   - {fileID: 1111185556}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1812010506
 GameObject:
@@ -9517,13 +9522,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922444155}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -34.48, y: -6.11, z: 0}
   m_LocalScale: {x: 0.9285513, y: 0.9285513, z: 0.9285513}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1794185599}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1922444157
 SpriteRenderer:
@@ -9951,7 +9956,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2096190257
 GameObject:

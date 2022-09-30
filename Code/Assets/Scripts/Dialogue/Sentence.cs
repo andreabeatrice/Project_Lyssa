@@ -20,9 +20,6 @@ public class Sentence
         public void makeFern(){
             textcolor = new Color32(135, 206, 253, 255);
             name = "Fern";
-
-            Debug.Log(GameObject.FindGameObjectWithTag("AudioPrefab").transform.GetComponentsInChildren<AudioSource>());
-            GameObject.FindGameObjectWithTag("AudioPrefab").transform.GetComponentsInChildren<AudioSource>();
             
         }
 

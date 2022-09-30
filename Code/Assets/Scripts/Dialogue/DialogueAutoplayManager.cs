@@ -69,6 +69,8 @@ public class DialogueAutoplayManager : MonoBehaviour {
 
         this.choices = c;
 
+        FindObjectOfType<PlayerController>().frozen = true;
+
         if (choiceButtons[0] != null)
         this.choice1 = choiceButtons[0];
 
@@ -89,7 +91,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
 
         this.speech = speech;
 
-        skipButton.SetActive(true);
+        skipButton.SetActive(false);
 
         sentences.Clear();
 

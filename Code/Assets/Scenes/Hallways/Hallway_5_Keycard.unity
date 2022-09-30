@@ -932,15 +932,15 @@ RectTransform:
   m_GameObject: {fileID: 151073638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.74368, y: 0.74368, z: 0.74368}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1482931955}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 813.42993, y: -438}
+  m_AnchoredPosition: {x: 813.42993, y: -461}
   m_SizeDelta: {x: 400, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151073640
@@ -18569,11 +18569,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Dr Kraus isn't in his office right now...
-    - You've been working here for months. You have no idea what it even looks like.
-    - You could find out... just a quick peek
+  interaction:
+  - words: Dr Kraus is up at reception with Mrs Pattel...
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  - words: ...you've been working here for months, and you don't even know what it
+      looks like.
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  - words: It couldn't hurt to take a quick look.
     voice: {fileID: 0}
     name: 
     textcolor:
@@ -18594,6 +18604,82 @@ MonoBehaviour:
   enableProximityReactions: 1
   PlayerCollider: {fileID: 1088111250}
   ObjectAreaCollider: {fileID: 702095020}
+--- !u!1 &705579752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 705579753}
+  - component: {fileID: 705579755}
+  - component: {fileID: 705579754}
+  m_Layer: 5
+  m_Name: InsanityMeter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &705579753
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705579752}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5075368, y: 1.5075368, z: 1.5075368}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1482931955}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 837, y: -358}
+  m_SizeDelta: {x: 128, y: 64}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &705579754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705579752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0346cd8782ae1f04687a72b07d3e9736, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &705579755
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705579752}
+  m_CullTransparentMesh: 1
 --- !u!1 &705745046
 GameObject:
   m_ObjectHideFlags: 0
@@ -19322,14 +19408,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - They'll let me rest soon.
+  interaction:
+  - words: They'll let me rest soon.
     voice: {fileID: 0}
     name: Patient #4
     textcolor:
       serializedVersion: 2
-      rgba: 4280070804
+      rgba: 4281951066
   HeadsUpDisplay: {fileID: 1564090237}
   choices:
   - Leave him be (+0)
@@ -21275,16 +21360,20 @@ MonoBehaviour:
   ObjectAreaCollider: {fileID: 1155262511}
   HeadsUpDisplay: {fileID: 1564090237}
   DialogueVariable:
-    sentences:
-    - 'We run a very tight ship here, Mrs Pattel. And you should be ashamed of yourself
-      for forgetting that. '
-    - I'm afraid I'm going to have to ask you to pack up your desk. We can't afford
-      any slips in this institution.
+  - words: We run a very tight ship here, Mrs Pattel. And your incompetence this
+      morning put our entire operation at risk.
     voice: {fileID: 0}
     name: Dr Kraus
     textcolor:
       serializedVersion: 2
-      rgba: 4286921103
+      rgba: 4294566347
+  - words: I'm afraid I'm going to have to ask you to pack up your desk. I want you
+      out of here within the hour.
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294566347
   Choices: []
   ChoiceButtons:
   - {fileID: 0}
@@ -21474,14 +21563,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Do you think she could be interested in me?
+  interaction:
+  - words: Do you think she'll ever accept my proposal?
     voice: {fileID: 0}
-    name: Patient #2
+    name: Patient #11
     textcolor:
       serializedVersion: 2
-      rgba: 4280070804
+      rgba: 4281951066
   HeadsUpDisplay: {fileID: 1564090237}
   choices:
   - Leave him be (+0)
@@ -23962,6 +24050,7 @@ RectTransform:
   - {fileID: 275045765}
   - {fileID: 2123636128}
   - {fileID: 448663178}
+  - {fileID: 705579753}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24590,18 +24679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - The base of the statue says that Lyssa was the spirit of mad rage, frenzy,
-      and rabies in animals
-    - 'She took a temperate, measured approach to her role, professing "not to use
-      her powers in anger against friends, nor to have any joy in visiting the homes
-      of men." '
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294823559
+  interaction: []
   HeadsUpDisplay: {fileID: 1564090237}
   choices:
   - Interesting

@@ -14436,9 +14436,14 @@ MonoBehaviour:
   allAudio: {fileID: 616691240}
   HeadsUpDisplay: {fileID: 1133166374}
   after_dialog:
-    sentences:
-    - There's caution tape and a "No Entry" sign. This seems like a bad idea. Are
-      you going to do it anyway?
+  - words: There's yellow tape and a "No Entry" sign on the door. This seems like
+      a bad idea.
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  - words: Are you really going to go in anyway?
     voice: {fileID: 0}
     name: 
     textcolor:
@@ -19086,14 +19091,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - My word, you're so slow! Hurry up already!
+  interaction:
+  - words: The storage closet hasn't moved, Fern. It's still down the hall.
     voice: {fileID: 616691242}
     name: Receptionist
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4289043952
   HeadsUpDisplay: {fileID: 1133166374}
   choices:
   - Apologize (+0)
@@ -26992,7 +26996,7 @@ GameObject:
   - component: {fileID: 1133166376}
   - component: {fileID: 1133166375}
   m_Layer: 5
-  m_Name: HUDelements
+  m_Name: DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29248,19 +29252,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - The base of the statue says that Lyssa was the spirit of mad rage, frenzy,
-      and rabies in animals
-    - 'She took a temperate, measured approach to her role, professing "not to use
-      her powers in anger against friends, nor to have any joy in visiting the homes
-      of men." '
+  interaction:
+  - words: Lyssa personifies mad rage and frenzy, who did not use her powers in anger
+      against friends, nor have any joy driving men mad.
     voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
-      rgba: 4294823559
-  HeadsUpDisplay: {fileID: 1133166374}
+      rgba: 4294967295
+  HeadsUpDisplay: {fileID: 0}
   choices:
   - Interesting
   choiceButtons:
@@ -29269,7 +29269,7 @@ MonoBehaviour:
   - {fileID: 0}
   speech: 0
   fern: 0
-  identifier: statue
+  identifier: infinite
   canClick: 1
   enableProximityReactions: 1
   PlayerCollider: {fileID: 1629585508}
@@ -29528,6 +29528,7 @@ MonoBehaviour:
   rb: {fileID: 1629585514}
   animator: {fileID: 1629585512}
   audiosrc: {fileID: 616691243}
+  frozen: 0
 --- !u!50 &1629585514
 Rigidbody2D:
   serializedVersion: 4

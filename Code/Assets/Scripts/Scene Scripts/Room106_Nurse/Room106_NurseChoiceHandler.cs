@@ -14,6 +14,10 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
     public GameObject grafitti; 
     public Sprite insaneGrafitti;
 
+    private Color32 fern = new Color32(135, 206, 253, 255);
+    private Color32 tarr = new Color32(126,179,189, 255);
+
+
     public void Start(){
         if (Globals.insanity > 4){
             grafitti.GetComponent<Image>().sprite = insaneGrafitti;
@@ -22,6 +26,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
     public void blamed_receptionist(){
         Globals.insanity += 2;
+        Globals.blamed_receptionist = true;
 
         allAudio.StopAllAudio();
 
@@ -30,9 +35,9 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
         //string[] s = {"Yes! She specifically told me that this room needed to be cleaned out!"};
         Sentence[] s = new Sentence[3];
         
-        s[0] = new Sentence("Yes! She specifically told me that this room needed to be cleaned out!", 1);
-        s[1] = new Sentence("I knew it! I'll have to speak to Dr Kraus about her.");
-        s[2] = new Sentence("Say, since you're in here anyway, have you seen my key card?");
+        s[0] = new Sentence("Yes! She specifically told me that this room needed to be cleaned out!", allAudio.fern_voice, "Fern", fern);
+        s[1] = new Sentence("I knew it! I'll have to speak to Dr Kraus about her.", allAudio.nurse_voice, "Nurse Tarr", tarr);
+        s[2] = new Sentence("Say, since you're in here anyway, have you seen my key card?", allAudio.nurse_voice, "Nurse Tarr", tarr);
 
         FindObjectOfType<DialogueManager>().StartDialogue(s, determineChoicesStrings(), determineChoicesButtons(), true);
 
@@ -48,19 +53,23 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
         if(Globals.insanity >= 5){
             s = new Sentence[4];
-            s[0] = new Sentence("There are rats around, I was trying to catch one.", 1);
-            s[1] = new Sentence("God, you're really the worst janitor, Fern");
-            s[1] = new Sentence("... though I'm not really surprised. She's a bit of an idiot.");
-            s[2] = new Sentence("Say, since you're in here anyway, have you seen my key card?");
+            s[0] = new Sentence("There are rats around, I was trying to catch one.", allAudio.fern_voice, "Fern", fern);
+            s[1] = new Sentence("God, you're really the worst janitor, Fern", allAudio.nurse_voice, "Nurse Tarr", tarr);
+            s[1] = new Sentence("... though I'm not really surprised. She's a bit of an idiot.", allAudio.nurse_voice, "Nurse Tarr", tarr);
+            s[2] = new Sentence("Say, since you're in here anyway, have you seen my key card?", allAudio.nurse_voice, "Nurse Tarr", tarr);
         } 
         else {
             s = new Sentence[3];
-            s[0] = new Sentence("There are rats around, I was trying to catch one.", 1);
-            s[1] = new Sentence("God, you're really the worst janitor, Fern.");
-            s[2] = new Sentence("Say, since you're in here anyway, have you seen my key card?");
+            s[0] = new Sentence("There are rats around, I was trying to catch one.", allAudio.fern_voice, "Fern", fern);
+            s[1] = new Sentence("God, you're really the worst janitor, Fern.", allAudio.nurse_voice, "Nurse Tarr", tarr);
+            s[2] = new Sentence("Say, since you're in here anyway, have you seen my key card?", allAudio.nurse_voice, "Nurse Tarr", tarr);
         }
+         Debug.Log(determineChoicesButtons());
 
+          Debug.Log(determineChoicesStrings());
         FindObjectOfType<DialogueManager>().StartDialogue(s, determineChoicesStrings(), determineChoicesButtons(), true);
+
+       
     
     }
 
@@ -69,7 +78,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
         Globals.insanity += 1;
 
-        Sentence[] s = new Sentence[]{new Sentence("Ugh, it will be a mission to get to the basement without it."), new Sentence("Are you still here? Get back to work!")};
+        Sentence[] s = new Sentence[]{new Sentence("Ugh, it will be a mission to get to the basement without it.", allAudio.nurse_voice, "Nurse Tarr", tarr), new Sentence("Are you still here? Get back to work!", allAudio.nurse_voice, "Nurse Tarr", tarr)};
 
         FindObjectOfType<DialogueManager>().StartDialogue(s, "Yes, nurse", leaveroombutton, true);
 
@@ -81,7 +90,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
         FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
-        Sentence[] s = new Sentence[]{new Sentence("Oh, brilliant! We can't have anyone getting into the basement. Now get back to work!"), new Sentence("Oh, and take this trash she was keeping under her pillow with you!")};
+        Sentence[] s = new Sentence[]{new Sentence("Oh, brilliant! We can't have anyone getting into the basement. Now get back to work!", allAudio.nurse_voice, "Nurse Tarr", tarr), new Sentence("Oh, and take this trash she was keeping under her pillow with you!", allAudio.nurse_voice, "Nurse Tarr", tarr)};
 
         HelperMethods.InventoryEnqueue("Note from Otto");
         
@@ -93,7 +102,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
     public void keycardtruth(){
         FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
-       Sentence[] s = new Sentence[]{new Sentence("Ugh, it's probably around here somewhere."), new Sentence("Are you still here? Get back to work!")};
+       Sentence[] s = new Sentence[]{new Sentence("Ugh, it's probably around here somewhere.", allAudio.nurse_voice, "Nurse Tarr", tarr), new Sentence("Are you still here? Get back to work!", allAudio.nurse_voice, "Nurse Tarr", tarr)};
 
         FindObjectOfType<DialogueManager>().StartDialogue(s, "Yes, nurse", leaveroombutton, true);
 

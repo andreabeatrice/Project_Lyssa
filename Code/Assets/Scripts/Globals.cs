@@ -20,6 +20,7 @@ public static class Globals
     //Used to determine whether player has completed the Janitors_Closet scene in the tutorial
     public static bool StorageRoom = false;
     public static bool LightSwitch = false;
+    public static bool blamed_receptionist = false;
 
     //For mouse inversion
     public static int primaryMouseButton = 0;
