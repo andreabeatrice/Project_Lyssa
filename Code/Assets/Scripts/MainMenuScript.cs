@@ -38,6 +38,8 @@ public class MainMenuScript : MonoBehaviour
             File.Delete(path);
         }
 
+        HelperMethods.ResetGlobals();
+
         gate_animator.Play("gate_opening_anim");
         
         opened = true;
@@ -92,7 +94,7 @@ public class MainMenuScript : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway", "crossfade_start");
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_1_PreTutorial", "crossfade_start");
     }
 
     public void OpenSettings(){

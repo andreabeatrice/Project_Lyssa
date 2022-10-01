@@ -33,6 +33,12 @@ public static class Globals
 
     public static bool mopped;
 
+    public static string direction;
+
+    public static List<string> deaths = new List<string>();  
+
+    public static float playedTime = 0.0f;
+
     
 }
 

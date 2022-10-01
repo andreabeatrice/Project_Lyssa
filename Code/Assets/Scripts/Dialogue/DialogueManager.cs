@@ -74,11 +74,15 @@ public class DialogueManager : MonoBehaviour {
 
         this.choices = c;
 
-        this.choice1 = choiceButtons[0];
 
-        this.choice2 = choiceButtons[1];
+        if (choiceButtons[0] != null)
+            this.choice1 = choiceButtons[0];
 
-        this.choice3 = choiceButtons[2];
+        if (choiceButtons[1] != null)
+            this.choice2 = choiceButtons[1];
+
+        if (choiceButtons[2] != null)
+            this.choice3 = choiceButtons[2];
 
         if (choice1 != null)
             choice1.SetActive(false);
@@ -165,6 +169,7 @@ public class DialogueManager : MonoBehaviour {
         dialogText.text = sentence;
 
         StopAllCoroutines();
+        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
 
         StartCoroutine(TypeSentence(sentence));
 

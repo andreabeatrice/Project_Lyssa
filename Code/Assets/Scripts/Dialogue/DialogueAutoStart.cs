@@ -17,6 +17,8 @@ public class DialogueAutoStart : MonoBehaviour
     //bool speech: used to determine whether the DialogueManager should play gibberish
     public bool speech;
 
+    public float waitfor;
+
     // Start(): is called before the first frame update - calls TriggerDialogue() or TriggerDialogueNoWait()
         void Start()
         {
@@ -28,7 +30,7 @@ public class DialogueAutoStart : MonoBehaviour
         {
             Debug.Log(dialog.voice);
             
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(waitfor);
             
             if (HeadsUpDisplay != null)
                 HeadsUpDisplay.SetActive(true);
