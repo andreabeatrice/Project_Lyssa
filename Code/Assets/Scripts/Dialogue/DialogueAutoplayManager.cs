@@ -69,7 +69,13 @@ public class DialogueAutoplayManager : MonoBehaviour {
 
         this.choices = c;
 
-        FindObjectOfType<PlayerController>().frozen = true;
+        if (FindObjectOfType<PlayerController>() != null){
+            FindObjectOfType<PlayerController>().frozen = true;
+        }
+        else {
+            //FindObjectOfType<InsanePlayerController>().frozen = true;
+        }
+        
 
         if (choiceButtons[0] != null)
         this.choice1 = choiceButtons[0];
@@ -253,7 +259,12 @@ public class DialogueAutoplayManager : MonoBehaviour {
         yield return new WaitForSeconds(4f);
 
         FindObjectOfType<DialogueBoxHandler>().clearHUD();
-        FindObjectOfType<PlayerController>().frozen = false;
+        if (FindObjectOfType<PlayerController>() != null){
+            FindObjectOfType<PlayerController>().frozen = false;
+        }
+        else {
+            //FindObjectOfType<InsanePlayerController>().frozen = false;
+        }
 
     }
 
