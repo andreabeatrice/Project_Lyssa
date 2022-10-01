@@ -1154,9 +1154,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.04184833, y: 0}
   serializedVersion: 2
-  m_Radius: 0.99999994
+  m_Radius: 1.2929387
 --- !u!212 &703775866
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1249,12 +1249,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a951119bf194c439259b4ca78f5c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hit: 0
   KrausBody: {fileID: 1666413479}
   crosshair: {fileID: 703775870}
   crosshair_object: {fileID: 703775864}
   none: {fileID: 0}
   crosshair_sprote: {fileID: 21300000, guid: 4575202f77c915249a72cfeda603f0fa, type: 3}
   fern: {fileID: 741977294}
+  kraus: {fileID: 0}
 --- !u!50 &703775870
 Rigidbody2D:
   serializedVersion: 4
@@ -6855,7 +6857,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e397843ebc0b2042bcd7fe1772395aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fern: {fileID: 741977294}
   kraus: {fileID: 1666413478}
+  hit: 0
 --- !u!1 &1763833645
 GameObject:
   m_ObjectHideFlags: 0
@@ -7063,6 +7067,7 @@ GameObject:
   - component: {fileID: 1825452602}
   - component: {fileID: 1825452603}
   - component: {fileID: 1825452604}
+  - component: {fileID: 1825452605}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -7210,6 +7215,20 @@ MonoBehaviour:
   PauseMenuUI: {fileID: 1000283178}
   PauseButton: {fileID: 1556909011}
   settingsPanel: {fileID: 1000283177}
+--- !u!114 &1825452605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825452595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a52a22ac4187d2a44a670bcaac63dc63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  testing: 0
 --- !u!1 &1845981121
 GameObject:
   m_ObjectHideFlags: 0

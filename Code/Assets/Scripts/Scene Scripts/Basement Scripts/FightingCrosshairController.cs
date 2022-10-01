@@ -14,7 +14,7 @@ public class FightingCrosshairController : MonoBehaviour
 
     public Sprite none, crosshair_sprote;
 
-    public Animator fern;
+    public Animator fern, kraus;
 
     private bool called = false;
     // Start is called before the first frame update
@@ -52,7 +52,7 @@ public class FightingCrosshairController : MonoBehaviour
 
         if(Globals.insanity != 0){
             timetowaitMin = 0f;
-        timetowaitMax = (Globals.insanity/2)/Globals.insanity;
+            timetowaitMax = (Globals.insanity/4);
         }
         else {
             timetowaitMin = 2f;

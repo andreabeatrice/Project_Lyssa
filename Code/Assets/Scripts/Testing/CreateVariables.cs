@@ -70,6 +70,9 @@ public class CreateVariables : MonoBehaviour
                     rb.position = new Vector2(0, -78);
                     check = true;
                 break;
+                case "Basement_2_SaneFight":
+                    Globals.insanity = 9;
+                break;
                 case "Hallway_6_Slip":
                     foreach(string s in Globals.objectives){
                         Globals.objectives.Dequeue();

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KrausCollider : MonoBehaviour
 {
-    public Animator kraus;
+    public Animator fern, kraus;
 
     public int hit = 0;
     // Start is called before the first frame update
@@ -41,6 +41,9 @@ public class KrausCollider : MonoBehaviour
         else {
             //change to fern loses
             Debug.Log("He wins!");
+            kraus.Play("kraus_punch");
+            kraus.Play("kraus_kick");
+            fern.Play("player_knockout");
         }
     }
 }
