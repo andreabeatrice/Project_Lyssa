@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueAutoStart : MonoBehaviour
 {
-    public Dialogue dialog;
+    public Sentence[] interaction;
 
     public GameObject HeadsUpDisplay;
 
@@ -28,14 +28,13 @@ public class DialogueAutoStart : MonoBehaviour
     //TriggerDialogue(): Waits for 1.5 seconds to be sure that the scene transition is done
         IEnumerator TriggerDialogue()
         {
-            Debug.Log(dialog.voice);
             
             yield return new WaitForSeconds(waitfor);
             
             if (HeadsUpDisplay != null)
                 HeadsUpDisplay.SetActive(true);
 
-            FindObjectOfType<DialogueManager>().StartDialogue(dialog, choices, choiceButtons, speech);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech);
         }
 
     //TriggerDialogueNoWait(): WaStarts the dialogue immediately
@@ -44,7 +43,7 @@ public class DialogueAutoStart : MonoBehaviour
             if (HeadsUpDisplay != null)
                 HeadsUpDisplay.SetActive(true);
 
-            FindObjectOfType<DialogueManager>().StartDialogue(dialog, choices, choiceButtons, speech);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech);
         }
 
 

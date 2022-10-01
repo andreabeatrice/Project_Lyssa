@@ -37,13 +37,9 @@ public class InvisibleWalls : MonoBehaviour
 
             hud.SetActive(true);
 
-            string[] sentences = new string[] { "It looks like I need a key card to open this door." };
+            Sentence[] interaction = new Sentence[] {new Sentence("It looks like I need a key card to open this door.", 1)};
 
-            Color32 c = new Color32(135, 206, 253, 255);
-
-            Dialogue dialog = new Dialogue(sentences, "Fern", c, null);
-
-            FindObjectOfType<DialogueManager>().StartDialogue(dialog, "Okay", basement_agreement, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement, false);
 
         }
 
@@ -53,13 +49,9 @@ public class InvisibleWalls : MonoBehaviour
 
             hud.SetActive(true);
 
-            string[] sentences = new string[] { "The patients are busy eating. I'll disturb them if I go in now." };
+            Sentence[] interaction = new Sentence[] {new Sentence("The patients are busy eating. I'll disturb them if I go in now.", 1)};
 
-            Color32 c = new Color32(135, 206, 253, 255);
-
-            Dialogue dialog = new Dialogue(sentences, "Fern", c, null);
-
-            FindObjectOfType<DialogueManager>().StartDialogue(dialog, "Okay", basement_agreement, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement, false);
 
         }
 
@@ -69,13 +61,9 @@ public class InvisibleWalls : MonoBehaviour
 
             hud.SetActive(true);
 
-            string[] sentences = new string[] { "I'm not supposed to clean here today." };
+            Sentence[] interaction = new Sentence[] {new Sentence("I'm not supposed to clean here today.", 1)};
 
-            Color32 c = new Color32(135, 206, 253, 255);
-
-            Dialogue dialog = new Dialogue(sentences, "Fern", c, null);
-
-            FindObjectOfType<DialogueManager>().StartDialogue(dialog, "Okay", basement_agreement, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement, false);
 
         }
 
@@ -85,13 +73,9 @@ public class InvisibleWalls : MonoBehaviour
 
             hud.SetActive(true);
 
-            string[] sentences = new string[] { "I'm definitely not allowed into Dr Krause's office! He doesn't even let anyone else clean it!" };
+            Sentence[] interaction = new Sentence[] {new Sentence("I'm definitely not allowed into Dr Kraus's office! He doesn't even let anyone else clean it!", 1)};
 
-            Color32 c = new Color32(135, 206, 253, 255);
-
-            Dialogue dialog = new Dialogue(sentences, "Fern", c, null);
-
-            FindObjectOfType<DialogueManager>().StartDialogue(dialog, "Okay", basement_agreement, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement, false);
 
         }
 

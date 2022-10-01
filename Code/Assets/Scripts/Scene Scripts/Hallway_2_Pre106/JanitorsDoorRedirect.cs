@@ -42,11 +42,8 @@ public class JanitorsDoorRedirect : MonoBehaviour
 
         HeadsUpDisplay.SetActive(true);
 
-        string[] sentences = new string[] { "I don't need to do that again right now." };
 
-        Color32 c = new Color32(135, 206, 253, 255);
-
-        Dialogue dialog = new Dialogue(sentences, "Fern", c, null);
+        Sentence[] dialog = new Sentence[] {new Sentence("I don't need to do that again right now.", 1)};
 
         FindObjectOfType<DialogueManager>().StartDialogue(dialog, "Okay", NoActionChoiceButton, false);
     }

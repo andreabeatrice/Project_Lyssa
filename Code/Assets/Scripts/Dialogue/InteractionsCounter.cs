@@ -20,6 +20,8 @@ public static  class InteractionsCounter
    public static int infinite = 0;
 
    public static bool intro = false;
+
+   public static int krausyelling = 0;
     
 }
 

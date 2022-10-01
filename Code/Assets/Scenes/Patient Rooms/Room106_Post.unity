@@ -1010,14 +1010,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Is that even legal...?
+  interaction:
+  - words: Is that even legal?
     voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 16777215
   HeadsUpDisplay: {fileID: 741515064}
   choices:
   - Keep looking around
@@ -1790,14 +1789,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - I shouldn't be touching that!
+  interaction:
+  - words: I shouldn't be touching those!
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 741515064}
   choices:
   - Keep looking around
@@ -2961,6 +2959,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcce22b6beb55eb4ab69352bb7a357dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &487512827 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2288145045806619492, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 498154118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &487512828 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 712669620306944424, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 498154118}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &498154118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3035,7 +3043,7 @@ PrefabInstance:
     - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: c739a6a2e95e158459c8f89a490e068b, type: 3}
+      objectReference: {fileID: 8300000, guid: 6c4aaf1c7320aff47bf9a8aae380f618, type: 3}
     - target: {fileID: 7514803825967726811, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -3076,11 +3084,6 @@ AudioSource:
 --- !u!82 &498154124 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7521320971508099391, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 498154118}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &498154125 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2657309576819361042, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
   m_PrefabInstance: {fileID: 498154118}
   m_PrefabAsset: {fileID: 0}
 --- !u!82 &498154126 stripped
@@ -7086,7 +7089,6 @@ GameObject:
   - component: {fileID: 1193657091}
   - component: {fileID: 1193657090}
   - component: {fileID: 1193657089}
-  - component: {fileID: 1193657088}
   - component: {fileID: 1193657087}
   - component: {fileID: 1193657086}
   m_Layer: 0
@@ -7129,41 +7131,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1193657088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1193657085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - That makes no sense to me.
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 0
-  HeadsUpDisplay: {fileID: 741515064}
-  choices:
-  - Keep looking around
-  - Try understand (+1)
-  choiceButtons:
-  - {fileID: 1116762783}
-  - {fileID: 1786620363}
-  - {fileID: 0}
-  speech: 0
-  fern: 1
-  identifier: infinite
-  canClick: 1
-  enableProximityReactions: 0
-  PlayerCollider: {fileID: 0}
-  ObjectAreaCollider: {fileID: 0}
 --- !u!61 &1193657089
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7674,8 +7641,8 @@ RectTransform:
   - {fileID: 1692327541}
   - {fileID: 741515065}
   - {fileID: 570871769}
-  - {fileID: 1485930844}
   - {fileID: 1926728972}
+  - {fileID: 1485930844}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8508,14 +8475,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Gross! There's a worm in it!
+  interaction:
+  - words: Gross! There's a worm in it! I'm not touching it!
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 741515064}
   choices:
   - Keep looking around
@@ -9414,14 +9380,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - She did that on her first day here... I can't believe they never fixed it.
+  interaction:
+  - words: It makes me nervous just looking at it
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 741515064}
   choices:
   - Keep looking around
@@ -10231,8 +10196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 498154125}
-  dropSound: {fileID: 0}
+  dragSound: {fileID: 487512827}
+  dropSound: {fileID: 487512828}
   canDrag: 0
 --- !u!212 &1705742185
 SpriteRenderer:
@@ -11985,7 +11950,7 @@ RectTransform:
   m_Children:
   - {fileID: 1466789800}
   m_Father: {fileID: 1322359628}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12815,14 +12780,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - I'm glad they let her keep this picture in here. She never stopped caring.
+  interaction:
+  - words: I'm glad they let her keep it. I hope she's okay.
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 741515064}
   choices:
   - Keep looking around

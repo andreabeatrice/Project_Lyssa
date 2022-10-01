@@ -60,18 +60,11 @@ public class ProximityReaction : MonoBehaviour
     public void reaction(string prox, string react, GameObject btn){
         HeadsUpDisplay.SetActive(true);
 
-        sentences =  new string[] {prox};
-                    
-        Dialogue dialog = new Dialogue(sentences, "Fern", c, null);
+                            
+        Sentence[] interaction = new Sentence[] {new Sentence(prox, 1)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(dialog, react, btn, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(interaction, react, btn, false);
         //allAudio.playMoppingSound();//need to move
     }
 
-    public void reaction_extended(string[] prox, string react, GameObject btn){
-        HeadsUpDisplay.SetActive(true);
-        Dialogue dialog = new Dialogue(prox, "Fern", c, null);
-
-        FindObjectOfType<DialogueManager>().StartDialogue(dialog, react, btn, false);
-    }
 }

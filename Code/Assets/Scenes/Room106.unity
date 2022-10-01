@@ -3668,14 +3668,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - I'm glad they let her keep this picture in here. She never stopped caring.
+  interaction:
+  - words: I'm glad they let her keep the picture. She never stopped caring.
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -3830,14 +3829,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - She did that on her first day here... I can't believe they never fixed it.
+  interaction:
+  - words: She did that when she first got here. I can't believe they never fixed
+      it.
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294823559
+  - words: Just looking at it makes me anxious.
+    voice: {fileID: 0}
+    name: Fern
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -3974,10 +3979,10 @@ RectTransform:
   m_Father: {fileID: 1455883695}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -848, y: 75}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &817519651
 Animator:
@@ -5659,9 +5664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Is that even legal...?
+  interaction:
+  - words: Is that even legal...?
     voice: {fileID: 0}
     name: 
     textcolor:
@@ -6201,14 +6205,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - If she was sleeping with this under her pillow, it must be important!
+  interaction:
+  - words: If she was sleeping with it under her pillow, it must be important!
     voice: {fileID: 0}
-    name: 
+    name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Take the Note (+0)
@@ -6762,14 +6765,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - That makes no sense to me.
-    voice: {fileID: 0}
-    name: 
+  interaction:
+  - words: It makes no sense to me
+    voice: {fileID: 1311853892}
+    name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -7419,14 +7421,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Gross! There's a worm in it!
+  interaction:
+  - words: Gross! It has a worm in it!
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -7909,7 +7910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1698870050
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9359,12 +9360,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Antipsychotic medications can reduce or relieve symptoms of psychosis, such
-      as delusions and hallucinations
-    - 'Patients who take antipsychotics while not needing them may start to display
-      symptoms of psychosis. '
+  interaction:
+  - words: Antipsychotic medications can reduce or relieve symptoms of psychosis,
+      such as delusions (false beliefs) and hallucinations (seeing or hearing something
+      that's not real).
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  - words: Patients who are prescribed antipsychotics while not needing them may
+      start to display symptoms of psychosis.
     voice: {fileID: 0}
     name: 
     textcolor:
@@ -9643,14 +9649,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - I shouldn't be touching that!
+  interaction:
+  - words: I shouldn't be touching those!
     voice: {fileID: 0}
     name: Fern
     textcolor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -10164,14 +10169,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - It's a nurse's access card!
+  interaction:
+  - words: It's a nurse's nurse's access card!
     voice: {fileID: 0}
     name: 
     textcolor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4294823559
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Take card (+0)

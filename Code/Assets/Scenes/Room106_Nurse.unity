@@ -1029,6 +1029,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 257713983}
   m_CullTransparentMesh: 1
+--- !u!82 &285080283 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2798499300600135434, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &285080284 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1592945172560053609, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 1705003576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &322313335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1282,7 +1292,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375198771}
-  - component: {fileID: 375198772}
   - component: {fileID: 375198773}
   - component: {fileID: 375198774}
   - component: {fileID: 375198775}
@@ -1292,6 +1301,7 @@ GameObject:
   - component: {fileID: 375198780}
   - component: {fileID: 375198781}
   - component: {fileID: 375198782}
+  - component: {fileID: 375198783}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -1316,29 +1326,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &375198772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375198770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 563f66cd54692394ba90e7f58a086e0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  closeDoorSound: {fileID: 984796068}
-  allAudio: {fileID: 0}
-  hud: {fileID: 1698870049}
-  dialogBox: {fileID: 0}
-  dialogHeading: {fileID: 0}
-  dialogBody: {fileID: 0}
-  popUpChoice1: {fileID: 0}
-  popUpChoice2: {fileID: 0}
-  firstInteraction: 1
-  insanityMeter: {fileID: 1586006827}
-  cleanWaterDispenser: {fileID: 0}
 --- !u!114 &375198773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1385,7 +1372,7 @@ MonoBehaviour:
   dialogText: {fileID: 1012626352}
   skipButton: {fileID: 1322063541}
   clickSound: {fileID: 388535185}
-  talking: {fileID: 0}
+  talking: {fileID: 285080284}
   inConversation: 0
 --- !u!114 &375198776
 MonoBehaviour:
@@ -1458,6 +1445,8 @@ MonoBehaviour:
   - {fileID: 0}
   allAudio: {fileID: 1705003580}
   leaveroombutton: {fileID: 1217105320}
+  grafitti: {fileID: 1358733638}
+  insaneGrafitti: {fileID: 0}
 --- !u!114 &375198780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1497,6 +1486,44 @@ MonoBehaviour:
   PauseMenuUI: {fileID: 1724761814}
   PauseButton: {fileID: 538515369}
   settingsPanel: {fileID: 1724761813}
+--- !u!114 &375198783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375198770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4c4dc781cb8d947bfa4c954f917c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interaction:
+  - words: What are you doing in here? Janitorial staff were supposed to be specifically
+      instructed to stay away from this room!
+    voice: {fileID: 1705003581}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4290622334
+  - words: It's that new receptionist, isn't it? I knew she was incompetent. We never
+      should have hired her.
+    voice: {fileID: 1705003581}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4290622334
+  HeadsUpDisplay: {fileID: 1698870049}
+  choices:
+  - Lie and blame the receptionist (+2)
+  - Be honest (-1)
+  choiceButtons:
+  - {fileID: 2076870911}
+  - {fileID: 970387531}
+  - {fileID: 0}
+  wait: 0
+  speech: 1
+  waitfor: 0
 --- !u!82 &388535185 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
@@ -2855,7 +2882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Yes, I have it here (+0)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
   m_sharedMaterial: {fileID: 7154477524753593885, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
@@ -3310,14 +3337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - She did that on her first day here... I can't believe they never fixed it.
-    voice: {fileID: 0}
-    name: Fern
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
+  interaction: []
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -3957,11 +3977,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 970387531}
   m_CullTransparentMesh: 1
---- !u!82 &984796068 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7660517941654832150, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 1705003576}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1012626350
 GameObject:
   m_ObjectHideFlags: 0
@@ -4639,14 +4654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Is that even legal...?
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
+  interaction: []
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -5641,14 +5649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - That makes no sense to me.
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 0
+  interaction: []
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -6196,14 +6197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Gross! There's a worm in it!
-    voice: {fileID: 0}
-    name: Fern
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
+  interaction: []
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -6365,7 +6359,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: Nope, haven't seen it (+1)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
   m_sharedMaterial: {fileID: 7154477524753593885, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
@@ -6821,7 +6815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1698870050}
   m_Layer: 5
-  m_Name: HUD
+  m_Name: Dialogue Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7058,6 +7052,14 @@ PrefabInstance:
       propertyPath: background106
       value: 
       objectReference: {fileID: 1683823574}
+    - target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: nurse_voice_2
+      value: 
+      objectReference: {fileID: 285080284}
+    - target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: nurse_voice_3
+      value: 
+      objectReference: {fileID: 285080283}
     - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_Volume
       value: 0.24
@@ -7113,7 +7115,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1713674553}
   - component: {fileID: 1713674552}
-  - component: {fileID: 1713674554}
   - component: {fileID: 1713674555}
   m_Layer: 0
   m_Name: Nurse Tarr
@@ -7189,40 +7190,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1713674554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713674551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c4dc781cb8d947bfa4c954f917c10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    sentences:
-    - 'What are you doing in here? Janitorial staff were supposed to be specifically
-      instructed to stay away from this room. '
-    - It's that new receptionist, isn't it? I knew she was inccompetent. We never
-      should have hired her.
-    voice: {fileID: 1705003581}
-    name: Nurse Tarr
-    textcolor:
-      serializedVersion: 2
-      rgba: 4289240946
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Lie and blame the receptionist (+2)
-  - Be honest (-1)
-  choiceButtons:
-  - {fileID: 2076870911}
-  - {fileID: 970387531}
-  - {fileID: 0}
-  wait: 0
-  speech: 1
-  waitfor: 0
 --- !u!95 &1713674555
 Animator:
   serializedVersion: 4
@@ -7997,17 +7964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Antipsychotic medications can reduce or relieve symptoms of psychosis, such
-      as delusions and hallucinations
-    - 'Patients who take antipsychotics while not needing them may start to display
-      symptoms of psychosis. '
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
+  interaction: []
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep Pills (+0)
@@ -8069,14 +8026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - I shouldn't be touching that!
-    voice: {fileID: 0}
-    name: Fern
-    textcolor:
-      serializedVersion: 2
-      rgba: 0
+  interaction: []
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around

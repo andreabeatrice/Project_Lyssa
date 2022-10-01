@@ -38,6 +38,36 @@ public class CreateVariables : MonoBehaviour
                 break;
                 case "Room106":
                     HelperMethods.InventoryEnqueue("Broom");
+                    
+                    check = true;
+                break;
+                case "Hallway_4_Note":
+                    HelperMethods.InventoryEnqueue("Broom");
+                    HelperMethods.InventoryEnqueue("HER Diary");
+                    HelperMethods.InventoryEnqueue("Note from Otto");
+                    HelperMethods.ObjectivesEnqueue("Don't get fired");
+                    HelperMethods.ObjectivesEnqueue("Find HER");
+                    HelperMethods.ObjectivesEnqueue("Find the note writer");
+                    rb.position = new Vector2(-34, -10);
+                    check = true;
+                break;
+                case "Hallway_5_Keycard":
+                    HelperMethods.InventoryEnqueue("Broom");
+                    HelperMethods.InventoryEnqueue("HER Diary");
+                    HelperMethods.InventoryEnqueue("Nurse's keycard");
+                    HelperMethods.ObjectivesEnqueue("Don't get fired");
+                    HelperMethods.ObjectivesEnqueue("Find HER");
+                    HelperMethods.ObjectivesEnqueue("Investigate the basement");
+                    rb.position = new Vector2(0, -78);
+                    check = true;
+                break;
+                case "Hallway_7_LightSwitch":
+                    HelperMethods.InventoryEnqueue("Broom");
+                    HelperMethods.InventoryEnqueue("HER Diary");
+                    HelperMethods.ObjectivesEnqueue("Don't get fired");
+                    HelperMethods.ObjectivesEnqueue("Find HER");
+                    HelperMethods.ObjectivesEnqueue("Turn the basement light on");
+                    rb.position = new Vector2(0, -78);
                     check = true;
                 break;
                 case "Hallway_6_Slip":

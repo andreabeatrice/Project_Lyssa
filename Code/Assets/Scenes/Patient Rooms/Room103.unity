@@ -722,9 +722,8 @@ MonoBehaviour:
   dragSound: {fileID: 1705003582}
   puttingDown: {fileID: 1705003581}
   canDrag: 1
-  dialog:
-  - sentences:
-    - It's a series, it has to be moved as one.
+  interactions:
+  - words: They have to be moved together, they're a set.
     voice: {fileID: 0}
     name: Fern
     textcolor:
@@ -1050,14 +1049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - 'That''s probably against regulations. '
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 0
+  interaction: []
   HeadsUpDisplay: {fileID: 1698870049}
   choices:
   - Keep looking around
@@ -1502,14 +1494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Gross! There's a worm in it!
-    voice: {fileID: 0}
-    name: Fern
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
+  interaction: []
   HeadsUpDisplay: {fileID: 0}
   choices:
   - Keep looking around
@@ -4254,9 +4239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - Is that even legal...?
+  interaction:
+  - words: Is that even legal...?
     voice: {fileID: 0}
     name: 
     textcolor:
@@ -5386,7 +5370,7 @@ PrefabInstance:
     - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 91acb2573eb791a45a89e446a00ba06d, type: 3}
+      objectReference: {fileID: 8300000, guid: 6c4aaf1c7320aff47bf9a8aae380f618, type: 3}
     - target: {fileID: 7514803825967726811, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -5421,12 +5405,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!82 &1705003581 stripped
 AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5671338687068651481, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9082787347377730821, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
   m_PrefabInstance: {fileID: 1705003576}
   m_PrefabAsset: {fileID: 0}
 --- !u!82 &1705003582 stripped
 AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2657309576819361042, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5342346198256710821, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
   m_PrefabInstance: {fileID: 1705003576}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1724761810
@@ -6338,14 +6322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog:
-  - sentences:
-    - I shouldn't be touching that!
-    voice: {fileID: 0}
-    name: Fern
-    textcolor:
-      serializedVersion: 2
-      rgba: 0
+  interaction: []
   HeadsUpDisplay: {fileID: 0}
   choices:
   - Keep looking around
