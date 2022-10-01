@@ -17,17 +17,9 @@ public class CursorManager : MonoBehaviour
     public void OnMouseExit()
     {
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+        
         //FindObjectOfType<DialogueManager>().setConversationStatus(false);
     }
 
-    public void OnMouseDown()
-    {
-        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
-    }
-
-    public void OnMouseUp()
-    {
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-    }
 
 }

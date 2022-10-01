@@ -24,7 +24,7 @@ public class Hallway_7_ChoiceHandler : MonoBehaviour
 
     public void CheckWhatPlayersTouching()
     {
-        if (PlayerCollider.IsTouching(OfficeDoor)){
+        if (PlayerCollider.IsTouching(OfficeDoor)  && !Globals.LightSwitch ){
             FindObjectOfType<LevelLoader>().LoadNextLevel("KrausOffice_2_LightSwitch", "crossfade_start");
         }
         if (PlayerCollider.IsTouching(invisibleWall) && played == false){

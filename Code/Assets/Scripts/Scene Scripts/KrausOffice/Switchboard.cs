@@ -6,10 +6,14 @@ public class Switchboard : MonoBehaviour
 {
 
     public Animator switchboard_animator;
+    private bool open = false;
 
     // Start is called before the first frame update
     public void OnMouseDown()
     {
-        switchboard_animator.Play("switchboard_open");
+        if (!open){
+            switchboard_animator.Play("switchboard_open");
+        }
+            
     }
 }

@@ -34,7 +34,7 @@ public class Hallway_8_Insanity17 : MonoBehaviour
     }
 
     public IEnumerator InsaneFernRoom(){
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(10);
         FindObjectOfType<LevelLoader>().LoadNextLevel("Room113_Fern", "crossfade_start");
     }
 
