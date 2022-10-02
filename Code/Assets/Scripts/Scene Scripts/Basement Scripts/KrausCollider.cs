@@ -47,6 +47,9 @@ public class KrausCollider : MonoBehaviour
             kraus.Play("kraus_kick");
             fern.Play("player_knockout");
             crosshair_object.SetActive(false);
+            Globals.deaths.Add("You know, if you just click all over the place, he's gonna get a few hits in.");
+
+            FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 3f);
         }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FightTimer : MonoBehaviour
+public class Basement_1_LitUp_CH : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,6 +13,6 @@ public class FightTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //+= Time.deltaTime;
+        
     }
 }

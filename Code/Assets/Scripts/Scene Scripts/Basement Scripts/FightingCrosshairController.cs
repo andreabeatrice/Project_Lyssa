@@ -48,9 +48,13 @@ public class FightingCrosshairController : MonoBehaviour
         }
         else if (timeToFight <= 0){
             Debug.Log("He wins.RIP");
-             kraus.Play("kraus_kick");
+            kraus.Play("kraus_kick");
             fern.Play("player_knockout");
             crosshair_object.SetActive(false);
+
+            Globals.deaths.Add("Did you read the instructions? They ~said~ that you had a limited time.");
+
+            FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 3f);
         }
 
         
@@ -119,8 +123,12 @@ public class FightingCrosshairController : MonoBehaviour
 
         else {
             //Change scne
+            fern.Play("Player_Kick");
+            kraus.Play("kraus_knockedout");
+
             Debug.Log("You win!");
             crosshair_object.SetActive(false);
+            KrausBody.enabled = false;
         }
        
         
@@ -128,6 +136,7 @@ public class FightingCrosshairController : MonoBehaviour
 
     public void FIGHT(){
         crosshair_object.SetActive(true);
+        KrausBody.enabled = true;
     }
 
 }
