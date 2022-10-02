@@ -55,6 +55,20 @@ public class AudioSources : MonoBehaviour
     public AudioSource fightBell;
     public AudioSource tickingTimer;
 
+    public AudioSource piano_a3;
+    public AudioSource piano_as3;
+    public AudioSource piano_b3;
+    public AudioSource piano_c3;
+    public AudioSource piano_cs3;
+    public AudioSource piano_d3;
+    public AudioSource piano_ds3;
+    public AudioSource piano_e3;
+    public AudioSource piano_f3;
+    public AudioSource piano_fs3;
+    public AudioSource piano_g3;
+    public AudioSource piano_gs3;
+
+
     private AudioSource[] allAudioSources;
 
 
@@ -211,6 +225,37 @@ public class AudioSources : MonoBehaviour
                 case "tickingTimer":
                     tickingTimer = sound;
                 break;
+                case "piano_a3":
+                    piano_a3 = sound;
+                break;
+                case "piano_as3":
+                    piano_as3 = sound;
+                break;
+                case "piano_b3":
+                    piano_b3 = sound;
+                break;
+                case "piano_c3":
+                    piano_c3 = sound;
+                break;
+                case "piano_cs3":
+                    piano_cs3 = sound;
+                break;
+                case "piano_e3":
+                    piano_e3 = sound;
+                break;
+                case "piano_f3":
+                    piano_f3 = sound;
+                break;
+                case "piano_fs3":
+                    piano_fs3 = sound;
+                break;
+                case "piano_g3":
+                    piano_g3 = sound;
+                break;
+                case "piano_gs3":
+                    piano_gs3 = sound;
+                break;
+
             }
         }
         
@@ -423,6 +468,55 @@ public class AudioSources : MonoBehaviour
      public void playTickingTimer()
     {
        tickingTimer.Play();
+    }
+    
+     public void playPiano_a3()
+    {
+       piano_a3.Play();
+    }
+    public void playPiano_as3()
+    {
+       piano_as3.Play();
+    }
+    public void playPiano_b3()
+    {
+       piano_b3.Play();
+    }
+    public void playPiano_c3()
+    {
+       piano_c3.Play();
+    }
+    public void playPiano_cs3()
+    {
+       piano_cs3.Play();
+    }
+    public void playPiano_d3()
+    {
+       piano_d3.Play();
+    }
+    public void playPiano_ds3()
+    {
+       piano_ds3.Play();
+    }
+    public void playPiano_e3()
+    {
+       piano_e3.Play();
+    }
+    public void playPiano_f3()
+    {
+       piano_f3.Play();
+    }
+    public void playPiano_fs3()
+    {
+       piano_fs3.Play();
+    }
+    public void playPiano_g3()
+    {
+       piano_g3.Play();
+    }
+    public void playPiano_gs3()
+    {
+       piano_gs3.Play();
     }
 
     public void StopAllAudio() {
