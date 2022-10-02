@@ -15,4 +15,12 @@ public class BoilerRoom_ChoiceHandler : MonoBehaviour
     {
         
     }
+
+    public void EscapeNow(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("EscapeNoMom", "crossfade_start");
+    }
+
+    public void SolveIt(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_1_LitUp", "crossfade_start");
+    }
 }
