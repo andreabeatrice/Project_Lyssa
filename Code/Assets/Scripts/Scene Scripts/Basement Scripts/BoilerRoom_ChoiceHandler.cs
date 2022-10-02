@@ -17,10 +17,16 @@ public class BoilerRoom_ChoiceHandler : MonoBehaviour
     }
 
     public void EscapeNow(){
+        
         FindObjectOfType<LevelLoader>().LoadNextLevel("EscapeNoMom", "crossfade_start");
     }
 
     public void SolveIt(){
-        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_1_LitUp", "crossfade_start");
+        Globals.insanity += 1;
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_4_LeavesBoiler", "crossfade_start");
+    }
+
+    public void Escape(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Escape", "crossfade_start");
     }
 }

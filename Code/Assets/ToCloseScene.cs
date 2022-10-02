@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ToCloseScene : MonoBehaviour
 {
+
+    public string deathSentence;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +22,7 @@ public class ToCloseScene : MonoBehaviour
     public IEnumerator ToDeathScene(){
         yield return new WaitForSeconds(7f);
 
-        Globals.deaths.Add("Well, you didn't die, so I guess this was a success. Are you proud of yourself, though?");
+        Globals.deaths.Add(deathSentence);
 
         SceneManager.LoadScene("DeathScreen");
     }
