@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class CreateVariables : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public bool testing =false;
+    public bool testing = false;
 
     private bool check = false;
+
+    public int insane = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,8 +72,8 @@ public class CreateVariables : MonoBehaviour
                     rb.position = new Vector2(0, -78);
                     check = true;
                 break;
-                case "Basement_2_SaneFight":
-                    Globals.insanity = 9;
+                case "Basement_2_Fight":
+                    Globals.insanity = insane;
                 break;
                 case "Hallway_6_Slip":
                     foreach(string s in Globals.objectives){
