@@ -5,6 +5,9 @@ using UnityEngine;
 public class FightingCrosshairController : MonoBehaviour
 {
     public int hit = 0;
+    
+    public AudioSources AllAudio;
+
 
     public Collider2D KrausBody;
 
@@ -106,12 +109,15 @@ public class FightingCrosshairController : MonoBehaviour
 
             switch (move){
                 case 1:
+                    AllAudio.playPunch();
                     fern.Play("Player_Jab_Cross");
                 break;
                 case 2:
+                    AllAudio.playPunch();
                     fern.Play("Player_Jab");
                 break;
                 case 3:
+                    AllAudio.playKick();
                     fern.Play("Player_Kick");
                 break;
             }
@@ -123,12 +129,15 @@ public class FightingCrosshairController : MonoBehaviour
 
         else {
             //Change scne
+            AllAudio.playKick();
             fern.Play("Player_Kick");
             kraus.Play("kraus_knockedout");
 
             Debug.Log("You win!");
             crosshair_object.SetActive(false);
             KrausBody.enabled = false;
+            Globals.playerPositionOnMap = new Vector2(-1.31f, 72.31f);
+            FindObjectOfType<LevelLoader>().LoadNextLevelLong("Basement_3_Win", "crossfade_start", 4f);
         }
        
         

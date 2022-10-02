@@ -9,7 +9,6 @@ public class KrausCollider : MonoBehaviour
 
     public GameObject crosshair_object;
 
-    public GameObject crosshair_object;
 
     public int hit = 0;
     // Start is called before the first frame update
@@ -49,7 +48,7 @@ public class KrausCollider : MonoBehaviour
             //change to fern loses
             //AllAudio.playFightBell();
             Debug.Log("He wins!");
-            kraus.Play("kraus_punch");
+            AllAudio.playKick();
             kraus.Play("kraus_kick");
             fern.Play("player_knockout");
             crosshair_object.SetActive(false);
