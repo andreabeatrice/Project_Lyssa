@@ -15,4 +15,8 @@ public class Basement_1_LitUp_CH : MonoBehaviour
     {
         
     }
+
+    public void intoBoilerRoom(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("BoilerRoomNoMom", "crossfade_start");
+    }
 }
