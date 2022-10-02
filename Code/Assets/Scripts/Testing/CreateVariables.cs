@@ -20,8 +20,19 @@ public class CreateVariables : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (testing == true && check == false){
-            Globals.StorageRoom = true;
+
+        if (Input.GetKeyDown(KeyCode.R)){
+                make();
+                Debug.Log(testing);
+                testing = true;
+        }
+        else if (testing == true && check == false ){
+            make();
+        }
+    }
+
+    public void make(){
+          Globals.StorageRoom = true;
             switch (SceneManager.GetActiveScene().name){
                 case "Hallway_2_Pre106":
                     //assign variables
@@ -96,6 +107,5 @@ public class CreateVariables : MonoBehaviour
                 break;
             }
 
-        }
     }
 }
