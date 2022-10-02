@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class LightSwitch : MonoBehaviour
 {
     public Animator switchboard_animator;
+    public AudioSources AllAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class LightSwitch : MonoBehaviour
 
     public void OnMouseDown()
     {
+        AllAudio.playLight_Switch();
         switchboard_animator.Play("switchboard_greenf");
         Globals.LightSwitch = true;
     }

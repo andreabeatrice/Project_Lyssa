@@ -25,6 +25,7 @@ public class CabinetCollider : MonoBehaviour
     }
 
     void OnMouseDown(){
+        AllAudio.playCabinet_Open();
         if (cabinet.GetComponent<SpriteRenderer>().sprite.name == "FilingcabinetClosed"){
             cabinet.GetComponent<SpriteRenderer>().sprite = open_me;
         }

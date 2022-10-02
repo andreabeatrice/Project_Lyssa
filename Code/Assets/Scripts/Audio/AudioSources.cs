@@ -40,6 +40,35 @@ public class AudioSources : MonoBehaviour
     public AudioSource putDownBook;
     public AudioSource light_Switch;
     public AudioSource footsteps_Concrete;
+
+    public AudioSource closeKitchenCupboard;
+    public AudioSource openKitchenCupboard;
+    public AudioSource punch;
+    public AudioSource doublePunch;
+    public AudioSource kick;
+    public AudioSource fridgeDoorOpening;
+    public AudioSource fridgeDoorClosing;
+    public AudioSource fridgeBeingOpen;
+    public AudioSource fridgeHum;
+    public AudioSource pot;
+    public AudioSource potsAndPans;
+    public AudioSource fightBell;
+    public AudioSource tickingTimer;
+
+    public AudioSource piano_a3;
+    public AudioSource piano_as3;
+    public AudioSource piano_b3;
+    public AudioSource piano_c3;
+    public AudioSource piano_cs3;
+    public AudioSource piano_d3;
+    public AudioSource piano_ds3;
+    public AudioSource piano_e3;
+    public AudioSource piano_f3;
+    public AudioSource piano_fs3;
+    public AudioSource piano_g3;
+    public AudioSource piano_gs3;
+
+
     private AudioSource[] allAudioSources;
 
 
@@ -145,18 +174,88 @@ public class AudioSources : MonoBehaviour
                  case "pickUpBook":
                     pickUpBook = sound;
                 break;
-                 case "PutDownBook":
+                 case "putDownBook":
                     putDownBook = sound;
                 break;
                  case "basement_Background":
-                    cabinet_Close = sound;
+                    basement_Background = sound;
                 break;
-                 case "glassClink":
+                 case "glass_Clink":
                     glass_Clink = sound;
                 break;
                 case "footsteps_Concrete":
                     footsteps_Concrete = sound;
                 break;
+                case "closeKitchenCupboard":
+                    closeKitchenCupboard = sound;
+                break;
+                case "openKitchenCupboard":
+                    openKitchenCupboard = sound;
+                break;
+                case "punch":
+                    punch = sound;
+                break;
+                case "doublePunch":
+                    doublePunch = sound;
+                break;
+                case "kick":
+                    kick = sound;
+                break;
+                case "fridgeDoorClosing":
+                    fridgeDoorClosing = sound;
+                break;
+                case "fridgeDoorOpening":
+                    fridgeDoorOpening = sound;
+                break;
+                case "fridgeBeingOpen":
+                    fridgeBeingOpen = sound;
+                break;
+                case "fridgeHum":
+                    fridgeHum = sound;
+                break;
+                  case "pot":
+                    pot = sound;
+                break;
+                  case "potsAndPans":
+                    potsAndPans = sound;
+                break;
+                case "fightBell":
+                    fightBell = sound;
+                break;
+                case "tickingTimer":
+                    tickingTimer = sound;
+                break;
+                case "piano_a3":
+                    piano_a3 = sound;
+                break;
+                case "piano_as3":
+                    piano_as3 = sound;
+                break;
+                case "piano_b3":
+                    piano_b3 = sound;
+                break;
+                case "piano_c3":
+                    piano_c3 = sound;
+                break;
+                case "piano_cs3":
+                    piano_cs3 = sound;
+                break;
+                case "piano_e3":
+                    piano_e3 = sound;
+                break;
+                case "piano_f3":
+                    piano_f3 = sound;
+                break;
+                case "piano_fs3":
+                    piano_fs3 = sound;
+                break;
+                case "piano_g3":
+                    piano_g3 = sound;
+                break;
+                case "piano_gs3":
+                    piano_gs3 = sound;
+                break;
+
             }
         }
         
@@ -222,7 +321,12 @@ public class AudioSources : MonoBehaviour
                 StopAllAudio();
                 background106.Play();
                 break;
-
+            case "Basement_Dark":
+                basement_Background.Play();
+                break;
+             case "Basement_1_LitUp":
+                basement_Background.Play();
+                break;
             default:
             break;
         }
@@ -279,6 +383,140 @@ public class AudioSources : MonoBehaviour
     public void playSqueak()
     {
        mirror_squeak.Play();
+    }
+
+      public void playCabinet_Open()
+    {
+       cabinet_Open.Play();
+    }
+      public void playCabinet_Close()
+    {
+       cabinet_Close.Play();
+    }
+      public void playLight_Switch()
+    {
+       light_Switch.Play();
+    }
+      public void playPickUpBook()
+    {
+       pickUpBook.Play();
+    }
+    public void playPutDownBook()
+    {
+       putDownBook.Play();
+    }
+    public void playBasement_Background()
+    {
+       basement_Background.Play();
+    }
+    public void playGlass_Clink()
+    {
+       glass_Clink.Play();
+    }
+    public void playFootsteps_Concrete()
+    {
+       footsteps_Concrete.Play();
+    }
+    public void playOpoenKitchenCupboard()
+    {
+       openKitchenCupboard.Play();
+    }
+    public void playCloseKitchenCupboard()
+    {
+       closeKitchenCupboard.Play();
+    }
+     public void playPunch()
+    {
+       punch.Play();
+    }
+     public void playDoublePunch()
+    {
+       doublePunch.Play();
+    }
+     public void playKick()
+    {
+       kick.Play();
+    }
+    public void playFridgeDoorOpoening()
+    {
+       fridgeDoorOpening.Play();
+    }
+    public void playFridgeDoorClosing()
+    {
+       fridgeDoorClosing.Play();
+    }
+    public void playFridgeBeingOpen()
+    {
+       fridgeBeingOpen.Play();
+    }
+    public void playFridgeHum()
+    {
+       fridgeHum.Play();
+    }
+     public void playPotsAndPans()
+    {
+       potsAndPans.Play();
+    }
+     public void playPot()
+    {
+       pot.Play();
+    }
+     public void playFightBell()
+    {
+       fightBell.Play();
+    }
+     public void playTickingTimer()
+    {
+       tickingTimer.Play();
+    }
+    
+     public void playPiano_a3()
+    {
+       piano_a3.Play();
+    }
+    public void playPiano_as3()
+    {
+       piano_as3.Play();
+    }
+    public void playPiano_b3()
+    {
+       piano_b3.Play();
+    }
+    public void playPiano_c3()
+    {
+       piano_c3.Play();
+    }
+    public void playPiano_cs3()
+    {
+       piano_cs3.Play();
+    }
+    public void playPiano_d3()
+    {
+       piano_d3.Play();
+    }
+    public void playPiano_ds3()
+    {
+       piano_ds3.Play();
+    }
+    public void playPiano_e3()
+    {
+       piano_e3.Play();
+    }
+    public void playPiano_f3()
+    {
+       piano_f3.Play();
+    }
+    public void playPiano_fs3()
+    {
+       piano_fs3.Play();
+    }
+    public void playPiano_g3()
+    {
+       piano_g3.Play();
+    }
+    public void playPiano_gs3()
+    {
+       piano_gs3.Play();
     }
 
     public void StopAllAudio() {
