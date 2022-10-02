@@ -696,11 +696,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517448754}
   m_CullTransparentMesh: 1
---- !u!1 &537197992 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 176746942238241825, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 2020620372}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &571518266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,6 +1251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hit: 0
+  AllAudio: {fileID: 2020620374}
   KrausBody: {fileID: 1666413479}
   crosshair: {fileID: 703775870}
   crosshair_object: {fileID: 703775864}
@@ -7082,9 +7078,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 537197992}
+      - m_Target: {fileID: 2020620374}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: playFightBell
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7405,6 +7401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fern: {fileID: 741977294}
   kraus: {fileID: 1666413478}
+  AllAudio: {fileID: 2020620374}
   crosshair_object: {fileID: 703775864}
   hit: 0
 --- !u!1 &1763833645
@@ -8186,6 +8183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4737877341898981362, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: m_Volume
+      value: 0.167
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
 --- !u!4 &2020620373 stripped
@@ -8198,7 +8199,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
   m_PrefabInstance: {fileID: 2020620372}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537197992}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}

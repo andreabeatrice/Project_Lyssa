@@ -25,7 +25,7 @@ public class RenderOrderHandlerBasement : MonoBehaviour
         {
             if(renderer.tag.Contains("rnd"))
             //childObject.transform.parent.gameObject
-            renderer.sortingOrder = (int)(renderer.transform.position.y * 1);
+            renderer.sortingOrder = (int)(renderer.transform.position.y * -1);
         }
 
         //tag.Contains(string name)

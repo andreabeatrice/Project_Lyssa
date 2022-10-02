@@ -126,7 +126,7 @@ public class FightingCrosshairController : MonoBehaviour
 
         else {
             //Change scne
-            AllAudio.playFightBell();
+            //AllAudio.playFightBell();
             fern.Play("Player_Kick");
             kraus.Play("kraus_knockedout");
 
