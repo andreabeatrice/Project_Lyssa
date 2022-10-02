@@ -52,6 +52,8 @@ public class AudioSources : MonoBehaviour
     public AudioSource fridgeHum;
     public AudioSource pot;
     public AudioSource potsAndPans;
+    public AudioSource fightBell;
+    public AudioSource tickingTimer;
 
     private AudioSource[] allAudioSources;
 
@@ -202,6 +204,12 @@ public class AudioSources : MonoBehaviour
                 break;
                   case "potsAndPans":
                     potsAndPans = sound;
+                break;
+                case "fightBell":
+                    fightBell = sound;
+                break;
+                case "tickingTimer":
+                    tickingTimer = sound;
                 break;
             }
         }
@@ -407,6 +415,14 @@ public class AudioSources : MonoBehaviour
      public void playPot()
     {
        pot.Play();
+    }
+     public void playFightBell()
+    {
+       fightBell.Play();
+    }
+     public void playTickingTimer()
+    {
+       tickingTimer.Play();
     }
 
     public void StopAllAudio() {

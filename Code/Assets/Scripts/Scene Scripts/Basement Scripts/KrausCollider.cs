@@ -43,6 +43,7 @@ public class KrausCollider : MonoBehaviour
         }
         else {
             //change to fern loses
+            AllAudio.playFightBell();
             Debug.Log("He wins!");
             kraus.Play("kraus_punch");
             kraus.Play("kraus_kick");

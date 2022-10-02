@@ -96,6 +96,7 @@ public class FightingCrosshairController : MonoBehaviour
         } 
         else {
             //Change scne
+            AllAudio.playFightBell();
             Debug.Log("You win!");
         }
        
