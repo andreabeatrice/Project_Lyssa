@@ -324,8 +324,14 @@ public class AudioSources : MonoBehaviour
             case "Basement_Dark":
                 basement_Background.Play();
                 break;
-             case "Basement_1_LitUp":
+            case "Basement_1_LitUp":
                 basement_Background.Play();
+                break;
+            case "KrausOffice_1_FromHall":
+                background106.Play();
+                break;
+            case "KrausOffice_2_LightSwitch":
+                background106.Play();
                 break;
             default:
             break;
