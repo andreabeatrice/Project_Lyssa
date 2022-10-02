@@ -1315,165 +1315,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &703775864
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 703775867}
-  - component: {fileID: 703775866}
-  - component: {fileID: 703775865}
-  - component: {fileID: 703775868}
-  - component: {fileID: 703775869}
-  - component: {fileID: 703775870}
-  m_Layer: 0
-  m_Name: Crosshair
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!58 &703775865
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703775864}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.04184833, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.2929387
---- !u!212 &703775866
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703775864}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1154211863
-  m_SortingLayer: 1
-  m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 4575202f77c915249a72cfeda603f0fa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &703775867
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703775864}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8499999, y: 2.1899948, z: 0}
-  m_LocalScale: {x: 0.5600753, y: 0.5600753, z: 0.5600753}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1666413477}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &703775868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703775864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a92a27e64b077a94fa3f9c31d41c547c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &703775869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703775864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5a951119bf194c439259b4ca78f5c0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hit: 0
-  AllAudio: {fileID: 2020620374}
-  KrausBody: {fileID: 1666413479}
-  crosshair: {fileID: 703775870}
-  crosshair_object: {fileID: 703775864}
-  none: {fileID: 0}
-  crosshair_sprote: {fileID: 21300000, guid: 4575202f77c915249a72cfeda603f0fa, type: 3}
-  fern: {fileID: 741977294}
-  kraus: {fileID: 1666413478}
---- !u!50 &703775870
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703775864}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!1 &713330509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1687,7 +1528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741977291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.46, y: 72.18288, z: 0}
+  m_LocalPosition: {x: -7.06, y: 78.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1704,7 +1545,7 @@ Animator:
   m_GameObject: {fileID: 741977291}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ec15a4484bf3a0642b12ed8f1028bd6c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7093187e82ffb0943b25da9068dbc6e3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -7350,7 +7191,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 703775869}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: FightingCrosshairController, Assembly-CSharp
         m_MethodName: FIGHT
         m_Mode: 1
@@ -7492,7 +7333,6 @@ GameObject:
   - component: {fileID: 1666413476}
   - component: {fileID: 1666413478}
   - component: {fileID: 1666413479}
-  - component: {fileID: 1666413480}
   m_Layer: 0
   m_Name: Kraus
   m_TagString: rnd
@@ -7563,8 +7403,7 @@ Transform:
   m_LocalPosition: {x: 3.52, y: 72.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 703775867}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7635,23 +7474,6 @@ PolygonCollider2D:
       - {x: 0.85, y: -2.7}
       - {x: 0.75, y: -0.85}
       - {x: 0.8, y: -0.05}
---- !u!114 &1666413480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666413474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e397843ebc0b2042bcd7fe1772395aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fern: {fileID: 741977294}
-  kraus: {fileID: 1666413478}
-  AllAudio: {fileID: 2020620374}
-  crosshair_object: {fileID: 703775864}
-  hit: 0
 --- !u!1 &1763833645
 GameObject:
   m_ObjectHideFlags: 0
@@ -7860,8 +7682,8 @@ GameObject:
   - component: {fileID: 1825452603}
   - component: {fileID: 1825452604}
   - component: {fileID: 1825452605}
-  - component: {fileID: 1825452606}
   - component: {fileID: 1825452607}
+  - component: {fileID: 1825452608}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -8024,73 +7846,6 @@ MonoBehaviour:
   rb: {fileID: 0}
   testing: 1
   insane: 0
---- !u!114 &1825452606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825452595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad4c4dc781cb8d947bfa4c954f917c10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interaction:
-  - words: It's kind of late in the game to be learning new tricks...
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
-  - words: ...but I guess it's better late than never. And everyone should have some
-      self-defence lessons.
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
-  - words: 'This is still about clicking on the things you see. But now there''s
-      a couple of caveats: '
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
-  - words: '1: You gotta do it quickly.'
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
-  - words: '2: If you miss, you''ll be penalized.'
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
-  - words: '3: The less sane you are, the harder this is going to be.'
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4278190265
-  - words: Good Luck!
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
-  HeadsUpDisplay: {fileID: 517448754}
-  choices:
-  - Start The Fight
-  choiceButtons:
-  - {fileID: 1571034010}
-  - {fileID: 0}
-  - {fileID: 0}
-  wait: 1
-  speech: 0
-  waitfor: 3
 --- !u!114 &1825452607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8104,6 +7859,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HeadsUpDisplay: {fileID: 517448754}
+--- !u!114 &1825452608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825452595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5526eb93420bd934e95e24f79cf2971e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interaction:
+  - words: Ah, Fern. I'm glad to have found you. It caused quite a stir upstairs
+      when you went missing.
+    voice: {fileID: 0}
+    name: Dr Kraus
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294566347
+  - words: I imagine it will cause more of a stir when they never find you
+    voice: {fileID: 0}
+    name: Dr Kraus
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294566347
+  - words: I'm so close to success, you see. I'll only need a couple more tests.
+      And I'm afraid that I'll be needing Dahlia for those tests.
+    voice: {fileID: 0}
+    name: Dr Kraus
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294566347
+  HeadsUpDisplay: {fileID: 517448754}
+  choices: []
+  choiceButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  wait: 0
+  speech: 0
+  waitfor: 0
 --- !u!1 &1845981121
 GameObject:
   m_ObjectHideFlags: 0

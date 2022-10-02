@@ -77,18 +77,9 @@ public class PlayerClickHandler : MonoBehaviour
                 objectivesText.text = objectivesText.text + "* " + sentence + "\n";
             }
 
-            int i = 0;
-
-            //Loops through each string the the inventory Queue and adds it to the inventory_body text box so the player can view it
             foreach (string sentence in Globals.inventory)
             {
-                texts[i].text = sentence;
-
-                //inventoryText.text = inventoryText.text + "* " + sentence + "\n";
-                //here
-                //make the inventory buttons? only si many items in inventory?
-                //next button child.text = this object
-                i++;
+                inventoryText.text = inventoryText.text + "* " + sentence + "\n";
             }
 
             open = true;
@@ -132,19 +123,11 @@ public class PlayerClickHandler : MonoBehaviour
                 objectivesText.text = objectivesText.text + "* " + sentence + "\n";
             }
 
-            int i = 0;
-
-            //Loops through each string the the inventory Queue and adds it to the inventory_body text box so the player can view it
             foreach (string sentence in Globals.inventory)
             {
-                texts[i].text = sentence;
-
-                //inventoryText.text = inventoryText.text + "* " + sentence + "\n";
-                //here
-                //make the inventory buttons? only si many items in inventory?
-                //next button child.text = this object
-                i++;
+                inventoryText.text = inventoryText.text + "* " + sentence + "\n";
             }
+
 
             open = true;
     }

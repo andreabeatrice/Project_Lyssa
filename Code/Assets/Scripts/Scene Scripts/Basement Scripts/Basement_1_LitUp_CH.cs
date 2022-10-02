@@ -20,6 +20,15 @@ public class Basement_1_LitUp_CH : MonoBehaviour
         FindObjectOfType<LevelLoader>().LoadNextLevel("BoilerRoomNoMom", "crossfade_start");
     }
 
+    public void intoBoilerRoomMom(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("BoilerRoomWithMom", "crossfade_start");
+    }
+
+
+    public void into101(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Room101", "crossfade_start");
+    }
+
     public void ConvinceHer(){
 
     }
