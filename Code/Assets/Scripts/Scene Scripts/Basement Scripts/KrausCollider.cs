@@ -6,6 +6,8 @@ public class KrausCollider : MonoBehaviour
 {
     public Animator fern, kraus;
 
+    public GameObject crosshair_object;
+
     public int hit = 0;
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,7 @@ public class KrausCollider : MonoBehaviour
             kraus.Play("kraus_punch");
             kraus.Play("kraus_kick");
             fern.Play("player_knockout");
+            crosshair_object.SetActive(false);
         }
     }
 }
