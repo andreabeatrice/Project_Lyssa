@@ -345,9 +345,11 @@ public class AudioSources : MonoBehaviour
                 break;
             case "BoilerRoomNoMom":
                 boilerRoomBackground.Play();
+                vent_drip.Play();
                 break;
             case "BoilerRoomWithMom":
                 boilerRoomBackground.Play();
+                vent_drip.Play();
                 break;
 >>>>>>> Stashed changes
             default:
@@ -543,7 +545,12 @@ public class AudioSources : MonoBehaviour
     }
      public void playMetalDrag()
     {
+<<<<<<< Updated upstream
        metalDrag.Play();
+=======
+       boilerRoomBackground.Play();
+       
+>>>>>>> Stashed changes
     }
      public void playBoilerRoomBackground()
     {
