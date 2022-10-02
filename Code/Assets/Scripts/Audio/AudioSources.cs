@@ -197,8 +197,8 @@ public class AudioSources : MonoBehaviour
                 case "fridgeHum":
                     fridgeHum = sound;
                 break;
-                  case "pots":
-                    pots = sound;
+                  case "pot":
+                    pot = sound;
                 break;
                   case "potsAndPans":
                     potsAndPans = sound;
@@ -268,7 +268,12 @@ public class AudioSources : MonoBehaviour
                 StopAllAudio();
                 background106.Play();
                 break;
-
+            case "Basement_Dark":
+                basement_Background.Play();
+                break;
+             case "Basement_1_LitUp":
+                basement_Background.Play();
+                break;
             default:
             break;
         }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class KrausCollider : MonoBehaviour
 {
     public Animator fern, kraus;
+    public AudioSources AllAudio;
 
     public int hit = 0;
     // Start is called before the first frame update
@@ -26,9 +27,11 @@ public class KrausCollider : MonoBehaviour
 
             switch (move){
                 case 1:
+                    AllAudio.playPunch();
                     kraus.Play("kraus_punch");
                 break;
                 case 2:
+                    AllAudio.playKick();
                     kraus.Play("kraus_kick");
                 break;
 

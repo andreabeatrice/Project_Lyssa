@@ -5,7 +5,7 @@ using UnityEngine;
 public class FightingCrosshairController : MonoBehaviour
 {
     public int hit = 0;
-
+    public AudioSources AllAudio;
     public Collider2D KrausBody;
 
     public Rigidbody2D crosshair;
@@ -77,12 +77,15 @@ public class FightingCrosshairController : MonoBehaviour
 
             switch (move){
                 case 1:
+                    AllAudio.playPunch();
                     fern.Play("Player_Jab_Cross");
                 break;
                 case 2:
+                    AllAudio.playPunch();
                     fern.Play("Player_Jab");
                 break;
                 case 3:
+                    AllAudio.playKick();
                     fern.Play("Player_Kick");
                 break;
             }
