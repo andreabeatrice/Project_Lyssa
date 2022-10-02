@@ -9,6 +9,8 @@ public class KrausCollider : MonoBehaviour
 
     public GameObject crosshair_object;
 
+    public GameObject crosshair_object;
+
     public int hit = 0;
     // Start is called before the first frame update
     void Start()
