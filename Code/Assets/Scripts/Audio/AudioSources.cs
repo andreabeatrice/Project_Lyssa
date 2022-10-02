@@ -68,7 +68,6 @@ public class AudioSources : MonoBehaviour
     public AudioSource piano_g3;
     public AudioSource piano_gs3;
 
-
     private AudioSource[] allAudioSources;
 
 

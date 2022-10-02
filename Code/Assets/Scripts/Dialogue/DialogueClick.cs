@@ -40,7 +40,6 @@ public class DialogueClick : MonoBehaviour
     public Collider2D ObjectAreaCollider;
     private bool popped = false;
 
-
     // Start is called before the first frame update
     void Start()
     {
