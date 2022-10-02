@@ -40,6 +40,17 @@ public class AudioSources : MonoBehaviour
     public AudioSource putDownBook;
     public AudioSource light_Switch;
     public AudioSource footsteps_Concrete;
+
+    public AudioSource closeKitchenCupboard;
+    public AudioSource openKitchenCupboard;
+    public AudioSource punch;
+    public AudioSource doublePunch;
+    public AudioSource kick;
+    public AudioSource fridgeDoorOpening;
+    public AudioSource fridgeDoorClosing;
+    public AudioSource fridgeBeingOpen;
+    public AudioSource fridgeHum;
+
     private AudioSource[] allAudioSources;
 
 
@@ -145,17 +156,44 @@ public class AudioSources : MonoBehaviour
                  case "pickUpBook":
                     pickUpBook = sound;
                 break;
-                 case "PutDownBook":
+                 case "putDownBook":
                     putDownBook = sound;
                 break;
                  case "basement_Background":
-                    cabinet_Close = sound;
+                    basement_Background = sound;
                 break;
-                 case "glassClink":
+                 case "glass_Clink":
                     glass_Clink = sound;
                 break;
                 case "footsteps_Concrete":
                     footsteps_Concrete = sound;
+                break;
+                case "closeKitchenCupboard":
+                    closeKitchenCupboard = sound;
+                break;
+                case "openKitchenCupboard":
+                    openKitchenCupboard = sound;
+                break;
+                case "punch":
+                    punch = sound;
+                break;
+                case "doublePunch":
+                    doublePunch = sound;
+                break;
+                case "kick":
+                    kick = sound;
+                break;
+                case "fridgeDoorClosing":
+                    fridgeDoorClosing = sound;
+                break;
+                case "fridgeDoorOpening":
+                    fridgeDoorOpening = sound;
+                break;
+                case "fridgeBeingOpen":
+                    fridgeBeingOpen = sound;
+                break;
+                case "fridgeHum":
+                    fridgeHum = sound;
                 break;
             }
         }
@@ -279,6 +317,75 @@ public class AudioSources : MonoBehaviour
     public void playSqueak()
     {
        mirror_squeak.Play();
+    }
+
+      public void playCabinet_Open()
+    {
+       cabinet_Open.Play();
+    }
+      public void playCabinet_Close()
+    {
+       cabinet_Close.Play();
+    }
+      public void playLight_Switch()
+    {
+       light_Switch.Play();
+    }
+      public void playPickUpBook()
+    {
+       pickUpBook.Play();
+    }
+    public void playPutDownBook()
+    {
+       putDownBook.Play();
+    }
+    public void playBasement_Background()
+    {
+       basement_Background.Play();
+    }
+    public void playGlass_Clink()
+    {
+       glass_Clink.Play();
+    }
+    public void playFootsteps_Concrete()
+    {
+       footsteps_Concrete.Play();
+    }
+    public void playOpoenKitchenCupboard()
+    {
+       openKitchenCupboard.Play();
+    }
+    public void playCloseKitchenCupboard()
+    {
+       closeKitchenCupboard.Play();
+    }
+     public void playPunch()
+    {
+       punch.Play();
+    }
+     public void playDoublePunch()
+    {
+       doublePunch.Play();
+    }
+     public void playKick()
+    {
+       kick.Play();
+    }
+    public void playFridgeDoorOpoening()
+    {
+       fridgeDoorOpening.Play();
+    }
+    public void playFridgeDoorClosing()
+    {
+       fridgeDoorClosing.Play();
+    }
+    public void playFridgeBeingOpen()
+    {
+       fridgeBeingOpen.Play();
+    }
+    public void playFridgeHum()
+    {
+       fridgeHum.Play();
     }
 
     public void StopAllAudio() {
