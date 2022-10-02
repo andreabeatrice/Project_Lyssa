@@ -68,6 +68,12 @@ public class AudioSources : MonoBehaviour
     public AudioSource piano_g3;
     public AudioSource piano_gs3;
 
+<<<<<<< Updated upstream
+=======
+    public AudioSource metalDrag;
+    public AudioSource boilerRoomBackground;
+
+>>>>>>> Stashed changes
     private AudioSource[] allAudioSources;
 
 
@@ -254,6 +260,9 @@ public class AudioSources : MonoBehaviour
                 case "piano_gs3":
                     piano_gs3 = sound;
                 break;
+                 case "metalDrag":
+                    metalDrag = sound;
+                break;
 
             }
         }
@@ -326,6 +335,21 @@ public class AudioSources : MonoBehaviour
              case "Basement_1_LitUp":
                 basement_Background.Play();
                 break;
+<<<<<<< Updated upstream
+=======
+            case "KrausOffice_1_FromHall":
+                background106.Play();
+                break;
+            case "KrausOffice_2_LightSwitch":
+                background106.Play();
+                break;
+            case "BoilerRoomNoMom":
+                boilerRoomBackground.Play();
+                break;
+            case "BoilerRoomWithMom":
+                boilerRoomBackground.Play();
+                break;
+>>>>>>> Stashed changes
             default:
             break;
         }
@@ -516,6 +540,14 @@ public class AudioSources : MonoBehaviour
     public void playPiano_gs3()
     {
        piano_gs3.Play();
+    }
+     public void playMetalDrag()
+    {
+       metalDrag.Play();
+    }
+     public void playBoilerRoomBackground()
+    {
+       boilerRoomBackground.Play();
     }
 
     public void StopAllAudio() {
