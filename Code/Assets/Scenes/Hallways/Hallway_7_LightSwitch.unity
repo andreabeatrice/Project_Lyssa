@@ -5065,6 +5065,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 176746942924713599, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
   m_PrefabInstance: {fileID: 187478326}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &187478330 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746941063478361, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 187478326}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &260208827
 GameObject:
   m_ObjectHideFlags: 0
@@ -10142,7 +10147,7 @@ MonoBehaviour:
   movespeed: 6
   rb: {fileID: 1143139932}
   animator: {fileID: 1143139930}
-  audiosrc: {fileID: 0}
+  audiosrc: {fileID: 187478330}
   frozen: 0
 --- !u!50 &1143139932
 Rigidbody2D:
@@ -25561,6 +25566,7 @@ MonoBehaviour:
   - {fileID: 0}
   played: 0
   speech: 0
+  nurse: 0
 --- !u!58 &1795406731
 CircleCollider2D:
   m_ObjectHideFlags: 0

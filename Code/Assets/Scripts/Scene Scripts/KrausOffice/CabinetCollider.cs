@@ -10,6 +10,8 @@ public class CabinetCollider : MonoBehaviour
 
     public Sprite open_me, bothopen, noneopen, youopen;
 
+    public AudioSources AllAudio;
+
     // Start is called before the first frame update
     void Start()
     {
