@@ -67,6 +67,8 @@ public class AudioSources : MonoBehaviour
     public AudioSource piano_fs3;
     public AudioSource piano_g3;
     public AudioSource piano_gs3;
+    public AudioSource metalDrag;
+    public AudioSource boilerRoomBackground;
 
 
     private AudioSource[] allAudioSources;
@@ -255,6 +257,9 @@ public class AudioSources : MonoBehaviour
                 case "piano_gs3":
                     piano_gs3 = sound;
                 break;
+                case "metalDrag":
+                    metalDrag = sound;
+                break;
 
             }
         }
@@ -332,6 +337,12 @@ public class AudioSources : MonoBehaviour
                 break;
             case "KrausOffice_2_LightSwitch":
                 background106.Play();
+                break;
+            case "BoilerRoomNoMom":
+                boilerRoomBackground.Play();
+                break;
+            case "BoilerRoomWithMom":
+                boilerRoomBackground.Play();
                 break;
             default:
             break;
@@ -523,6 +534,14 @@ public class AudioSources : MonoBehaviour
     public void playPiano_gs3()
     {
        piano_gs3.Play();
+    }
+    public void playBoilerRoomBackground()
+    {
+       boilerRoomBackground.Play();
+    }
+    public void playMetalDrag()
+    {
+       metalDrag.Play();
     }
 
     public void StopAllAudio() {
