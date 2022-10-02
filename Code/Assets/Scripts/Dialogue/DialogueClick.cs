@@ -16,6 +16,7 @@ public class DialogueClick : MonoBehaviour
 {
     public Sentence[] interaction;
     private AudioSource clickSound; //don't want clicksound before audio
+    public AudioSources AllAudio;
 
     public GameObject HeadsUpDisplay;
 

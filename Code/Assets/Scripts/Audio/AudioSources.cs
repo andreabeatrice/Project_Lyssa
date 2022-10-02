@@ -50,6 +50,8 @@ public class AudioSources : MonoBehaviour
     public AudioSource fridgeDoorClosing;
     public AudioSource fridgeBeingOpen;
     public AudioSource fridgeHum;
+    public AudioSource pot;
+    public AudioSource potsAndPans;
 
     private AudioSource[] allAudioSources;
 
@@ -194,6 +196,12 @@ public class AudioSources : MonoBehaviour
                 break;
                 case "fridgeHum":
                     fridgeHum = sound;
+                break;
+                  case "pots":
+                    pots = sound;
+                break;
+                  case "potsAndPans":
+                    potsAndPans = sound;
                 break;
             }
         }
@@ -386,6 +394,14 @@ public class AudioSources : MonoBehaviour
     public void playFridgeHum()
     {
        fridgeHum.Play();
+    }
+     public void playPotsAndPans()
+    {
+       potsAndPans.Play();
+    }
+     public void playPot()
+    {
+       pot.Play();
     }
 
     public void StopAllAudio() {
