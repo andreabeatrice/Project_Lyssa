@@ -71,6 +71,7 @@ public class CreateVariables : MonoBehaviour
                     HelperMethods.ObjectivesEnqueue("Turn the basement light on");
                     rb.position = new Vector2(0, -78);
                     check = true;
+                    Globals.LightSwitch = true;
                 break;
                 case "Basement_2_Fight":
                     Globals.insanity = insane;
