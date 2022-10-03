@@ -21,6 +21,9 @@ public class DialogueAutoStart_Fight : MonoBehaviour
 
     private float time = 0; 
 
+    private bool willFight = false;
+    
+
     // Start(): is called before the first frame update - calls TriggerDialogue() or TriggerDialogueNoWait()
         void Start()
         {
@@ -28,6 +31,16 @@ public class DialogueAutoStart_Fight : MonoBehaviour
 
             }
             StartCoroutine(TriggerDialogue());
+        }
+
+         void Update()
+        {   
+             if (FindObjectOfType<DialogueManager>().inConversation == true){
+                willFight = true;
+             }
+            if (FindObjectOfType<DialogueManager>().inConversation == false && willFight){
+                StartCoroutine(FIGHT());
+            }
         }
 
     //TriggerDialogue(): Waits for 1.5 seconds to be sure that the scene transition is done
@@ -41,7 +54,7 @@ public class DialogueAutoStart_Fight : MonoBehaviour
 
             FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech);
 
-            StartCoroutine(FIGHT());
+            
         }
 
     //TriggerDialogueNoWait(): WaStarts the dialogue immediately
@@ -54,10 +67,15 @@ public class DialogueAutoStart_Fight : MonoBehaviour
         }
 
     IEnumerator FIGHT(){
-            yield return new WaitForSeconds(10f);
+        
+            float ttw = (interaction[interaction.Length - 1].words.ToCharArray().Length * Globals.typingSpeed);
+
+            Debug.Log(ttw);
+
+            yield return new WaitForSeconds(ttw);
 
             FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_2_Fight", "crossfade_start");
 
-        }
+    }
 
 }
