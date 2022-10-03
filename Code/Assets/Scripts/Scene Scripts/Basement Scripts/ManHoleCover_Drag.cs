@@ -53,9 +53,12 @@ public class ManHoleCover_Drag : MonoBehaviour
 
     void OnMouseUp()
     {
+        
         if (isBeingHeld){
-            if (dropSound != null)
-                dropSound.Play();
+            dragSound.Stop();
+            //if (dropSound != null)
+               
+               // dropSound.Play();
 
             isBeingHeld = false;
             manHole.enabled = true;

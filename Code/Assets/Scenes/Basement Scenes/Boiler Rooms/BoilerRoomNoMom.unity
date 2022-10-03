@@ -1604,6 +1604,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!82 &764568316 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 558270822060598791, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 2070936064}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &968558878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,7 +2757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ac65a20e361534db13371fed7afc16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 764568316}
   dropSound: {fileID: 0}
   canDrag: 1
   manHole: {fileID: 968558881}
@@ -3183,6 +3188,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6c4aaf1c7320aff47bf9a8aae380f618, type: 3}
+    - target: {fileID: 6323185090271669862, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 307db093ca6a9154ab9960f9f350990b, type: 3}
     - target: {fileID: 7514803825967726811, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0

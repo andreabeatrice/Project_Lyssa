@@ -69,7 +69,14 @@ public class AudioSources : MonoBehaviour
     public AudioSource piano_gs3;
 
     public AudioSource metalDrag;
+    public AudioSource manHoleDrop;
     public AudioSource boilerRoomBackground;
+    public AudioSource burning;
+    public AudioSource screamingMale;
+    public AudioSource fightBackground;
+    public AudioSource panting;
+    public AudioSource roadAndBirds;
+    public AudioSource newspaperSpin;
 
     private AudioSource[] allAudioSources;
 
@@ -260,6 +267,24 @@ public class AudioSources : MonoBehaviour
                  case "metalDrag":
                     metalDrag = sound;
                 break;
+                case "manHoleDrop":
+                    manHoleDrop = sound;
+                break;
+                 case "burning":
+                    burning = sound;
+                break;
+                 case "screamingMale":
+                    screamingMale = sound;
+                break;
+                case "fightBackground":
+                    fightBackground = sound;
+                break;
+                case "panting":
+                    panting = sound;
+                break;
+                case "roadAndBirds":
+                    roadAndBirds = sound;
+                break;
 
             }
         }
@@ -326,13 +351,16 @@ public class AudioSources : MonoBehaviour
                 StopAllAudio();
                 background106.Play();
                 break;
-            case "Basement_Dark":
+            case "Basement_DarkScript":
+                StopAllAudio();
                 basement_Background.Play();
                 break;
              case "Basement_1_LitUp":
+                StopAllAudio();
                 basement_Background.Play();
                 break;
             case "KrausOffice_1_FromHall":
+                StopAllAudio();
                 background106.Play();
                 break;
             case "KrausOffice_2_LightSwitch":
@@ -346,6 +374,26 @@ public class AudioSources : MonoBehaviour
                 boilerRoomBackground.Play();
                 vent_drip.Play();
                 break;
+            case "Basement_4_LeavesBoiler":
+                basement_Background.Play();
+                break;
+            case "Room101":
+                StopAllAudio();
+                fightBackground.Play();
+                break;
+            case "Basement_5_Confrontation":
+                fightBackground.Play();
+                break;
+            case "Basement_2_Fight":
+                fightBackground.Play();
+                break;
+            case "Basement_3_Win":
+                StopAllAudio();
+                fightBackground.Stop();
+                panting.Play();
+                basement_Background.Play();
+                break;
+           
             default:
             break;
         }
@@ -540,12 +588,34 @@ public class AudioSources : MonoBehaviour
      public void playMetalDrag()
     {
        metalDrag.Play();
-       boilerRoomBackground.Play();
-       
+    }
+     public void playManHoleDrop()
+    {
+       manHoleDrop.Play();
     }
      public void playBoilerRoomBackground()
     {
        boilerRoomBackground.Play();
+    }
+      public void playScreamingMale()
+    {
+       screamingMale.Play();
+    }
+      public void playBurning()
+    {
+       burning.Play();
+    }
+       public void playPanting()
+    {
+       panting.Play();
+    }
+       public void playRoadAndBirds()
+    {
+       roadAndBirds.Play();
+    }
+    public void playNewspaperSpin()
+    {
+       newspaperSpin.Play();
     }
 
     public void StopAllAudio() {
