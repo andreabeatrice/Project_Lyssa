@@ -258,6 +258,9 @@ public class DialogueAutoplayManager : MonoBehaviour {
     public IEnumerator ClearHeadsUp(){
         yield return new WaitForSeconds(4f);
 
+        nameText.text = "";
+        dialogText.text = "";
+
         FindObjectOfType<DialogueBoxHandler>().clearHUD();
         if (FindObjectOfType<PlayerController>() != null){
             FindObjectOfType<PlayerController>().frozen = false;

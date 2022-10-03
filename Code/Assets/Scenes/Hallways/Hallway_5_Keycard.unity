@@ -975,7 +975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 801.4, y: -408.7}
+  m_AnchoredPosition: {x: 889.4, y: -439.8998}
   m_SizeDelta: {x: 567.51, y: 319.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151073640
@@ -20145,15 +20145,15 @@ RectTransform:
   m_GameObject: {fileID: 980235919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.507403, y: 1.507403, z: 1.507403}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.8000001, y: 1.8000001, z: 1.8000001}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1482931955}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 842.4, y: -527.8}
+  m_AnchoredPosition: {x: 911, y: -302}
   m_SizeDelta: {x: 142.5, y: 71.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &980235921
@@ -21944,7 +21944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165402296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.89, y: -44.14, z: 0}
+  m_LocalPosition: {x: 3.89, y: -45.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21964,7 +21964,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.34873056, y: -2.0579367}
+  m_Offset: {x: 0.012629628, y: -0.3168373}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -21975,7 +21975,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.979952, y: 4.631384}
+  m_Size: {x: 2.286173, y: 5.8797226}
   m_EdgeRadius: 0
 --- !u!114 &1165402302
 MonoBehaviour:
@@ -22001,7 +22001,7 @@ MonoBehaviour:
   choices:
   - Leave him be (+0)
   choiceButtons:
-  - {fileID: 0}
+  - {fileID: 326374777}
   - {fileID: 0}
   - {fileID: 0}
   speech: 1
@@ -25247,7 +25247,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.21795565, y: -0.16952085}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -25258,7 +25258,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8, y: 8}
+  m_Size: {x: 4.173666, y: 7.6609583}
   m_EdgeRadius: 0
 --- !u!114 &1520949210
 MonoBehaviour:
@@ -25272,8 +25272,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interaction: []
-  AllAudio: {fileID: 0}
+  interaction:
+  - words: Lyssa, who personified mad rage and frenzy, did not use her powers in
+      anger against friends, nor have any joy driving men mad.
+    voice: {fileID: 0}
+    name: 
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294967295
+  AllAudio: {fileID: 145486661}
   HeadsUpDisplay: {fileID: 1564090237}
   choices:
   - Interesting
@@ -25612,7 +25619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1564090238
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32810,7 +32817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2085363318
 RectTransform:
   m_ObjectHideFlags: 0
