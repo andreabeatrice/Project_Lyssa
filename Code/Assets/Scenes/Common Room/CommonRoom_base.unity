@@ -334,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 686599332}
+  keys: {fileID: 475432368}
 --- !u!212 &140212942
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -374,7 +375,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -714,6 +715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 0}
+  keys: {fileID: 475432368}
 --- !u!212 &272469603
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -754,7 +756,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f8978758ef11158468307bb30d3edb48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -880,7 +882,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -906,6 +908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 735613144}
+  keys: {fileID: 475432368}
 --- !u!60 &290042427
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1128,7 +1131,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1154,6 +1157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 1110640053}
+  keys: {fileID: 475432368}
 --- !u!60 &304895377
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1605,6 +1609,7 @@ MonoBehaviour:
   enableProximityReactions: 0
   PlayerCollider: {fileID: 0}
   ObjectAreaCollider: {fileID: 0}
+  body: {fileID: 0}
 --- !u!1 &405833825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,6 +1798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 2060819241}
+  keys: {fileID: 475432368}
 --- !u!212 &405833831
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1833,7 +1839,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f8978758ef11158468307bb30d3edb48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2049,6 +2055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 295500683}
+  keys: {fileID: 475432368}
 --- !u!212 &418637476
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2089,7 +2096,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2367,6 +2374,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431990019}
+  m_CullTransparentMesh: 1
+--- !u!1 &475432366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 475432367}
+  - component: {fileID: 475432369}
+  - component: {fileID: 475432368}
+  m_Layer: 5
+  m_Name: Piano Keys
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &475432367
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475432366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2084387622}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 623, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &475432368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475432366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
+  m_sharedMaterial: {fileID: 7154477524753593885, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &475432369
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475432366}
   m_CullTransparentMesh: 1
 --- !u!1 &565312503
 GameObject:
@@ -2691,6 +2833,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 1320251540}
+  keys: {fileID: 475432368}
 --- !u!212 &588626844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2731,7 +2874,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f8978758ef11158468307bb30d3edb48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2820,7 +2963,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2846,6 +2989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 58017252}
+  keys: {fileID: 475432368}
 --- !u!60 &615195878
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3378,6 +3522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 0}
+  keys: {fileID: 475432368}
 --- !u!212 &677389421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3418,7 +3563,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f8978758ef11158468307bb30d3edb48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4307,6 +4452,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1013339180}
   - component: {fileID: 1013339179}
+  - component: {fileID: 1013339181}
+  - component: {fileID: 1013339182}
   m_Layer: 0
   m_Name: Piano
   m_TagString: Untagged
@@ -4354,7 +4501,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4384,6 +4531,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1013339181
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013339178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 70b6996bdbc6e1a4e9085b626f9173f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1013339182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013339178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c687a18648576364eb6e7f24d4446299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 1013339181}
+  animation: piano
 --- !u!1 &1018681533
 GameObject:
   m_ObjectHideFlags: 0
@@ -4590,6 +4771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 959929329}
+  keys: {fileID: 475432368}
 --- !u!212 &1018681540
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4630,7 +4812,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4808,7 +4990,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4834,6 +5016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 295500683}
+  keys: {fileID: 475432368}
 --- !u!60 &1090989390
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5237,7 +5420,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5263,6 +5446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 959929329}
+  keys: {fileID: 475432368}
 --- !u!60 &1134578102
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6209,6 +6393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 1110640053}
+  keys: {fileID: 475432368}
 --- !u!212 &1183303936
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6249,7 +6434,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6454,6 +6639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 0}
+  keys: {fileID: 475432368}
 --- !u!212 &1217967263
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6494,7 +6680,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f8978758ef11158468307bb30d3edb48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6694,6 +6880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 0}
+  keys: {fileID: 475432368}
 --- !u!212 &1230014522
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6734,7 +6921,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f8978758ef11158468307bb30d3edb48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7064,6 +7251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 0}
+  keys: {fileID: 475432368}
 --- !u!212 &1286263129
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7104,7 +7292,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f8978758ef11158468307bb30d3edb48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7468,6 +7656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 0}
+  keys: {fileID: 475432368}
 --- !u!212 &1443289901
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7508,7 +7697,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7708,6 +7897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 1591368327}
+  keys: {fileID: 475432368}
 --- !u!212 &1450451888
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7748,7 +7938,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f8978758ef11158468307bb30d3edb48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7760,6 +7950,90 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1472641124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1472641126}
+  - component: {fileID: 1472641125}
+  m_Layer: 0
+  m_Name: passage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1472641125
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472641124}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 3395592e81e8cc54794a10f197d2cf1c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1472641126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472641124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.71, y: 0.01, z: 0}
+  m_LocalScale: {x: 1.3447, y: 1.3447, z: 1.3447}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1480678934
 GameObject:
   m_ObjectHideFlags: 0
@@ -7926,6 +8200,7 @@ MonoBehaviour:
   enableProximityReactions: 0
   PlayerCollider: {fileID: 0}
   ObjectAreaCollider: {fileID: 0}
+  body: {fileID: 0}
 --- !u!1 &1488185889
 GameObject:
   m_ObjectHideFlags: 0
@@ -8114,6 +8389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 1152222492}
+  keys: {fileID: 475432368}
 --- !u!212 &1488185895
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8154,7 +8430,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f8978758ef11158468307bb30d3edb48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8184,6 +8460,7 @@ GameObject:
   - component: {fileID: 1537124670}
   - component: {fileID: 1537124669}
   - component: {fileID: 1537124667}
+  - component: {fileID: 1537124675}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -8360,6 +8637,20 @@ MonoBehaviour:
   inventoryAndObjectives: {fileID: 289807990}
   clickSound: {fileID: 1823502286}
   animatorForIO: {fileID: 427840438}
+--- !u!114 &1537124675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537124664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632f61cee5a5bf4478d1083db5284f01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pla: {fileID: 1013339182}
+  keys: {fileID: 475432368}
 --- !u!82 &1591368327 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 667364692622348989, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
@@ -8596,6 +8887,7 @@ MonoBehaviour:
   enableProximityReactions: 0
   PlayerCollider: {fileID: 0}
   ObjectAreaCollider: {fileID: 0}
+  body: {fileID: 0}
 --- !u!1 &1749482860
 GameObject:
   m_ObjectHideFlags: 0
@@ -9038,6 +9330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 58017252}
+  keys: {fileID: 475432368}
 --- !u!212 &1806723359
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9078,7 +9371,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9635,6 +9928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 1195787840}
+  keys: {fileID: 475432368}
 --- !u!212 &1885582393
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9675,7 +9969,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9741,6 +10035,7 @@ GameObject:
   - component: {fileID: 1902243309}
   - component: {fileID: 1902243310}
   - component: {fileID: 1902243311}
+  - component: {fileID: 1902243312}
   m_Layer: 0
   m_Name: Otto
   m_TagString: Untagged
@@ -9902,10 +10197,17 @@ MonoBehaviour:
       rgba: 4294823559
   - words: Not often, and only in mirrors.
     voice: {fileID: 1823502285}
-    name: Otto
+    name: ???
     textcolor:
       serializedVersion: 2
       rgba: 4281951066
+  - words: So did you write this note, then? I think it's about the patients going
+      missing, but I don't understand it.
+    voice: {fileID: 1823502285}
+    name: Fern
+    textcolor:
+      serializedVersion: 2
+      rgba: 4294823559
   AllAudio: {fileID: 1823502280}
   HeadsUpDisplay: {fileID: 2093608141}
   choices: []
@@ -9920,6 +10222,21 @@ MonoBehaviour:
   enableProximityReactions: 0
   PlayerCollider: {fileID: 0}
   ObjectAreaCollider: {fileID: 0}
+  body: {fileID: 1902243312}
+--- !u!114 &1902243312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902243306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c687a18648576364eb6e7f24d4446299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  body: {fileID: 1902243309}
+  animation: otto_panic
 --- !u!1 &1908593494
 GameObject:
   m_ObjectHideFlags: 0
@@ -9977,7 +10294,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: ae22e6c9efb4acf419aae187f1a46120, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10192,6 +10509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 202114083}
+  keys: {fileID: 475432368}
 --- !u!212 &1948871236
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10232,7 +10550,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: f8978758ef11158468307bb30d3edb48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10321,7 +10639,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10347,6 +10665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 0}
+  keys: {fileID: 475432368}
 --- !u!60 &1975517324
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10719,7 +11038,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10745,6 +11064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 1195787840}
+  keys: {fileID: 475432368}
 --- !u!60 &2064791043
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -10997,6 +11317,7 @@ RectTransform:
   - {fileID: 1146170517}
   - {fileID: 2093608142}
   - {fileID: 826641854}
+  - {fileID: 475432367}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11135,7 +11456,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 2e2ccd50bf770c344bea2ad5d2836a51, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11161,6 +11482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 1823502280}
   note: {fileID: 0}
+  keys: {fileID: 475432368}
 --- !u!60 &2111652265
 PolygonCollider2D:
   m_ObjectHideFlags: 0

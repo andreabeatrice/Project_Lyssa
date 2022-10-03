@@ -33,6 +33,8 @@ public class DialogueManager : MonoBehaviour {
 
     public string changeScene = "";
 
+    private PlaySomeonesAnim pla = null;
+
 
     // Start is called before the first frame update
     void Start()
@@ -107,9 +109,54 @@ public class DialogueManager : MonoBehaviour {
 
     }
 
+    public void StartDialogue(Sentence[] di, string[] c, GameObject[] choiceButtons, bool speech, PlaySomeonesAnim pla)
+    {
+        this.pla = pla;
+
+        last = di[di.Length - 1].words;
+        
+        inConversation = true;
+
+        this.choices = c;
+
+        if (choiceButtons[0] != null)
+            this.choice1 = choiceButtons[0];
+
+        if (choiceButtons[1] != null)
+            this.choice2 = choiceButtons[1];
+
+        if (choiceButtons[2] != null)
+            this.choice3 = choiceButtons[2];
+
+        if (choice1 != null)
+            choice1.SetActive(false);
+
+        if (choice2 != null)
+            choice2.SetActive(false);
+
+        if (choice3 != null)
+            choice3.SetActive(false);
+
+        this.speech = speech;
+
+        skipButton.SetActive(true);
+
+        sentences.Clear();
+
+        foreach (Sentence s in di)
+        {
+            sentences.Enqueue(s);
+        }
+
+        DisplayNextSentence();
+
+    }
+
     public void StartDialogue(Sentence[] di, string choice, GameObject c1, bool speech, string change)
     {
         changeScene = change;
+
+        last = di[di.Length - 1].words;
 
         inConversation = true;
 
@@ -144,6 +191,8 @@ public class DialogueManager : MonoBehaviour {
     {
 
         inConversation = true;
+
+        last = di[di.Length - 1].words;
 
         this.choices = new string[] { choice };
 
@@ -357,6 +406,10 @@ public class DialogueManager : MonoBehaviour {
         float ttw = last.ToCharArray().Length * Globals.typingSpeed + 3;
 
         yield return new WaitForSeconds(ttw);
+        if(pla != null){
+            pla.play();
+        }
+
 
         FindObjectOfType<DialogueBoxHandler>().clearHUD();
 

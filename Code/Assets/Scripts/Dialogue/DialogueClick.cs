@@ -40,6 +40,8 @@ public class DialogueClick : MonoBehaviour
     public Collider2D ObjectAreaCollider;
     private bool popped = false;
 
+    public PlaySomeonesAnim body;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -130,11 +132,11 @@ public class DialogueClick : MonoBehaviour
         int diCount = interaction.Length - 1;
         if (numInteractions <= diCount)
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech, body);
         }
         else
         {
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech, body);
         }
         
     }
