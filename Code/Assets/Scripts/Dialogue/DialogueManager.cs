@@ -29,7 +29,10 @@ public class DialogueManager : MonoBehaviour {
 
     public bool inConversation = false;
 
-    private int timesclicked = 0;
+    private string last;
+
+    public string changeScene = "";
+
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +67,8 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Sentence[] di, string[] c, GameObject[] choiceButtons, bool speech)
     {
+
+        last = di[di.Length - 1].words;
         
         inConversation = true;
 
@@ -97,6 +102,39 @@ public class DialogueManager : MonoBehaviour {
         {
             sentences.Enqueue(s);
         }
+
+        DisplayNextSentence();
+
+    }
+
+    public void StartDialogue(Sentence[] di, string choice, GameObject c1, bool speech, string change)
+    {
+        changeScene = change;
+
+        inConversation = true;
+
+        this.choices = new string[] { choice };
+
+        this.choice1 = c1;
+
+        if (choice1 != null)
+            choice1.SetActive(false);
+
+        skipButton.SetActive(true);
+
+        sentences.Clear();
+
+        this.speech = speech;
+
+        skipButton.SetActive(true);
+
+        sentences.Clear();
+
+        foreach (Sentence s in di)
+        {
+            sentences.Enqueue(s);
+        }
+
 
         DisplayNextSentence();
 
@@ -311,9 +349,18 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public IEnumerator ClearHeadsUp(){
-        yield return new WaitForSeconds(4f);
+        if(changeScene != ""){
+
+            SceneManager.LoadScene(changeScene);
+        }
+
+        float ttw = last.ToCharArray().Length * Globals.typingSpeed + 3;
+
+        yield return new WaitForSeconds(ttw);
 
         FindObjectOfType<DialogueBoxHandler>().clearHUD();
+
+
     }
 
 

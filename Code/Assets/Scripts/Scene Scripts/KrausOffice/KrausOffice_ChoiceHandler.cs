@@ -21,6 +21,11 @@ public class KrausOffice_ChoiceHandler : MonoBehaviour
         FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_7_LightSwitch", "crossfade_start");
     }
 
+    public void LeaveOfficeSnuckIn(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_5_Keycard", "crossfade_start");
+    }
+
+
     public void SheTakesAWhiskeyDrink(){
         Globals.insanity += 1;
     }
