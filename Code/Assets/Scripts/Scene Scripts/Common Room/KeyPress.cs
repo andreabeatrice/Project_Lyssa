@@ -5,6 +5,7 @@ using UnityEngine;
 public class KeyPress : MonoBehaviour
 {
     public AudioSources AllAudio;
+    public AudioSource note;
 
     Color32 me;
     // Start is called before the first frame update
@@ -21,7 +22,7 @@ public class KeyPress : MonoBehaviour
 
      void OnMouseDown()
     {
-        AllAudio.StopAllAudio();
+        //AllAudio.StopAllAudio();
         this.GetComponentInChildren<AudioSource>().Play();
     }
 

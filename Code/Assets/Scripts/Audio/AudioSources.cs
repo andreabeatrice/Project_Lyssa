@@ -393,6 +393,9 @@ public class AudioSources : MonoBehaviour
                 panting.Play();
                 basement_Background.Play();
                 break;
+            case "CommonRoom_base":
+                background106.Play();
+                break;
            
             default:
             break;
