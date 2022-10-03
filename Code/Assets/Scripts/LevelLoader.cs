@@ -23,10 +23,17 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextLevel(string scenename, string animname)
     {
         
-        StartCoroutine(LevelTransition(scenename, animname));
+        StartCoroutine(LevelTransition(scenename, animname, 1.5f));
     }
 
-    IEnumerator LevelTransition(string scenename, string animname)
+        public void LoadNextLevelLong(string scenename, string animname, float time)
+    {
+        
+        StartCoroutine(LevelTransition(scenename, animname, time));
+    }
+
+
+    IEnumerator LevelTransition(string scenename, string animname, float time)
     {
         //yield on a new YieldInstruction that waits for 5 seconds.
 
@@ -34,11 +41,13 @@ public class LevelLoader : MonoBehaviour
         //After we have waited 5 seconds print the time again.
         transition.Play(animname);
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(time);
 
         SceneManager.LoadScene(scenename);
 
         //
 
     }
+
+
 }

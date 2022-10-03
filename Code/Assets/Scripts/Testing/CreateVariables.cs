@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class CreateVariables : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public bool testing =false;
+    public bool testing = false;
 
     private bool check = false;
+
+    public int insane = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,19 @@ public class CreateVariables : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (testing == true && check == false){
-            Globals.StorageRoom = true;
+
+        if (Input.GetKeyDown(KeyCode.R)){
+                make();
+                Debug.Log(testing);
+                testing = true;
+        }
+        else if (testing == true && check == false ){
+            make();
+        }
+    }
+
+    public void make(){
+          Globals.StorageRoom = true;
             switch (SceneManager.GetActiveScene().name){
                 case "Hallway_2_Pre106":
                     //assign variables
@@ -69,9 +82,10 @@ public class CreateVariables : MonoBehaviour
                     HelperMethods.ObjectivesEnqueue("Turn the basement light on");
                     rb.position = new Vector2(0, -78);
                     check = true;
+                    Globals.LightSwitch = true;
                 break;
-                case "Basement_2_SaneFight":
-                    Globals.insanity = 9;
+                case "Basement_2_Fight":
+                    Globals.insanity = insane;
                 break;
                 case "Hallway_6_Slip":
                     foreach(string s in Globals.objectives){
@@ -93,6 +107,5 @@ public class CreateVariables : MonoBehaviour
                 break;
             }
 
-        }
     }
 }

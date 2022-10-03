@@ -38,6 +38,7 @@ public class Hallway_7_ChoiceHandler : MonoBehaviour
 
         }
         if (PlayerCollider.IsTouching(basement) && !playedDenial && Globals.LightSwitch){
+            Globals.playerPositionOnMap = new Vector2(0, 0);
             FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_1_LitUp", "crossfade_start");
         }
     }

@@ -27,12 +27,12 @@ public class BasementDoor : MonoBehaviour
 
 
     //OnMouseDown(): if the Collider attached to the object the script is attached to is clicked
-    private void OnMouseOver(){
+    // private void OnMouseOver(){
             
-        if (Input.GetMouseButtonDown(Globals.primaryMouseButton) && !Globals.paused ){
-                handle();
-            }
-    }
+    //     if (Input.GetMouseButtonDown(Globals.primaryMouseButton) && !Globals.paused ){
+    //             handle();
+    //         }
+    // }
 
 
     public IEnumerator EnterDarkBasement(){

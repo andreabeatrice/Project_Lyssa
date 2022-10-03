@@ -5,7 +5,10 @@ using UnityEngine;
 public class FightingCrosshairController : MonoBehaviour
 {
     public int hit = 0;
+    
     public AudioSources AllAudio;
+
+
     public Collider2D KrausBody;
 
     public Rigidbody2D crosshair;
@@ -17,19 +20,48 @@ public class FightingCrosshairController : MonoBehaviour
     public Animator fern, kraus;
 
     private bool called = false;
+
+    private float timeToFight;
     // Start is called before the first frame update
     void Start()
     {
         spawn();
+
+        if (Globals.insanity > 3){
+            timeToFight = 60 / (Globals.insanity/3);
+        }
+        else {
+            timeToFight = 60;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!called){
+        if (!called && crosshair_object.activeSelf){
             StartCoroutine(gonnaSpawn());
             called = true;
+
+            
+
+            Debug.Log(timeToFight);
         }
+        if (crosshair_object.activeSelf && timeToFight > 0){
+            timeToFight -= Time.deltaTime;
+        }
+        else if (timeToFight <= 0){
+            Debug.Log("He wins.RIP");
+            kraus.Play("kraus_kick");
+            fern.Play("player_knockout");
+            crosshair_object.SetActive(false);
+
+            Globals.deaths.Add("Did you read the instructions? They ~said~ that you had a limited time.");
+
+            FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 3f);
+        }
+
+        
+        //-= Time.deltaTime;
     }
 
     public void spawn(){
@@ -52,7 +84,7 @@ public class FightingCrosshairController : MonoBehaviour
 
         if(Globals.insanity != 0){
             timetowaitMin = 0f;
-            timetowaitMax = (Globals.insanity/4);
+            timetowaitMax = 5 - (Globals.insanity/4);
         }
         else {
             timetowaitMin = 2f;
@@ -69,7 +101,7 @@ public class FightingCrosshairController : MonoBehaviour
     private void OnMouseDown()
     {
 
-        if (hit < 3){
+        if (hit < 3 && timeToFight > 0){
              StartCoroutine(gonnaSpawn());
             crosshair_object.GetComponent<SpriteRenderer>().sprite = none;
 
@@ -94,13 +126,26 @@ public class FightingCrosshairController : MonoBehaviour
 
             FindObjectOfType<KrausCollider>().hit = 0;
         } 
+
         else {
             //Change scne
-            AllAudio.playFightBell();
+            AllAudio.playKick();
+            fern.Play("Player_Kick");
+            kraus.Play("kraus_knockedout");
+
             Debug.Log("You win!");
+            crosshair_object.SetActive(false);
+            KrausBody.enabled = false;
+            Globals.playerPositionOnMap = new Vector2(-1.31f, 72.31f);
+            FindObjectOfType<LevelLoader>().LoadNextLevelLong("Basement_3_Win", "crossfade_start", 4f);
         }
        
         
+    }
+
+    public void FIGHT(){
+        crosshair_object.SetActive(true);
+        KrausBody.enabled = true;
     }
 
 }

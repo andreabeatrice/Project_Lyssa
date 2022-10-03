@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 
 //This class is attached to the Player sprite, and it used to open the inventory & objectives lists when the player clicks on Fern
@@ -22,10 +23,22 @@ public class PlayerClickHandler : MonoBehaviour
 
     private bool open = false;
 
+    GameObject[] gos ;
+    TextMeshProUGUI[] texts ;
 
     // Start is called before the first frame update
     void Start()
     {
+        gos = GameObject.FindGameObjectsWithTag("inventoryObject");
+
+        int i = 0;
+
+        foreach(GameObject g in gos){
+            texts[i] =  g.GetComponentInChildren<TextMeshProUGUI>();
+            i++;
+        }
+
+
         //so that the inventory_and_objectives panel is not always covering the screen
         inventoryAndObjectives.SetActive(false);
 
@@ -64,7 +77,6 @@ public class PlayerClickHandler : MonoBehaviour
                 objectivesText.text = objectivesText.text + "* " + sentence + "\n";
             }
 
-            //Loops through each string the the inventory Queue and adds it to the inventory_body text box so the player can view it
             foreach (string sentence in Globals.inventory)
             {
                 inventoryText.text = inventoryText.text + "* " + sentence + "\n";
@@ -111,11 +123,11 @@ public class PlayerClickHandler : MonoBehaviour
                 objectivesText.text = objectivesText.text + "* " + sentence + "\n";
             }
 
-            //Loops through each string the the inventory Queue and adds it to the inventory_body text box so the player can view it
             foreach (string sentence in Globals.inventory)
             {
                 inventoryText.text = inventoryText.text + "* " + sentence + "\n";
             }
+
 
             open = true;
     }

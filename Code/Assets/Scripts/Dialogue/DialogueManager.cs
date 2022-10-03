@@ -29,6 +29,8 @@ public class DialogueManager : MonoBehaviour {
 
     public bool inConversation = false;
 
+    private int timesclicked = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -131,11 +133,11 @@ public class DialogueManager : MonoBehaviour {
         DisplayNextSentence();
 
     }
+    
 
     //Add to a skip button
     public void DisplayNextSentence()
     {
-
         Sentence s = sentences.Dequeue();
 
         if(s.voice !=null)

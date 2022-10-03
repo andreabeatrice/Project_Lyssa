@@ -7,6 +7,9 @@ public class KrausCollider : MonoBehaviour
     public Animator fern, kraus;
     public AudioSources AllAudio;
 
+    public GameObject crosshair_object;
+
+
     public int hit = 0;
     // Start is called before the first frame update
     void Start()
@@ -43,11 +46,15 @@ public class KrausCollider : MonoBehaviour
         }
         else {
             //change to fern loses
-            AllAudio.playFightBell();
+            //AllAudio.playFightBell();
             Debug.Log("He wins!");
-            kraus.Play("kraus_punch");
+            AllAudio.playKick();
             kraus.Play("kraus_kick");
             fern.Play("player_knockout");
+            crosshair_object.SetActive(false);
+            Globals.deaths.Add("You know, if you just click all over the place, he's gonna get a few hits in.");
+
+            FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 3f);
         }
     }
 }
