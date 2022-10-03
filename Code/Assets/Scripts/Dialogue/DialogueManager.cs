@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour {
 
     public string changeScene = "";
 
-    private PlaySomeonesAnim pla = null;
+    private PlaySomeonesAnim pla ;
 
 
     // Start is called before the first frame update
@@ -109,9 +109,9 @@ public class DialogueManager : MonoBehaviour {
 
     }
 
-    public void StartDialogue(Sentence[] di, string[] c, GameObject[] choiceButtons, bool speech, PlaySomeonesAnim pla)
+    public void StartDialogue(Sentence[] di, string[] c, GameObject[] choiceButtons, bool speech, PlaySomeonesAnim pl)
     {
-        this.pla = pla;
+        this.pla = pl;
 
         last = di[di.Length - 1].words;
         
@@ -286,7 +286,9 @@ public class DialogueManager : MonoBehaviour {
 
     void EndDialogue()
     {
-       
+        if(pla != null){
+            pla.play();
+        }
         //Debug.Log("End of conversation");
         skipButton.SetActive(false);
 
@@ -403,12 +405,14 @@ public class DialogueManager : MonoBehaviour {
             SceneManager.LoadScene(changeScene);
         }
 
+
+
+        Debug.Log(pla);
+
         float ttw = last.ToCharArray().Length * Globals.typingSpeed + 3;
 
         yield return new WaitForSeconds(ttw);
-        if(pla != null){
-            pla.play();
-        }
+
 
 
         FindObjectOfType<DialogueBoxHandler>().clearHUD();

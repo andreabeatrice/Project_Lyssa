@@ -7,7 +7,7 @@ public class Hallway_4_Note_ChoiceHandler : MonoBehaviour
 
 public Collider2D PlayerCollider;
 
-    public Collider2D collider;
+    public Collider2D coll;
 
     public bool played = false;
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public Collider2D PlayerCollider;
 
     public void CheckWhatPlayersTouching()
     {
-        if (PlayerCollider.IsTouching(collider) && played == false ){
+        if (PlayerCollider.IsTouching(coll) && played == false ){
             EnterOffice();
             played = true;
         }

@@ -108,7 +108,8 @@ public class Room105ChoiceHandler : MonoBehaviour
     }
 
     public void justleave(){
-       // FindObjectOfType<LevelLoader>().LoadNextLevel("DeathScreen", "crossfade_start");
+    Globals.playerPositionOnMap = new Vector2(-48, -8);
+       FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_8_Kitchen", "crossfade_start");
        Debug.Log("leaving now...");
     }
 

@@ -9,11 +9,20 @@ public class PlaySomeonesAnim : MonoBehaviour
 {
     public Animator body;
 
-    public string animation;
+    public string animation_name;
 
-
+    public void Start(){
+        StartCoroutine(strt());
+    }
     public void play(){
-        body.Play(animation);
+        body.Play(animation_name);
+    }
+
+    public IEnumerator strt(){
+        yield return new WaitForSeconds(5f);
+
+        //body.Play(animation_name);
+
     }
 
 }
