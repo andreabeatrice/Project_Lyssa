@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour {
 
     private string last;
 
-    public string changeScene;
+    public string changeScene = "";
 
 
     // Start is called before the first frame update

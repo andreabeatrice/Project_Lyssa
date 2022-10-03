@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 169.76001, y: -1.9407043}
+  m_AnchoredPosition: {x: 169.76001, y: -1.9406738}
   m_SizeDelta: {x: -1108.4426, y: -424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3555431
@@ -3558,7 +3558,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 533, y: 55.000027}
+  m_AnchoredPosition: {x: 533, y: 55.00003}
   m_SizeDelta: {x: 256, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1464742203
@@ -7971,6 +7971,7 @@ MonoBehaviour:
   clickSound: {fileID: 593944057}
   talking: {fileID: 0}
   inConversation: 0
+  changeScene: 
 --- !u!114 &1825452601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8063,6 +8064,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1801c744200e649a97ff82a5f2eb19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AllAudio: {fileID: 0}
+  responses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  restext: []
+  rb: {fileID: 1420137536}
 --- !u!114 &1825452606
 MonoBehaviour:
   m_ObjectHideFlags: 0

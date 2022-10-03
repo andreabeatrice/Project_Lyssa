@@ -10,10 +10,12 @@ public class Basement_1_LitUp_CH : MonoBehaviour
     public GameObject[] responses = new GameObject[3];
 
     public string[] restext;
+
+    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb.transform.position = new Vector3(0, 3, 0);
     }
 
     // Update is called once per frame

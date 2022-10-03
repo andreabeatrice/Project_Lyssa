@@ -24,7 +24,7 @@ public class Hallway_5_KeycardChoiceHandler : MonoBehaviour
 
     public void CheckWhatPlayersTouching()
     {
-        if (PlayerCollider.IsTouching(OfficeDoor) && played == false){
+        if (PlayerCollider.IsTouching(OfficeDoor) && played == false && !Globals.LightSwitch ){
             OfficeDoor.GetComponent<DialogueClick>().TriggerDialogue();
 
             played = true;
