@@ -136,8 +136,8 @@ GameObject:
   - component: {fileID: 56982569}
   - component: {fileID: 56982568}
   - component: {fileID: 56982567}
-  - component: {fileID: 56982566}
   - component: {fileID: 56982565}
+  - component: {fileID: 56982572}
   m_Layer: 0
   m_Name: World Book (C-Ch)
   m_TagString: moveable_object
@@ -158,32 +158,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &56982566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 56982564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &56982567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +289,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &56982572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56982564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &60726869
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +514,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &141214889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141214890}
+  - component: {fileID: 141214892}
+  - component: {fileID: 141214891}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &141214890
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141214889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1048602788}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &141214891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141214889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
+  m_sharedMaterial: {fileID: 7154477524753593885, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &141214892
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141214889}
+  m_CullTransparentMesh: 1
 --- !u!1 &146587555
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,8 +769,8 @@ GameObject:
   - component: {fileID: 158909586}
   - component: {fileID: 158909585}
   - component: {fileID: 158909584}
-  - component: {fileID: 158909583}
   - component: {fileID: 158909582}
+  - component: {fileID: 158909589}
   m_Layer: 0
   m_Name: World Book (J)
   m_TagString: moveable_object
@@ -667,32 +791,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &158909583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158909581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &158909584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,6 +922,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &158909589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158909581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &199138897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1028,8 +1141,8 @@ GameObject:
   - component: {fileID: 211894861}
   - component: {fileID: 211894860}
   - component: {fileID: 211894859}
-  - component: {fileID: 211894858}
   - component: {fileID: 211894864}
+  - component: {fileID: 211894865}
   m_Layer: 0
   m_Name: ' Powszechna(Nomo-Polsc)'
   m_TagString: moveable_object
@@ -1037,32 +1150,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &211894858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211894857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &211894859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1207,6 +1294,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &211894865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 211894857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &241163307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,8 +1322,8 @@ GameObject:
   - component: {fileID: 241163311}
   - component: {fileID: 241163310}
   - component: {fileID: 241163309}
-  - component: {fileID: 241163308}
   - component: {fileID: 241163314}
+  - component: {fileID: 241163315}
   m_Layer: 0
   m_Name: ' Powszechna(Dep-Franc) '
   m_TagString: moveable_object
@@ -1229,32 +1331,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &241163308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241163307}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &241163309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1399,6 +1475,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &241163315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 241163307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &255752032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,8 +1503,8 @@ GameObject:
   - component: {fileID: 255752037}
   - component: {fileID: 255752036}
   - component: {fileID: 255752035}
-  - component: {fileID: 255752034}
   - component: {fileID: 255752033}
+  - component: {fileID: 255752040}
   m_Layer: 0
   m_Name: World Book (Ci-Cz)
   m_TagString: moveable_object
@@ -1434,32 +1525,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &255752034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255752032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &255752035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1591,6 +1656,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &255752040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255752032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1001 &322313335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2197,6 +2277,14 @@ MonoBehaviour:
   - {fileID: 1821036189}
   - {fileID: 989316119}
   - {fileID: 1717930698}
+  lowInsanitychoices:
+  - {fileID: 1048602787}
+  - {fileID: 1872221197}
+  - {fileID: 982667630}
+  highInsanityChoices:
+  - {fileID: 1653391815}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &381229575
 GameObject:
   m_ObjectHideFlags: 0
@@ -2255,7 +2343,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 375198773}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnMouseEnter
           m_Mode: 1
@@ -2271,7 +2359,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 375198773}
           m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
           m_MethodName: OnMouseExit
           m_Mode: 1
@@ -2327,9 +2415,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
-        m_MethodName: playClickSound
+      - m_Target: {fileID: 375198783}
+        m_TargetAssemblyTypeName: Room105ChoiceHandler, Assembly-CSharp
+        m_MethodName: AnsweringOtto
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2339,21 +2427,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DialogueBoxHandler, Assembly-CSharp
-        m_MethodName: clearHUD
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 375198773}
         m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
         m_MethodName: OnMouseExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1705003580}
+        m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
+        m_MethodName: playClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2419,8 +2507,8 @@ GameObject:
   - component: {fileID: 420194715}
   - component: {fileID: 420194714}
   - component: {fileID: 420194713}
-  - component: {fileID: 420194712}
   - component: {fileID: 420194711}
+  - component: {fileID: 420194718}
   m_Layer: 0
   m_Name: World Book (Rj-Ry)
   m_TagString: moveable_object
@@ -2441,32 +2529,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &420194712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 420194710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &420194713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2598,6 +2660,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &420194718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420194710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &433567517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2611,8 +2688,8 @@ GameObject:
   - component: {fileID: 433567522}
   - component: {fileID: 433567521}
   - component: {fileID: 433567520}
-  - component: {fileID: 433567519}
   - component: {fileID: 433567518}
+  - component: {fileID: 433567525}
   m_Layer: 0
   m_Name: World Book (I)
   m_TagString: moveable_object
@@ -2633,32 +2710,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &433567519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 433567517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &433567520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2790,6 +2841,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433567525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433567517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &442010250
 GameObject:
   m_ObjectHideFlags: 0
@@ -3139,6 +3205,141 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &482783394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 482783395}
+  - component: {fileID: 482783397}
+  - component: {fileID: 482783396}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &482783395
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482783394}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1653391816}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &482783396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482783394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
+  m_sharedMaterial: {fileID: 7154477524753593885, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &482783397
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482783394}
+  m_CullTransparentMesh: 1
 --- !u!1 &508875297
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,8 +3915,8 @@ GameObject:
   - component: {fileID: 542486858}
   - component: {fileID: 542486857}
   - component: {fileID: 542486856}
-  - component: {fileID: 542486855}
   - component: {fileID: 542486854}
+  - component: {fileID: 542486861}
   m_Layer: 0
   m_Name: World Book (D)
   m_TagString: moveable_object
@@ -3736,32 +3937,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &542486855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542486853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &542486856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3893,6 +4068,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &542486861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542486853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &545236148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3906,8 +4096,8 @@ GameObject:
   - component: {fileID: 545236153}
   - component: {fileID: 545236152}
   - component: {fileID: 545236151}
-  - component: {fileID: 545236150}
   - component: {fileID: 545236149}
+  - component: {fileID: 545236156}
   m_Layer: 0
   m_Name: World Book (P)
   m_TagString: moveable_object
@@ -3928,32 +4118,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &545236150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 545236148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &545236151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4085,6 +4249,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &545236156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545236148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &576036023
 GameObject:
   m_ObjectHideFlags: 0
@@ -4098,8 +4277,8 @@ GameObject:
   - component: {fileID: 576036028}
   - component: {fileID: 576036027}
   - component: {fileID: 576036026}
-  - component: {fileID: 576036025}
   - component: {fileID: 576036024}
+  - component: {fileID: 576036031}
   m_Layer: 0
   m_Name: World Book (U-V)
   m_TagString: moveable_object
@@ -4120,32 +4299,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &576036025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576036023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &576036026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4277,6 +4430,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &576036031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576036023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &593964632
 GameObject:
   m_ObjectHideFlags: 0
@@ -4290,8 +4458,8 @@ GameObject:
   - component: {fileID: 593964637}
   - component: {fileID: 593964636}
   - component: {fileID: 593964635}
-  - component: {fileID: 593964634}
   - component: {fileID: 593964633}
+  - component: {fileID: 593964640}
   m_Layer: 0
   m_Name: World Book (G)
   m_TagString: moveable_object
@@ -4312,32 +4480,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &593964634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593964632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &593964635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4469,6 +4611,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &593964640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593964632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &594759086
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,8 +4639,8 @@ GameObject:
   - component: {fileID: 594759091}
   - component: {fileID: 594759090}
   - component: {fileID: 594759089}
-  - component: {fileID: 594759088}
   - component: {fileID: 594759087}
+  - component: {fileID: 594759094}
   m_Layer: 0
   m_Name: World Book (E)
   m_TagString: moveable_object
@@ -4504,32 +4661,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &594759088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594759086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &594759089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4661,6 +4792,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &594759094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594759086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &638493401
 GameObject:
   m_ObjectHideFlags: 0
@@ -4674,8 +4820,8 @@ GameObject:
   - component: {fileID: 638493405}
   - component: {fileID: 638493404}
   - component: {fileID: 638493403}
-  - component: {fileID: 638493402}
   - component: {fileID: 638493408}
+  - component: {fileID: 638493409}
   m_Layer: 0
   m_Name: ' Powszechna(Kont-Mam)'
   m_TagString: moveable_object
@@ -4683,32 +4829,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &638493402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638493401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &638493403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4853,6 +4973,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &638493409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638493401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &657819900
 GameObject:
   m_ObjectHideFlags: 0
@@ -5028,8 +5163,8 @@ GameObject:
   - component: {fileID: 685809398}
   - component: {fileID: 685809397}
   - component: {fileID: 685809396}
-  - component: {fileID: 685809395}
   - component: {fileID: 685809401}
+  - component: {fileID: 685809402}
   m_Layer: 0
   m_Name: ' Powszechna(Bli-Deo)'
   m_TagString: moveable_object
@@ -5037,32 +5172,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &685809395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685809394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &685809396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5207,6 +5316,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &685809402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685809394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &736845150
 GameObject:
   m_ObjectHideFlags: 0
@@ -5399,8 +5523,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5839,8 +5963,8 @@ GameObject:
   - component: {fileID: 844389751}
   - component: {fileID: 844389750}
   - component: {fileID: 844389749}
-  - component: {fileID: 844389748}
   - component: {fileID: 844389747}
+  - component: {fileID: 844389754}
   m_Layer: 0
   m_Name: World Book (Mp-Mz)
   m_TagString: moveable_object
@@ -5861,32 +5985,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &844389748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844389746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &844389749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6018,6 +6116,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &844389754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844389746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &849337873
 GameObject:
   m_ObjectHideFlags: 0
@@ -6031,8 +6144,8 @@ GameObject:
   - component: {fileID: 849337878}
   - component: {fileID: 849337877}
   - component: {fileID: 849337876}
-  - component: {fileID: 849337875}
   - component: {fileID: 849337874}
+  - component: {fileID: 849337881}
   m_Layer: 0
   m_Name: World Book (A)
   m_TagString: moveable_object
@@ -6053,32 +6166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &849337875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 849337873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &849337876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6210,6 +6297,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &849337881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849337873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &873528367
 GameObject:
   m_ObjectHideFlags: 0
@@ -6563,8 +6665,8 @@ GameObject:
   - component: {fileID: 881501183}
   - component: {fileID: 881501182}
   - component: {fileID: 881501181}
-  - component: {fileID: 881501180}
   - component: {fileID: 881501179}
+  - component: {fileID: 881501186}
   m_Layer: 0
   m_Name: World Book (S)
   m_TagString: moveable_object
@@ -6585,32 +6687,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &881501180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 881501178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &881501181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6742,6 +6818,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &881501186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881501178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &953119046
 GameObject:
   m_ObjectHideFlags: 0
@@ -6860,8 +6951,8 @@ GameObject:
   - component: {fileID: 958248159}
   - component: {fileID: 958248158}
   - component: {fileID: 958248157}
-  - component: {fileID: 958248156}
   - component: {fileID: 958248162}
+  - component: {fileID: 958248163}
   m_Layer: 0
   m_Name: ' Powszechna(Ster-Urz)'
   m_TagString: moveable_object
@@ -6869,32 +6960,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &958248156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958248155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &958248157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7039,6 +7104,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &958248163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958248155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &958597329
 GameObject:
   m_ObjectHideFlags: 0
@@ -7229,8 +7309,8 @@ GameObject:
   - component: {fileID: 977741928}
   - component: {fileID: 977741927}
   - component: {fileID: 977741926}
-  - component: {fileID: 977741925}
   - component: {fileID: 977741924}
+  - component: {fileID: 977741931}
   m_Layer: 0
   m_Name: World Book (Y-Z)
   m_TagString: moveable_object
@@ -7251,32 +7331,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &977741925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977741923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &977741926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7408,6 +7462,225 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &977741931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977741923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
+--- !u!1 &982667630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 982667631}
+  - component: {fileID: 982667635}
+  - component: {fileID: 982667634}
+  - component: {fileID: 982667633}
+  - component: {fileID: 982667632}
+  m_Layer: 5
+  m_Name: takeantipstchlow
+  m_TagString: ChoiceButton
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &982667631
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982667630}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.391038, y: 1.391038, z: 1.391038}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1259369529}
+  m_Father: {fileID: 1698870050}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -106, y: -398.99997}
+  m_SizeDelta: {x: 256, y: 28}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &982667632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982667630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 375198773}
+          m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+          m_MethodName: OnMouseEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 375198773}
+          m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &982667633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982667630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 982667634}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1705003580}
+        m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
+        m_MethodName: playClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 375198783}
+        m_TargetAssemblyTypeName: Room105ChoiceHandler, Assembly-CSharp
+        m_MethodName: takeantipsych
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 375198773}
+        m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+        m_MethodName: OnMouseExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &982667634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982667630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bf44987df1dfd49469d8611cbc42d608, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &982667635
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982667630}
+  m_CullTransparentMesh: 1
 --- !u!1 &989316119
 GameObject:
   m_ObjectHideFlags: 0
@@ -7753,6 +8026,210 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1022587593}
   m_CullTransparentMesh: 1
+--- !u!1 &1048602787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1048602788}
+  - component: {fileID: 1048602792}
+  - component: {fileID: 1048602791}
+  - component: {fileID: 1048602790}
+  - component: {fileID: 1048602789}
+  m_Layer: 5
+  m_Name: justleave
+  m_TagString: ChoiceButton
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1048602788
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048602787}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.391038, y: 1.391038, z: 1.391038}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 141214890}
+  m_Father: {fileID: 1698870050}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -504.34, y: -398.99997}
+  m_SizeDelta: {x: 256, y: 28}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1048602789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048602787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 375198773}
+          m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+          m_MethodName: OnMouseEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 375198773}
+          m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1048602790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048602787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1048602791}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1705003580}
+        m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
+        m_MethodName: playClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 375198783}
+        m_TargetAssemblyTypeName: Room105ChoiceHandler, Assembly-CSharp
+        m_MethodName: justleave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 375198773}
+        m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+        m_MethodName: OnMouseExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1048602791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048602787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bf44987df1dfd49469d8611cbc42d608, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1048602792
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048602787}
+  m_CullTransparentMesh: 1
 --- !u!1 &1051549694
 GameObject:
   m_ObjectHideFlags: 0
@@ -7766,8 +8243,8 @@ GameObject:
   - component: {fileID: 1051549699}
   - component: {fileID: 1051549698}
   - component: {fileID: 1051549697}
-  - component: {fileID: 1051549696}
   - component: {fileID: 1051549695}
+  - component: {fileID: 1051549702}
   m_Layer: 0
   m_Name: World Book (T)
   m_TagString: moveable_object
@@ -7788,32 +8265,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &1051549696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051549694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1051549697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7945,6 +8396,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1051549702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051549694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1063903574
 GameObject:
   m_ObjectHideFlags: 0
@@ -8735,6 +9201,141 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 5342346198256710821, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
   m_PrefabInstance: {fileID: 1705003576}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1259369528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259369529}
+  - component: {fileID: 1259369531}
+  - component: {fileID: 1259369530}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1259369529
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259369528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 982667631}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1259369530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259369528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
+  m_sharedMaterial: {fileID: 7154477524753593885, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1259369531
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259369528}
+  m_CullTransparentMesh: 1
 --- !u!1 &1266576581
 GameObject:
   m_ObjectHideFlags: 0
@@ -8748,8 +9349,8 @@ GameObject:
   - component: {fileID: 1266576586}
   - component: {fileID: 1266576585}
   - component: {fileID: 1266576584}
-  - component: {fileID: 1266576583}
   - component: {fileID: 1266576582}
+  - component: {fileID: 1266576589}
   m_Layer: 0
   m_Name: World Book (O)
   m_TagString: moveable_object
@@ -8770,32 +9371,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &1266576583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266576581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1266576584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8927,6 +9502,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1266576589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266576581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1302110634
 GameObject:
   m_ObjectHideFlags: 0
@@ -9075,8 +9665,8 @@ GameObject:
   - component: {fileID: 1314379617}
   - component: {fileID: 1314379616}
   - component: {fileID: 1314379615}
-  - component: {fileID: 1314379614}
   - component: {fileID: 1314379613}
+  - component: {fileID: 1314379620}
   m_Layer: 0
   m_Name: World Book (Ma-Mo)
   m_TagString: moveable_object
@@ -9097,32 +9687,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &1314379614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1314379612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1314379615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9254,6 +9818,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1314379620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314379612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1322063541
 GameObject:
   m_ObjectHideFlags: 0
@@ -9459,8 +10038,8 @@ GameObject:
   - component: {fileID: 1330142883}
   - component: {fileID: 1330142882}
   - component: {fileID: 1330142887}
-  - component: {fileID: 1330142886}
   - component: {fileID: 1330142888}
+  - component: {fileID: 1330142889}
   m_Layer: 0
   m_Name: ' Powszechna(A-Ble)'
   m_TagString: moveable_object
@@ -9585,32 +10164,6 @@ Transform:
   m_Father: {fileID: 1960086073}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1330142886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330142881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1330142887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9638,6 +10191,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &1330142889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330142881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1351835972
 GameObject:
   m_ObjectHideFlags: 0
@@ -9651,8 +10219,8 @@ GameObject:
   - component: {fileID: 1351835976}
   - component: {fileID: 1351835975}
   - component: {fileID: 1351835974}
-  - component: {fileID: 1351835973}
   - component: {fileID: 1351835979}
+  - component: {fileID: 1351835980}
   m_Layer: 0
   m_Name: ' Powszechna(Polska-Robe)'
   m_TagString: moveable_object
@@ -9660,32 +10228,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1351835973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1351835972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1351835974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9830,6 +10372,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &1351835980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351835972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!82 &1360844120 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7521320971508099391, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
@@ -9903,8 +10460,8 @@ GameObject:
   - component: {fileID: 1381445894}
   - component: {fileID: 1381445893}
   - component: {fileID: 1381445892}
-  - component: {fileID: 1381445891}
   - component: {fileID: 1381445897}
+  - component: {fileID: 1381445898}
   m_Layer: 0
   m_Name: ' Powszechna(Frang-Im)'
   m_TagString: moveable_object
@@ -9912,32 +10469,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1381445891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1381445890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1381445892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10082,6 +10613,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &1381445898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381445890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1413781467
 GameObject:
   m_ObjectHideFlags: 0
@@ -10464,8 +11010,8 @@ GameObject:
   - component: {fileID: 1489929326}
   - component: {fileID: 1489929325}
   - component: {fileID: 1489929324}
-  - component: {fileID: 1489929323}
   - component: {fileID: 1489929329}
+  - component: {fileID: 1489929330}
   m_Layer: 0
   m_Name: ' Powszechna(Man-Nomi)'
   m_TagString: moveable_object
@@ -10473,32 +11019,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1489929323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489929322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1489929324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10643,6 +11163,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &1489929330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489929322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1507096774
 GameObject:
   m_ObjectHideFlags: 0
@@ -10761,8 +11296,8 @@ GameObject:
   - component: {fileID: 1516813152}
   - component: {fileID: 1516813151}
   - component: {fileID: 1516813150}
-  - component: {fileID: 1516813149}
   - component: {fileID: 1516813148}
+  - component: {fileID: 1516813155}
   m_Layer: 0
   m_Name: World Book (W-X)
   m_TagString: moveable_object
@@ -10783,32 +11318,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &1516813149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516813147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1516813150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10940,6 +11449,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1516813155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516813147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1540637343
 GameObject:
   m_ObjectHideFlags: 0
@@ -10953,8 +11477,8 @@ GameObject:
   - component: {fileID: 1540637348}
   - component: {fileID: 1540637347}
   - component: {fileID: 1540637346}
-  - component: {fileID: 1540637345}
   - component: {fileID: 1540637344}
+  - component: {fileID: 1540637351}
   m_Layer: 0
   m_Name: World Book (Q-Ri)
   m_TagString: moveable_object
@@ -10975,32 +11499,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &1540637345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540637343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1540637346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11132,6 +11630,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1540637351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540637343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1557137368
 GameObject:
   m_ObjectHideFlags: 0
@@ -11145,8 +11658,8 @@ GameObject:
   - component: {fileID: 1557137372}
   - component: {fileID: 1557137371}
   - component: {fileID: 1557137370}
-  - component: {fileID: 1557137369}
   - component: {fileID: 1557137375}
+  - component: {fileID: 1557137376}
   m_Layer: 0
   m_Name: ' Powszechna(Usa-Z)'
   m_TagString: moveable_object
@@ -11154,32 +11667,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1557137369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557137368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1557137370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11324,6 +11811,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &1557137376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557137368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1586006827
 GameObject:
   m_ObjectHideFlags: 0
@@ -11359,7 +11861,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 766, y: -455.3903}
+  m_AnchoredPosition: {x: 787, y: -431}
   m_SizeDelta: {x: 128, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1586006830
@@ -11413,8 +11915,8 @@ GameObject:
   - component: {fileID: 1625545661}
   - component: {fileID: 1625545660}
   - component: {fileID: 1625545659}
-  - component: {fileID: 1625545658}
   - component: {fileID: 1625545664}
+  - component: {fileID: 1625545665}
   m_Layer: 0
   m_Name: ' Powszechna(Robi-Step)'
   m_TagString: moveable_object
@@ -11422,32 +11924,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1625545658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1625545657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1625545659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11592,6 +12068,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &1625545665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625545657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1634722531
 GameObject:
   m_ObjectHideFlags: 0
@@ -11736,6 +12227,210 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1653391815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1653391816}
+  - component: {fileID: 1653391820}
+  - component: {fileID: 1653391819}
+  - component: {fileID: 1653391818}
+  - component: {fileID: 1653391817}
+  m_Layer: 5
+  m_Name: nice leave
+  m_TagString: ChoiceButton
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1653391816
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653391815}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.391038, y: 1.391038, z: 1.391038}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 482783395}
+  m_Father: {fileID: 1698870050}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -504.34, y: -398.99997}
+  m_SizeDelta: {x: 256, y: 28}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1653391817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653391815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 375198773}
+          m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+          m_MethodName: OnMouseEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 375198773}
+          m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1653391818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653391815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1653391819}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1705003580}
+        m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
+        m_MethodName: playClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 375198783}
+        m_TargetAssemblyTypeName: Room105ChoiceHandler, Assembly-CSharp
+        m_MethodName: niceleave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 375198773}
+        m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+        m_MethodName: OnMouseExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1653391819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653391815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bf44987df1dfd49469d8611cbc42d608, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1653391820
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653391815}
+  m_CullTransparentMesh: 1
 --- !u!1 &1662822913
 GameObject:
   m_ObjectHideFlags: 0
@@ -11812,6 +12507,10 @@ RectTransform:
   - {fileID: 1432194064}
   - {fileID: 381229576}
   - {fileID: 367224840}
+  - {fileID: 1048602788}
+  - {fileID: 1872221198}
+  - {fileID: 982667631}
+  - {fileID: 1653391816}
   m_Father: {fileID: 2065235193}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12080,8 +12779,8 @@ GameObject:
   - component: {fileID: 1706252401}
   - component: {fileID: 1706252400}
   - component: {fileID: 1706252399}
-  - component: {fileID: 1706252398}
   - component: {fileID: 1706252397}
+  - component: {fileID: 1706252404}
   m_Layer: 0
   m_Name: World Book (N)
   m_TagString: moveable_object
@@ -12102,32 +12801,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &1706252398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706252396}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1706252399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12259,6 +12932,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1706252404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706252396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1717930698
 GameObject:
   m_ObjectHideFlags: 0
@@ -12620,8 +13308,8 @@ GameObject:
   - component: {fileID: 1735920178}
   - component: {fileID: 1735920177}
   - component: {fileID: 1735920176}
-  - component: {fileID: 1735920175}
   - component: {fileID: 1735920174}
+  - component: {fileID: 1735920181}
   m_Layer: 0
   m_Name: World Book (B)
   m_TagString: moveable_object
@@ -12642,32 +13330,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &1735920175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1735920173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1735920176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12799,6 +13461,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1735920181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735920173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1737973073
 GameObject:
   m_ObjectHideFlags: 0
@@ -12933,6 +13610,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737973073}
+  m_CullTransparentMesh: 1
+--- !u!1 &1742753622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1742753623}
+  - component: {fileID: 1742753625}
+  - component: {fileID: 1742753624}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1742753623
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742753622}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1872221198}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1742753624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742753622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Button
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
+  m_sharedMaterial: {fileID: 7154477524753593885, guid: 804c1bf7f3663d24d8b94a41e3d9d35e, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1742753625
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1742753622}
   m_CullTransparentMesh: 1
 --- !u!1 &1766698139
 GameObject:
@@ -13082,8 +13894,8 @@ GameObject:
   - component: {fileID: 1774874193}
   - component: {fileID: 1774874192}
   - component: {fileID: 1774874191}
-  - component: {fileID: 1774874190}
   - component: {fileID: 1774874189}
+  - component: {fileID: 1774874196}
   m_Layer: 0
   m_Name: World Book (H)
   m_TagString: moveable_object
@@ -13104,32 +13916,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &1774874190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774874188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1774874191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13261,6 +14047,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1774874196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774874188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1821036189
 GameObject:
   m_ObjectHideFlags: 0
@@ -13379,8 +14180,8 @@ GameObject:
   - component: {fileID: 1827985946}
   - component: {fileID: 1827985945}
   - component: {fileID: 1827985944}
-  - component: {fileID: 1827985943}
   - component: {fileID: 1827985942}
+  - component: {fileID: 1827985949}
   m_Layer: 0
   m_Name: World Book (F)
   m_TagString: moveable_object
@@ -13401,32 +14202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &1827985943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827985941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1827985944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13558,6 +14333,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1827985949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827985941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1834774045
 GameObject:
   m_ObjectHideFlags: 0
@@ -13571,8 +14361,8 @@ GameObject:
   - component: {fileID: 1834774049}
   - component: {fileID: 1834774048}
   - component: {fileID: 1834774047}
-  - component: {fileID: 1834774046}
   - component: {fileID: 1834774052}
+  - component: {fileID: 1834774053}
   m_Layer: 0
   m_Name: ' Powszechna(In-Kons)'
   m_TagString: moveable_object
@@ -13580,32 +14370,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1834774046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1834774045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1834774047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13750,6 +14514,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &1834774053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834774045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!82 &1842476724 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5351476601720383963, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
@@ -13843,6 +14622,210 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852345446}
+  m_CullTransparentMesh: 1
+--- !u!1 &1872221197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872221198}
+  - component: {fileID: 1872221202}
+  - component: {fileID: 1872221201}
+  - component: {fileID: 1872221200}
+  - component: {fileID: 1872221199}
+  m_Layer: 5
+  m_Name: mean leave
+  m_TagString: ChoiceButton
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1872221198
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872221197}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.391038, y: 1.391038, z: 1.391038}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1742753623}
+  m_Father: {fileID: 1698870050}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -106, y: -398.99997}
+  m_SizeDelta: {x: 256, y: 28}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1872221199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872221197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 375198773}
+          m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+          m_MethodName: OnMouseEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 375198773}
+          m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1872221200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872221197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1872221201}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1705003580}
+        m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
+        m_MethodName: playClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 375198783}
+        m_TargetAssemblyTypeName: Room105ChoiceHandler, Assembly-CSharp
+        m_MethodName: meanleave
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 375198773}
+        m_TargetAssemblyTypeName: CursorManager, Assembly-CSharp
+        m_MethodName: OnMouseExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1872221201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872221197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bf44987df1dfd49469d8611cbc42d608, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1872221202
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872221197}
   m_CullTransparentMesh: 1
 --- !u!1 &1877098822
 GameObject:
@@ -14298,8 +15281,8 @@ GameObject:
   - component: {fileID: 1987543580}
   - component: {fileID: 1987543579}
   - component: {fileID: 1987543578}
-  - component: {fileID: 1987543577}
   - component: {fileID: 1987543576}
+  - component: {fileID: 1987543583}
   m_Layer: 0
   m_Name: World Book (K-L)
   m_TagString: moveable_object
@@ -14320,32 +15303,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &1987543577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987543575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allAudio: {fileID: 1705003580}
-  dragSound: {fileID: 1252956304}
-  puttingDown: {fileID: 1252956303}
-  canDrag: 1
-  interactions: []
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking Around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  numInteractions: 0
 --- !u!114 &1987543578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14477,6 +15434,21 @@ Transform:
   m_Father: {fileID: 1368366714}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1987543583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987543575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 1252956304}
+  dropSound: {fileID: 1252956303}
+  canDrag: 1
 --- !u!1 &1990562660
 GameObject:
   m_ObjectHideFlags: 0
