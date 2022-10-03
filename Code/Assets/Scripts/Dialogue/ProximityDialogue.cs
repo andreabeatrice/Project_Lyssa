@@ -41,10 +41,7 @@ public class ProximityDialogue : MonoBehaviour
 
             played = true;
         }
-        else if(!PlayerCollider.IsTouching(ObjectAreaCollider) && played == true  && !nurse){
 
-            played = false;
-        }
     }
 
 
