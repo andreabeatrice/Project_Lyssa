@@ -11,22 +11,21 @@ public class DialogueBoxHandler : MonoBehaviour
     public GameObject HeadsUpDisplay;
     
 
-    public void clearHUD()
+    public void ClearDialogueBox()
     {
         GameObject[] gos;
+
         gos = GameObject.FindGameObjectsWithTag("ChoiceButton");
 
         HeadsUpDisplay.SetActive(false);
 
-        foreach (GameObject go in gos)
-        {
+        foreach (GameObject go in gos){
             go.SetActive(false);
         }
 
-        FindObjectOfType<DialogueManager>().setConversationStatus(false);
     }
 
-    public void clearChoiceButtons(){
+    public void ClearChoiceButtons(){
         GameObject[] gos;
         gos = GameObject.FindGameObjectsWithTag("ChoiceButton");
 
@@ -37,17 +36,17 @@ public class DialogueBoxHandler : MonoBehaviour
     }
 
     public void RemoveHeadsUpDisplayAfterXTime(float f){
-        StartCoroutine(ClearHUDAfter(f));
+        StartCoroutine(ClearDialogueBoxAfter(f));
     }
 
-    IEnumerator ClearHUDAfter(float flt)
+    IEnumerator ClearDialogueBoxAfter(float flt)
         {
             yield return new WaitForSeconds(flt);
             
-            clearHUD();
+            ClearDialogueBox();
         }
 
-    public void showHUD(){
+    public void ShowDialogueBox(){
         HeadsUpDisplay.SetActive(true);
     }
 }

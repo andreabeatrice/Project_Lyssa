@@ -37,7 +37,7 @@ public class ProximityDialogue : MonoBehaviour
             if (HeadsUpDisplay != null)
                 HeadsUpDisplay.SetActive(true);
 
-            FindObjectOfType<DialogueAutoplayManager>().StartDialogue(DialogueVariable, Choices, ChoiceButtons, speech);
+            FindObjectOfType<DialogueAutoplayManager>().StartDialogue(DialogueVariable, Choices, ChoiceButtons);
 
             played = true;
         }

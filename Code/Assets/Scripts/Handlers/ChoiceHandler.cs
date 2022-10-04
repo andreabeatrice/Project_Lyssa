@@ -10,6 +10,7 @@ public class ChoiceHandler : MonoBehaviour
 {
     //public AudioSource clickSound;
     public AudioSource closeDoorSound;
+
     public AudioSources allAudio;
 
     public GameObject hud;
@@ -32,26 +33,6 @@ public class ChoiceHandler : MonoBehaviour
         Globals.paused = false;
     }
 
-
-
-    //removeButtons(): Helper Method- hides all buttons in the scene tagged with "ChoiceButton"
-        //tags are set in the inspector
-        public void removeButtons()
-        {
-            GameObject[] gos;
-            gos = GameObject.FindGameObjectsWithTag("ChoiceButton");
-
-            foreach (GameObject go in gos)
-            {
-                go.SetActive(false);
-            }
-
-
-            FindObjectOfType<DialogueManager>().setConversationStatus(false);
-
-        }
-
-
     //TutorialObjective1(): The OnClick() method for the response to the receptionist
         public void TutorialObjective1()
         {
@@ -62,8 +43,6 @@ public class ChoiceHandler : MonoBehaviour
                 HelperMethods.ObjectivesEnqueue("Go to the storage closet for supplies");
 
                 hud.SetActive(false);
-
-                FindObjectOfType<DialogueManager>().setConversationStatus(false);
 
                 //Popup saying that the player is about to enter the tutorial, and allow them to skip
                 dialogBox.SetActive(true);
@@ -79,7 +58,7 @@ public class ChoiceHandler : MonoBehaviour
             }
             else
             {
-                FindObjectOfType<DialogueBoxHandler>().clearHUD();
+                FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
             }
 
 
@@ -174,12 +153,12 @@ public class ChoiceHandler : MonoBehaviour
                 sentences[i] = new Sentence(bucketSentences[i]);
             }
             
-            FindObjectOfType<DialogueManager>().StartDialogue(sentences, "", null, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(sentences, "", null);
 
             //Enables dragging
             FindObjectOfType<ObjectDrag>().canDrag = true;
 
-            GameObject.Find("Rat").GetComponentInChildren<DialogueClick>().canClick = true;
+            GameObject.Find("Rat").GetComponentInChildren<DialogueClick>().Clickable = true;
 
         }
 

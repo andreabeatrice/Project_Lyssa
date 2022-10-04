@@ -7,418 +7,288 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour { 
 
     //Queue is FIFO so sentences will be in order even if they play dialogue many times
-    private Queue<Sentence> sentences = new Queue<Sentence>();
+    private Queue<Sentence> Sentences = new Queue<Sentence>();
 
-    public TMP_Text nameText;
+    public TMP_Text NamePlaceholder;
 
-    public TMP_Text dialogText;
+    public TMP_Text SpeechPlaceholder;
    // public AudioSources allAudio;
-    public GameObject skipButton;
+    public GameObject ContinueButton;
 
     public AudioSource clickSound;
 
-    public AudioSource talking;
+    public AudioSource SpeakerVoice;
 
-    private string[] choices;
+    private string[] ResponseStrings;
+
+    private GameObject[] ResponseButtons;
 
     private GameObject choice1;
     private GameObject choice2;
     private GameObject choice3;
 
-    private bool speech;
+    private float TimeToClear;
 
-    public bool inConversation = false;
-
-    private string last;
-
-    public string changeScene = "";
-
-    private PlaySomeonesAnim pla ;
+    //If a specific animation needs to play after a sentence
+    private Animator AnimationObject;
+    private string SentenceAnimation;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        //sentences 
         Globals.currentScene = SceneManager.GetActiveScene().name;
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && inConversation == true && skipButton.activeSelf){
+        if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && ContinueButton.activeSelf){
             
-            if (sentences.Count == 0){
-                
+            if (Sentences.Count == 0){
+                EndDialogue();
             }
             else {
+                DisplayNextSentenceNoAnimation();
+            }            
+        }
+
+    }
+
+    //StartDialogue(Sentence[] i): takes in an array of sentences, one response, and the button that response will be assigned to 
+        public void StartDialogue(Sentence[] i){
+            //0) Clear any assigned animations
+                AnimationObject = null;
+                SentenceAnimation = "";
+            
+            //1) assign the passed-in sentences to the Sentences queue
+                Sentences.Clear();
+            
+                foreach(Sentence s in i){
+                    Sentences.Enqueue(s);
+                }
+
+            //TimeToClear
+                TimeToClear = (i[i.Length-1].Words.ToCharArray().Length * Globals.typingSpeed) + 3;
+
+            //4) show the continue button
+                ContinueButton.SetActive(true);
+
+            //5) Hide all previous Response buttons
+                FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+
+
+
+            //6) Start the first sentence
+            DisplayNextSentence();
+
+        }
+
+    //StartDialogue(Sentence[] i, string c, GameObject b): takes in an array of sentences, one response, and the button that response will be assigned to 
+        public void StartDialogue(Sentence[] i, string c, GameObject b){
+            if(c == null){
+                StartDialogue(i);
+            }
+            else {
+                //0) Clear any assigned animations
+                    AnimationObject = null;
+                    SentenceAnimation = "";
+                
+                //1) assign the passed-in sentences to the Sentences queue
+                Sentences.Clear();
+            
+                foreach(Sentence s in i){
+                    Sentences.Enqueue(s);
+                }
+
+                //2) save the response string
+                ResponseStrings = new string[]{c};
+
+                //3) save the button that the response will be assigned to
+                ResponseButtons = new GameObject[]{b};
+
+                //4) show the continue button
+                ContinueButton.SetActive(true);
+
+                //5) Hide all previous Response buttons
+                    FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+
+                //6) Start the first sentence
                 DisplayNextSentence();
             }
-            //skip to next sentence
-            
+
+
         }
 
-    }
+    //StartDialogue(Sentence[] i, string[] c, GameObject[] b): takes in an array of sentences, the possible responses, and the buttons that responses will be assigned to 
+        public void StartDialogue(Sentence[] i, string[] c, GameObject[] b){
 
-    public void playClickSound()
-    {
-        clickSound.Play();
-    }
+            if(c == null){
+                StartDialogue(i);
+            }
+            else {
+                //0) Clear any assigned animations
+                    AnimationObject = null;
+                    SentenceAnimation = "";
 
-    public void setConversationStatus(bool s){
-        inConversation = s;
-    }
+                //1) assign the passed-in sentences to the Sentences queue
+                    Sentences.Clear();
+                
+                    foreach(Sentence s in i){
+                        Sentences.Enqueue(s);
+                    }
 
-    public void StartDialogue(Sentence[] di, string[] c, GameObject[] choiceButtons, bool speech)
-    {
+                //2) save the response string
+                    ResponseStrings = new string[c.Length];
 
-        last = di[di.Length - 1].words;
-        
-        inConversation = true;
+                    for(int j = 0; j < c.Length; j++){
+                        ResponseStrings[j] = c[j];
+                    }
 
-        this.choices = c;
+                //3) save the button that the response will be assigned to
+                    ResponseButtons = new GameObject[b.Length];
 
-        if (choiceButtons[0] != null)
-            this.choice1 = choiceButtons[0];
+                    for(int j = 0; j < b.Length; j++){
+                        ResponseButtons[j] = b[j];
+                    }
 
-        if (choiceButtons[1] != null)
-            this.choice2 = choiceButtons[1];
+                //4) show the continue button
+                    ContinueButton.SetActive(true);
 
-        if (choiceButtons[2] != null)
-            this.choice3 = choiceButtons[2];
+                //5) Hide all previous Response buttons
+                        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
-        if (choice1 != null)
-            choice1.SetActive(false);
+                //6) Start the first sentence
+                    DisplayNextSentence();
+            }
 
-        if (choice2 != null)
-            choice2.SetActive(false);
+           
 
-        if (choice3 != null)
-            choice3.SetActive(false);
-
-        this.speech = speech;
-
-        skipButton.SetActive(true);
-
-        sentences.Clear();
-
-        foreach (Sentence s in di)
-        {
-            sentences.Enqueue(s);
         }
-
-        DisplayNextSentence();
-
-    }
-
-    public void StartDialogue(Sentence[] di, string[] c, GameObject[] choiceButtons, bool speech, PlaySomeonesAnim pl)
-    {
-        this.pla = pl;
-
-        last = di[di.Length - 1].words;
-        
-        inConversation = true;
-
-        this.choices = c;
-
-        if (choiceButtons[0] != null)
-            this.choice1 = choiceButtons[0];
-
-        if (choiceButtons[1] != null)
-            this.choice2 = choiceButtons[1];
-
-        if (choiceButtons[2] != null)
-            this.choice3 = choiceButtons[2];
-
-        if (choice1 != null)
-            choice1.SetActive(false);
-
-        if (choice2 != null)
-            choice2.SetActive(false);
-
-        if (choice3 != null)
-            choice3.SetActive(false);
-
-        this.speech = speech;
-
-        skipButton.SetActive(true);
-
-        sentences.Clear();
-
-        foreach (Sentence s in di)
-        {
-            sentences.Enqueue(s);
-        }
-
-        DisplayNextSentence();
-
-    }
-
-    public void StartDialogue(Sentence[] di, string choice, GameObject c1, bool speech, string change)
-    {
-        changeScene = change;
-
-        last = di[di.Length - 1].words;
-
-        inConversation = true;
-
-        this.choices = new string[] { choice };
-
-        this.choice1 = c1;
-
-        if (choice1 != null)
-            choice1.SetActive(false);
-
-        skipButton.SetActive(true);
-
-        sentences.Clear();
-
-        this.speech = speech;
-
-        skipButton.SetActive(true);
-
-        sentences.Clear();
-
-        foreach (Sentence s in di)
-        {
-            sentences.Enqueue(s);
-        }
-
-
-        DisplayNextSentence();
-
-    }
-
-    public void StartDialogue(Sentence[] di, string choice, GameObject c1, bool speech)
-    {
-
-        inConversation = true;
-
-        last = di[di.Length - 1].words;
-
-        this.choices = new string[] { choice };
-
-        this.choice1 = c1;
-
-        if (choice1 != null)
-            choice1.SetActive(false);
-
-        skipButton.SetActive(true);
-
-        sentences.Clear();
-
-        this.speech = speech;
-
-        skipButton.SetActive(true);
-
-        sentences.Clear();
-
-        foreach (Sentence s in di)
-        {
-            sentences.Enqueue(s);
-        }
-
-
-        DisplayNextSentence();
-
-    }
     
-
-    //Add to a skip button
-    public void DisplayNextSentence()
-    {
-        Sentence s = sentences.Dequeue();
-
-        if(s.voice !=null)
+    //DisplayNextSentence(): the key routine in DialogueManager, starts the next string in the Sentence array
+        public void DisplayNextSentence()
         {
-            talking = s.voice;
-        }
 
-        if(talking!=null && this.speech)
+            //0) If a Sentence already played, and it had an Animator attached, play the animation
+                if(AnimationObject != null)
+                    AnimationObject.Play(SentenceAnimation);
+
+            //1) Get the Sentence object we're going to be working with
+                Sentence CurrentSentence = Sentences.Dequeue();
+
+            //2) If the Sentence object has a voice attached, assign the voice
+            if(CurrentSentence.Voice !=null)
+                SpeakerVoice = CurrentSentence.Voice;
+
+            //3) If the Sentence object has an Animator attached, assign the animation and animation name string
+                AnimationObject = CurrentSentence.AnimationObject;
+                SentenceAnimation = CurrentSentence.Play;
+
+            //3) If the Sentence object has a TextColor assigned to it, assign that text colour to the placeholders
+                NamePlaceholder.color = CurrentSentence.TextColor;
+                SpeechPlaceholder.color = CurrentSentence.TextColor;
+
+            //4) Get the string from the Sentence object
+                string NextLine = CurrentSentence.Words;
+
+            //5) Hide all previous Response buttons
+                FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+
+            //6) If a previous sentence was typing, stop it
+                StopAllCoroutines();
+
+            //7) Start the new sentence
+                StartCoroutine(TypeSentence(NextLine));
+
+            //8) If this method was called but there's nothing left in the Sentences queue, end the dialogue
+                if (Sentences.Count == 0){
+                    EndDialogue();
+                    return;
+                }
+
+        }
+        
+    //TypeSentence(string s): Runs the text animation and voice audio
+        public IEnumerator TypeSentence(string s) //each sentence
         {
-        
-            talking.time = Random.Range(0.01f, talking.clip.length);
 
-            talking.Play();// plays for all direct dialogue
-        }
+            if(SpeakerVoice != null){
+                SpeakerVoice.time = Random.Range(0.01f, SpeakerVoice.clip.length);
+                SpeakerVoice.Play();
+            }
 
-        string sentence = s.words;
+            SpeechPlaceholder.text = "";
 
-        
-        dialogText.color = s.textcolor;
+            foreach (char letter in s.ToCharArray()){
+                SpeechPlaceholder.text += letter;
+                yield return new WaitForSeconds(Globals.typingSpeed);
+            }
 
-        if (nameText != null){
-            nameText.text = s.name;
-            nameText.color = s.textcolor;
-        }
+            if(SpeakerVoice != null){
+                SpeakerVoice.Stop();
+            }
             
-
-        dialogText.text = sentence;
-
-        StopAllCoroutines();
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
-
-        StartCoroutine(TypeSentence(sentence));
-
-        if (sentences.Count == 0)
-        {
-            EndDialogue();
-
-            //Debug.Log(skipButton.activeSelf);
-            return;
         }
 
-    }
+    //EndDialogue(): Shows any assigned responses
+        void EndDialogue(){
 
-    public IEnumerator TypeSentence(string sentence) //each sentence
-    {
-        dialogText.text = "";
-
-        foreach (char letter in sentence.ToCharArray())
-        {
-            dialogText.text += letter;
-            yield return new WaitForSeconds(Globals.typingSpeed);
-        }
-        if(talking!=null)
-        {
-            talking.Stop();
-        }
-        
-    }
-
-    void EndDialogue()
-    {
-        if(pla != null){
-            pla.play();
-        }
-        //Debug.Log("End of conversation");
-        skipButton.SetActive(false);
-
-        if (choices != null && choice1 != null)
-        {
-            for (int i = 1; i <= choices.Length; i++)
+            if (ResponseStrings != null)
             {
-                if (i == 1)
-                {
-                    choice1.SetActive(true);
-                    choice1.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
-                }
-                if (i == 2)
-                {
-                    choice2.SetActive(true);
-                    choice2.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
-                }
-                if (i == 3)
-                {
-                    choice3.SetActive(true);
-                    choice3.GetComponentInChildren<TextMeshProUGUI>().text = choices[i - 1];
+                for (int j = 0; j < ResponseStrings.length-1; j++){
+                    ResponseButtons[j].SetActive(true);
+                    ResponseButtons[j].GetComponentInChildren<TextMeshProUGUI>().text = ResponseStrings[j];
                 }
             }
-        }
-        else {
-            StartCoroutine(ClearHeadsUp());
-        }
-
-        
-    }
-
-    //Add to a skip button
-    public void DisplayNextSentenceNoAnimation()
-    {
-        Sentence s = sentences.Dequeue();
-
-        if(s.voice !=null)
-        {
-            talking = s.voice;
-        }
-
-        if(talking!=null && this.speech)
-        {
-            talking.Play();// plays for all direct dialogue
-        }
-
-        string sentence = s.words;
-
-        
-        dialogText.color = s.textcolor;
-
-        if (nameText != null){
-            nameText.text = s.name;
-            nameText.color = s.textcolor;
-        }
+            else {
+                StartCoroutine(ClearHeadsUp());
+            }
             
-        dialogText.text = sentence;
-
-        if (sentences.Count == 0)
-        {
-            EndDialogue();
-
-            //Debug.Log(skipButton.activeSelf);
-            return;
-        }
-    }
-
-    //StartDialogueNoAnimation(Dialogue di, string[] c, GameObject[] choiceButtons, bool speech)
-    public void StartDialogueNoAnimation(Sentence[] di, string[] c, GameObject[] choiceButtons, bool speech)
-    {
-        inConversation = true;
-
-        this.choices = c;
-
-        this.choice1 = choiceButtons[0];
-
-        this.choice2 = choiceButtons[1];
-
-        this.choice3 = choiceButtons[2];
-
-        if (choice1 != null)
-            choice1.SetActive(false);
-
-        if (choice2 != null)
-            choice2.SetActive(false);
-
-        if (choice3 != null)
-            choice3.SetActive(false);
-
-        this.speech = speech;
-
-        skipButton.SetActive(true);
-
-        sentences.Clear();
-
-        this.speech = speech;
-
-        skipButton.SetActive(true);
-
-        sentences.Clear();
-
-        foreach (Sentence s in di)
-        {
-            sentences.Enqueue(s);
         }
 
-        DisplayNextSentenceNoAnimation();
+    //DisplayNextSentenceNoAnimation(): shows the next line without playing the text animation
+        public void DisplayNextSentenceNoAnimation(){
+            //0) If a Sentence already played, and it had an Animator attached, play the animation
+                    if(AnimationObject != null)
+                        AnimationObject.Play(SentenceAnimation);
 
-    }
+                //1) Get the Sentence object we're going to be working with
+                    Sentence CurrentSentence = Sentences.Dequeue();
 
-    public IEnumerator ClearHeadsUp(){
-        if(changeScene != ""){
+                //2) If the Sentence object has a voice attached, assign the voice
+                if(CurrentSentence.Voice !=null)
+                    SpeakerVoice = CurrentSentence.Voice;
 
-            SceneManager.LoadScene(changeScene);
+                //3) If the Sentence object has an Animator attached, assign the animation and animation name string
+                    AnimationObject = CurrentSentence.AnimationObject;
+                    SentenceAnimation = CurrentSentence.Play;
+
+                //3) If the Sentence object has a TextColor assigned to it, assign that text colour to the placeholders
+                    NamePlaceholder.color = CurrentSentence.TextColor;
+                    SpeechPlaceholder.color = CurrentSentence.TextColor;
+
+                //4) Get the string from the Sentence object
+                    string NextLine = CurrentSentence.Words;
+
+                //5) Hide all previous Response buttons
+                    FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+
+                //6) If a previous sentence was typing, stop it
+                SpeechPlaceholder.text = NextLine;
+
+                //8) If this method was called but there's nothing left in the Sentences queue, end the dialogue
+                    if (Sentences.Count == 0){
+                        EndDialogue();
+                        return;
+                    }
         }
 
+   
+    //ClearHeadsUp(): clears the Dialogue Box from the screen if there were no given responses
+        public IEnumerator ClearHeadsUp(){
+            yield return new WaitForSeconds(TimeToClear);
 
-
-        Debug.Log(pla);
-
-        float ttw = last.ToCharArray().Length * Globals.typingSpeed + 3;
-
-        yield return new WaitForSeconds(ttw);
-
-
-
-        FindObjectOfType<DialogueBoxHandler>().clearHUD();
-
-
-    }
+            FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
+        }
 
 
 }

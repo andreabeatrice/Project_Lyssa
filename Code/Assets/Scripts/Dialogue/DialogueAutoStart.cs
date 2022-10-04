@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class DialogueAutoStart : MonoBehaviour
 {
-    public Sentence[] interaction;
+    public Sentence[] Interaction;
 
-    public GameObject HeadsUpDisplay;
+    public GameObject DialogueBox;
 
-    public string[] choices;
+    public string[] ResponseStrings;
 
-    public GameObject[] choiceButtons = new GameObject[3];
+    public GameObject[] ResponseButtons;
 
     public bool wait;
 
-    //bool speech: used to determine whether the DialogueManager should play gibberish
-    public bool speech;
-
-    public float waitfor;
+    public float TimeToWait;
 
     // Start(): is called before the first frame update - calls TriggerDialogue() or TriggerDialogueNoWait()
         void Start()
@@ -29,22 +26,14 @@ public class DialogueAutoStart : MonoBehaviour
         IEnumerator TriggerDialogue()
         {
             
-            yield return new WaitForSeconds(waitfor);
+            yield return new WaitForSeconds(TimeToWait);
             
-            if (HeadsUpDisplay != null)
-                HeadsUpDisplay.SetActive(true);
+            if (DialogueBox != null)
+                DialogueBox.SetActive(true);
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech);
+            FindObjectOfType<DialogueManager>().StartDialogue(Interaction, ResponseStrings, ResponseButtons);
         }
 
-    //TriggerDialogueNoWait(): WaStarts the dialogue immediately
-        public void TriggerDialogueNoWait()
-        {
-            if (HeadsUpDisplay != null)
-                HeadsUpDisplay.SetActive(true);
-
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech);
-        }
 
 
 }

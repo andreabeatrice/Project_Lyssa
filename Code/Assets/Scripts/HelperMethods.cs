@@ -114,7 +114,8 @@ public static class HelperMethods{
 
             //Used to determine whether player has completed the Janitors_Closet scene in the tutorial
             Globals.StorageRoom = false;
-
+            Globals.LightSwitch = false;
+            Globals.blamed_receptionist = false;
 
             Globals.mopped = false;
 

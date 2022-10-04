@@ -39,7 +39,7 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("It looks like I need a key card to open this door.", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement);
 
         }
 
@@ -51,7 +51,7 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("The patients are busy eating. I'll disturb them if I go in now.", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement);
 
         }
 
@@ -63,7 +63,7 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("I'm not supposed to clean here today.", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement);
 
         }
 
@@ -75,7 +75,7 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("I'm definitely not allowed into Dr Kraus's office! He doesn't even let anyone else clean it!", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement);
 
         }
 

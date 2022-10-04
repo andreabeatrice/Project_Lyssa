@@ -27,10 +27,8 @@ public class SeveralCollidersSingleObjectClick : MonoBehaviour
         foreach(Collider2D item in objectsColliders){
             
             if(mousePos.x <= (item.bounds.center.x + 0.5) && mousePos.x >= (item.bounds.center.x - 0.5)){
-                //if object has 
-                Debug.Log(item.name);
 
-                 if(item.GetComponent<DialogueClick>() != null && item.GetComponent<DialogueClick>().canClick == true){
+                 if(item.GetComponent<DialogueClick>() != null && item.GetComponent<DialogueClick>().Clickable == true){
                     item.GetComponent<DialogueClick>().TriggerDialogue();
                  }
             }

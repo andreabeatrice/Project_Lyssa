@@ -6,20 +6,13 @@ public class DialogueAutoStart_Fight : MonoBehaviour
 {
   public Sentence[] interaction;
 
-    public GameObject HeadsUpDisplay;
+    public GameObject DialogueBox;
 
-    public string[] choices;
+    public string[] ResponseStrings;
 
-    public GameObject[] choiceButtons = new GameObject[3];
-
-    public bool wait;
-
-    //bool speech: used to determine whether the DialogueManager should play gibberish
-    public bool speech;
+    public GameObject[] ResponseButtons;
 
     public float waitfor;
-
-    private float time = 0; 
 
     private bool willFight = false;
     
@@ -27,20 +20,15 @@ public class DialogueAutoStart_Fight : MonoBehaviour
     // Start(): is called before the first frame update - calls TriggerDialogue() or TriggerDialogueNoWait()
         void Start()
         {
-            foreach(Sentence s in interaction){
-
-            }
             StartCoroutine(TriggerDialogue());
         }
 
-         void Update()
-        {   
-             if (FindObjectOfType<DialogueManager>().inConversation == true){
+        void Update(){   
+            if (DialogueBox.activeSelf == true)
                 willFight = true;
-             }
-            if (FindObjectOfType<DialogueManager>().inConversation == false && willFight){
+
+            if (DialogueBox.activeSelf == false && willFight)
                 StartCoroutine(FIGHT());
-            }
         }
 
     //TriggerDialogue(): Waits for 1.5 seconds to be sure that the scene transition is done
@@ -49,33 +37,22 @@ public class DialogueAutoStart_Fight : MonoBehaviour
             
             yield return new WaitForSeconds(waitfor);
             
-            if (HeadsUpDisplay != null)
-                HeadsUpDisplay.SetActive(true);
+            if (DialogueBox != null)
+                DialogueBox.SetActive(true);
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction, ResponseStrings, ResponseButtons);
 
             
         }
 
-    //TriggerDialogueNoWait(): WaStarts the dialogue immediately
-        public void TriggerDialogueNoWait()
-        {
-            if (HeadsUpDisplay != null)
-                HeadsUpDisplay.SetActive(true);
-
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech);
-        }
-
-    IEnumerator FIGHT(){
+        IEnumerator FIGHT(){
         
-            float ttw = (interaction[interaction.Length - 1].words.ToCharArray().Length * Globals.typingSpeed);
-
-            Debug.Log(ttw);
+            float ttw = (interaction[interaction.Length - 1].Words.ToCharArray().Length * Globals.typingSpeed) + 1;
 
             yield return new WaitForSeconds(ttw);
 
             FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_2_Fight", "crossfade_start");
 
-    }
+        }
 
 }

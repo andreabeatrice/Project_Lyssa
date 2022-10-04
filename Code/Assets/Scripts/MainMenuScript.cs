@@ -12,7 +12,7 @@ public class MainMenuScript : MonoBehaviour
 
     public bool opened;
 
-    public GameObject start, load, settings, gate;
+    public GameObject start, load, settings, gate, quit;
 
     public static string path;
 
@@ -49,6 +49,7 @@ public class MainMenuScript : MonoBehaviour
         GameObject.Find("Start").SetActive(false);
         GameObject.Find("LoadSave").SetActive(false);
         GameObject.Find("Settings").SetActive(false);
+        GameObject.Find("Quit").SetActive(false);
 
         //Reset globals in case player wants to retry
     }

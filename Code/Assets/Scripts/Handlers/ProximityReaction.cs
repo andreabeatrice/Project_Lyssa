@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class ProximityReaction : MonoBehaviour
 {
-    public AudioSources allAudio;
+    public AudioSources AllAudio;
+
     public Collider2D PlayerCollider;
     public Collider2D ObjectAreaCollider;
-    public GameObject HeadsUpDisplay;
-    public GameObject ChoiceButton_none, ChoiceButton_mop, ChoiceButton_broom;
+
+    public GameObject DialogueBox;
+
+    public GameObject DoNothing, DecisionMop, DecisionBroom;
 
     private bool popped = false;
+
     string[] sentences;
     
     //TODO: create a Global solution
@@ -20,37 +24,31 @@ public class ProximityReaction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerCollider.IsTouching(ObjectAreaCollider) && popped == false)
-        {
+        if (PlayerCollider.IsTouching(ObjectAreaCollider) && popped == false){
             popped = true;
 
             switch(this.name){
                 case "WaterDispenser":
-                    foreach (string item in Globals.inventory)
-                    {
+                    foreach (string item in Globals.inventory){
                         if (item.Equals("Broom")){
-                                reaction("Damn, why didn't I pick the mop?", "Regret choice (+0)", ChoiceButton_broom);
+                                reaction("Damn, why didn't I pick the mop?", "Regret choice (+0)", DecisionBroom);
                             }
                             else if (item.Equals("Mop")){
                                 
-                                reaction("Good thing I didn't choose the broom!", "Mop it up (+0)", ChoiceButton_mop);
+                                reaction("Good thing I didn't choose the broom!", "Mop it up (+0)", DecisionMop);
                             }
                             else {
-                                HeadsUpDisplay.SetActive(false);
+                                DialogueBox.SetActive(false);
                                 return;
                             }
                     }
                 break;
                 case "KeepOutTape":
-                    reaction("Caution tape seems like a bad sign... maybe I should check on her?", "Continue", ChoiceButton_none);
+                    reaction("Caution tape seems like a bad sign... maybe I should check on her?", "Continue", DoNothing);
                 break;
 
             }
-
-                
-
         }
-
         if (!PlayerCollider.IsTouching(ObjectAreaCollider) && popped == true){
             popped = false;
         }
@@ -58,13 +56,11 @@ public class ProximityReaction : MonoBehaviour
 
 
     public void reaction(string prox, string react, GameObject btn){
-        HeadsUpDisplay.SetActive(true);
-
-                            
+        DialogueBox.SetActive(true);
+    
         Sentence[] interaction = new Sentence[] {new Sentence(prox, 1)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(interaction, react, btn, false);
-        //allAudio.playMoppingSound();//need to move
+        FindObjectOfType<DialogueManager>().StartDialogue(interaction, react, btn);
     }
 
 }

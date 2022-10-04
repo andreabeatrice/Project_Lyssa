@@ -64,34 +64,31 @@ public class ObjectClick : MonoBehaviour
 
     public void handle(){
         if (animator != null){
-                    animator.Play(clickAnimation);
+            animator.Play(clickAnimation);
+        }
+
+        switch (nextMethod){
+            case "JanitorsDoorClick":
+                if (!Globals.StorageRoom){
+                    openDoorSound.Play();
+                    StartCoroutine(JanitorsDoorClick());
                 }
+                else{
+                    HeadsUpDisplay.SetActive(true);
 
-                switch (nextMethod)
-                {
-                    case "JanitorsDoorClick":
-                        if (!Globals.StorageRoom)
-                        {
-                            openDoorSound.Play();
-                            StartCoroutine(JanitorsDoorClick());
-                        }
-                        else
-                        {
-                            HeadsUpDisplay.SetActive(true);
+                    string[] sentences = new string[] { "I don't need to do that again right now." };
 
-                            string[] sentences = new string[] { "I don't need to do that again right now." };
+                    Color32 c = new Color32(135, 206, 253, 255);
 
-                            Color32 c = new Color32(135, 206, 253, 255);
+                    Sentence[] interaction = new Sentence[] {new Sentence("I should go get cleaning supplies first")};
 
-                            Sentence[] interaction = new Sentence[] {new Sentence("I should go get cleaning supplies first")};
+                    FindObjectOfType<DialogueManager>().StartDialogue(interaction, "Okay", noaction);
 
-                            FindObjectOfType<DialogueManager>().StartDialogue(interaction, "Okay", noaction, false);
-
-                        }
+                }
                         
-                        break;
+                break;
             
-                }
+        }
     }
 
 }

@@ -14,130 +14,86 @@ using System;
 //Can be assigned to any object/sprite you want to be able to click on to start a dialogue
 public class DialogueClick : MonoBehaviour
 {
-    public Sentence[] interaction;
-    private AudioSource clickSound; //don't want clicksound before audio
+    public Sentence[] Interaction;
+
     public AudioSources AllAudio;
 
-    public GameObject HeadsUpDisplay;
+    public GameObject DialogueBox;
 
-    public string[] choices;
+    public string[] ResponseStrings;
 
-    public GameObject[] choiceButtons = new GameObject[3];
-
-    public bool speech;
-
-    public bool fern;
+    public GameObject[] ResponseButtons;
 
     private int numInteractions;
 
     public string identifier;
 
-    public bool canClick = true;
+    public bool Clickable = true;
 
     //Proximity Abilities enabled
     public bool enableProximityReactions;
+
     public Collider2D PlayerCollider;
     public Collider2D ObjectAreaCollider;
+
     private bool popped = false;
 
-    public PlaySomeonesAnim body;
-
     // Start is called before the first frame update
-    void Start()
-    {
-
-        clickSound = GameObject.Find("click_sound").GetComponentInChildren<AudioSource>();
+    void Start(){
         
-        //Option 1: switch case
-        if(fern){
-            foreach(Sentence s in interaction){
-                s.makeFern();
-            }
-        }
-
         if(identifier == null){
-            identifier = "infintie";
+            identifier = "infinite";
         }
-
-        if (HeadsUpDisplay != null)
-            HeadsUpDisplay.SetActive(false);
     }
        
     //TODO: Update() method that checks if player collider is touching the collider attached to this object
     //and if player pressed space (Input.GetKeyDown(KeyCode.Space))
     void Update(){
 
-        if (enableProximityReactions== true && PlayerCollider.IsTouching(ObjectAreaCollider) && popped == false && canClick)
-        {
-            if (identifier != null)
-                numInteractions = (int) typeof(InteractionsCounter).GetField(identifier).GetValue(this);
-            else
-                numInteractions = (int) typeof(InteractionsCounter).GetField("infinite").GetValue(this);
+        if (enableProximityReactions == true && PlayerCollider.IsTouching(ObjectAreaCollider) && popped == false && Clickable){
             
-            if(clickSound!=null)
-               // clickSound.Play();
+            numInteractions = (int) typeof(InteractionsCounter).GetField("infinite").GetValue(this);
+            
 
-
-            if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && FindObjectOfType<DialogueManager>().inConversation == false){
+            if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && PlayerCollider.IsTouching(ObjectAreaCollider)){
 
                 TriggerDialogue();
           
-                if (HeadsUpDisplay != null)
-                    HeadsUpDisplay.SetActive(true);
-
                 numInteractions++;
 
-                if (identifier != null)
-                    typeof(InteractionsCounter).GetField(identifier).SetValue(this, numInteractions);
-                else
-                    typeof(InteractionsCounter).GetField("infinite").SetValue(this, numInteractions);
+                typeof(InteractionsCounter).GetField(identifier).SetValue(this, numInteractions);
 
             }
             
 
         }
-        else if (enableProximityReactions == true && !PlayerCollider.IsTouching(ObjectAreaCollider) && popped == true && canClick){
+        else if (enableProximityReactions == true && !PlayerCollider.IsTouching(ObjectAreaCollider) && popped == true && Clickable){
             popped = false;
         }
     }
 
     public void OnMouseOver() {
-        if (Input.GetMouseButtonDown(Globals.primaryMouseButton) && !Globals.paused && canClick){
-            if (identifier != null)
+        if (Input.GetMouseButtonDown(Globals.primaryMouseButton) && !Globals.paused && Clickable){
                 numInteractions = (int) typeof(InteractionsCounter).GetField(identifier).GetValue(this);
-            else
-                numInteractions = (int) typeof(InteractionsCounter).GetField("infinite").GetValue(this);
             
-            if(clickSound!=null)
-               clickSound.Play();//adds click sound to broom and mop ect
+            AllAudio.playClickSound();
 
             TriggerDialogue();
           
-
             numInteractions++;
 
-            if (identifier != null)
-                typeof(InteractionsCounter).GetField(identifier).SetValue(this, numInteractions);
-            else
-                typeof(InteractionsCounter).GetField("infinite").SetValue(this, numInteractions);
+            typeof(InteractionsCounter).GetField(identifier).SetValue(this, numInteractions);
         }
     }
 
 
-    public void TriggerDialogue()
-    {
-        if (HeadsUpDisplay != null)
-                HeadsUpDisplay.SetActive(true);
+    public void TriggerDialogue(){
 
-        int diCount = interaction.Length - 1;
-        if (numInteractions <= diCount)
-        {
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech, body);
-        }
-        else
-        {
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction, choices, choiceButtons, speech, body);
-        }
+        if (DialogueBox != null)
+            DialogueBox.SetActive(true);
+
+
+        FindObjectOfType<DialogueManager>().StartDialogue(Interaction, ResponseStrings, ResponseButtons);
         
     }
    

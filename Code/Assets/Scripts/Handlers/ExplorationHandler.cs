@@ -34,10 +34,11 @@ public class ExplorationHandler : MonoBehaviour
             FindObjectOfType<LevelLoader>().LoadNextLevel(this.name, "crossfade_start");
         }
         else {
-            FindObjectOfType<DialogueBoxHandler>().showHUD();
+            FindObjectOfType<DialogueBoxHandler>().ShowDialogueBox();
+
             Sentence[] interaction = new Sentence[] {new Sentence("I should go get cleaning supplies first", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction, "Yeah, okay", silent_agreement, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction, "Yeah, okay", silent_agreement);
 
             allAudio.playErrorSound();
         }

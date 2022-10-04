@@ -76,8 +76,6 @@ public class ObjectDrag : MonoBehaviour
         if (isBeingHeld){
             puttingDown.Play();
             isBeingHeld = false;
-            //disable click
-            //this.gameObject.transform.GetComponent<ObjectDrag>().enabled = false;
             bucketTalk = false;
         }
 
@@ -85,7 +83,7 @@ public class ObjectDrag : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(interactions, choices, choiceButtons, speech);
+        FindObjectOfType<DialogueManager>().StartDialogue(interactions, choices, choiceButtons);
 
     }
 }
