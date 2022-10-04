@@ -2214,7 +2214,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1734519196}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: BasementDoor, Assembly-CSharp
         m_MethodName: handle
         m_Mode: 1
@@ -28475,8 +28475,6 @@ GameObject:
   - component: {fileID: 1734519201}
   - component: {fileID: 1734519197}
   - component: {fileID: 1734519200}
-  - component: {fileID: 1734519196}
-  - component: {fileID: 1734519199}
   m_Layer: 0
   m_Name: Basement Door
   m_TagString: rnd
@@ -28484,23 +28482,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1734519196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734519195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a302aff7a8059d24d9e242834c3ef32b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  openDoorSound: {fileID: 0}
-  animator: {fileID: 1734519198}
-  enableProximityReactions: 1
-  PlayerCollider: {fileID: 2115122456}
-  ObjectAreaCollider: {fileID: 1734519197}
 --- !u!61 &1734519197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28547,41 +28528,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1734519199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734519195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interaction:
-  - words: The nurse's access card will definitely work here!
-    voice: {fileID: 0}
-    name: Fern
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294823559
-  AllAudio: {fileID: 1392735406}
-  HeadsUpDisplay: {fileID: 1615589087}
-  choices:
-  - Try Keycard (+0)
-  choiceButtons:
-  - {fileID: 174549335}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  fern: 0
-  identifier: infinite
-  canClick: 1
-  enableProximityReactions: 0
-  PlayerCollider: {fileID: 0}
-  ObjectAreaCollider: {fileID: 0}
-  body: {fileID: 0}
 --- !u!114 &1734519200
 MonoBehaviour:
   m_ObjectHideFlags: 0

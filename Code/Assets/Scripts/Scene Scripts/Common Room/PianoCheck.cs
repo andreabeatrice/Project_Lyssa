@@ -15,7 +15,7 @@ public class PianoCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (keys.text.Length == 4 && !keys.text.Contains("FEFD")){
+        if (keys.text.Length >= 4 && !keys.text.Contains("FEFD")){
             keys.text = "";
         }
         else if (keys.text.Length == 4 && keys.text.Contains("FEFD")){
