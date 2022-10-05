@@ -14,7 +14,7 @@ public class InvisibleWalls : MonoBehaviour
     public GameObject basement_agreement;
 
     public bool poppedB, poppedD, poppedR, poppedK;
-    public GameObject hud;
+    public GameObject DialogueBox;
 
     public bool speech;
 
@@ -35,7 +35,7 @@ public class InvisibleWalls : MonoBehaviour
         {
             poppedB = true;
 
-            hud.SetActive(true);
+            DialogueBox.SetActive(true);
 
             Sentence[] interaction = new Sentence[] {new Sentence("It looks like I need a key card to open this door.", 1)};
 
@@ -47,7 +47,7 @@ public class InvisibleWalls : MonoBehaviour
         {
             poppedD = true;
 
-            hud.SetActive(true);
+            DialogueBox.SetActive(true);
 
             Sentence[] interaction = new Sentence[] {new Sentence("The patients are busy eating. I'll disturb them if I go in now.", 1)};
 
@@ -59,7 +59,7 @@ public class InvisibleWalls : MonoBehaviour
         {
             poppedR = true;
 
-            hud.SetActive(true);
+            DialogueBox.SetActive(true);
 
             Sentence[] interaction = new Sentence[] {new Sentence("I'm not supposed to clean here today.", 1)};
 
@@ -71,7 +71,7 @@ public class InvisibleWalls : MonoBehaviour
         {
             poppedK = true;
 
-            hud.SetActive(true);
+            DialogueBox.SetActive(true);
 
             Sentence[] interaction = new Sentence[] {new Sentence("I'm definitely not allowed into Dr Kraus's office! He doesn't even let anyone else clean it!", 1)};
 

@@ -40,11 +40,11 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
         GameObject.Find("Pill").SetActive(false);
 
-        FindObjectOfType<DialogueBoxHandler>().clearHUD();
+        FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
     }
 
     public void leave_object(){
-        FindObjectOfType<DialogueBoxHandler>().clearHUD();
+        FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
     }
 
     public void keep_keycard(){
@@ -60,11 +60,11 @@ public class Room106_ChoiceHandler : MonoBehaviour
         FindObjectOfType<AudioSources>().playFootsteps();
         //FindObjectOfType<DialogueManager>().TypeSentence("Someone's coming!");
 
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
+        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
         Sentence[] se = new Sentence[]{new Sentence("Someone's coming!", null, "Fern", ColorCodes.fern)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(se, "", null, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(se, "", null);
 
         StartCoroutine(NurseScene());
 
@@ -84,11 +84,11 @@ public class Room106_ChoiceHandler : MonoBehaviour
         FindObjectOfType<AudioSources>().playFootsteps();
         //FindObjectOfType<DialogueManager>().TypeSentence("Someone's coming!");
 
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
+        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
         Sentence[] se = new Sentence[]{new Sentence("Someone's coming!", null, "Fern", ColorCodes.fern)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(se, "", null, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(se, "", null);
 
         StartCoroutine(NurseScene());
 
@@ -98,7 +98,7 @@ public class Room106_ChoiceHandler : MonoBehaviour
     public void investigate_writing(){
         Globals.insanity +=1;
         DestroyImmediate(GameObject.Find("writing on the walls").GetComponent<Collider2D>());
-        FindObjectOfType<DialogueBoxHandler>().clearHUD();
+        FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
     }
 
     public IEnumerator NurseScene() //each sentence

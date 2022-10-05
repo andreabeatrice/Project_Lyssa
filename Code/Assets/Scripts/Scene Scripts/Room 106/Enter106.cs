@@ -48,7 +48,7 @@ public class Enter106 : MonoBehaviour
                 //clickSound.Play();
 
 
-            if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && FindObjectOfType<DialogueManager>().inConversation == false){
+            if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused){
                 allAudio.playErrorSound();
 
                 TriggerAfterDialogue();
@@ -94,7 +94,7 @@ public class Enter106 : MonoBehaviour
     }
 
     public void TriggerAfterDialogue(){
-        FindObjectOfType<DialogueManager>().StartDialogue(after_dialog, after_choices,after_choiceButtons, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(after_dialog, after_choices,after_choiceButtons);
         
         
     }

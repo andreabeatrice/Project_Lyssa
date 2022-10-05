@@ -23,7 +23,6 @@ public class JanitorsDoorRedirect : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused ){
                 handle();
             }
-            
 
         }
     }
@@ -45,6 +44,6 @@ public class JanitorsDoorRedirect : MonoBehaviour
 
         Sentence[] dialog = new Sentence[] {new Sentence("I don't need to do that again right now.", 1)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(dialog, "Okay", NoActionChoiceButton, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialog, "Okay", NoActionChoiceButton);
     }
 }

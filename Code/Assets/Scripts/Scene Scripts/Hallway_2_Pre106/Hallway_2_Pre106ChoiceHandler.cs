@@ -27,8 +27,6 @@ public class Hallway_2_Pre106ChoiceHandler : MonoBehaviour
             }
 
 
-            FindObjectOfType<DialogueManager>().setConversationStatus(false);
-
         }
 
     public void mopitup(){

@@ -23,7 +23,7 @@ public class KitchenScript : MonoBehaviour
     public void DrinkMilk(){
         fern.SetActive(true);
         fern2.Play("rotten_milk");
-        FindObjectOfType<DialogueBoxHandler>().clearHUD();
+        FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
 
         Globals.deaths.Add("'No outside food' isn't just a suggestion.");
 
@@ -45,9 +45,9 @@ public class KitchenScript : MonoBehaviour
 
         Sentence[] convincingDialogue = new Sentence[]{ new Sentence("The pot wobbles for a second, before coming crashing down on your head...", null, "", new Color32(255,255,255,255)), new Sentence("You should have quit while you were ahead, Fern.", null, "???", blu1)};
 
-        FindObjectOfType<DialogueBoxHandler>().showHUD();
+        FindObjectOfType<DialogueBoxHandler>().ShowDialogueBox();
         
-        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null);
 
         StartCoroutine(Exp());
     }

@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class DialogueBoxHandler : MonoBehaviour
 {
-    public GameObject HeadsUpDisplay;
+    public GameObject DialogueBox;
     
 
     public void ClearDialogueBox()
@@ -17,7 +17,7 @@ public class DialogueBoxHandler : MonoBehaviour
 
         gos = GameObject.FindGameObjectsWithTag("ChoiceButton");
 
-        HeadsUpDisplay.SetActive(false);
+        DialogueBox.SetActive(false);
 
         foreach (GameObject go in gos){
             go.SetActive(false);
@@ -35,7 +35,7 @@ public class DialogueBoxHandler : MonoBehaviour
         }
     }
 
-    public void RemoveHeadsUpDisplayAfterXTime(float f){
+    public void RemoveDialogueBoxAfterXTime(float f){
         StartCoroutine(ClearDialogueBoxAfter(f));
     }
 
@@ -47,6 +47,6 @@ public class DialogueBoxHandler : MonoBehaviour
         }
 
     public void ShowDialogueBox(){
-        HeadsUpDisplay.SetActive(true);
+        DialogueBox.SetActive(true);
     }
 }

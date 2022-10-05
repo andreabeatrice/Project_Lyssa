@@ -30,7 +30,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
         allAudio.StopAllAudio();
 
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
+        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
         //string[] s = {"Yes! She specifically told me that this room needed to be cleaned out!"};
         Sentence[] s = new Sentence[3];
@@ -39,7 +39,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
         s[1] = new Sentence("I knew it! I'll have to speak to Dr Kraus about her.", allAudio.nurse_voice, "Nurse Tarr", tarr);
         s[2] = new Sentence("Say, since you're in here anyway, have you seen my key card?", allAudio.nurse_voice, "Nurse Tarr", tarr);
 
-        FindObjectOfType<DialogueManager>().StartDialogue(s, determineChoicesStrings(), determineChoicesButtons(), true);
+        FindObjectOfType<DialogueManager>().StartDialogue(s, determineChoicesStrings(), determineChoicesButtons());
 
         //StartCoroutine(nurse_response_receptionist());
     }
@@ -47,7 +47,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
     public void be_honest(){
         Globals.insanity -= 1;
 
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
+        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
         Sentence[] s;
 
@@ -67,20 +67,20 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
          Debug.Log(determineChoicesButtons());
 
           Debug.Log(determineChoicesStrings());
-        FindObjectOfType<DialogueManager>().StartDialogue(s, determineChoicesStrings(), determineChoicesButtons(), true);
+        FindObjectOfType<DialogueManager>().StartDialogue(s, determineChoicesStrings(), determineChoicesButtons());
 
        
     
     }
 
     public void keycardlie(){
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
+        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
         Globals.insanity += 1;
 
         Sentence[] s = new Sentence[]{new Sentence("Ugh, it will be a mission to get to the basement without it.", allAudio.nurse_voice, "Nurse Tarr", tarr), new Sentence("Are you still here? Get back to work!", allAudio.nurse_voice, "Nurse Tarr", tarr)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yes, nurse", leaveroombutton);
 
         HelperMethods.ObjectivesEnqueue("Investigate the basement");
     }
@@ -88,23 +88,23 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
     public void keycardtruth_here(){
         HelperMethods.InventoryDequeue("Nurse's Keycard");
 
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
+        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
         Sentence[] s = new Sentence[]{new Sentence("Oh, brilliant! We can't have anyone getting into the basement. Now get back to work!", allAudio.nurse_voice, "Nurse Tarr", tarr), new Sentence("Oh, and take this trash she was keeping under her pillow with you!", allAudio.nurse_voice, "Nurse Tarr", tarr)};
 
         HelperMethods.InventoryEnqueue("Note from Otto");
         
-        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yes, nurse", leaveroombutton);
 
         HelperMethods.ObjectivesEnqueue("Find the note writer");
     }
 
     public void keycardtruth(){
-        FindObjectOfType<DialogueBoxHandler>().clearChoiceButtons();
+        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
        Sentence[] s = new Sentence[]{new Sentence("Ugh, it's probably around here somewhere.", allAudio.nurse_voice, "Nurse Tarr", tarr), new Sentence("Are you still here? Get back to work!", allAudio.nurse_voice, "Nurse Tarr", tarr)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yes, nurse", leaveroombutton, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yes, nurse", leaveroombutton);
 
         HelperMethods.ObjectivesEnqueue("Find the note writer");
     }

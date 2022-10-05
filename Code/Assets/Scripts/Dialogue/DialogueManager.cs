@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour {
 
     public AudioSource clickSound;
 
-    public AudioSource SpeakerVoice;
+    private AudioSource SpeakerVoice;
 
     private string[] ResponseStrings;
 
@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && ContinueButton.activeSelf){
             
             if (Sentences.Count == 0){
+                DisplayNextSentenceNoAnimation();
                 EndDialogue();
             }
             else {
@@ -71,6 +72,7 @@ public class DialogueManager : MonoBehaviour {
 
             //4) show the continue button
                 ContinueButton.SetActive(true);
+                NamePlaceholder.text = "";
 
             //5) Hide all previous Response buttons
                 FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
@@ -107,6 +109,7 @@ public class DialogueManager : MonoBehaviour {
 
                 //4) show the continue button
                 ContinueButton.SetActive(true);
+                NamePlaceholder.text = "";
 
                 //5) Hide all previous Response buttons
                     FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
@@ -137,21 +140,14 @@ public class DialogueManager : MonoBehaviour {
                     }
 
                 //2) save the response string
-                    ResponseStrings = new string[c.Length];
-
-                    for(int j = 0; j < c.Length; j++){
-                        ResponseStrings[j] = c[j];
-                    }
+                    ResponseStrings = c;
 
                 //3) save the button that the response will be assigned to
-                    ResponseButtons = new GameObject[b.Length];
-
-                    for(int j = 0; j < b.Length; j++){
-                        ResponseButtons[j] = b[j];
-                    }
+                    ResponseButtons = b;
 
                 //4) show the continue button
                     ContinueButton.SetActive(true);
+                    NamePlaceholder.text = "";
 
                 //5) Hide all previous Response buttons
                         FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
@@ -232,16 +228,16 @@ public class DialogueManager : MonoBehaviour {
     //EndDialogue(): Shows any assigned responses
         void EndDialogue(){
 
-            if (ResponseStrings != null)
-            {
-                for (int j = 0; j < ResponseStrings.length-1; j++){
+            ContinueButton.SetActive(false);
+
+                for (int j = 0; j < ResponseStrings.Length; j++){
                     ResponseButtons[j].SetActive(true);
                     ResponseButtons[j].GetComponentInChildren<TextMeshProUGUI>().text = ResponseStrings[j];
                 }
-            }
-            else {
-                StartCoroutine(ClearHeadsUp());
-            }
+            
+            // else {
+            //     StartCoroutine(ClearHeadsUp());
+            // }
             
         }
 
@@ -268,6 +264,9 @@ public class DialogueManager : MonoBehaviour {
 
                 //4) Get the string from the Sentence object
                     string NextLine = CurrentSentence.Words;
+
+                //6) If a previous sentence was typing, stop it
+                StopAllCoroutines();
 
                 //5) Hide all previous Response buttons
                     FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();

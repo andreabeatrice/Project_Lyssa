@@ -4,8 +4,8 @@ using UnityEngine;
 using TMPro;
 public class PianoCheck : MonoBehaviour
 {
-    public PlaySomeonesAnim pla;
     public TextMeshProUGUI keys; 
+    public Animator piano;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,13 +20,13 @@ public class PianoCheck : MonoBehaviour
         }
         else if (keys.text.Length == 4 && keys.text.Contains("FEFD")){
             keys.text = "";
-            pla.play();
+            piano.Play("");
 
-            FindObjectOfType<DialogueBoxHandler>().showHUD();
+            FindObjectOfType<DialogueBoxHandler>().ShowDialogueBox();
 
             Sentence[] convincingDialogue = new Sentence[]{ new Sentence("A secret passage??", null, "Fern", ColorCodes.fern)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null, true);
+            FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null);
 
             StartCoroutine(SecretPassage());
         }

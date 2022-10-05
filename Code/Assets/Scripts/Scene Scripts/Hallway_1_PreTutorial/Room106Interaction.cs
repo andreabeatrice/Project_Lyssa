@@ -21,7 +21,7 @@ public class Room106Interaction : MonoBehaviour
     void Update()
     {
 
-        if(PlayerCollider.IsTouching(ObjectAreaCollider) && Input.GetKeyDown(KeyCode.Space) && !Globals.paused && FindObjectOfType<DialogueManager>().inConversation == false){
+        if(PlayerCollider.IsTouching(ObjectAreaCollider) && Input.GetKeyDown(KeyCode.Space) && !Globals.paused ){
                 allAudio.playErrorSound();
                 TriggerBeforeDialogue();
 
@@ -44,9 +44,7 @@ public class Room106Interaction : MonoBehaviour
 
     public void TriggerBeforeDialogue()
     {
-        foreach(Sentence s in before_dialog)
-            s.makeFern();
 
-        FindObjectOfType<DialogueManager>().StartDialogue(before_dialog, before_choices, before_choiceButtons, false);   
+        FindObjectOfType<DialogueManager>().StartDialogue(before_dialog, before_choices, before_choiceButtons);   
     }
 }

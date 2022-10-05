@@ -7,30 +7,21 @@ using UnityEngine;
 //they haven't been in the scene before
 public class Welcome : MonoBehaviour
 {
-    private Sentence[] welcomespeech = new Sentence[3];
+    public Sentence[] WelcomeStrings;
     
     //Needs to be assigned in the Inspector
-    public GameObject HeadsUpDisplay;
-    public GameObject[] choiceButtons = new GameObject[3];
+    public GameObject DialogueBox;
+    public GameObject[] ResponseButton;
 
     //These will always be the same for the welcome, so we can skip them
     private string[] choices = new string[1];
 
     private bool wait = true;
 
-    private bool speech = false;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        string[] WelcomeStrings = new string[] {"Welcome to Lyssa Psychiatric Institution.", "Use the WASD or arrow keys to move around.", "You can view your inventory & objectives by clicking on your avatar or using the I key."};
-
-
-        //Instantiates a Dialogue object which contains the sentences from the WelcomeStrings array
-        for (int i = 0; i < 3; i++){
-            welcomespeech[i] = new Sentence(WelcomeStrings[i]);
-        }
 
         choices[0] = "I got this.";
 
@@ -53,25 +44,24 @@ public class Welcome : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         
-        if (HeadsUpDisplay != null)
-            HeadsUpDisplay.SetActive(true);
+        if (DialogueBox != null)
+            DialogueBox.SetActive(true);
 
-        FindObjectOfType<DialogueManager>().StartDialogue(welcomespeech, choices, choiceButtons, speech);
+        FindObjectOfType<DialogueManager>().StartDialogue(WelcomeStrings, choices, ResponseButton);
     }
 
     //Starts the dialogue immediately
     public void TriggerDialogueNoWait()
     {
-        if (HeadsUpDisplay != null)
-            HeadsUpDisplay.SetActive(true);
+        if (DialogueBox != null)
+            DialogueBox.SetActive(true);
 
-        FindObjectOfType<DialogueManager>().StartDialogue(welcomespeech, choices, choiceButtons, speech);
+        FindObjectOfType<DialogueManager>().StartDialogue(WelcomeStrings, choices, ResponseButton);
     }
 
     public void WelcomeOver(){
         Globals.canClick = true;
         InteractionsCounter.intro = true;
-        FindObjectOfType<DialogueManager>().setConversationStatus(false);
     }
 
 }

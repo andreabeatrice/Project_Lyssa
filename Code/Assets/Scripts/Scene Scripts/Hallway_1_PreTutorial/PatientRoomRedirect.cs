@@ -24,13 +24,13 @@ public class PatientRoomRedirect : MonoBehaviour
 
     void OnMouseDown()
     {
-        FindObjectOfType<DialogueBoxHandler>().showHUD();
+        FindObjectOfType<DialogueBoxHandler>().ShowDialogueBox();
         
         string[] bucketSentences = new string[] {};
 
         Sentence[] s = new Sentence[]{new Sentence("I should go get cleaning supplies first",1)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yeah, okay", NoActionChoiceButton, false);
+        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yeah, okay", NoActionChoiceButton);
 
         allAudio.playErrorSound();
     }

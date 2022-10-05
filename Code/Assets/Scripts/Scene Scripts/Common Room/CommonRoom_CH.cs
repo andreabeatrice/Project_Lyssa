@@ -33,7 +33,7 @@ public class CommonRoom_CH : MonoBehaviour
         Globals.insanity += 2;
         Sentence[] convincingDialogue = new Sentence[]{ new Sentence("C'mon, Otto. Breathe. Breathe. I need you to listen to me.", AllAudio.fern_voice, "Fern", ColorCodes.fern)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Call the nurse (-2)", "Offer him a cigarette (+1)"}, choices, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Call the nurse (-2)", "Offer him a cigarette (+1)"}, choices);
 
     }
 
@@ -42,7 +42,7 @@ public class CommonRoom_CH : MonoBehaviour
         Sentence[] convincingDialogue = new Sentence[]{ new Sentence("Hey, you used to smoke, right? I'll give you my pack right now if you calm down.", AllAudio.fern_voice, "Fern", ColorCodes.fern)};
     
 
-        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Call the nurse (-2)", "Offer him a cigarette (+1)"}, choices, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Call the nurse (-2)", "Offer him a cigarette (+1)"}, choices);
         StartCoroutine(to105());
         
     }

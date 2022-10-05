@@ -21,7 +21,7 @@ public class Room106Entry : MonoBehaviour
     void Update()
     {
 
-        if(PlayerCollider.IsTouching(ObjectAreaCollider) && Input.GetKeyDown(KeyCode.Space) && !Globals.paused && FindObjectOfType<DialogueManager>().inConversation == false){
+        if(PlayerCollider.IsTouching(ObjectAreaCollider) && Input.GetKeyDown(KeyCode.Space) && !Globals.paused){
             TriggerAfterDialogue();
 
             if (HeadsUpDisplay != null)
@@ -42,6 +42,6 @@ public class Room106Entry : MonoBehaviour
 
     public void TriggerAfterDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(after_dialog, after_choices, after_choiceButtons, false);   
+        FindObjectOfType<DialogueManager>().StartDialogue(after_dialog, after_choices, after_choiceButtons);   
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
 {
     
-    public GameObject HeadsUpDisplay;
+    public GameObject DialogueBox;
 
     public GameObject dialogBox;
 
@@ -35,9 +35,6 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
                 go.SetActive(false);
             }
 
-
-            FindObjectOfType<DialogueManager>().setConversationStatus(false);
-
         }
 
     //TutorialObjective1(): The OnClick() method for the response to the receptionist
@@ -50,9 +47,8 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
                 HelperMethods.ObjectivesEnqueue("Go to the storage closet for supplies");
                 HelperMethods.InventoryEnqueue("Pack of cigarettes");
 
-                HeadsUpDisplay.SetActive(false);
+                DialogueBox.SetActive(false);
 
-                FindObjectOfType<DialogueManager>().setConversationStatus(false);
                 firstInteraction = false;
 
                 //Popup saying that the player is about to enter the tutorial, and allow them to skip
@@ -64,11 +60,12 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
                 popUpChoice1.onClick.AddListener(PlayTutorial);
                 popUpChoice2.onClick.AddListener(SkipTutorial);
 
-                HeadsUpDisplay.transform.GetChild(3).gameObject.SetActive(false);
+                //why?
+                //DialogueBox.transform.GetChild(3).gameObject.SetActive(false);
             }
             else
             {
-                FindObjectOfType<DialogueBoxHandler>().clearHUD();
+                FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
             }
 
 

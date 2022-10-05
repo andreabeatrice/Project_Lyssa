@@ -165,7 +165,7 @@ public class ChoiceHandler : MonoBehaviour
     //keepLooking(): The onClick() method for the Janitors_Closet scene 'leave' button, which acts as a "no action" button
         public void keepLooking()
         {
-            FindObjectOfType<DialogueBoxHandler>().clearHUD();
+            FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
         }
 
     //BackToHall(): When the play is done with the tutorial, this puts the player back in the hall & changes their objective to "Go clean the patients' rooms"
@@ -188,7 +188,7 @@ public class ChoiceHandler : MonoBehaviour
         {
             if (firstInteraction)
             {
-                FindObjectOfType<DialogueBoxHandler>().clearHUD();
+                FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
                 Globals.insanity += 1;
                 firstInteraction = false;
                 DestroyImmediate(GameObject.Find("Rat").GetComponent<PolygonCollider2D>());

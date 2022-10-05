@@ -234,7 +234,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
 
             if (ResponseStrings != null)
             {
-                for (int j = 0; j < ResponseStrings.length-1; j++){
+                for (int j = 0; j < ResponseStrings.Length-1; j++){
                     ResponseButtons[j].SetActive(true);
                     ResponseButtons[j].GetComponentInChildren<TextMeshProUGUI>().text = ResponseStrings[j];
                 }
@@ -293,7 +293,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
 
         float TimeToWait = (Globals.typingSpeed * CurrentSentence.Words.ToCharArray().Length) + 2;
         
-        yield return new WaitForSeconds(ttw);
+        yield return new WaitForSeconds(TimeToWait);
 
         //2) If the Sentence object has a voice attached, assign the voice
             if(CurrentSentence.Voice !=null)
@@ -321,7 +321,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
 
         //8) If this method was called but there's nothing left in the Sentences queue, end the dialogue
         
-        if (sentences.Count == 0)
+        if (Sentences.Count == 0)
         {
             EndDialogue();
         }

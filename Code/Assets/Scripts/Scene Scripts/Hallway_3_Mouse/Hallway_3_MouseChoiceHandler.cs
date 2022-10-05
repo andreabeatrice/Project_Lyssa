@@ -23,7 +23,7 @@ public class Hallway_3_MouseChoiceHandler : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)){
             HeadsUpDisplay.SetActive(true);
-            FindObjectOfType<DialogueManager>().StartDialogue(di, "Enter Room 106 (+0)", ChoiceBtn, false);
+            FindObjectOfType<DialogueManager>().StartDialogue(di, "Enter Room 106 (+0)", ChoiceBtn);
         }
     }
 

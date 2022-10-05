@@ -116,7 +116,7 @@ public class DiaryClick : MonoBehaviour
         HelperMethods.ObjectivesEnqueue("Find the note from Otto");
         HelperMethods.ObjectivesEnqueue("Find the nurse's key card");
 
-        keycard.GetComponentsInChildren<DialogueClick>()[0].canClick = true;
+        keycard.GetComponentsInChildren<DialogueClick>()[0].Clickable = true;
 
        pillow.GetComponentsInChildren<objectDrag_nodialog>()[0].canDrag =true;
     }

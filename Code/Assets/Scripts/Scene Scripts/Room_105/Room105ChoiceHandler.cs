@@ -29,7 +29,7 @@ public class Room105ChoiceHandler : MonoBehaviour
 
         Globals.deaths.Add("(1) Cigarettes are against the rules. (2) They're very bad for you. (3) Don't ask people questions that make them uncomfortable.");
 
-        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null);
 
         otto.Play("otto_smoking_panic");
 
@@ -64,7 +64,7 @@ public class Room105ChoiceHandler : MonoBehaviour
                 lowInsanitychoices[2] = null;
             }
             
-        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, choices, lowInsanitychoices, true);
+        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, choices, lowInsanitychoices);
         }
         else{
             convincingDialogue = new Sentence[]{new Sentence("They've got a rat. She speaks to me sometimes, tell me what's happening.", null, "Otto", ColorCodes.patients), 
@@ -73,7 +73,7 @@ public class Room105ChoiceHandler : MonoBehaviour
 
             choices[0] = "Thank Otto (-1)";
 
-            FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, choices, highInsanityChoices, true);
+            FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, choices, highInsanityChoices);
 
         }
 
