@@ -20,13 +20,13 @@ public class PianoCheck : MonoBehaviour
         }
         else if (keys.text.Length == 4 && keys.text.Contains("FEFD")){
             keys.text = "";
-            piano.Play("");
+            piano.Play("piano");
 
             FindObjectOfType<DialogueBoxHandler>().ShowDialogueBox();
 
             Sentence[] convincingDialogue = new Sentence[]{ new Sentence("A secret passage??", null, "Fern", ColorCodes.fern)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null);
+            FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue);
 
             StartCoroutine(SecretPassage());
         }

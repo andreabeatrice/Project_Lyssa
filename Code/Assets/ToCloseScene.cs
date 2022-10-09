@@ -7,10 +7,14 @@ public class ToCloseScene : MonoBehaviour
 {
 
     public string deathSentence;
+
+    public AudioSources AllAudio;
+
+    public Animator nsp;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ToDeathScene());
+        
     }
 
     // Update is called once per frame
@@ -19,11 +23,21 @@ public class ToCloseScene : MonoBehaviour
         
     }
 
-    public IEnumerator ToDeathScene(){
-        yield return new WaitForSeconds(7f);
-
+    public void  ToDeathScene(){
         Globals.deaths.Add(deathSentence);
 
-        SceneManager.LoadScene("DeathScreen");
+        FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 4f);
+    }
+
+    public void PlayNewspaperSound(){
+        AllAudio.playNewspaperSpin();
+    }
+
+    public void PlayMovingManholeCover(){
+        AllAudio.playMetalDrag();
+    }
+
+    public void NewspaperAnimation(){
+        nsp.Play("win_newspaper");
     }
 }

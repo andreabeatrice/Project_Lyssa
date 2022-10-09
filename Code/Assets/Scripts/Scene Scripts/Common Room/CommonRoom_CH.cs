@@ -7,7 +7,7 @@ public class CommonRoom_CH : MonoBehaviour
 
     public AudioSources AllAudio;
 
-    public GameObject[] choices = new GameObject[3];
+    public GameObject[] choices;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,22 +33,24 @@ public class CommonRoom_CH : MonoBehaviour
         Globals.insanity += 2;
         Sentence[] convincingDialogue = new Sentence[]{ new Sentence("C'mon, Otto. Breathe. Breathe. I need you to listen to me.", AllAudio.fern_voice, "Fern", ColorCodes.fern)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Call the nurse (-2)", "Offer him a cigarette (+1)"}, choices);
+        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Call the nurse (-1)", "Offer him a cigarette (+1)"}, choices);
 
     }
 
-    public void Cigarette(){
+    public void Cigarette(){    
+        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+
         Globals.insanity += 1;
         Sentence[] convincingDialogue = new Sentence[]{ new Sentence("Hey, you used to smoke, right? I'll give you my pack right now if you calm down.", AllAudio.fern_voice, "Fern", ColorCodes.fern)};
     
 
-        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Call the nurse (-2)", "Offer him a cigarette (+1)"}, choices);
+        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null);
         StartCoroutine(to105());
         
     }
 
     public IEnumerator to105(){
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
 
         FindObjectOfType<LevelLoader>().LoadNextLevel("Room105_Otto", "crossfade_start");
     }

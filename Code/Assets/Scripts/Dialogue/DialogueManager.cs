@@ -244,10 +244,17 @@ public class DialogueManager : MonoBehaviour {
 
             ContinueButton.SetActive(false);
 
+            if(ResponseButtons != null){
                 for (int j = 0; j < ResponseButtons.Length; j++){
                     ResponseButtons[j].SetActive(true);
                     ResponseButtons[j].GetComponentInChildren<TextMeshProUGUI>().text = ResponseStrings[j];
                 }
+            }
+            else {
+                StartCoroutine(ClearHeadsUp());
+            }
+
+
             
             
         }

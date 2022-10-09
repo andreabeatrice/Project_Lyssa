@@ -108,7 +108,7 @@ public class DeathScene : MonoBehaviour
     }
 
     public IEnumerator ShowTitle(){
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
 
         //switch (Globals.deaths.Last())
         if (Globals.deaths.Last().Contains("meditation")){
