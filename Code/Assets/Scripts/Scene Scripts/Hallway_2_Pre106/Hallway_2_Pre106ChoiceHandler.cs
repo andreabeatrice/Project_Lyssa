@@ -8,7 +8,7 @@ public class Hallway_2_Pre106ChoiceHandler : MonoBehaviour
 {
     public AudioSources allAudio;
 
-    public Sprite cleanWaterDispenser;
+    public Sprite WaterCooler_Sprite;
 
     void Start(){
         Globals.paused = false;
@@ -30,15 +30,15 @@ public class Hallway_2_Pre106ChoiceHandler : MonoBehaviour
         }
 
     public void mopitup(){
-        Globals.mopped = true;
+        Globals.MoppedWater = true;
 
         allAudio.playMoppingSound();//shouldn't play when coming out of 106
         GameObject.Find("WaterDispenser").GetComponent<Animator>().enabled = false;
-        GameObject.Find("WaterDispenser").GetComponent<SpriteRenderer>().sprite = cleanWaterDispenser;
+        GameObject.Find("WaterDispenser").GetComponent<SpriteRenderer>().sprite = WaterCooler_Sprite;
     }
 
     public void cannotmop(){
-        Globals.mopped = false;
+        Globals.MoppedWater = false;
     }
 
     public void enter106(){

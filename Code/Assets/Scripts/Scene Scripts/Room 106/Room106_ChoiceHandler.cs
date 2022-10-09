@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Room106_ChoiceHandler : MonoBehaviour
 {
-    public AudioSources allAudio;
-    public GameObject leaveroombutton;
+    public AudioSources AllAudio;
+    public GameObject WallWritings, AntipsychoticPill, Keycard, Note;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,26 +34,22 @@ public class Room106_ChoiceHandler : MonoBehaviour
         
     }
 
-    public void keep_antipsychotics(){
+    public void KeepAntipsychotic(){
 
         HelperMethods.InventoryEnqueue("Antipyschotic Pill");
 
-        GameObject.Find("Pill").SetActive(false);
+        AntipsychoticPill.SetActive(false);
 
         FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
     }
 
-    public void leave_object(){
-        FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
-    }
-
-    public void keep_keycard(){
+    public void KeepKeycard(){
         HelperMethods.InventoryEnqueue("Nurse's Keycard");
 
         HelperMethods.ObjectivesDequeue("Find the note from Otto");
         HelperMethods.ObjectivesDequeue("Find the nurse's key card");
 
-        GameObject.Find("keycard collider").SetActive(false);
+        Keycard.SetActive(false);
 
         //play footsteps noise + dialogue
         FindObjectOfType<AudioSources>().StopAllAudio();
@@ -71,33 +67,32 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
     }
 
-    public void keep_note(){
+    public void KeepOttosNote(){
         HelperMethods.InventoryEnqueue("Note from Otto");
 
         HelperMethods.ObjectivesDequeue("Find the note from Otto");
         HelperMethods.ObjectivesDequeue("Find the nurse's key card");
 
-        GameObject.Find("Note").SetActive(false);
+        Note.SetActive(false);
 
         //play footsteps noise + dialogue
         FindObjectOfType<AudioSources>().StopAllAudio();
         FindObjectOfType<AudioSources>().playFootsteps();
-        //FindObjectOfType<DialogueManager>().TypeSentence("Someone's coming!");
 
         FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
         Sentence[] se = new Sentence[]{new Sentence("Someone's coming!", null, "Fern", ColorCodes.fern)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(se, "", null);
+        FindObjectOfType<DialogueManager>().StartDialogue(se);
 
-        StartCoroutine(NurseScene());
+        FindObjectOfType<LevelLoader>().LoadNextLevelLong("Room106_Nurse", "crossfade_start", 4f);
 
 
     }
 
-    public void investigate_writing(){
+    public void ExamineWall(){
         Globals.insanity +=1;
-        DestroyImmediate(GameObject.Find("writing on the walls").GetComponent<Collider2D>());
+        DestroyImmediate(WallWritings.GetComponent<Collider2D>());
         FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
     }
 

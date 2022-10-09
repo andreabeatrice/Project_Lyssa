@@ -6,9 +6,9 @@ public class Hallway_3_MouseChoiceHandler : MonoBehaviour
 {
 
     public Sentence[] di;
-    public GameObject ChoiceBtn;
+    public GameObject Decision_Enter106;
 
-    public GameObject HeadsUpDisplay;
+    public GameObject DialogueBox;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +22,8 @@ public class Hallway_3_MouseChoiceHandler : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)){
-            HeadsUpDisplay.SetActive(true);
-            FindObjectOfType<DialogueManager>().StartDialogue(di, "Enter Room 106 (+0)", ChoiceBtn);
+            DialogueBox.SetActive(true);
+            FindObjectOfType<DialogueManager>().StartDialogue(di, "Enter Room 106 (+0)", Decision_Enter106);
         }
     }
 

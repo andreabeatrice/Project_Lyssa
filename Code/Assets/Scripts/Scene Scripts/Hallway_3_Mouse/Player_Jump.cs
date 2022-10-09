@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player_Jump : MonoBehaviour
 {
     public Animator player;
+
+    public AudioSources AllAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +23,9 @@ public class Player_Jump : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         player.Play("Player_Jump_Away");
+    }
+
+    public void PlayScaredNoise(){
+        //@Angela - need to play noise here
     }
 }

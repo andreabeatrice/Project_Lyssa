@@ -28,8 +28,6 @@ public class ObjectDrag : MonoBehaviour
 
     public int numInteractions = 0;
 
-    private bool bucketTalk = true;
-
 
     // Update is called once per frame
     void Update()
@@ -76,7 +74,6 @@ public class ObjectDrag : MonoBehaviour
         if (isBeingHeld){
             puttingDown.Play();
             isBeingHeld = false;
-            bucketTalk = false;
         }
 
     }

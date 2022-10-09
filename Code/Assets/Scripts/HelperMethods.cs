@@ -117,7 +117,7 @@ public static class HelperMethods{
             Globals.LightSwitch = false;
             Globals.blamed_receptionist = false;
 
-            Globals.mopped = false;
+            Globals.MoppedWater = false;
 
             Globals.direction = "";
 

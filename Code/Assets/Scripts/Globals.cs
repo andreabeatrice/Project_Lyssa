@@ -20,20 +20,21 @@ public static class Globals
     //Used to determine whether player has completed the Janitors_Closet scene in the tutorial
     public static bool StorageRoom = false;
     public static bool LightSwitch = false;
+    public static bool MoppedWater = false;
     public static bool blamed_receptionist = false;
 
     //For mouse inversion
     public static int primaryMouseButton = 0;
     public static int secondaryMouseButton = 1;
 
-    public static float MusicVolume = 0;
+    public static float MusicVolume = -24;
     public static float SFXVolume = 0;
 
     public static float typingSpeed = 0.03f;
 
     public static Color32 fernspeech = new Color32(135, 206, 253, 255);
 
-    public static bool mopped;
+    
 
     public static string direction;
 

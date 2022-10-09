@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class SettingsController : MonoBehaviour
 {
@@ -17,9 +18,9 @@ public class SettingsController : MonoBehaviour
 
         text.text = (10 - (Globals.typingSpeed * 100)).ToString();
 
-        music.text = (10 + (Globals.MusicVolume / 8)).ToString();
+        music.text = ((Globals.MusicVolume/8) +10).ToString();
 
-        sfx.text = (10 + (Globals.SFXVolume / 8)).ToString();
+        sfx.text = ((Globals.SFXVolume/8) +10).ToString();
         
     }
 

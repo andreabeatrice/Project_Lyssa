@@ -204,7 +204,7 @@ public class ChoiceHandler : MonoBehaviour
     }
 
     public void mopitup(){
-        Globals.mopped = true;
+        Globals.MoppedWater = true;
 
         allAudio.playMoppingSound();//shouldn't play when coming out of 106
         GameObject.Find("WaterDispenser").GetComponent<Animator>().enabled = false;
@@ -212,7 +212,7 @@ public class ChoiceHandler : MonoBehaviour
     }
 
     public void cannotmop(){
-        Globals.mopped = false;
+        Globals.MoppedWater = false;
     }
 
 

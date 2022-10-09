@@ -5,19 +5,10 @@ using UnityEngine;
 public class InvisibleWalls : MonoBehaviour
 {
 
-    public Collider2D playerCollider;
-    public Collider2D basementDoorCollider;
-    public Collider2D recreationAreaCollider;
-    public Collider2D diningHallCollider;
-    public Collider2D krauseOfficeCollider;
-
-    public GameObject basement_agreement;
-
+    public Collider2D PlayerCollider, BasementCollider, CommonRoomCollider, DiningHallCollider, KrausOfficeCollider;
+    public GameObject Action_DoNothing;
     public bool poppedB, poppedD, poppedR, poppedK;
     public GameObject DialogueBox;
-
-    public bool speech;
-
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +22,7 @@ public class InvisibleWalls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerCollider.IsTouching(basementDoorCollider) && poppedB == false)
+        if (PlayerCollider.IsTouching(BasementCollider) && poppedB == false)
         {
             poppedB = true;
 
@@ -39,11 +30,11 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("It looks like I need a key card to open this door.", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", Action_DoNothing);
 
         }
 
-        if (playerCollider.IsTouching(diningHallCollider) && poppedD == false)
+        if (PlayerCollider.IsTouching(DiningHallCollider) && poppedD == false)
         {
             poppedD = true;
 
@@ -51,11 +42,11 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("The patients are busy eating. I'll disturb them if I go in now.", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", Action_DoNothing);
 
         }
 
-        if (playerCollider.IsTouching(recreationAreaCollider) && poppedR == false)
+        if (PlayerCollider.IsTouching(CommonRoomCollider) && poppedR == false)
         {
             poppedR = true;
 
@@ -63,11 +54,11 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("I'm not supposed to clean here today.", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", Action_DoNothing);
 
         }
 
-        if (playerCollider.IsTouching(krauseOfficeCollider) && poppedK == false)
+        if (PlayerCollider.IsTouching(KrausOfficeCollider) && poppedK == false)
         {
             poppedK = true;
 
@@ -75,23 +66,23 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("I'm definitely not allowed into Dr Kraus's office! He doesn't even let anyone else clean it!", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", basement_agreement);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", Action_DoNothing);
 
         }
 
-        if (!playerCollider.IsTouching(basementDoorCollider) && poppedB == true){
+        if (!PlayerCollider.IsTouching(BasementCollider) && poppedB == true){
             poppedB = false;
         }
 
-        if (!playerCollider.IsTouching(recreationAreaCollider) && poppedR == true){
+        if (!PlayerCollider.IsTouching(CommonRoomCollider) && poppedR == true){
             poppedR = false;
         }
 
-        if (!playerCollider.IsTouching(krauseOfficeCollider) && poppedK == true){
+        if (!PlayerCollider.IsTouching(KrausOfficeCollider) && poppedK == true){
             poppedK = false;
         }
 
-        if (!playerCollider.IsTouching(diningHallCollider) && poppedD == true){
+        if (!PlayerCollider.IsTouching(DiningHallCollider) && poppedD == true){
             poppedD = false;
         }
         

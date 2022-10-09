@@ -11,7 +11,7 @@ public class DiaryClick : MonoBehaviour
     public AudioSource clickSound;
     public AudioSource pageTurn;
     public AudioSource bookClose;
-    public GameObject _HUD;
+    public GameObject DialogueBox;
 
     public GameObject diary_sprite;
 
@@ -63,7 +63,7 @@ public class DiaryClick : MonoBehaviour
 
         animator_diary.SetBool("isOpen", true);
 
-        _HUD.SetActive(false);
+        DialogueBox.SetActive(false);
 
         prev_page_button.SetActive(false);
         hide_diary_button.SetActive(false);

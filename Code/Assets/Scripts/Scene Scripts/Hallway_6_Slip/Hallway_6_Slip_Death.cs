@@ -19,7 +19,7 @@ public class Hallway_6_Slip_Death : MonoBehaviour
     void Update()
     {
         //Determine which direction the player is walking from
-        if (SceneManager.GetActiveScene().name != "Hallway_6_Slip" && !Globals.mopped){
+        if (SceneManager.GetActiveScene().name != "Hallway_6_Slip" && !Globals.MoppedWater){
             if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)){
                 Globals.direction = "left";
             }
@@ -28,7 +28,7 @@ public class Hallway_6_Slip_Death : MonoBehaviour
             }
         }
         //if player is standing over puddle, change scene to Hallway_6_Slip
-        if (SceneManager.GetActiveScene().name != "Hallway_6_Slip" && PlayerCollider.IsTouching(ObjectAreaCollider) && !Globals.mopped){
+        if (SceneManager.GetActiveScene().name != "Hallway_6_Slip" && PlayerCollider.IsTouching(ObjectAreaCollider) && !Globals.MoppedWater){
                         
             SceneManager.LoadScene("Hallway_6_Slip");
 
