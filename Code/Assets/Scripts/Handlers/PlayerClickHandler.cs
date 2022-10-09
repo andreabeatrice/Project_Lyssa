@@ -44,6 +44,10 @@ public class PlayerClickHandler : MonoBehaviour
 
         if (Globals.objectives.Count == 0)
             Globals.objectives.Enqueue("You haven't been told to do anything yet. Maybe try talking to people?");
+
+        if(Globals.inventory.Count == 0){
+            HelperMethods.InventoryEnqueue("Pack of cigarettes");
+        }
     }
 
     void Update(){

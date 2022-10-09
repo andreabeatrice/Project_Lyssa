@@ -2107,13 +2107,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9476bb2238de94eafbd3d9eb972a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 1125294141}
-  dialogText: {fileID: 1766698141}
-  skipButton: {fileID: 1322063541}
+  NamePlaceholder: {fileID: 0}
+  SpeechPlaceholder: {fileID: 0}
+  ContinueButton: {fileID: 0}
   clickSound: {fileID: 388535185}
-  talking: {fileID: 0}
-  inConversation: 0
-  changeScene: 
 --- !u!114 &375198776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2126,7 +2123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861cf531448a63242b1581674a0a6d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeadsUpDisplay: {fileID: 1698870049}
+  DialogueBox: {fileID: 0}
 --- !u!114 &375198777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2228,30 +2225,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4c4dc781cb8d947bfa4c954f917c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interaction:
-  - words: So. What was it you wanted to know?
-    voice: {fileID: 0}
-    name: Otto
-    textcolor:
-      serializedVersion: 2
-      rgba: 4281951066
-  - words: I need to find out...
-    voice: {fileID: 0}
-    name: 'Fern '
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294823559
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - why you wrote this note? (+0)
-  - what's happening to the patients? (+1)
-  choiceButtons:
-  - {fileID: 381229575}
-  - {fileID: 367224839}
-  - {fileID: 0}
+  Interaction: []
+  DialogueBox: {fileID: 0}
+  ResponseStrings: []
+  ResponseButtons: []
   wait: 0
-  speech: 0
-  waitfor: 0
+  TimeToWait: 0
 --- !u!114 &375198783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3423,8 +3402,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508875297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3983, y: -1.3526, z: -1.0445}
-  m_LocalScale: {x: 0.92297333, y: 0.92297333, z: 0.92297333}
+  m_LocalPosition: {x: 4.37, y: -1.32, z: -1.0445}
+  m_LocalScale: {x: 1.0534817, y: 1.0534817, z: 1.0534817}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8457,19 +8436,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interaction: []
+  Interaction: []
   AllAudio: {fileID: 0}
-  HeadsUpDisplay: {fileID: 0}
-  choices:
-  - Keep looking around
-  choiceButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  fern: 1
+  DialogueBox: {fileID: 0}
+  ResponseStrings: []
+  ResponseButtons: []
   identifier: infinite
-  canClick: 1
+  Clickable: 1
   enableProximityReactions: 0
   PlayerCollider: {fileID: 0}
   ObjectAreaCollider: {fileID: 0}
@@ -9093,25 +9066,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interaction:
-  - words: Is that even legal...?
-    voice: {fileID: 0}
-    name: 
-    textcolor:
-      serializedVersion: 2
-      rgba: 4294967295
+  Interaction: []
   AllAudio: {fileID: 0}
-  HeadsUpDisplay: {fileID: 1698870049}
-  choices:
-  - Keep looking around
-  choiceButtons:
-  - {fileID: 1432194063}
-  - {fileID: 0}
-  - {fileID: 0}
-  speech: 0
-  fern: 0
+  DialogueBox: {fileID: 0}
+  ResponseStrings: []
+  ResponseButtons: []
   identifier: infinite
-  canClick: 1
+  Clickable: 1
   enableProximityReactions: 0
   PlayerCollider: {fileID: 0}
   ObjectAreaCollider: {fileID: 0}

@@ -72,7 +72,9 @@ public class DialogueManager : MonoBehaviour {
 
             //4) show the continue button
                 ContinueButton.SetActive(true);
-                NamePlaceholder.text = "";
+
+                if (NamePlaceholder != null)
+                    NamePlaceholder.text = "";
 
             //5) Hide all previous Response buttons
                 FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
@@ -109,7 +111,8 @@ public class DialogueManager : MonoBehaviour {
 
                 //4) show the continue button
                 ContinueButton.SetActive(true);
-                NamePlaceholder.text = "";
+                if (NamePlaceholder != null)
+                    NamePlaceholder.text = "";
 
                 //5) Hide all previous Response buttons
                     FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
@@ -147,7 +150,9 @@ public class DialogueManager : MonoBehaviour {
 
                 //4) show the continue button
                     ContinueButton.SetActive(true);
-                    NamePlaceholder.text = "";
+                    
+                    if (NamePlaceholder != null)
+                        NamePlaceholder.text = "";
 
                 //5) Hide all previous Response buttons
                         FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
@@ -180,7 +185,9 @@ public class DialogueManager : MonoBehaviour {
                 SentenceAnimation = CurrentSentence.Play;
 
             //3) If the Sentence object has a TextColor assigned to it, assign that text colour to the placeholders
-                NamePlaceholder.color = CurrentSentence.TextColor;
+                if (NamePlaceholder != null)
+                    NamePlaceholder.color = CurrentSentence.TextColor;
+                
                 SpeechPlaceholder.color = CurrentSentence.TextColor;
 
             //4) Get the string from the Sentence object
@@ -259,7 +266,9 @@ public class DialogueManager : MonoBehaviour {
                     SentenceAnimation = CurrentSentence.Play;
 
                 //3) If the Sentence object has a TextColor assigned to it, assign that text colour to the placeholders
-                    NamePlaceholder.color = CurrentSentence.TextColor;
+                    if (NamePlaceholder != null)
+                        NamePlaceholder.color = CurrentSentence.TextColor;
+                    
                     SpeechPlaceholder.color = CurrentSentence.TextColor;
 
                 //4) Get the string from the Sentence object

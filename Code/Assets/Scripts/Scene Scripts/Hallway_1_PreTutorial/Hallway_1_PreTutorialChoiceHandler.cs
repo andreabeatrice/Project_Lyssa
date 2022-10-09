@@ -45,7 +45,9 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
             if (temp == 1)
             {
                 HelperMethods.ObjectivesEnqueue("Go to the storage closet for supplies");
-                HelperMethods.InventoryEnqueue("Pack of cigarettes");
+
+                FindObjectOfType<PauseMenu>().PauseForPopup();
+                
 
                 DialogueBox.SetActive(false);
 
@@ -56,12 +58,9 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
                 dialogHeading.text = "Tutorial";
                 dialogBody.text = "You are about to play through the tutorial. If you'd like to skip it, now's your chance.";
 
-                Time.timeScale = 0f;
                 popUpChoice1.onClick.AddListener(PlayTutorial);
                 popUpChoice2.onClick.AddListener(SkipTutorial);
 
-                //why?
-                //DialogueBox.transform.GetChild(3).gameObject.SetActive(false);
             }
             else
             {
@@ -72,7 +71,7 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
         }
 
     //PlayTutorial(): The onClick() method if the player chooses to do the tutorial- essentially just unpauses the game
-        void PlayTutorial()
+        public void PlayTutorial()
         {
             //Debug.Log("It's tutorial time!");
 
@@ -82,7 +81,7 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
 
     
     //SkipTutorial(): The onClick() method if the player chooses to skip the tutorial- unpauses the game && opens the Tutorial_Skip scene
-        void SkipTutorial()
+        public void SkipTutorial()
         {
             //Debug.Log("You have skipped the tutorial!");
             Time.timeScale = 1f;

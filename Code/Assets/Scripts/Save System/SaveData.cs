@@ -19,7 +19,7 @@ public class SaveData {
 
     public bool intro;
 
-    public static float volume;
+    public static float MusicVolume, SFXVolume;
 
     public static float typingSpeed;
 
@@ -44,7 +44,7 @@ public class SaveData {
 
         currentScene = SceneManager.GetActiveScene().name;
 
-        volume = Globals.volume;
+        MusicVolume = Globals.MusicVolume;
 
         typingSpeed = Globals.typingSpeed;
     }
@@ -62,7 +62,7 @@ public class SaveData {
 
         secondaryMouseButton = Globals.secondaryMouseButton;
 
-        volume = Globals.volume;
+        MusicVolume = Globals.MusicVolume;
 
         typingSpeed = Globals.typingSpeed;
 

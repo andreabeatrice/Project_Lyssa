@@ -26,7 +26,8 @@ public static class Globals
     public static int primaryMouseButton = 0;
     public static int secondaryMouseButton = 1;
 
-    public static float volume;
+    public static float MusicVolume = 0;
+    public static float SFXVolume = 0;
 
     public static float typingSpeed = 0.03f;
 

@@ -55,6 +55,12 @@ public class PauseMenu : MonoBehaviour
         PauseButton.SetActive(false);
     }
 
+    public void PauseForPopup(){
+        Time.timeScale = 0f;
+        Globals.paused = true;
+        PauseButton.SetActive(false);
+    }
+
     public void SavePlayer(){
         this.Resume();
         SaveSystem.SavePlayer();
@@ -62,9 +68,8 @@ public class PauseMenu : MonoBehaviour
 
     public void SaveAndQuit(){
         this.Resume();
-
         SaveSystem.SavePlayer();
-        SceneManager.LoadScene("MainMenu");
+        FindObjectOfType<LevelLoader>().LoadNextLevel("MainMenu", "crossfade_start");
     }
 
     public void openSettings(){
