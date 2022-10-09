@@ -19,6 +19,8 @@ public class DialogueManager : MonoBehaviour {
 
     private AudioSource SpeakerVoice;
 
+    public AudioSources AllAudio;
+
     private string[] ResponseStrings;
 
     private GameObject[] ResponseButtons;
@@ -177,16 +179,21 @@ public class DialogueManager : MonoBehaviour {
                 Sentence CurrentSentence = Sentences.Dequeue();
 
             //2) If the Sentence object has a voice attached, assign the voice
-            if(CurrentSentence.Voice !=null)
+            if(CurrentSentence.Voice !=null){
                 SpeakerVoice = CurrentSentence.Voice;
+            }
+                
 
             //3) If the Sentence object has an Animator attached, assign the animation and animation name string
                 AnimationObject = CurrentSentence.AnimationObject;
                 SentenceAnimation = CurrentSentence.Play;
 
             //3) If the Sentence object has a TextColor assigned to it, assign that text colour to the placeholders
-                if (NamePlaceholder != null)
+                if (NamePlaceholder != null){
                     NamePlaceholder.color = CurrentSentence.TextColor;
+                    NamePlaceholder.text = CurrentSentence.Name;
+                }
+                    
                 
                 SpeechPlaceholder.color = CurrentSentence.TextColor;
 
@@ -237,14 +244,11 @@ public class DialogueManager : MonoBehaviour {
 
             ContinueButton.SetActive(false);
 
-                for (int j = 0; j < ResponseStrings.Length; j++){
+                for (int j = 0; j < ResponseButtons.Length; j++){
                     ResponseButtons[j].SetActive(true);
                     ResponseButtons[j].GetComponentInChildren<TextMeshProUGUI>().text = ResponseStrings[j];
                 }
             
-            // else {
-            //     StartCoroutine(ClearHeadsUp());
-            // }
             
         }
 
@@ -266,8 +270,10 @@ public class DialogueManager : MonoBehaviour {
                     SentenceAnimation = CurrentSentence.Play;
 
                 //3) If the Sentence object has a TextColor assigned to it, assign that text colour to the placeholders
-                    if (NamePlaceholder != null)
+                    if (NamePlaceholder != null){
                         NamePlaceholder.color = CurrentSentence.TextColor;
+                        NamePlaceholder.text = CurrentSentence.Name;
+                    }
                     
                     SpeechPlaceholder.color = CurrentSentence.TextColor;
 
@@ -275,13 +281,13 @@ public class DialogueManager : MonoBehaviour {
                     string NextLine = CurrentSentence.Words;
 
                 //6) If a previous sentence was typing, stop it
-                StopAllCoroutines();
+                    StopAllCoroutines();
 
                 //5) Hide all previous Response buttons
                     FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
                 //6) If a previous sentence was typing, stop it
-                SpeechPlaceholder.text = NextLine;
+                    SpeechPlaceholder.text = NextLine;
 
                 //8) If this method was called but there's nothing left in the Sentences queue, end the dialogue
                     if (Sentences.Count == 0){

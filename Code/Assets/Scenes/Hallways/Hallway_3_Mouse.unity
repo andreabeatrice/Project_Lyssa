@@ -504,6 +504,7 @@ MonoBehaviour:
   SpeechPlaceholder: {fileID: 1151055799}
   ContinueButton: {fileID: 1151055798}
   clickSound: {fileID: 1647875458}
+  AllAudio: {fileID: 0}
 --- !u!4 &243715972
 Transform:
   m_ObjectHideFlags: 0
@@ -1914,7 +1915,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 9
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -3033,6 +3034,14 @@ PrefabInstance:
     - target: {fileID: 1083865238472208566, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnMouseExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083865239636568196, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083865239636568196, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1083865239698043744, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_Name

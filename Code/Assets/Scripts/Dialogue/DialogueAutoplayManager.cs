@@ -17,7 +17,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
 
     public AudioSource clickSound;
 
-    public AudioSource SpeakerVoice;
+    private AudioSource SpeakerVoice;
 
     private string[] ResponseStrings;
 
@@ -70,7 +70,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
                 TimeToClear = (i[i.Length-1].Words.ToCharArray().Length * Globals.typingSpeed) + 3;
 
             //4) show the continue button
-                ContinueButton.SetActive(true);
+               // ContinueButton.SetActive(true);
 
             //5) Hide all previous Response buttons
                 FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
@@ -78,7 +78,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
 
 
             //6) Start the first sentence
-            StartCoroutine(DNS());
+            DisplayNextSentence();
 
         }
 
@@ -106,13 +106,13 @@ public class DialogueAutoplayManager : MonoBehaviour {
                 ResponseButtons = new GameObject[]{b};
 
                 //4) show the continue button
-                ContinueButton.SetActive(true);
+                //ContinueButton.SetActive(true);
 
                 //5) Hide all previous Response buttons
                     FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
                 //6) Start the first sentence
-                    StartCoroutine(DNS());
+                    DisplayNextSentence();
             }
 
 
@@ -151,13 +151,13 @@ public class DialogueAutoplayManager : MonoBehaviour {
                     }
 
                 //4) show the continue button
-                    ContinueButton.SetActive(true);
+                    //ContinueButton.SetActive(true);
 
                 //5) Hide all previous Response buttons
                         FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
                 //6) Start the first sentence
-                    StartCoroutine(DNS());
+                    DisplayNextSentence();
             }
 
            
@@ -184,7 +184,10 @@ public class DialogueAutoplayManager : MonoBehaviour {
                 SentenceAnimation = CurrentSentence.Play;
 
             //3) If the Sentence object has a TextColor assigned to it, assign that text colour to the placeholders
-                NamePlaceholder.color = CurrentSentence.TextColor;
+                if (NamePlaceholder != null){
+                    NamePlaceholder.color = CurrentSentence.TextColor;
+                    NamePlaceholder.text = CurrentSentence.Name;
+                }
                 SpeechPlaceholder.color = CurrentSentence.TextColor;
 
             //4) Get the string from the Sentence object
@@ -210,6 +213,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
     //TypeSentence(string s): Runs the text animation and voice audio
         public IEnumerator TypeSentence(string s) //each sentence
         {
+            StartCoroutine(DNS());
 
             if(SpeakerVoice != null){
                 SpeakerVoice.time = Random.Range(0.01f, SpeakerVoice.clip.length);
@@ -263,7 +267,10 @@ public class DialogueAutoplayManager : MonoBehaviour {
                     SentenceAnimation = CurrentSentence.Play;
 
                 //3) If the Sentence object has a TextColor assigned to it, assign that text colour to the placeholders
-                    NamePlaceholder.color = CurrentSentence.TextColor;
+                    if (NamePlaceholder != null){
+                        NamePlaceholder.color = CurrentSentence.TextColor;
+                        NamePlaceholder.text = CurrentSentence.Name;
+                    }
                     SpeechPlaceholder.color = CurrentSentence.TextColor;
 
                 //4) Get the string from the Sentence object
@@ -304,7 +311,10 @@ public class DialogueAutoplayManager : MonoBehaviour {
             SentenceAnimation = CurrentSentence.Play;
 
         //4) If the Sentence object has a TextColor assigned to it, assign that text colour to the placeholders
-            NamePlaceholder.color = CurrentSentence.TextColor;
+            if (NamePlaceholder != null){
+                NamePlaceholder.color = CurrentSentence.TextColor;
+                NamePlaceholder.text = CurrentSentence.Name;
+            }
             SpeechPlaceholder.color = CurrentSentence.TextColor;
 
         //4) Get the string from the Sentence object

@@ -54,6 +54,12 @@ public class CreateVariables : MonoBehaviour
                     
                     check = true;
                 break;
+                case "Room106_Nurse":
+                    HelperMethods.InventoryEnqueue("Broom");
+                    HelperMethods.InventoryEnqueue("Note");
+                    
+                    check = true;
+                break;
                 case "Hallway_4_Note":
                     HelperMethods.InventoryEnqueue("Broom");
                     HelperMethods.InventoryEnqueue("HER Diary");

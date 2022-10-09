@@ -7,7 +7,7 @@ public class ProximityDialogue : MonoBehaviour
     public AudioSources AllAudio;
     public Collider2D PlayerCollider;
     public Collider2D ObjectAreaCollider;
-    public GameObject HeadsUpDisplay;
+    public GameObject DialogueBox;
     public Sentence[] DialogueVariable = new Sentence[2];
     public string[] Choices;
     public GameObject[] ChoiceButtons = new GameObject[3];
@@ -34,10 +34,10 @@ public class ProximityDialogue : MonoBehaviour
     {
         if (PlayerCollider.IsTouching(ObjectAreaCollider) && played == false){
 
-            if (HeadsUpDisplay != null)
-                HeadsUpDisplay.SetActive(true);
+            if (DialogueBox != null)
+                DialogueBox.SetActive(true);
 
-            FindObjectOfType<DialogueAutoplayManager>().StartDialogue(DialogueVariable, Choices, ChoiceButtons);
+            FindObjectOfType<DialogueAutoplayManager>().StartDialogue(DialogueVariable);
 
             played = true;
         }

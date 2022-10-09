@@ -64,9 +64,9 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
             s[1] = new Sentence("God, you're really the worst janitor, Fern.", allAudio.nurse_voice, "Nurse Tarr", tarr);
             s[2] = new Sentence("Say, since you're in here anyway, have you seen my key card?", allAudio.nurse_voice, "Nurse Tarr", tarr);
         }
-         Debug.Log(determineChoicesButtons());
+        Debug.Log(determineChoicesButtons());
 
-          Debug.Log(determineChoicesStrings());
+        Debug.Log(determineChoicesStrings());
         FindObjectOfType<DialogueManager>().StartDialogue(s, determineChoicesStrings(), determineChoicesButtons());
 
        
