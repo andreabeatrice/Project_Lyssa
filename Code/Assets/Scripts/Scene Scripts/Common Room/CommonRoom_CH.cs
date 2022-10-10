@@ -44,15 +44,15 @@ public class CommonRoom_CH : MonoBehaviour
         Sentence[] convincingDialogue = new Sentence[]{ new Sentence("Hey, you used to smoke, right? I'll give you my pack right now if you calm down.", AllAudio.fern_voice, "Fern", ColorCodes.fern)};
     
 
-        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null);
-        StartCoroutine(to105());
+        FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue);
+        FindObjectOfType<LevelLoader>().LoadNextLevelLong("Room105_Otto", "crossfade_start", 5f);
         
     }
 
     public IEnumerator to105(){
         yield return new WaitForSeconds(5f);
 
-        FindObjectOfType<LevelLoader>().LoadNextLevel("Room105_Otto", "crossfade_start");
+        
     }
 
     public void toHallway(){

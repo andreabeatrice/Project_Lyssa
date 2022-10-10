@@ -81,7 +81,7 @@ public class DialogueManager : MonoBehaviour {
             //5) Hide all previous Response buttons
                 FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
-
+            ResponseButtons = null;
 
             //6) Start the first sentence
             DisplayNextSentence();

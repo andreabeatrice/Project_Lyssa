@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class KrausOffice_ChoiceHandler : MonoBehaviour
 {
-
+    public GameObject CanvasPinboard;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -28,6 +27,18 @@ public class KrausOffice_ChoiceHandler : MonoBehaviour
 
     public void SheTakesAWhiskeyDrink(){
         Globals.insanity += 1;
+    }
+
+    public void ShowCanvasPinboard(){
+        CanvasPinboard.SetActive(true);
+    }
+
+    public void HideCanvasPinboard(){
+        CanvasPinboard.SetActive(false);
+    }
+
+    public void Pause(){
+        Globals.paused = true;
     }
 
     

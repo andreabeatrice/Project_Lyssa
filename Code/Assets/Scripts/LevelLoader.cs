@@ -39,9 +39,11 @@ public class LevelLoader : MonoBehaviour
 
 
         //After we have waited 5 seconds print the time again.
-        transition.Play(animname);
+
 
         yield return new WaitForSeconds(time);
+
+        transition.Play(animname);
 
         SceneManager.LoadScene(scenename);
 

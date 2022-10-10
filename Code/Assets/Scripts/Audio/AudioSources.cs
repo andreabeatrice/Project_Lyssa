@@ -444,7 +444,7 @@ public class AudioSources : MonoBehaviour
     {
        footsteps_Concrete.Play();
     }
-    public void playOpoenKitchenCupboard()
+    public void playOpenKitchenCupboard()
     {
        openKitchenCupboard.Play();
     }
