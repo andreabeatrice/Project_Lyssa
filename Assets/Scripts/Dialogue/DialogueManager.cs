@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour {
 
     //StartDialogue(Sentence[] i, string c, GameObject b): takes in an array of sentences, one response, and the button that response will be assigned to 
         public void StartDialogue(Sentence[] i, string c, GameObject b){
-            if(c == null){
+            if(c == null || c == ""){
                 StartDialogue(i);
             }
             else {
@@ -129,7 +129,7 @@ public class DialogueManager : MonoBehaviour {
     //StartDialogue(Sentence[] i, string[] c, GameObject[] b): takes in an array of sentences, the possible responses, and the buttons that responses will be assigned to 
         public void StartDialogue(Sentence[] i, string[] c, GameObject[] b){
 
-            if(c == null){
+            if(c == null || c.Length == 0){
                 StartDialogue(i);
             }
             else {
@@ -243,8 +243,10 @@ public class DialogueManager : MonoBehaviour {
         void EndDialogue(){
 
             ContinueButton.SetActive(false);
+            
 
             if(ResponseButtons != null){
+                Debug.Log("Response Buttons :check:");
                 for (int j = 0; j < ResponseButtons.Length; j++){
                     ResponseButtons[j].SetActive(true);
                     ResponseButtons[j].GetComponentInChildren<TextMeshProUGUI>().text = ResponseStrings[j];
@@ -306,6 +308,8 @@ public class DialogueManager : MonoBehaviour {
    
     //ClearHeadsUp(): clears the Dialogue Box from the screen if there were no given responses
         public IEnumerator ClearHeadsUp(){
+            Debug.Log(TimeToClear);
+
             yield return new WaitForSeconds(TimeToClear);
 
             FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
