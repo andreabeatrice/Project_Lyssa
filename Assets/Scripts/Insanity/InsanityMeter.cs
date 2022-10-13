@@ -25,6 +25,14 @@ public class InsanityMeter : MonoBehaviour
         {
             meter_image.SetActive(true);
         }
+        
+        if (Globals.insanity < 0){
+            Globals.insanity = 0;
+        }
+        if (Globals.insanity > 20){
+            Globals.insanity = 20;
+        }
+
         switch (Globals.insanity)
         {
             case 0:

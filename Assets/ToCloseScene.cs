@@ -26,7 +26,7 @@ public class ToCloseScene : MonoBehaviour
     public void  ToDeathScene(){
         Globals.deaths.Add(deathSentence);
 
-        FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 4f);
+        FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 1f);
     }
 
     public void PlayNewspaperSound(){

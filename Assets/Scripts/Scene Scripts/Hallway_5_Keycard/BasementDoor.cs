@@ -14,15 +14,7 @@ public class BasementDoor : MonoBehaviour
     public Collider2D ObjectAreaCollider;
 
     void Update(){
-        if (enableProximityReactions== true && PlayerCollider.IsTouching(ObjectAreaCollider))
-        {
 
-            if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused ){
-                handle();
-            }
-            
-
-        }
     }
 
 

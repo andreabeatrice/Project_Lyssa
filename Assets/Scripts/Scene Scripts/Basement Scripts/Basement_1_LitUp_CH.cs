@@ -80,6 +80,8 @@ public class Basement_1_LitUp_CH : MonoBehaviour
         convincingDialogue[1] = new Sentence("My dear, who even knows you're here?", null, "???", blu1);
 
         FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null);
+
+        FindObjectOfType<LevelLoader>().LoadNextLevelLong("ExperimentationDeath_CutScene", "crossfade_start", 5f);
     }
 
     public void sacrificehuh(){
@@ -88,5 +90,9 @@ public class Basement_1_LitUp_CH : MonoBehaviour
         convincingDialogue[0] = new Sentence("What do you mean 'sacrifice'?", AllAudio.fern_voice, "Fern", ColorCodes.fern);
 
         FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null);
+
+        FindObjectOfType<LevelLoader>().LoadNextLevelLong("ExperimentationDeath_CutScene", "crossfade_start", 3f);
+
+
     }
 }

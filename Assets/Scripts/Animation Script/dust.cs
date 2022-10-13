@@ -7,8 +7,15 @@ public class dust : MonoBehaviour
     public Animator duster;
     public AudioSources allAudio;
 
+    public Collider2D hitbox;
+
     void OnMouseDown(){
         duster.SetBool("cleaned", true);
-        allAudio.puff.Play();
+
+        if (allAudio != null)
+            allAudio.puff.Play();
+
+        if (hitbox != null)
+            hitbox.enabled = false;
     }
 }

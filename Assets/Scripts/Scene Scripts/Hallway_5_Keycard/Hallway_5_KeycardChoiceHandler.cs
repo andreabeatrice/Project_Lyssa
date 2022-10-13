@@ -29,18 +29,13 @@ public class Hallway_5_KeycardChoiceHandler : MonoBehaviour
 
             played = true;
         }
-        else if (commonroom!= null && PlayerCollider.IsTouching(commonroom) && played == false ){
+        else if (commonroom!= null && PlayerCollider.IsTouching(commonroom) && played == false && Input.GetKeyDown(KeyCode.LeftArrow)){
             commonroom_innocent();
 
             played = true;
         }
-        else if (kitchen != null && PlayerCollider.IsTouching(kitchen) && played == false ){
+        else if (kitchen != null && PlayerCollider.IsTouching(kitchen) && played == false && Input.GetKeyDown(KeyCode.RightArrow)){
             toKitchen();
-
-            played = true;
-        }
-        else if (cm2 != null && PlayerCollider.IsTouching(cm2) && played == false ){
-            commonroom_empty();
 
             played = true;
         }

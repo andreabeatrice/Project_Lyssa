@@ -10,7 +10,7 @@ public class ProximityDialogue : MonoBehaviour
     public GameObject DialogueBox;
     public Sentence[] DialogueVariable = new Sentence[2];
     public string[] Choices;
-    public GameObject[] ChoiceButtons = new GameObject[3];
+    public GameObject[] ChoiceButtons;
     public bool played = false;
     public bool speech;
 

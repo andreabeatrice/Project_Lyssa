@@ -17,7 +17,7 @@ public class BoilerRoom_ChoiceHandler : MonoBehaviour
     }
 
     public void EscapeNow(){
-        
+        Globals.insanity -= 3;
         FindObjectOfType<LevelLoader>().LoadNextLevel("EscapeNoMom", "crossfade_start");
     }
 
