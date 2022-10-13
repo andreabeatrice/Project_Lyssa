@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 103097486}
   - component: {fileID: 103097488}
-  - component: {fileID: 103097487}
   m_Layer: 0
   m_Name: KrauseOfficeCollider
   m_TagString: Untagged
@@ -156,28 +155,6 @@ Transform:
   m_Father: {fileID: 2012699844}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &103097487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103097485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Interaction: []
-  AllAudio: {fileID: 0}
-  DialogueBox: {fileID: 0}
-  ResponseStrings: []
-  ResponseButtons: []
-  identifier: infinite
-  Clickable: 1
-  enableProximityReactions: 1
-  PlayerCollider: {fileID: 1143139926}
-  ObjectAreaCollider: {fileID: 103097488}
 --- !u!61 &103097488
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22963,7 +22940,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1517018938}
   - component: {fileID: 1517018939}
-  - component: {fileID: 1517018940}
   m_Layer: 0
   m_Name: BasementCollider
   m_TagString: Untagged
@@ -23012,28 +22988,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.1267395, y: 6.4670944}
   m_EdgeRadius: 0
---- !u!114 &1517018940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517018937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Interaction: []
-  AllAudio: {fileID: 0}
-  DialogueBox: {fileID: 0}
-  ResponseStrings: []
-  ResponseButtons: []
-  identifier: 
-  Clickable: 1
-  enableProximityReactions: 0
-  PlayerCollider: {fileID: 0}
-  ObjectAreaCollider: {fileID: 0}
 --- !u!1001 &1557566044
 PrefabInstance:
   m_ObjectHideFlags: 0
