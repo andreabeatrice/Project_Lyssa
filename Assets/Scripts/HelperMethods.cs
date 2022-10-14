@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -86,7 +87,7 @@ public static class HelperMethods{
 
         public static bool CheckInventory(string lookFor){
             foreach(string item in Globals.inventory){
-                if (item.Contains(lookFor)){
+                if (item.Contains(lookFor, StringComparison.OrdinalIgnoreCase)){
                     return true;
                 }
             }

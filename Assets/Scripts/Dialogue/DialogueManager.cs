@@ -45,13 +45,13 @@ public class DialogueManager : MonoBehaviour {
     void Update(){
         if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && ContinueButton.activeSelf){
             
-            if (Sentences.Count == 0){
-                DisplayNextSentenceNoAnimation();
-                EndDialogue();
-            }
-            else {
-                DisplayNextSentenceNoAnimation();
-            }            
+            // if (Sentences.Count == 0){
+            //     DisplayNextSentenceNoAnimation();
+            //     EndDialogue();
+            // }
+            // else {
+            //     DisplayNextSentenceNoAnimation();
+            // }            
         }
 
     }
@@ -170,7 +170,7 @@ public class DialogueManager : MonoBehaviour {
     //DisplayNextSentence(): the key routine in DialogueManager, starts the next string in the Sentence array
         public void DisplayNextSentence()
         {
-
+            Debug.Log(Sentences);
             //0) If a Sentence already played, and it had an Animator attached, play the animation
                 if(AnimationObject != null)
                     AnimationObject.Play(SentenceAnimation);
@@ -248,8 +248,11 @@ public class DialogueManager : MonoBehaviour {
             if(ResponseButtons != null){
                 Debug.Log("Response Buttons :check:");
                 for (int j = 0; j < ResponseButtons.Length; j++){
-                    ResponseButtons[j].SetActive(true);
-                    ResponseButtons[j].GetComponentInChildren<TextMeshProUGUI>().text = ResponseStrings[j];
+                    if (ResponseButtons[j] != null){
+                        ResponseButtons[j].SetActive(true);
+                        ResponseButtons[j].GetComponentInChildren<TextMeshProUGUI>().text = ResponseStrings[j];
+                    }
+                    
                 }
             }
             else {

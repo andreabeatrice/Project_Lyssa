@@ -46,11 +46,11 @@ public class Hallway_5_KeycardChoiceHandler : MonoBehaviour
     }
 
     public void commonroom_innocent(){
-        FindObjectOfType<LevelLoader>().LoadNextLevel("CommonRoom_2_Nothing", "crossfade_start");
+        FindObjectOfType<LevelLoader>().LoadNextLevel("CommonRoom_2_KeycardPath", "crossfade_start");
     }
 
     public void commonroom_empty(){
-        FindObjectOfType<LevelLoader>().LoadNextLevel("CommonRoom_3_Nothing", "crossfade_start");
+        FindObjectOfType<LevelLoader>().LoadNextLevel("CommonRoom_3_Empty", "crossfade_start");
     }
 
     public void toKitchen(){

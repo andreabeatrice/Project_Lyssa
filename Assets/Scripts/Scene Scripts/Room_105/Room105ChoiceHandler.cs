@@ -24,7 +24,8 @@ public class Room105ChoiceHandler : MonoBehaviour
         
     }
 
-    public void PanicOtto(){
+    public void ResponseToAskingAboutPatients(){
+        Globals.insanity += 1;
         Sentence[] convincingDialogue = new Sentence[]{ new Sentence("No No No No No No No No No No If I talk about it they'll take me next that's why they took—", null, "Otto", ColorCodes.patients)};
 
         Globals.deaths.Add("(1) Cigarettes are against the rules. (2) They're very bad for you. (3) Don't ask people questions that make them uncomfortable.");
@@ -40,7 +41,7 @@ public class Room105ChoiceHandler : MonoBehaviour
         
     }
 
-    public void AnsweringOtto(){
+    public void ResponseToAskingAboutNote(){
         Sentence[] convincingDialogue = null;
         string[] choices = new string[2];
 
@@ -102,25 +103,25 @@ public class Room105ChoiceHandler : MonoBehaviour
         FindObjectOfType<LevelLoader>().LoadNextLevel("DeathScreen", "crossfade_start");
     }
 
-    public void takeantipsych(){
+    public void TakeAntipsychoticToIncreaseInsanity(){
         Globals.insanity += 5;
-        AnsweringOtto();
+        ResponseToAskingAboutNote();
     }
 
-    public void justleave(){
+    public void BackToHallway_Kitchen(){
     Globals.playerPositionOnMap = new Vector2(-48, -8);
        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_8_Kitchen", "crossfade_start");
        Debug.Log("leaving now...");
     }
 
-    public void meanleave(){
+    public void InsanityIncreaseExit(){
         Globals.insanity += 1;
 
-        justleave();
+        BackToHallway_Kitchen();
     }
 
-    public void niceleave(){
+    public void InstanityDecreaseExit(){
         Globals.insanity -= 1;
-        justleave();
+        BackToHallway_Kitchen();
     }
 }

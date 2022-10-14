@@ -70,6 +70,11 @@ public class CreateVariables : MonoBehaviour
                     rb.position = new Vector2(-34, -10);
                     check = true;
                 break;
+                case "Room105_Otto":
+                    HelperMethods.InventoryEnqueue("Antipsychotic Pill");
+                    
+                    check = true;
+                break;
                 case "Hallway_5_Keycard":
                     HelperMethods.InventoryEnqueue("Broom");
                     HelperMethods.InventoryEnqueue("HER Diary");
