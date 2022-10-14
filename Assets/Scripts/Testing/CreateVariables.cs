@@ -97,6 +97,7 @@ public class CreateVariables : MonoBehaviour
                 break;
                 case "Basement_2_Fight":
                     Globals.insanity = insane;
+                    HelperMethods.InventoryEnqueue("Antipsychotic Pill");
                 break;
                 case "Hallway_6_Slip":
                     foreach(string s in Globals.objectives){
