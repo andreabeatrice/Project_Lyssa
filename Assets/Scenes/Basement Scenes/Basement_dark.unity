@@ -463,6 +463,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
   m_PrefabInstance: {fileID: 515740387}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &515740389 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
+  m_PrefabInstance: {fileID: 515740387}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &540950827
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,7 +1312,7 @@ GameObject:
   - component: {fileID: 1587005221}
   - component: {fileID: 1587005225}
   m_Layer: 0
-  m_Name: MopButton
+  m_Name: Action - Return To Hallway
   m_TagString: ChoiceButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1525,12 +1536,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9476bb2238de94eafbd3d9eb972a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogText: {fileID: 1236231565}
-  skipButton: {fileID: 1001378427}
+  NamePlaceholder: {fileID: 0}
+  SpeechPlaceholder: {fileID: 1236231565}
+  ContinueButton: {fileID: 1236231563}
   clickSound: {fileID: 515557568}
-  talking: {fileID: 0}
-  inConversation: 0
+  AllAudio: {fileID: 515740389}
 --- !u!4 &1727503202
 Transform:
   m_ObjectHideFlags: 0
@@ -1574,35 +1584,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4c4dc781cb8d947bfa4c954f917c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interaction:
-  - words: It's pitch black in here. You can't see your own hands.
-    voice: {fileID: 0}
-    name: 
-    textcolor:
+  Interaction:
+  - Words: It's pitch black in here... you can't see your hands in front of your
+      face.
+    Voice: {fileID: 0}
+    Name: 
+    TextColor:
       serializedVersion: 2
       rgba: 4294967295
-  - words: You'll have to go turn the lights on...
-    voice: {fileID: 0}
-    name: 
-    textcolor:
+    AnimationObject: {fileID: 0}
+    Play: 
+  - Words: You'll have to turn the power to the basement on.
+    Voice: {fileID: 0}
+    Name: 
+    TextColor:
       serializedVersion: 2
       rgba: 4294967295
-  - words: And the switch board is in Dr Kraus' office.
-    voice: {fileID: 0}
-    name: 
-    textcolor:
+    AnimationObject: {fileID: 0}
+    Play: 
+  - Words: And the switchboard is in Dr Kraus' office.
+    Voice: {fileID: 0}
+    Name: 
+    TextColor:
       serializedVersion: 2
       rgba: 4294967295
-  HeadsUpDisplay: {fileID: 0}
-  choices:
-  - Return to the Hallway
-  choiceButtons:
+    AnimationObject: {fileID: 0}
+    Play: 
+  DialogueBox: {fileID: 667565681}
+  ResponseStrings:
+  - < Back to Hallway
+  ResponseButtons:
   - {fileID: 1587005219}
-  - {fileID: 0}
-  - {fileID: 0}
   wait: 0
-  speech: 0
-  waitfor: 0
+  TimeToWait: 0
 --- !u!114 &1727503207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,7 +1629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861cf531448a63242b1581674a0a6d37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeadsUpDisplay: {fileID: 0}
+  DialogueBox: {fileID: 667565681}
 --- !u!114 &1727503209
 MonoBehaviour:
   m_ObjectHideFlags: 0

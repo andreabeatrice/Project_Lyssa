@@ -50,25 +50,28 @@ public class DialogueClick : MonoBehaviour
     //and if player pressed space (Input.GetKeyDown(KeyCode.Space))
     void Update(){
 
-        if (enableProximityReactions == true && PlayerCollider.IsTouching(ObjectAreaCollider) && popped == false && Clickable){
+        if ( PlayerCollider != null){
+
+            if (enableProximityReactions == true && PlayerCollider.IsTouching(ObjectAreaCollider) && popped == false && Clickable){
+                
+                numInteractions = (int) typeof(InteractionsCounter).GetField("infinite").GetValue(this);
+                
+
+                if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && PlayerCollider.IsTouching(ObjectAreaCollider)){
+
+                    TriggerDialogue();
             
-            numInteractions = (int) typeof(InteractionsCounter).GetField("infinite").GetValue(this);
-            
+                    numInteractions++;
 
-            if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && PlayerCollider.IsTouching(ObjectAreaCollider)){
+                    typeof(InteractionsCounter).GetField(identifier).SetValue(this, numInteractions);
 
-                TriggerDialogue();
-          
-                numInteractions++;
-
-                typeof(InteractionsCounter).GetField(identifier).SetValue(this, numInteractions);
+                }
+                
 
             }
-            
-
-        }
-        else if (enableProximityReactions == true && !PlayerCollider.IsTouching(ObjectAreaCollider) && popped == true && Clickable){
-            popped = false;
+            else if (enableProximityReactions == true && !PlayerCollider.IsTouching(ObjectAreaCollider) && popped == true && Clickable){
+                popped = false;
+            }
         }
     }
 

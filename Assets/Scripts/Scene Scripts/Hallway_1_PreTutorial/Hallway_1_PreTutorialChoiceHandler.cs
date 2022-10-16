@@ -77,6 +77,7 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
 
             dialogBox.SetActive(false); 
             Time.timeScale = 1f;
+            Globals.paused = false;
         }
 
     

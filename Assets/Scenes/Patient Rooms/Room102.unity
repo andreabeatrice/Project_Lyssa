@@ -1132,6 +1132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duster: {fileID: 349461859}
   allAudio: {fileID: 1705003580}
+  hitbox: {fileID: 0}
 --- !u!60 &349461858
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4116,6 +4117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue Box
       objectReference: {fileID: 0}
+    - target: {fileID: 1083865239698043744, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1083865239698043751, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4479,6 +4484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duster: {fileID: 1382958428}
   allAudio: {fileID: 1705003580}
+  hitbox: {fileID: 0}
 --- !u!60 &1382958427
 PolygonCollider2D:
   m_ObjectHideFlags: 0

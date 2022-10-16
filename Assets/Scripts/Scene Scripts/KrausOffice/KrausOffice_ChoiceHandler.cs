@@ -27,6 +27,7 @@ public class KrausOffice_ChoiceHandler : MonoBehaviour
 
     public void SheTakesAWhiskeyDrink(){
         Globals.insanity += 1;
+        FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
     }
 
     public void ShowCanvasPinboard(){

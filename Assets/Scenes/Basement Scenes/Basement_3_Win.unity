@@ -286,8 +286,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4c4dc781cb8d947bfa4c954f917c10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Interaction: []
-  DialogueBox: {fileID: 0}
+  Interaction:
+  - Words: 'You handled that well. Especially considering you only just learnt how
+      to fight. '
+    Voice: {fileID: 0}
+    Name: 
+    TextColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    AnimationObject: {fileID: 0}
+    Play: 
+  - Words: You did /only just/ learn, didn't you?
+    Voice: {fileID: 0}
+    Name: 
+    TextColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    AnimationObject: {fileID: 0}
+    Play: 
+  - Words: You'll have to be quick if you want to escape...
+    Voice: {fileID: 0}
+    Name: 
+    TextColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    AnimationObject: {fileID: 0}
+    Play: 
+  DialogueBox: {fileID: 580733296}
   ResponseStrings: []
   ResponseButtons: []
   wait: 0
@@ -1014,6 +1039,10 @@ PrefabInstance:
     - target: {fileID: 1083865239698043744, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_Name
       value: Dialogue Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083865239698043744, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1083865239698043751, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_Pivot.x
