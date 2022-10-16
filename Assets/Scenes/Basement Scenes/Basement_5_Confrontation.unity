@@ -1809,7 +1809,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2143158860}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueAutoStart_Fight, Assembly-CSharp
         m_MethodName: DontTakePill
         m_Mode: 1
@@ -6171,7 +6171,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2143158860}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueAutoStart_Fight, Assembly-CSharp
         m_MethodName: TakeAntipsychotic
         m_Mode: 1
@@ -9570,7 +9570,7 @@ GameObject:
   - component: {fileID: 2143158865}
   - component: {fileID: 2143158864}
   - component: {fileID: 2143158863}
-  - component: {fileID: 2143158860}
+  - component: {fileID: 2143158868}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -9578,84 +9578,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2143158860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143158859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5526eb93420bd934e95e24f79cf2971e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interaction:
-  - Words: It's a bit late in the game to be learning new tricks.
-    Voice: {fileID: 0}
-    Name: 
-    TextColor:
-      serializedVersion: 2
-      rgba: 4294967295
-    AnimationObject: {fileID: 0}
-    Play: 
-  - Words: But better late than never, I guess.
-    Voice: {fileID: 0}
-    Name: 
-    TextColor:
-      serializedVersion: 2
-      rgba: 4294967295
-    AnimationObject: {fileID: 0}
-    Play: 
-  - Words: 'Here''s the deal: this is still about pointing at things, and clicking
-      on them.'
-    Voice: {fileID: 0}
-    Name: 
-    TextColor:
-      serializedVersion: 2
-      rgba: 4294967295
-    AnimationObject: {fileID: 0}
-    Play: 
-  - Words: There's just a few differences.
-    Voice: {fileID: 0}
-    Name: 
-    TextColor:
-      serializedVersion: 2
-      rgba: 4294967295
-    AnimationObject: {fileID: 0}
-    Play: 
-  - Words: '1: You only have so long to do it.'
-    Voice: {fileID: 0}
-    Name: 
-    TextColor:
-      serializedVersion: 2
-      rgba: 4294967295
-    AnimationObject: {fileID: 0}
-    Play: 
-  - Words: '2: If you miss, you''ll be penalized.'
-    Voice: {fileID: 0}
-    Name: 
-    TextColor:
-      serializedVersion: 2
-      rgba: 4294967295
-    AnimationObject: {fileID: 0}
-    Play: 
-  - Words: '3: The higher your insanity, the harder this is going to be.'
-    Voice: {fileID: 0}
-    Name: 
-    TextColor:
-      serializedVersion: 2
-      rgba: 4278190294
-    AnimationObject: {fileID: 0}
-    Play: 
-  DialogueBox: {fileID: 1920970105}
-  ResponseStrings:
-  - Take the Pill (???)
-  - Play it Safe (+0)
-  ResponseButtons:
-  - {fileID: 1771183002}
-  - {fileID: 771398276}
-  waitfor: 1
 --- !u!114 &2143158861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9757,3 +9679,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d938942b721a042ba17c99bddebb16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2143158868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143158859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1789274b3f1354c8848a330cf6eafc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interaction:
+  - Words: 
+    Voice: {fileID: 0}
+    Name: 
+    TextColor:
+      serializedVersion: 2
+      rgba: 0
+    AnimationObject: {fileID: 0}
+    Play: 
+  DialogueBox: {fileID: 1920970105}
+  ResponseStrings: []
+  ResponseButtons: []
+  waitfor: 3
