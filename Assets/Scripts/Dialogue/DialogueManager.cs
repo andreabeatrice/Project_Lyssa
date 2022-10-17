@@ -36,6 +36,7 @@ public class DialogueManager : MonoBehaviour {
     private string SentenceAnimation;
 
 
+
     // Start is called before the first frame update
     void Start()
     {

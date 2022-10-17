@@ -46,6 +46,8 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
             {
                 HelperMethods.ObjectivesEnqueue("Go to the storage closet for supplies");
 
+                //
+
                 FindObjectOfType<PauseMenu>().PauseForPopup();
                 
 
