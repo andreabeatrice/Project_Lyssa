@@ -838,6 +838,7 @@ GameObject:
   - component: {fileID: 375198780}
   - component: {fileID: 375198774}
   - component: {fileID: 375198781}
+  - component: {fileID: 375198782}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -931,6 +932,32 @@ MonoBehaviour:
   PauseMenuUI: {fileID: 1785720054}
   PauseButton: {fileID: 1390530844}
   settingsPanel: {fileID: 1785720053}
+--- !u!114 &375198782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375198770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4c4dc781cb8d947bfa4c954f917c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interaction:
+  - Words: This room is very empty.
+    Voice: {fileID: 0}
+    Name: Fern
+    TextColor:
+      serializedVersion: 2
+      rgba: 4294823559
+    AnimationObject: {fileID: 0}
+    Play: 
+  DialogueBox: {fileID: 1484825659}
+  ResponseStrings: []
+  ResponseButtons: []
+  wait: 0
+  TimeToWait: 0
 --- !u!82 &388535185 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
@@ -3568,6 +3595,11 @@ PrefabInstance:
 --- !u!224 &1484825658 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1083865239698043751, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+  m_PrefabInstance: {fileID: 1484825657}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1484825659 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1083865239698043744, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
   m_PrefabInstance: {fileID: 1484825657}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1506324543

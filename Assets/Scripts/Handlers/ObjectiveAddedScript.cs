@@ -20,7 +20,7 @@ public class ObjectiveAddedScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (TempObjectives.Count == 0 || TempObjectives.Peek() != Globals.objectives.Peek()){
+        if (TempObjectives.Count == 0 || TempObjectives.Peek() != Globals.objectives.Peek() || Globals.objectives.Count > TempObjectives.Count){
             TempObjectives.Clear();
 
             foreach (string task in Globals.objectives){
@@ -28,6 +28,7 @@ public class ObjectiveAddedScript : MonoBehaviour
             }
             NewObjectivePopup.PlayObjectAnimation();
         }
+        
     
     }
 }
