@@ -8,7 +8,7 @@ public class Room106Entry : MonoBehaviour
     public GameObject HeadsUpDisplay;
     public Sentence[] after_dialog;
     public string[] after_choices;
-    public GameObject[] after_choiceButtons = new GameObject[3];
+    public GameObject[] after_choiceButtons;
     public bool enableProximityReactions;
     public Collider2D PlayerCollider;
     public Collider2D ObjectAreaCollider;
@@ -42,6 +42,6 @@ public class Room106Entry : MonoBehaviour
 
     public void TriggerAfterDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(after_dialog, after_choices, after_choiceButtons);   
+        FindObjectOfType<DialogueManager>().StartDialogue(after_dialog, after_choices, after_choiceButtons);
     }
 }

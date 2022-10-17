@@ -41,4 +41,28 @@ public class PlayAnimation : MonoBehaviour
             ObjectAnimator.Play(AnimationName);
         }
     }
+
+    public void PlayObjectAnimation(){
+         if(Trigger != null){
+            if(AnimatedObject != null){
+                AnimatedObject.SetActive(true);
+            }
+
+            ObjectAnimator.SetTrigger(Trigger);
+
+
+        }
+        else if (AnimationName != null){
+            if(AnimatedObject != null){
+                AnimatedObject.SetActive(true);
+            }
+            ObjectAnimator.Play(AnimationName);
+        }
+    }
+
+    public void ResetAnimation(){
+        if (Trigger != null){
+            ObjectAnimator.ResetTrigger(Trigger);
+        }
+    }
 }

@@ -36,6 +36,7 @@ public class DialogueManager : MonoBehaviour {
     private string SentenceAnimation;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,14 +45,18 @@ public class DialogueManager : MonoBehaviour {
 
     void Update(){
         if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && ContinueButton.activeSelf){
-            
-            // if (Sentences.Count == 0){
-            //     DisplayNextSentenceNoAnimation();
-            //     EndDialogue();
-            // }
-            // else {
-            //     DisplayNextSentenceNoAnimation();
-            // }            
+
+            if (Sentences != null){
+                   
+                if (Sentences.Count == 0){
+                    //DisplayNextSentenceNoAnimation();
+                    EndDialogue();
+                }
+                else {
+                    DisplayNextSentenceNoAnimation();
+                }           
+            }
+          
         }
 
     }

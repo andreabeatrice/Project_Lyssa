@@ -13,20 +13,24 @@ public class DialougeAutoSceneSwitch : MonoBehaviour
 
     public GameObject[] ResponseButtons;
 
-    public float waitfor = 3f;
+    public float waitfor = 0.5f;
 
     private bool willFight = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(TriggerDialogue());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+            if (DialogueBox.activeSelf == true)
+                willFight = true;
+
+            if (DialogueBox.activeSelf == false && willFight)
+                StartCoroutine(FIGHT());     
     }
 
         //TriggerDialogue(): Waits for 1.5 seconds to be sure that the scene transition is done
@@ -45,7 +49,7 @@ public class DialougeAutoSceneSwitch : MonoBehaviour
 
         IEnumerator FIGHT(){
         
-            float ttw = (interaction[interaction.Length - 1].Words.ToCharArray().Length * Globals.typingSpeed) + 1;
+            float ttw = (interaction[interaction.Length - 1].Words.ToCharArray().Length * Globals.typingSpeed) ;
 
             yield return new WaitForSeconds(ttw);
 
