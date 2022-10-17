@@ -77,6 +77,13 @@ public class AudioSources : MonoBehaviour
     public AudioSource panting;
     public AudioSource roadAndBirds;
     public AudioSource newspaperSpin;
+    public AudioSource OttoNormal;
+    public AudioSource OttoFreak;
+    public AudioSource Dahlia;
+    public AudioSource DrKrause;
+    public AudioSource WinSound;
+    public AudioSource RadioBackground;
+    public AudioSource fan;
 
     private AudioSource[] allAudioSources;
 
@@ -133,6 +140,9 @@ public class AudioSources : MonoBehaviour
 
                 case "janitors_closet_background_music":
                     janitors_closet_background_music = sound;
+                break;
+                case "RadioBackground":
+                    RadioBackground = sound;
                 break;
                 case "close_door":
                     close_door = sound;
@@ -285,6 +295,9 @@ public class AudioSources : MonoBehaviour
                 case "roadAndBirds":
                     roadAndBirds = sound;
                 break;
+                case "fan":
+                    fan = sound;
+                break;
 
             }
         }
@@ -294,6 +307,9 @@ public class AudioSources : MonoBehaviour
 
         if (scenename.Contains("Room1") && !scenename.Contains("106")){
             background106.Play();
+        }
+         if (scenename.Contains("CommonRoom")){
+             RadioBackground.Play();
         }
 
 
@@ -332,11 +348,11 @@ public class AudioSources : MonoBehaviour
                 vent_drip.Play();
             break;
             case "mainMenu_Settings":
-                StopAllAudio();
+                //StopAllAudio();
                 crickets.Play();
             break;
             case "mainMenu_Help":
-                StopAllAudio();
+                //StopAllAudio();
                 crickets.Play();
             break;
             case "Room106":
@@ -348,7 +364,7 @@ public class AudioSources : MonoBehaviour
                 intercom.Play();
                 break;
             case "Room106_Nurse":
-                StopAllAudio();
+                //StopAllAudio();
                 background106.Play();
                 break;
             case "Basement_DarkScript":
@@ -361,10 +377,12 @@ public class AudioSources : MonoBehaviour
                 break;
             case "KrausOffice_1_FromHall":
                 StopAllAudio();
-                background106.Play();
+                janitors_closet_background_music.Play();
+                fan.Play();
                 break;
             case "KrausOffice_2_LightSwitch":
-                background106.Play();
+                janitors_closet_background_music.Play();
+                fan.Play();
                 break;
             case "BoilerRoomNoMom":
                 boilerRoomBackground.Play();
@@ -393,9 +411,8 @@ public class AudioSources : MonoBehaviour
                 panting.Play();
                 basement_Background.Play();
                 break;
-            case "CommonRoom_base":
-                background106.Play();
-                break;
+                
+           
            
             default:
             break;
@@ -616,10 +633,31 @@ public class AudioSources : MonoBehaviour
     {
        roadAndBirds.Play();
     }
-    public void playNewspaperSpin()
+    public void playWinSound()
     {
-       newspaperSpin.Play();
+       WinSound.Play();
     }
+    public void playNewspaperSpin(){
+        newspaperSpin.Play();
+    }
+     public void playOttoNormal()
+    {
+       OttoNormal.Play();
+    }
+
+     public void playOttoFreak()
+    {
+       OttoFreak.Play();
+    }
+     public void playDahlia()
+    {
+       Dahlia.Play();
+    }
+     public void playDrKrause()
+    {
+       DrKrause.Play();
+    }
+    
 
     public void StopAllAudio() {
         foreach (AudioSource audioS in allAudioSources) {
