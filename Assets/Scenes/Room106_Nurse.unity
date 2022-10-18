@@ -1056,6 +1056,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thisObject: {fileID: 210047897}
   objectsColliders: []
+--- !u!1 &230192130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4970498925076773056, guid: 2b5c854d54ff3ea4b98be02aace5473a, type: 3}
+  m_PrefabInstance: {fileID: 429677142}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &238803670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1624,8 +1629,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keycardResponseChoices_lie:
-  - {fileID: 145770058}
   - {fileID: 156826939}
+  - {fileID: 145770058}
   keycardResponseChoices:
   - {fileID: 1754031102}
   - {fileID: 2000319643}
@@ -1822,6 +1827,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4970498926098928130, guid: 2b5c854d54ff3ea4b98be02aace5473a, type: 3}
+      propertyPath: AnimatedObject
+      value: 
+      objectReference: {fileID: 230192130}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b5c854d54ff3ea4b98be02aace5473a, type: 3}
 --- !u!224 &429677143 stripped
@@ -1984,7 +1993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duster: {fileID: 547183861}
   allAudio: {fileID: 1260932475}
-  hitbox: {fileID: 0}
+  hitbox: {fileID: 547183860}
 --- !u!60 &547183860
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5568,7 +5577,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1260932475}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
         m_Mode: 1

@@ -1214,11 +1214,8 @@ GameObject:
   - component: {fileID: 375198773}
   - component: {fileID: 375198780}
   - component: {fileID: 375198781}
-  - component: {fileID: 375198776}
   - component: {fileID: 375198774}
-  - component: {fileID: 375198775}
   - component: {fileID: 375198777}
-  - component: {fileID: 375198778}
   - component: {fileID: 375198779}
   - component: {fileID: 375198782}
   m_Layer: 0
@@ -1273,38 +1270,8 @@ MonoBehaviour:
   inventoryText: {fileID: 1740612623}
   objectivesText: {fileID: 1740612622}
   inventoryAndObjectives: {fileID: 1740612624}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 1403642739}
   animatorForIO: {fileID: 1740612625}
---- !u!114 &375198775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375198770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df9476bb2238de94eafbd3d9eb972a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NamePlaceholder: {fileID: 865435693}
-  SpeechPlaceholder: {fileID: 865435692}
-  ContinueButton: {fileID: 865435694}
-  clickSound: {fileID: 0}
-  AllAudio: {fileID: 0}
---- !u!114 &375198776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375198770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 861cf531448a63242b1581674a0a6d37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DialogueBox: {fileID: 865435691}
 --- !u!114 &375198777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,47 +1284,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7604b24b190494eb1a1bccd4672f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 1403642733}
   WallWritings: {fileID: 1358733638}
   AntipsychoticPill: {fileID: 1915224745}
   Keycard: {fileID: 2109133765}
   Note: {fileID: 1217644111}
---- !u!114 &375198778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375198770}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5fdb19cb5ca74948a692c708b3391ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meter_image: {fileID: 660442058}
-  meter_sprites:
-  - {fileID: 21300000, guid: 0346cd8782ae1f04687a72b07d3e9736, type: 3}
-  - {fileID: 21300000, guid: e1625950d73347740b1b220a45804eb8, type: 3}
-  - {fileID: 21300000, guid: 12e14882470e3b54fb686b93199d0827, type: 3}
-  - {fileID: 21300000, guid: 66074fd4eabfe1947805724c2b8bfd0b, type: 3}
-  - {fileID: 21300000, guid: fcee7f2ee0624d3419bf84d4d143dfa5, type: 3}
-  - {fileID: 21300000, guid: b5fefa4a00b9bac4bbac39d0ee430138, type: 3}
-  - {fileID: 21300000, guid: f21a72dbaa960cf43a21335f111fbeb7, type: 3}
-  - {fileID: 21300000, guid: 9b4ec8e61d6544b4093ad0962c6150c3, type: 3}
-  - {fileID: 21300000, guid: 93cea10360a299b4a89fce4c7d87afff, type: 3}
-  - {fileID: 21300000, guid: 4e6b025c90f56a04fb6a9c026d3ec8db, type: 3}
-  - {fileID: 21300000, guid: c676e44672d98284c906b37906a47ba1, type: 3}
-  - {fileID: 21300000, guid: 267efd6c495054744b66c503648766af, type: 3}
-  - {fileID: 21300000, guid: 5fc6c915de5e68c4e85c849ac57c0d12, type: 3}
-  - {fileID: 21300000, guid: 9a9c4a70b509eee46b19ca3bcf2df23a, type: 3}
-  - {fileID: 21300000, guid: 7fd73610e04f4344586ffb45e7e523bc, type: 3}
-  - {fileID: 21300000, guid: 327b6033d15d028468e67fa4577f8990, type: 3}
-  - {fileID: 21300000, guid: 3816a5338f50a7f488d13a76eedcff99, type: 3}
-  - {fileID: 21300000, guid: 7789343dba72a084ba5fcc6ed05f3be5, type: 3}
-  - {fileID: 21300000, guid: cfff369e8bfd6834e9d2c19fd0c2c017, type: 3}
-  - {fileID: 21300000, guid: 84d1e6c75116242488de2cbfe26a2065, type: 3}
-  - {fileID: 21300000, guid: 514410d6c4264514682456452c880896, type: 3}
-  test: 0
 --- !u!114 &375198779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1702,7 +1633,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duster: {fileID: 472517587}
   allAudio: {fileID: 1403642733}
-  hitbox: {fileID: 0}
+  hitbox: {fileID: 472517586}
 --- !u!60 &472517586
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1965,21 +1896,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1403642733}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 375198776}
-        m_TargetAssemblyTypeName: DialogueBoxHandler, Assembly-CSharp
-        m_MethodName: ClearDialogueBox
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2181,7 +2100,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1403642733}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
         m_Mode: 1
@@ -2193,7 +2112,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 375198776}
+      - m_Target: {fileID: 1125784277}
         m_TargetAssemblyTypeName: DialogueBoxHandler, Assembly-CSharp
         m_MethodName: ClearDialogueBox
         m_Mode: 1
@@ -2846,11 +2765,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &660442058 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1714896569350666831, guid: fa3a9745fd6d63f4fbd14702cbd3046f, type: 3}
-  m_PrefabInstance: {fileID: 660442054}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &693817864 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1083865239040756510, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
@@ -3521,11 +3435,11 @@ PrefabInstance:
     - target: {fileID: 1083865238472208565, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1403642733}
     - target: {fileID: 1083865238472208565, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 375198776}
+      objectReference: {fileID: 1125784277}
     - target: {fileID: 1083865238472208565, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnMouseExit
@@ -3537,6 +3451,10 @@ PrefabInstance:
     - target: {fileID: 1083865238472208565, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: ClearDialogueBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1083865238472208565, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: AudioSources, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1083865238472208566, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3665,7 +3583,7 @@ PrefabInstance:
     - target: {fileID: 1083865240032741169, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 375198775}
+      objectReference: {fileID: 0}
     - target: {fileID: 1083865240032741169, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -3722,28 +3640,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1083865239698043744, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
   m_PrefabInstance: {fileID: 865435689}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &865435692 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1083865239698097701, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
-  m_PrefabInstance: {fileID: 865435689}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &865435693 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1083865239922112557, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
-  m_PrefabInstance: {fileID: 865435689}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &865435694 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1083865240032741171, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
@@ -4026,7 +3922,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1403642733}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
         m_Mode: 1
@@ -4387,6 +4283,17 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1125784277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7468022973962032164, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+  m_PrefabInstance: {fileID: 865435689}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865435691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 861cf531448a63242b1581674a0a6d37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1156987368
 GameObject:
   m_ObjectHideFlags: 0
@@ -5098,7 +5005,7 @@ MonoBehaviour:
   - {fileID: 926739467}
   - {fileID: 500503190}
   identifier: infinite
-  Clickable: 1
+  Clickable: 0
   enableProximityReactions: 0
   PlayerCollider: {fileID: 0}
   ObjectAreaCollider: {fileID: 0}
@@ -5251,10 +5158,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1358733640}
   - component: {fileID: 1358733639}
-  - component: {fileID: 1358733641}
   - component: {fileID: 1358733642}
   - component: {fileID: 1358733643}
   - component: {fileID: 1358733644}
+  - component: {fileID: 1358733646}
+  - component: {fileID: 1358733645}
   m_Layer: 0
   m_Name: Object - Writing on the Walls
   m_TagString: Untagged
@@ -5329,32 +5237,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1358733641
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358733638}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.38264608, y: 0.71023774}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10, y: 10}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 5.853793, y: 4.719114}
-  m_EdgeRadius: 0
 --- !u!114 &1358733642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5376,14 +5258,14 @@ MonoBehaviour:
       rgba: 4294823559
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 1403642733}
   DialogueBox: {fileID: 865435691}
   ResponseStrings:
   - Keep Looking Around (+0)
   - Try Understand (+1)
   ResponseButtons:
   - {fileID: 2069463894}
-  - {fileID: 0}
+  - {fileID: 1900050418}
   identifier: infinite
   Clickable: 1
   enableProximityReactions: 0
@@ -5422,6 +5304,409 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   this_animator: {fileID: 1358733643}
+--- !u!114 &1358733645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358733638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92a27e64b077a94fa3f9c31d41c547c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!60 &1358733646
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358733638}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 10, y: 10}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.45, y: -1.4}
+      - {x: 1.15, y: -1.4}
+      - {x: 1.85, y: -1.4}
+      - {x: 1.75, y: -1.5}
+      - {x: 1.75, y: -1.9}
+      - {x: 1.85, y: -2}
+      - {x: 2.7, y: -2.1000001}
+      - {x: 2.95, y: -2.05}
+      - {x: 3.2, y: -1.95}
+      - {x: 3.05, y: -1.35}
+      - {x: 2.4, y: -1.35}
+      - {x: 2.65, y: -1.35}
+      - {x: 2.7, y: -1.2}
+      - {x: 2.55, y: -0.75}
+      - {x: 2.45, y: -0.65000004}
+      - {x: 1.5500001, y: -0.65000004}
+      - {x: 1.5500001, y: -0.3}
+      - {x: 1.45, y: -0.2}
+      - {x: 1.7, y: 0.25}
+      - {x: 1.7, y: 0.45000002}
+      - {x: 1.5500001, y: 0.6}
+      - {x: 1.3000001, y: 0.6}
+      - {x: 1.1, y: 0.4}
+      - {x: 0.85, y: 0.7}
+      - {x: 1.35, y: 0.8}
+      - {x: 1.8000001, y: 0.45000002}
+      - {x: 1.7, y: 0.05}
+      - {x: 1.7, y: -0.5}
+      - {x: 1.85, y: -0.55}
+      - {x: 2.15, y: -0.6}
+      - {x: 2.4, y: -0.4}
+      - {x: 2.65, y: -0.3}
+      - {x: 3.05, y: -0.2}
+      - {x: 3.1000001, y: 0.15}
+      - {x: 3.3500001, y: 0.6}
+      - {x: 3.3, y: 0.85}
+      - {x: 3.15, y: 1.0500001}
+      - {x: 2.75, y: 1.1}
+      - {x: 2.7, y: 1.5500001}
+      - {x: 3.15, y: 2.25}
+      - {x: 3.05, y: 2.55}
+      - {x: 2.6000001, y: 2.5}
+      - {x: 2.3, y: 2.7}
+      - {x: 1.85, y: 2.65}
+      - {x: 0.85, y: 2.55}
+      - {x: 0.65000004, y: 2.3500001}
+      - {x: 0.35, y: 2.55}
+      - {x: 0.2, y: 2.95}
+      - {x: -1.85, y: 2.95}
+      - {x: -2.25, y: 2.9}
+      - {x: -2.5, y: 2.7}
+      - {x: -2.5, y: 2.75}
+      - {x: -3.25, y: 2.95}
+      - {x: -3.4, y: 2.95}
+      - {x: -3.9, y: 2.8}
+      - {x: -4.25, y: 2.6000001}
+      - {x: -4.4500003, y: 2.5}
+      - {x: -4.4500003, y: 2.15}
+      - {x: -4.25, y: 2}
+      - {x: -4.05, y: 2}
+      - {x: -4.3, y: 2}
+      - {x: -4.4500003, y: 1.9}
+      - {x: -4.4500003, y: 1.6}
+      - {x: -4.1, y: 1.4}
+      - {x: -3.7, y: 1.5}
+      - {x: -3.7, y: 0.15}
+      - {x: -3.55, y: 0.05}
+      - {x: -3.3, y: 0.1}
+      - {x: -3.5, y: -0.35}
+      - {x: -3.05, y: -1.0500001}
+      - {x: -2.55, y: -1.8000001}
+      - {x: -2.25, y: -1.8000001}
+      - {x: -2.1000001, y: -1.75}
+      - {x: -2.2, y: -1.4}
+      - {x: -2.3, y: -0.8}
+      - {x: -2.55, y: -0.55}
+      - {x: -2.2, y: 0.2}
+      - {x: -1.65, y: 0.2}
+      - {x: -2.1000001, y: -0.15}
+      - {x: -1.95, y: -0.3}
+      - {x: -1.35, y: -0.3}
+      - {x: -1.25, y: -0.4}
+      - {x: -1.2, y: -0.4}
+      - {x: -0.7, y: -0.3}
+      - {x: -0.6, y: -0.2}
+      - {x: -0.65000004, y: -0.05}
+      - {x: -0.55, y: -0.25}
+      - {x: -0.3, y: -0.6}
+      - {x: -0.6, y: -0.35}
+      - {x: -0.8, y: -0.35}
+      - {x: -1, y: -0.4}
+      - {x: -1.5, y: -0.4}
+      - {x: -1.6, y: -0.5}
+      - {x: -1.6, y: -0.7}
+      - {x: -1.65, y: -0.65000004}
+      - {x: -1.6, y: -0.5}
+      - {x: -1.6, y: -0.4}
+      - {x: -1.7, y: -0.3}
+      - {x: -2.3, y: -0.35}
+      - {x: -2.4, y: -0.65000004}
+      - {x: -2.15, y: -0.8}
+      - {x: -2.15, y: -1}
+      - {x: -2.1000001, y: -1.15}
+      - {x: -1.7, y: -1.2}
+      - {x: -1.3000001, y: -1.0500001}
+      - {x: -1.1, y: -1.2}
+      - {x: -0.95, y: -1.15}
+      - {x: -1.15, y: -1.25}
+      - {x: -1.3000001, y: -1.1}
+      - {x: -1.4, y: -1.1}
+      - {x: -1.65, y: -1.45}
+      - {x: -1.7, y: -1.6}
+      - {x: -1.2, y: -1.8000001}
+      - {x: 0.4, y: -2.15}
+      - {x: 1.45, y: -2.15}
+      - {x: 1.6, y: -2.1000001}
+      - {x: 1.6, y: -1.5500001}
+    - - {x: 0.8, y: -1.6}
+      - {x: 0.75, y: -1.5500001}
+    - - {x: 0.05, y: -1.15}
+      - {x: 0.05, y: -1}
+      - {x: 0.05, y: -1.1}
+      - {x: -0.05, y: -1.2}
+      - {x: 0, y: -1.2}
+    - - {x: 2.1000001, y: -1.0500001}
+      - {x: 2.05, y: -1.1}
+    - - {x: 0.8, y: -0.90000004}
+      - {x: 0.8, y: -0.8}
+      - {x: 0.7, y: -0.65000004}
+      - {x: 0.65000004, y: -0.5}
+      - {x: 0.5, y: -0.4}
+      - {x: 0.3, y: -0.35}
+      - {x: 0.2, y: -0.35}
+      - {x: 0.05, y: -0.5}
+      - {x: 0.1, y: -0.5}
+      - {x: 0.1, y: -0.15}
+      - {x: 0.2, y: -0.1}
+      - {x: 0.35, y: 0.05}
+      - {x: 0.35, y: 0.2}
+      - {x: 0.2, y: 0.35}
+      - {x: 0.05, y: 0.35}
+      - {x: 0, y: 0.3}
+      - {x: 0.05, y: 0.25}
+      - {x: 0.2, y: 0.25}
+      - {x: 0.35, y: 0.4}
+      - {x: 0.35, y: 0.5}
+      - {x: 0.45000002, y: 0.6}
+      - {x: 0.45000002, y: 0.5}
+      - {x: 0.4, y: 0.45000002}
+      - {x: 0.35, y: 0.25}
+      - {x: 0.4, y: 0.1}
+      - {x: 0.3, y: 0}
+      - {x: 0.35, y: -0.05}
+      - {x: 0.3, y: 0}
+      - {x: 0.15, y: 0}
+      - {x: 0, y: -0.15}
+      - {x: 0, y: -0.2}
+      - {x: 0.15, y: -0.35}
+      - {x: 0.3, y: -0.35}
+      - {x: 0.45000002, y: -0.3}
+      - {x: 0.65000004, y: -0.45000002}
+      - {x: 0.65000004, y: -0.65000004}
+      - {x: 0.8, y: -0.8}
+      - {x: 1, y: -0.75}
+      - {x: 0.90000004, y: -0.7}
+      - {x: 0.75, y: -0.85}
+      - {x: 0.75, y: -0.95}
+    - - {x: -0.4, y: 0}
+      - {x: -0.35, y: 0.05}
+      - {x: -0.35, y: 0.25}
+      - {x: -0.3, y: 0.3}
+      - {x: -0.3, y: 0.2}
+      - {x: -0.25, y: 0.15}
+      - {x: -0.25, y: -0.05}
+      - {x: -0.3, y: 0}
+    - - {x: -1.0500001, y: 0.2}
+      - {x: -1.0500001, y: 0.3}
+      - {x: -1.0500001, y: 0.15}
+      - {x: -1, y: 0.1}
+      - {x: -0.95, y: 0.15}
+    - - {x: 2.3500001, y: 0.65000004}
+      - {x: 2.3500001, y: 0.8}
+      - {x: 2.15, y: 1.0500001}
+      - {x: 2, y: 1.0500001}
+      - {x: 1.95, y: 1}
+      - {x: 1.95, y: 0.95}
+      - {x: 2.1000001, y: 1.1}
+      - {x: 2.1000001, y: 1.15}
+      - {x: 2.05, y: 1.15}
+      - {x: 2.2, y: 1}
+      - {x: 2.3500001, y: 1}
+      - {x: 2.45, y: 1.1}
+      - {x: 2.4, y: 1.1}
+      - {x: 2.55, y: 0.95}
+      - {x: 2.6000001, y: 1}
+      - {x: 2.5, y: 1.0500001}
+      - {x: 2.3, y: 0.90000004}
+      - {x: 2.25, y: 0.7}
+      - {x: 2.3500001, y: 0.55}
+      - {x: 2.3, y: 0.55}
+    - - {x: -2.3, y: 0.75}
+      - {x: -2.45, y: 0.90000004}
+      - {x: -2.7, y: 0.90000004}
+      - {x: -2.8500001, y: 0.75}
+      - {x: -2.95, y: 0.8}
+      - {x: -3, y: 0.75}
+      - {x: -2.95, y: 0.75}
+      - {x: -3.1000001, y: 0.90000004}
+      - {x: -3.15, y: 0.85}
+      - {x: -3.1000001, y: 0.90000004}
+      - {x: -3.05, y: 0.85}
+      - {x: -2.95, y: 0.85}
+      - {x: -2.65, y: 1.15}
+      - {x: -2.65, y: 1.25}
+      - {x: -2.45, y: 1.45}
+      - {x: -2.45, y: 1.5}
+      - {x: -2.45, y: 1.2}
+      - {x: -2.25, y: 0.95}
+      - {x: -2.15, y: 0.95}
+      - {x: -2, y: 1.1}
+      - {x: -2.05, y: 1.15}
+      - {x: -2.1000001, y: 1.15}
+      - {x: -2.1000001, y: 1.1}
+      - {x: -2, y: 0.95}
+      - {x: -2.05, y: 0.90000004}
+      - {x: -2.05, y: 0.8}
+      - {x: -1.9, y: 0.65000004}
+      - {x: -1.85, y: 0.7}
+      - {x: -1.85, y: 0.75}
+      - {x: -1.9, y: 0.7}
+      - {x: -1.95, y: 0.75}
+      - {x: -2.05, y: 0.75}
+      - {x: -2.1000001, y: 0.7}
+      - {x: -2.3, y: 0.7}
+    - - {x: 0.2, y: 0.95}
+      - {x: 0.15, y: 0.90000004}
+      - {x: 0.3, y: 1.0500001}
+      - {x: 0.3, y: 1.1}
+      - {x: 0.15, y: 1.25}
+      - {x: 0.05, y: 1.2}
+      - {x: 0.25, y: 1.1}
+      - {x: 0.3, y: 1.15}
+      - {x: 0.25, y: 1.1}
+      - {x: 0.3, y: 0.85}
+      - {x: 0.3, y: 0.90000004}
+    - - {x: 3.4, y: 1.7}
+      - {x: 3.1000001, y: 1.6}
+      - {x: 3.1000001, y: 1.25}
+      - {x: 3.2, y: 1.1}
+      - {x: 3.55, y: 0.90000004}
+      - {x: 3.7, y: 0.95}
+      - {x: 3.8, y: 1.15}
+      - {x: 3.8, y: 1.45}
+      - {x: 3.65, y: 1.7}
+    - - {x: -1.5, y: 1.2}
+      - {x: -1.65, y: 1.3000001}
+      - {x: -1.6, y: 1.2}
+      - {x: -1.5, y: 1.2}
+      - {x: -1.45, y: 1.25}
+      - {x: -1.15, y: 1.25}
+      - {x: -1.1, y: 1.3000001}
+      - {x: -1.15, y: 1.2}
+      - {x: -1.2, y: 1.2}
+      - {x: -1.3000001, y: 1.1}
+      - {x: -1.35, y: 1.15}
+      - {x: -1.45, y: 1.15}
+      - {x: -1.5, y: 1.1}
+    - - {x: 3.05, y: 1.7}
+      - {x: 2.75, y: 1.7}
+      - {x: 2.7, y: 1.65}
+      - {x: 2.7, y: 1.15}
+      - {x: 2.9, y: 1}
+      - {x: 2.95, y: 1}
+      - {x: 3.15, y: 1.2}
+      - {x: 3.15, y: 1.65}
+    - - {x: -0.75, y: 1.2}
+      - {x: -0.75, y: 1.5500001}
+      - {x: -0.7, y: 1.5500001}
+      - {x: -0.5, y: 1.7}
+      - {x: -0.55, y: 1.2}
+      - {x: -0.6, y: 1.15}
+      - {x: -0.65000004, y: 1.2}
+    - - {x: 0.45000002, y: 1.25}
+      - {x: 0.65000004, y: 1.15}
+      - {x: 0.65000004, y: 1.2}
+      - {x: 0.6, y: 1.25}
+    - - {x: 1.4, y: 1.5500001}
+      - {x: 1.25, y: 1.35}
+      - {x: 1.3000001, y: 1.3000001}
+      - {x: 1.4, y: 1.35}
+    - - {x: -2.05, y: 1.65}
+      - {x: -2.1000001, y: 1.65}
+      - {x: -2.05, y: 1.65}
+      - {x: -2, y: 1.7}
+      - {x: -1.95, y: 1.65}
+      - {x: -1.85, y: 1.7}
+      - {x: -1.5500001, y: 1.5500001}
+      - {x: -1.4, y: 1.7}
+      - {x: -1.35, y: 1.65}
+      - {x: -1.2, y: 1.8000001}
+      - {x: -1.2, y: 1.9}
+      - {x: -1.25, y: 1.95}
+      - {x: -1.25, y: 2.15}
+      - {x: -1.3000001, y: 2.2}
+      - {x: -1.3000001, y: 2.3500001}
+      - {x: -1.4, y: 2.45}
+      - {x: -1.45, y: 2.45}
+      - {x: -1.4, y: 2.4}
+      - {x: -1.2, y: 2.3500001}
+      - {x: -1.1, y: 2.45}
+      - {x: -1.2, y: 2.3500001}
+      - {x: -1.2, y: 2.3}
+      - {x: -1.15, y: 2.25}
+      - {x: -1.2, y: 2.3}
+      - {x: -1.35, y: 2.15}
+      - {x: -1.35, y: 2.1000001}
+      - {x: -1.25, y: 1.95}
+      - {x: -1.1, y: 1.9}
+      - {x: -1.0500001, y: 1.65}
+      - {x: -1.15, y: 1.75}
+      - {x: -1.2, y: 1.75}
+      - {x: -1.4, y: 1.65}
+      - {x: -1.5, y: 1.7}
+      - {x: -1.65, y: 1.6}
+      - {x: -1.7, y: 1.65}
+      - {x: -1.8000001, y: 1.65}
+      - {x: -1.9, y: 1.5500001}
+    - - {x: 0.85, y: 1.65}
+      - {x: 0.7, y: 1.8000001}
+      - {x: 0.5, y: 1.85}
+      - {x: 0.55, y: 1.9}
+      - {x: 0.55, y: 2}
+      - {x: 0.45000002, y: 2.05}
+      - {x: 0.5, y: 1.95}
+      - {x: 0.65000004, y: 1.95}
+      - {x: 0.7, y: 2}
+      - {x: 0.75, y: 1.95}
+      - {x: 0.85, y: 1.95}
+      - {x: 0.90000004, y: 1.8000001}
+      - {x: 1.0500001, y: 1.7}
+      - {x: 1.1, y: 1.75}
+      - {x: 1, y: 1.7}
+      - {x: 1, y: 1.6}
+      - {x: 0.95, y: 1.5500001}
+      - {x: 0.90000004, y: 1.6}
+      - {x: 0.8, y: 1.5500001}
+    - - {x: -2.75, y: 1.9}
+      - {x: -2.7, y: 1.9}
+      - {x: -2.65, y: 1.85}
+      - {x: -2.65, y: 1.9}
+    - - {x: -3.25, y: 2.3500001}
+      - {x: -3.3, y: 2.3500001}
+      - {x: -3.45, y: 2.15}
+      - {x: -3.15, y: 2.3500001}
+      - {x: -3.15, y: 2.15}
+      - {x: -3.05, y: 2.05}
+      - {x: -3, y: 2.1000001}
+    - - {x: -0.5, y: 2.55}
+      - {x: -0.5, y: 2.5}
+      - {x: -0.35, y: 2.4}
+      - {x: -0.3, y: 2.45}
+      - {x: -0.25, y: 2.4}
+      - {x: -0.35, y: 2.45}
+      - {x: -0.4, y: 2.4}
+      - {x: -0.35, y: 2.4}
 --- !u!1001 &1403642731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6177,7 +6462,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1403642733}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
         m_Mode: 1
@@ -7049,7 +7334,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1403642733}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
         m_Mode: 1
@@ -7936,7 +8221,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1403642733}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
         m_Mode: 1
@@ -7948,7 +8233,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 375198776}
+      - m_Target: {fileID: 1125784277}
         m_TargetAssemblyTypeName: DialogueBoxHandler, Assembly-CSharp
         m_MethodName: ClearDialogueBox
         m_Mode: 1
@@ -8022,6 +8307,7 @@ GameObject:
   - component: {fileID: 2109133768}
   - component: {fileID: 2109133769}
   - component: {fileID: 2109133770}
+  - component: {fileID: 2109133771}
   m_Layer: 0
   m_Name: Object - Nurse's Keycard
   m_TagString: 106_objects
@@ -8143,7 +8429,7 @@ MonoBehaviour:
       rgba: 4294823559
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 1403642733}
   DialogueBox: {fileID: 865435691}
   ResponseStrings:
   - Take Nurse's Keycard (+0)
@@ -8152,10 +8438,23 @@ MonoBehaviour:
   - {fileID: 479023656}
   - {fileID: 500503190}
   identifier: infinite
-  Clickable: 1
+  Clickable: 0
   enableProximityReactions: 0
   PlayerCollider: {fileID: 0}
   ObjectAreaCollider: {fileID: 0}
+--- !u!114 &2109133771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109133765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92a27e64b077a94fa3f9c31d41c547c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
 --- !u!1001 &2130887399
 PrefabInstance:
   m_ObjectHideFlags: 0

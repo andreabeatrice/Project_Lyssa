@@ -8,10 +8,36 @@ public class CursorManager : MonoBehaviour
     [SerializeField]
     Texture2D cursor;
 
-
     public void OnMouseEnter()
     {
-        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+
+        if (this.GetComponentInChildren<ObjectDrag>()){
+            if (this.GetComponentInChildren<ObjectDrag>().canDrag){
+                Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+            }
+            else {
+                return;
+            }
+        }
+        else if (this.GetComponentInChildren<DialogueClick>()){
+            if (this.GetComponentInChildren<DialogueClick>().Clickable){
+                Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+            }
+            else {
+                return;
+            }
+        }
+        else if (this.GetComponentInChildren<objectDrag_nodialog>()){
+            if (this.GetComponentInChildren<objectDrag_nodialog>().canDrag){
+                Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+            }
+            else {
+                return;
+            }
+        }
+        else {
+            Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+        }
     }
 
     public void OnMouseExit()

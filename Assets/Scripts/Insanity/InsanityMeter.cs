@@ -14,7 +14,7 @@ public class InsanityMeter : MonoBehaviour
     void Start()
     {
 
-        if(test == false)
+        if(test == false || Globals.StorageRoom == false)
             meter_image.SetActive(false);
     }
 
