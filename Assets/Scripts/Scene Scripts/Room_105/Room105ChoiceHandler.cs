@@ -110,7 +110,7 @@ public class Room105ChoiceHandler : MonoBehaviour
 
     public void BackToHallway_Kitchen(){
     Globals.playerPositionOnMap = new Vector2(-48, -8);
-       FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_8_Kitchen", "crossfade_start");
+       FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_9_Kitchen", "crossfade_start");
        Debug.Log("leaving now...");
     }
 

@@ -1615,6 +1615,17 @@ MonoBehaviour:
   dragSound: {fileID: 0}
   dropSound: {fileID: 0}
   canDrag: 1
+--- !u!114 &297386377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 176746942238241886, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1900517912}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &322313335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1830,7 +1841,7 @@ MonoBehaviour:
   inventoryText: {fileID: 547010191}
   objectivesText: {fileID: 547010190}
   inventoryAndObjectives: {fileID: 547010193}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 1900517919}
   animatorForIO: {fileID: 547010192}
 --- !u!114 &375198779
 MonoBehaviour:
@@ -1885,7 +1896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interaction:
   - Words: I needed this. Haven't had since Dahlia smuggled them in for me.
-    Voice: {fileID: 0}
+    Voice: {fileID: 1900517917}
     Name: Otto
     TextColor:
       serializedVersion: 2
@@ -1893,7 +1904,7 @@ MonoBehaviour:
     AnimationObject: {fileID: 0}
     Play: 
   - Words: Yeah, sure, you're welcome. Can you please explain this note, now?
-    Voice: {fileID: 0}
+    Voice: {fileID: 1900517918}
     Name: Fern
     TextColor:
       serializedVersion: 2
@@ -1901,7 +1912,7 @@ MonoBehaviour:
     AnimationObject: {fileID: 0}
     Play: 
   - Words: Possibly. What do you want to know?
-    Voice: {fileID: 0}
+    Voice: {fileID: 1900517917}
     Name: Otto
     TextColor:
       serializedVersion: 2
@@ -1930,7 +1941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otto: {fileID: 1507096775}
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 297386377}
   flames:
   - {fileID: 541404750}
   - {fileID: 60726869}
@@ -13137,6 +13148,21 @@ AudioSource:
 --- !u!82 &1900517916 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2288145045806619492, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1900517912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1900517917 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3287833671470746244, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1900517912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1900517918 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8661605048657298932, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1900517912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1900517919 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
   m_PrefabInstance: {fileID: 1900517912}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1924568576
