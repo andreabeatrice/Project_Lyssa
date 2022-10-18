@@ -495,6 +495,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319001849}
   m_CullTransparentMesh: 1
+--- !u!82 &334007468 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 568769184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &359840663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,6 +1010,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &568769187 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2421056048147085754, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 568769184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &568769188 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4843395590475669058, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 568769184}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &568769189 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 42792677516163967, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 568769184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &571518266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,7 +1825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interaction:
   - Words: 3rd November. Beta Trial Two.
-    Voice: {fileID: 0}
+    Voice: {fileID: 1883429031}
     Name: 
     TextColor:
       serializedVersion: 2
@@ -1814,7 +1834,7 @@ MonoBehaviour:
     Play: 
   - Words: Human trials started a week ago. So far, the subject has not experienced
       any atypical reactions.
-    Voice: {fileID: 0}
+    Voice: {fileID: 568769189}
     Name: 
     TextColor:
       serializedVersion: 2
@@ -1823,7 +1843,7 @@ MonoBehaviour:
     Play: 
   - Words: "The MDPV-based serotonin\u2013norepinephrine\u2013dopamine releasing
       agent that I've been calling DIRA is working as intended."
-    Voice: {fileID: 0}
+    Voice: {fileID: 568769188}
     Name: 
     TextColor:
       serializedVersion: 2
@@ -1832,7 +1852,7 @@ MonoBehaviour:
     Play: 
   - Words: Subject is on their fourth day without sleep, and shows some signs of
       tiring.
-    Voice: {fileID: 0}
+    Voice: {fileID: 1883429031}
     Name: 
     TextColor:
       serializedVersion: 2
@@ -1840,7 +1860,7 @@ MonoBehaviour:
     AnimationObject: {fileID: 0}
     Play: 
   - Words: 'Subject was given 2 milligrams of DIRA and stayed awake for 47 hours. '
-    Voice: {fileID: 0}
+    Voice: {fileID: 568769189}
     Name: 
     TextColor:
       serializedVersion: 2
@@ -1849,7 +1869,7 @@ MonoBehaviour:
     Play: 
   - Words: After the most recent test they were left with 34 nanograms of DIRA per
       millilitre of blood in their system.
-    Voice: {fileID: 0}
+    Voice: {fileID: 568769188}
     Name: 
     TextColor:
       serializedVersion: 2
@@ -1857,7 +1877,7 @@ MonoBehaviour:
     AnimationObject: {fileID: 0}
     Play: 
   - Words: If given the chance to stimulate the mind, the subject always takes it.
-    Voice: {fileID: 0}
+    Voice: {fileID: 568769189}
     Name: 
     TextColor:
       serializedVersion: 2
@@ -1866,7 +1886,7 @@ MonoBehaviour:
     Play: 
   - Words: The subject has been allowed to complete tasks that simulate a warehousing
       environment, and consistently worked faster than a minimum-wage employee.
-    Voice: {fileID: 0}
+    Voice: {fileID: 1883429031}
     Name: 
     TextColor:
       serializedVersion: 2
@@ -1875,7 +1895,7 @@ MonoBehaviour:
     Play: 
   - Words: The simulant will likely be ready to ship by the end of the month. Preliminary
       calculations predict that this will increase warehousing profits by 120%.
-    Voice: {fileID: 0}
+    Voice: {fileID: 568769188}
     Name: 
     TextColor:
       serializedVersion: 2
@@ -1890,7 +1910,7 @@ MonoBehaviour:
       rgba: 4294967295
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 568769186}
   DialogueBox: {fileID: 929869284}
   ResponseStrings: []
   ResponseButtons: []
@@ -2842,6 +2862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectAnimator: {fileID: 855011499}
+  tvStatic: {fileID: 568769187}
   Trigger: OnClick
   AnimationName: 
   AnimatedObject: {fileID: 0}
@@ -3753,7 +3774,7 @@ MonoBehaviour:
   movespeed: 6
   rb: {fileID: 1420137536}
   animator: {fileID: 1420137533}
-  audiosrc: {fileID: 0}
+  audiosrc: {fileID: 1989287184}
   frozen: 0
 --- !u!61 &1420137539
 BoxCollider2D:
@@ -7327,7 +7348,7 @@ MonoBehaviour:
   inventoryText: {fileID: 758432016}
   objectivesText: {fileID: 758432015}
   inventoryAndObjectives: {fileID: 758432018}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 334007468}
   animatorForIO: {fileID: 758432017}
 --- !u!114 &1825452604
 MonoBehaviour:
@@ -7406,6 +7427,11 @@ MonoBehaviour:
   rb: {fileID: 1420137536}
   testing: 0
   insane: 0
+--- !u!82 &1883429031 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1884637907026658890, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 568769184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1974089525
 GameObject:
   m_ObjectHideFlags: 0
@@ -7517,6 +7543,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.530537, y: 1.2868297}
   m_EdgeRadius: 0
+--- !u!82 &1989287184 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7298781121344049330, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 568769184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1990818424
 GameObject:
   m_ObjectHideFlags: 0

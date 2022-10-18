@@ -68,9 +68,13 @@ public class AudioSources : MonoBehaviour
     public AudioSource OttoFreak;
     public AudioSource Dahlia;
     public AudioSource DrKrause;
+    public AudioSource DrKrause_2;
+    public AudioSource DrKrause_3;
     public AudioSource WinSound;
     public AudioSource RadioBackground;
     public AudioSource fan;
+    public AudioSource tvStatic;
+    public AudioSource basementDoors;
 
     private AudioSource[] allAudioSources;
     public void Start()
@@ -253,6 +257,18 @@ public class AudioSources : MonoBehaviour
                 case "fan":
                     fan = sound;
                 break;
+                case "tvStactic":
+                    tvStatic = sound;
+                break;
+                case "basementDoors":
+                    basementDoors = sound;
+                break;
+                 case "DrKrause_2":
+                    DrKrause_2 = sound;
+                break;
+                case "DrKrause_3":
+                    DrKrause_3 = sound;
+                break;
 
             }
         }
@@ -332,6 +348,7 @@ public class AudioSources : MonoBehaviour
                 break;
              case "Basement_1_LitUp":
                 StopAllAudio();
+                basementDoors.Play();
                 basement_Background.Play();
                 break;
             case "KrausOffice_1_FromHall":
@@ -566,7 +583,10 @@ public class AudioSources : MonoBehaviour
     {
        DrKrause.Play();
     }
-    
+     public void playTVStatic()
+    {
+       tvStatic.Play();
+    }
 
     public void StopAllAudio() {
         foreach (AudioSource audioS in allAudioSources) {
