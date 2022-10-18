@@ -46,6 +46,8 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
             {
                 HelperMethods.ObjectivesEnqueue("Go to the storage closet for supplies");
 
+                //
+
                 FindObjectOfType<PauseMenu>().PauseForPopup();
                 
 
@@ -77,6 +79,7 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
 
             dialogBox.SetActive(false); 
             Time.timeScale = 1f;
+            Globals.paused = false;
         }
 
     

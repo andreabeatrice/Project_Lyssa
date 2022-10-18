@@ -57,7 +57,9 @@ public class JanitorsCloset_ChoiceHandler : MonoBehaviour
 
             FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
-            insanityMeter.SetActive(true);
+            Globals.StorageRoom = true;
+            HelperMethods.ObjectivesDequeue("Go to the storage closet for supplies");
+            HelperMethods.ObjectivesEnqueue("Go clean the patients' rooms");
 
             //Explains the insanity meter to the player
             //Explains dragging     
@@ -71,7 +73,7 @@ public class JanitorsCloset_ChoiceHandler : MonoBehaviour
                 sentences[i] = new Sentence(bucketSentences[i]);
             }
             
-            FindObjectOfType<DialogueManager>().StartDialogue(sentences, "", null);
+            FindObjectOfType<DialogueManager>().StartDialogue(sentences);
 
             //Enables dragging
             FindObjectOfType<ObjectDrag>().canDrag = true;

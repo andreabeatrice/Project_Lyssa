@@ -24,7 +24,7 @@ public class ExplorationHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if(Input.GetKeyDown(KeyCode.Space) && PlayerCollider.IsTouching(ObjectAreaCollider) &&  SceneManager.GetActiveScene().name.Contains("Hallway"))
+         if(Input.GetKeyDown(KeyCode.Space) && PlayerCollider != null && PlayerCollider.IsTouching(ObjectAreaCollider) &&  SceneManager.GetActiveScene().name.Contains("Hallway"))
             OnMouseDown();
     }
 

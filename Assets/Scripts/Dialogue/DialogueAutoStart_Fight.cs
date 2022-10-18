@@ -17,6 +17,8 @@ public class DialogueAutoStart_Fight : MonoBehaviour
     public float waitfor = 3f;
 
     private bool willFight = false;
+
+    public Animator PlayerAnimator;
     
 
     // Start(): is called before the first frame update - calls TriggerDialogue() or TriggerDialogueNoWait()
@@ -76,6 +78,9 @@ public class DialogueAutoStart_Fight : MonoBehaviour
         }
 
     public void TakeAntipsychotic(){
+        FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
+        PlayerAnimator.Play("player_takepill");
+
         if (Globals.insanity >= 9){
             Globals.insanity -= 5;
             interaction = new Sentence[2];
@@ -88,8 +93,8 @@ public class DialogueAutoStart_Fight : MonoBehaviour
 
             interaction = new Sentence[2];
 
-            interaction[0] = new Sentence("Didn't you read the label of the pills? When taken by someone not experiencing a psychotic break, antipsychotics can result in /psychosis-like/ symptoms.");
-            interaction[1] = new Sentence("Good luck. You'll need it.");
+            interaction = new Sentence[]{new Sentence("Didn't you read the label of the pills?"), new Sentence("When taken by someone not experiencing a psychotic break, antipsychotics can result in /psychosis-like/ symptoms."), 
+                                        new Sentence("Good luck. You'll need it.")};
         }
 
         StartCoroutine(TriggerDialogue());
