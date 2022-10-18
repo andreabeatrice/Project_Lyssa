@@ -10,6 +10,8 @@ public class Hallway_2_Pre106ChoiceHandler : MonoBehaviour
 
     public Sprite WaterCooler_Sprite;
 
+    public GameObject WaterCooler;
+
     void Start(){
         Globals.paused = false;
     }
@@ -33,8 +35,8 @@ public class Hallway_2_Pre106ChoiceHandler : MonoBehaviour
         Globals.MoppedWater = true;
 
         allAudio.playMoppingSound();//shouldn't play when coming out of 106
-        GameObject.Find("WaterDispenser").GetComponent<Animator>().enabled = false;
-        GameObject.Find("WaterDispenser").GetComponent<SpriteRenderer>().sprite = WaterCooler_Sprite;
+        WaterCooler.GetComponent<Animator>().enabled = false;
+        WaterCooler.GetComponent<SpriteRenderer>().sprite = WaterCooler_Sprite;
     }
 
     public void cannotmop(){

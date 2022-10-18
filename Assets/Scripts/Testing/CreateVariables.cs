@@ -36,7 +36,7 @@ public class CreateVariables : MonoBehaviour
             switch (SceneManager.GetActiveScene().name){
                 case "Hallway_2_Pre106":
                     //assign variables
-                    HelperMethods.InventoryEnqueue("Broom");
+                    HelperMethods.InventoryEnqueue("Mop");
                     HelperMethods.ObjectivesEnqueue("Go clean the patients' rooms.");
 
                     foreach(string s in Globals.objectives){

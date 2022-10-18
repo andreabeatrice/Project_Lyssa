@@ -44,7 +44,7 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
             
             if (temp == 1)
             {
-                HelperMethods.ObjectivesEnqueue("Go to the storage closet for supplies");
+                HelperMethods.ObjectivesEnqueue("Go to the janitor's closet for supplies");
 
                 //
 

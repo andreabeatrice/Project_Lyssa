@@ -7,9 +7,12 @@ public class Player_Jump : MonoBehaviour
     public Animator player;
 
     public AudioSources AllAudio;
+
+    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
+        rb.position = Globals.playerPositionOnMap;
         StartCoroutine(waitAndJump());
     }
 
