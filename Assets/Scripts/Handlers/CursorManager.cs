@@ -27,6 +27,14 @@ public class CursorManager : MonoBehaviour
                 return;
             }
         }
+        else if (this.GetComponentInChildren<objectDrag_nodialog>()){
+            if (this.GetComponentInChildren<objectDrag_nodialog>().canDrag){
+                Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+            }
+            else {
+                return;
+            }
+        }
         else {
             Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
         }

@@ -10,7 +10,7 @@ public class Tutorial_SkipChoiceHandler : MonoBehaviour
         public void TutorialSkipMop()
         {
             HelperMethods.InventoryEnqueue("Mop");
-            HelperMethods.ObjectivesDequeue("Go to the storage closet for supplies");
+            HelperMethods.ObjectivesDequeue("Go to the janitor's closet for supplies");
             HelperMethods.ObjectivesEnqueue("Go clean the patients' rooms");
             SceneManager.LoadScene("Hallway_2_Pre106");
             Globals.StorageRoom = true;
@@ -20,7 +20,7 @@ public class Tutorial_SkipChoiceHandler : MonoBehaviour
         public void TutorialSkipBroom()
         {
             HelperMethods.InventoryEnqueue("Broom");
-            HelperMethods.ObjectivesDequeue("Go to the storage closet for supplies");
+            HelperMethods.ObjectivesDequeue("Go to the janitor's closet for supplies");
             HelperMethods.ObjectivesEnqueue("Go clean the patients' rooms");
             SceneManager.LoadScene("Hallway_2_Pre106");
             Globals.StorageRoom = true;
