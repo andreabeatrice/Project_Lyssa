@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &13447572
@@ -497,7 +497,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1143762422}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
         m_Mode: 1
@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &28967630
@@ -1381,7 +1381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &155803041
@@ -1491,7 +1491,7 @@ MonoBehaviour:
       rgba: 4294823559
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   DialogueBox: {fileID: 1073901460}
   ResponseStrings: []
   ResponseButtons: []
@@ -1932,7 +1932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &293933393
@@ -2179,6 +2179,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &432927949
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1704566601}
+    m_Modifications:
+    - target: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241825, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_Name
+      value: AudioPrefab
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+--- !u!4 &432927950 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 432927949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &500766288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2569,7 +2631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &519697110
@@ -2826,7 +2888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &521648439
@@ -3067,7 +3129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &523087186
@@ -3310,7 +3372,7 @@ MonoBehaviour:
       rgba: 4281951066
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   DialogueBox: {fileID: 1073901460}
   ResponseStrings: []
   ResponseButtons: []
@@ -3589,7 +3651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &681766653
@@ -3848,7 +3910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &842111996
@@ -4146,7 +4208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &925142775
@@ -4405,7 +4467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &969490995
@@ -4730,7 +4792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &985641609
@@ -4989,7 +5051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &1006966304
@@ -5198,7 +5260,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1143762422}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
         m_Mode: 1
@@ -5362,7 +5424,7 @@ PrefabInstance:
     - target: {fileID: 1083865240032741169, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1143762422}
+      objectReference: {fileID: 0}
     - target: {fileID: 1083865240032741169, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -5636,123 +5698,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100264991}
   m_CullTransparentMesh: 1
---- !u!1001 &1143762416
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1704566601}
-    m_Modifications:
-    - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241825, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_Name
-      value: AudioPrefab
-      objectReference: {fileID: 0}
-    - target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: page_turn
-      value: 
-      objectReference: {fileID: 1143762421}
-    - target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: book_close
-      value: 
-      objectReference: {fileID: 1143762420}
-    - target: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: background106
-      value: 
-      objectReference: {fileID: 1143762419}
-    - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_Volume
-      value: 0.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 34441ab3de865e649b263c5f93f94c47, type: 3}
-    - target: {fileID: 7514803825967726811, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
---- !u!82 &1143762417 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 1143762416}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1143762418 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 176746942238241824, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 1143762416}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1143762419 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4831553427263184785, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 1143762416}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1143762420 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5351476601720383963, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 1143762416}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1143762421 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7521320971508099391, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 1143762416}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1143762422 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 176746942238241886, guid: 875a43e42a0a7774d9020f8dd49c23f6, type: 3}
-  m_PrefabInstance: {fileID: 1143762416}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1282136516
 GameObject:
   m_ObjectHideFlags: 0
@@ -5955,7 +5900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &1282136523
@@ -6499,7 +6444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &1390619508
@@ -6742,7 +6687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &1426719558
@@ -6983,7 +6928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &1480664947
@@ -7359,7 +7304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &1519870312
@@ -7592,7 +7537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4505e5988a4723f4c97540aedecf818c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   choices:
   - {fileID: 1028479061}
   - {fileID: 23689724}
@@ -7623,7 +7568,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1143762418}
+  - {fileID: 432927950}
   - {fileID: 511828591}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -7672,7 +7617,7 @@ MonoBehaviour:
   inventoryText: {fileID: 1739354315}
   objectivesText: {fileID: 1739354314}
   inventoryAndObjectives: {fileID: 1739354317}
-  clickSound: {fileID: 1143762417}
+  clickSound: {fileID: 0}
   animatorForIO: {fileID: 1739354316}
 --- !u!114 &1704566607
 MonoBehaviour:
@@ -7888,7 +7833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &1721396568
@@ -8283,7 +8228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &1748279719
@@ -8666,7 +8611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &1824280803
@@ -8854,7 +8799,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1143762422}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
         m_Mode: 1
@@ -9129,7 +9074,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &1916475980
@@ -9238,7 +9183,7 @@ MonoBehaviour:
       rgba: 0
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   DialogueBox: {fileID: 0}
   ResponseStrings: []
   ResponseButtons: []
@@ -9546,7 +9491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &1988472428
@@ -9787,7 +9732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &2039076074
@@ -9975,7 +9920,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1143762422}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioSources, Assembly-CSharp
         m_MethodName: playClickSound
         m_Mode: 1
@@ -10231,7 +10176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18b27071f6640654bb1e1cf3b2e411fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 1143762422}
+  AllAudio: {fileID: 0}
   note: {fileID: 0}
   keys: {fileID: 1100264993}
 --- !u!212 &2113818555

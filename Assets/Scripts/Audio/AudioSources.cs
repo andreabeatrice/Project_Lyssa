@@ -73,8 +73,6 @@ public class AudioSources : MonoBehaviour
     public AudioSource fan;
 
     private AudioSource[] allAudioSources;
-
-
     public void Start()
     {
         allAudioSources = FindObjectsOfType<AudioSource>();
@@ -268,6 +266,7 @@ public class AudioSources : MonoBehaviour
          if (scenename.Contains("CommonRoom")){
              RadioBackground.Play();
         }
+       
 
 
 
@@ -314,6 +313,9 @@ public class AudioSources : MonoBehaviour
             break;
             case "Room106":
                 StopAllAudio();
+                background106.Play();
+                break;
+            case "Room106_Post":
                 background106.Play();
                 break;
             case "Hallway_Post106":
@@ -369,8 +371,6 @@ public class AudioSources : MonoBehaviour
                 basement_Background.Play();
                 break;
                 
-           
-           
             default:
             break;
         }
