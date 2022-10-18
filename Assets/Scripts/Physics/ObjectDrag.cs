@@ -80,7 +80,7 @@ public class ObjectDrag : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(interactions, choices, choiceButtons);
+        HeadsUpDisplay.GetComponent<DialogueManager>().StartDialogue(interactions, choices, choiceButtons);
 
     }
 }

@@ -318,9 +318,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allAudio: {fileID: 0}
-  dragSound: {fileID: 0}
-  puttingDown: {fileID: 0}
+  allAudio: {fileID: 1490015099}
+  dragSound: {fileID: 569344500}
+  puttingDown: {fileID: 569344499}
   canDrag: 1
   interactions:
   - Words: Is it just me, or do  these ones look kind of familiar?
@@ -653,9 +653,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allAudio: {fileID: 0}
-  dragSound: {fileID: 0}
-  puttingDown: {fileID: 0}
+  allAudio: {fileID: 1490015099}
+  dragSound: {fileID: 569344500}
+  puttingDown: {fileID: 569344499}
   canDrag: 1
   interactions:
   - Words: Is it just me, or do  these ones look kind of familiar?
@@ -1263,6 +1263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359853352}
   - component: {fileID: 359853351}
+  - component: {fileID: 359853353}
   m_Layer: 0
   m_Name: Alarm Clock
   m_TagString: Untagged
@@ -1311,7 +1312,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: f11e183cdadc1854fa5a5784e8927038, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef3f39ed958526642845019c7895704e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1330,13 +1331,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359853350}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3737, y: 0.72777, z: 0.055878}
-  m_LocalScale: {x: 0.7305717, y: 0.7305717, z: 0.7305717}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -4.42, y: 0.66, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &359853353
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359853350}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dfe002af738da7f42b832886ca8f180f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &375198770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,9 +1675,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allAudio: {fileID: 0}
-  dragSound: {fileID: 0}
-  puttingDown: {fileID: 0}
+  allAudio: {fileID: 1490015099}
+  dragSound: {fileID: 569344500}
+  puttingDown: {fileID: 569344499}
   canDrag: 1
   interactions:
   - Words: Is it just me, or do  these ones look kind of familiar?
@@ -2240,6 +2261,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!82 &569344499 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 9082787347377730821, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1490015095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &569344500 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2657309576819361042, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1490015095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &612734393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,9 +2466,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80414201d50f31f4fb6de1b389764300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allAudio: {fileID: 0}
-  dragSound: {fileID: 0}
-  puttingDown: {fileID: 0}
+  allAudio: {fileID: 1490015099}
+  dragSound: {fileID: 569344500}
+  puttingDown: {fileID: 569344499}
   canDrag: 1
   interactions:
   - Words: Is it just me, or do  these ones look kind of familiar?
@@ -3474,7 +3505,7 @@ PrefabInstance:
     - target: {fileID: 3964440556433673794, guid: 5c7e5e8b48052794ab71270a399a9acb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1490015099}
     - target: {fileID: 3964440556433673794, guid: 5c7e5e8b48052794ab71270a399a9acb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnMouseExit

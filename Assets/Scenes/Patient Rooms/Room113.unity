@@ -442,6 +442,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4912672613045916097, guid: 2151814495eee1d44837e8e0bdd3cfc0, type: 3}
   m_PrefabInstance: {fileID: 70638756}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &158328317 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8661605048657298932, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 612855182}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &158328318 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 612855182}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &215210494
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,7 +901,7 @@ MonoBehaviour:
   inventoryText: {fileID: 70638759}
   objectivesText: {fileID: 70638758}
   inventoryAndObjectives: {fileID: 70638761}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 158328318}
   animatorForIO: {fileID: 70638760}
 --- !u!114 &375198779
 MonoBehaviour:
@@ -946,7 +956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interaction:
   - Words: This room is very empty.
-    Voice: {fileID: 0}
+    Voice: {fileID: 158328317}
     Name: Fern
     TextColor:
       serializedVersion: 2
@@ -2185,8 +2195,8 @@ MonoBehaviour:
       rgba: 4294967295
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 0}
-  DialogueBox: {fileID: 0}
+  AllAudio: {fileID: 1605620786}
+  DialogueBox: {fileID: 1484825659}
   ResponseStrings: []
   ResponseButtons: []
   identifier: infinite
@@ -3867,6 +3877,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1605620786 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 176746942238241886, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 612855182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1634630590
 GameObject:
   m_ObjectHideFlags: 0
