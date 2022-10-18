@@ -4771,6 +4771,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
   m_PrefabInstance: {fileID: 184247935}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &184247937 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 184247935}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &184247938 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746941063478361, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 184247935}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &282468959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8061,7 +8071,7 @@ MonoBehaviour:
   inventoryText: {fileID: 1119329087}
   objectivesText: {fileID: 1119329086}
   inventoryAndObjectives: {fileID: 1119329088}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 184247937}
   animatorForIO: {fileID: 1119329089}
 --- !u!61 &1143139929
 BoxCollider2D:
@@ -8124,7 +8134,7 @@ MonoBehaviour:
   movespeed: 6
   rb: {fileID: 1143139932}
   animator: {fileID: 1143139930}
-  audiosrc: {fileID: 0}
+  audiosrc: {fileID: 184247938}
   frozen: 0
 --- !u!50 &1143139932
 Rigidbody2D:

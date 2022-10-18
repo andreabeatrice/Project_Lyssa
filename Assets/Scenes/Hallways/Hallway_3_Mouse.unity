@@ -498,8 +498,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1670048524}
   - {fileID: 2063028771}
+  - {fileID: 1670048524}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4264,7 +4264,7 @@ MonoBehaviour:
   inventoryText: {fileID: 912023411}
   objectivesText: {fileID: 912023410}
   inventoryAndObjectives: {fileID: 912023409}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 2063028773}
   animatorForIO: {fileID: 912023412}
 --- !u!61 &1794185594
 BoxCollider2D:
@@ -4413,7 +4413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1794185595}
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 2063028772}
 --- !u!1 &1796772433
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,6 +4881,22 @@ PrefabInstance:
 --- !u!4 &2063028771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2063028770}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2063028772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 176746942238241886, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2063028770}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &2063028773 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
   m_PrefabInstance: {fileID: 2063028770}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2063078722 stripped

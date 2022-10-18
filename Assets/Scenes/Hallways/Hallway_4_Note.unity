@@ -25321,7 +25321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0376713ea07de1848bee1203a651e066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 2113452645}
   PlayerCollider: {fileID: 2115122456}
   ObjectAreaCollider: {fileID: 1940837168}
   DialogueBox: {fileID: 1044115872}
@@ -28661,6 +28661,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
   m_PrefabInstance: {fileID: 2113452643}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2113452645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 176746942238241886, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2113452643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &2113452646 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746941063478361, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2113452643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2113452647 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2113452643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2115122455
 GameObject:
   m_ObjectHideFlags: 0
@@ -28729,7 +28750,7 @@ MonoBehaviour:
   inventoryText: {fileID: 1069075817}
   objectivesText: {fileID: 1069075816}
   inventoryAndObjectives: {fileID: 1069075819}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 2113452647}
   animatorForIO: {fileID: 1069075818}
 --- !u!61 &2115122459
 BoxCollider2D:
@@ -28792,7 +28813,7 @@ MonoBehaviour:
   movespeed: 6
   rb: {fileID: 2115122462}
   animator: {fileID: 2115122460}
-  audiosrc: {fileID: 0}
+  audiosrc: {fileID: 2113452646}
   frozen: 0
 --- !u!50 &2115122462
 Rigidbody2D:

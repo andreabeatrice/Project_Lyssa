@@ -3110,6 +3110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89be08de1cfd907418205fad11273d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &413751176 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 910116105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &416733726
 GameObject:
   m_ObjectHideFlags: 0
@@ -5449,7 +5454,7 @@ MonoBehaviour:
       rgba: 4294967295
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 910116107}
   DialogueBox: {fileID: 8813411}
   ResponseStrings: []
   ResponseButtons: []
@@ -5826,6 +5831,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
   m_PrefabInstance: {fileID: 910116105}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &910116107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 176746942238241886, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 910116105}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &910116108 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942691156601, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 910116105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &923160066
 GameObject:
   m_ObjectHideFlags: 0
@@ -6128,7 +6149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b74518bbba4e044e9ae004315462680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openDoorSound: {fileID: 0}
+  openDoorSound: {fileID: 910116108}
   animator: {fileID: 939532623}
   enableProximityReactions: 1
   PlayerCollider: {fileID: 2145307541}
@@ -9246,7 +9267,7 @@ MonoBehaviour:
       rgba: 4289043952
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 910116107}
   DialogueBox: {fileID: 8813411}
   ResponseStrings:
   - I'm on it!
@@ -28596,6 +28617,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4912672613045916110, guid: 2151814495eee1d44837e8e0bdd3cfc0, type: 3}
   m_PrefabInstance: {fileID: 4912672614830079398}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &2101868389 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746941063478361, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 910116105}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2109867225
 GameObject:
   m_ObjectHideFlags: 0
@@ -29067,7 +29093,7 @@ MonoBehaviour:
   inventoryText: {fileID: 1643908884}
   objectivesText: {fileID: 558967915}
   inventoryAndObjectives: {fileID: 1993878631}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 413751176}
   animatorForIO: {fileID: 262168176}
 --- !u!61 &2145307544
 BoxCollider2D:
@@ -29130,7 +29156,7 @@ MonoBehaviour:
   movespeed: 6
   rb: {fileID: 2145307547}
   animator: {fileID: 2145307545}
-  audiosrc: {fileID: 0}
+  audiosrc: {fileID: 2101868389}
   frozen: 0
 --- !u!50 &2145307547
 Rigidbody2D:

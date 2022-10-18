@@ -540,7 +540,7 @@ MonoBehaviour:
       rgba: 4294967295
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 1579933549}
   DialogueBox: {fileID: 766211832}
   ResponseStrings:
   - Keep looking around (+0)
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 1579933552}
   puttingDown: {fileID: 0}
   dragAnimator: {fileID: 341285374}
 --- !u!95 &341285374
@@ -1683,7 +1683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duster: {fileID: 579631366}
-  allAudio: {fileID: 0}
+  allAudio: {fileID: 1579933549}
   hitbox: {fileID: 0}
 --- !u!60 &579631365
 PolygonCollider2D:
@@ -2054,7 +2054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 1579933552}
   puttingDown: {fileID: 0}
   dragAnimator: {fileID: 906589035}
 --- !u!95 &906589035
@@ -2829,7 +2829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 1579933552}
   puttingDown: {fileID: 0}
   dragAnimator: {fileID: 1449836688}
 --- !u!95 &1449836688
@@ -3140,6 +3140,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
   m_PrefabInstance: {fileID: 1579933547}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1579933549 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 176746942238241886, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1579933547}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &1579933550 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2288145045806619492, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1579933547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1579933551 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 712669620306944424, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1579933547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1579933552 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2136626542117941155, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1579933547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1600121051
 GameObject:
   m_ObjectHideFlags: 0
@@ -3172,7 +3198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Interaction: []
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 1579933549}
   DialogueBox: {fileID: 0}
   ResponseStrings: []
   ResponseButtons: []
@@ -3544,8 +3570,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
-  dropSound: {fileID: 0}
+  dragSound: {fileID: 1579933550}
+  dropSound: {fileID: 1579933551}
   canDrag: 0
 --- !u!212 &1705742185
 SpriteRenderer:
@@ -3691,7 +3717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb7cb092dc29ab4e8f79d65739242e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSound: {fileID: 0}
+  dragSound: {fileID: 1579933552}
   puttingDown: {fileID: 0}
   dragAnimator: {fileID: 1788918659}
 --- !u!95 &1788918659

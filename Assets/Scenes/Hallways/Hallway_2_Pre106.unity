@@ -17155,8 +17155,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1561922912}
   - {fileID: 2026617862}
+  - {fileID: 1561922912}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17970,7 +17970,7 @@ MonoBehaviour:
       rgba: 4289043952
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 2026617863}
   DialogueBox: {fileID: 525861618}
   ResponseStrings:
   - Apologize (+0)
@@ -26481,7 +26481,7 @@ MonoBehaviour:
       rgba: 4294967295
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 2026617863}
   DialogueBox: {fileID: 525861618}
   ResponseStrings:
   - 
@@ -26644,7 +26644,7 @@ MonoBehaviour:
   inventoryText: {fileID: 996588387}
   objectivesText: {fileID: 996588388}
   inventoryAndObjectives: {fileID: 996588389}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 2026617865}
   animatorForIO: {fileID: 996588390}
 --- !u!61 &1629585511
 BoxCollider2D:
@@ -26707,7 +26707,7 @@ MonoBehaviour:
   movespeed: 6
   rb: {fileID: 1629585514}
   animator: {fileID: 1629585512}
-  audiosrc: {fileID: 0}
+  audiosrc: {fileID: 2026617864}
   frozen: 0
 --- !u!50 &1629585514
 Rigidbody2D:
@@ -28227,6 +28227,27 @@ PrefabInstance:
 --- !u!4 &2026617862 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 176746942238241824, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2026617861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2026617863 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 176746942238241886, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2026617861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!82 &2026617864 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746941063478361, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2026617861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2026617865 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
   m_PrefabInstance: {fileID: 2026617861}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2044301959
