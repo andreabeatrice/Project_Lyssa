@@ -2252,6 +2252,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &432927952 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3287833671470746244, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 432927949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &500766288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3376,14 +3381,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interaction:
   - Words: The melody means death.
-    Voice: {fileID: 0}
+    Voice: {fileID: 432927952}
     Name: Patient #5
     TextColor:
       serializedVersion: 2
       rgba: 4281951066
     AnimationObject: {fileID: 0}
     Play: 
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 432927951}
   DialogueBox: {fileID: 1073901460}
   ResponseStrings: []
   ResponseButtons: []
