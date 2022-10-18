@@ -29,12 +29,12 @@ public class Hallway_5_KeycardChoiceHandler : MonoBehaviour
 
             played = true;
         }
-        else if (commonroom!= null && PlayerCollider.IsTouching(commonroom) && played == false && Input.GetKeyDown(KeyCode.LeftArrow)){
+        if (commonroom!= null && PlayerCollider.IsTouching(commonroom) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))){
             commonroom_innocent();
 
             played = true;
         }
-        else if (kitchen != null && PlayerCollider.IsTouching(kitchen) && played == false && Input.GetKeyDown(KeyCode.RightArrow)){
+        if (kitchen != null && PlayerCollider.IsTouching(kitchen) && played == false && (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))){
             toKitchen();
 
             played = true;
