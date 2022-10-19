@@ -80,6 +80,7 @@ public class AudioSources : MonoBehaviour
     public AudioSource fernFright;
     public AudioSource syringe;
     public AudioSource painfulBreathing;
+    public AudioSource fernFreak;
     
 
     private AudioSource[] allAudioSources;
@@ -292,6 +293,9 @@ public class AudioSources : MonoBehaviour
                 break;
                 case "painfulBreathing":
                     painfulBreathing= sound;
+                break;
+                 case "fernFreak":
+                    fernFreak= sound;
                 break;
 
             }
@@ -629,6 +633,9 @@ public class AudioSources : MonoBehaviour
     }
     public void playPainfulBreathing(){
         painfulBreathing.Play();
+    }
+     public void playFernFreak(){
+        fernFreak.Play();
     }
 
     public void StopAllAudio() {
