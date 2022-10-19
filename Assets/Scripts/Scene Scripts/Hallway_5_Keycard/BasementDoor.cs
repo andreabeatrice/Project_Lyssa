@@ -32,7 +32,7 @@ public class BasementDoor : MonoBehaviour
         animator.Play("basement_door_open");
         //openDoorSound.Play();
 
-        if(Globals.LightSwitch){
+        if(Globals.LightSwitch == true){
             FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_1_LitUp", "crossfade_start");
         }
         else {

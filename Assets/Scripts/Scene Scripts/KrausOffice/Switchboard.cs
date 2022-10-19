@@ -52,6 +52,7 @@ public class Switchboard : MonoBehaviour
 
     public void PlaySwitchFlipNoise(){
         AllAudio.playLight_Switch();
+        Globals.LightSwitch = true;
     }
 
 }

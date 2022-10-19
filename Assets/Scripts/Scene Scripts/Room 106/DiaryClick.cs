@@ -29,7 +29,7 @@ public class DiaryClick : MonoBehaviour
 
     public GameObject hide_diary_button;
 
-    public GameObject pillow, keycard;
+    public GameObject pillow, keycard, note;
 
     //this is the OnClick() action of the io_close button
     public void closeDiary()
@@ -119,6 +119,8 @@ public class DiaryClick : MonoBehaviour
         keycard.GetComponentsInChildren<DialogueClick>()[0].Clickable = true;
 
        pillow.GetComponentsInChildren<objectDrag_nodialog>()[0].canDrag =true;
+
+       note.GetComponentsInChildren<DialogueClick>()[0].Clickable = true;
     }
 
     

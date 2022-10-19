@@ -1010,11 +1010,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &568769187 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2421056048147085754, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
-  m_PrefabInstance: {fileID: 568769184}
-  m_PrefabAsset: {fileID: 0}
 --- !u!82 &568769188 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 4843395590475669058, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
@@ -1549,6 +1544,11 @@ PrefabInstance:
 --- !u!224 &673649789 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1714896571131185866, guid: fa3a9745fd6d63f4fbd14702cbd3046f, type: 3}
+  m_PrefabInstance: {fileID: 673649788}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &673649790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1714896569350666831, guid: fa3a9745fd6d63f4fbd14702cbd3046f, type: 3}
   m_PrefabInstance: {fileID: 673649788}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &751649675
@@ -2866,7 +2866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectAnimator: {fileID: 855011499}
-  tvStatic: {fileID: 568769187}
+  PlaySound: {fileID: 0}
   Trigger: OnClick
   AnimationName: 
   AnimatedObject: {fileID: 0}
@@ -3821,7 +3821,7 @@ MonoBehaviour:
   inventoryText: {fileID: 758432016}
   objectivesText: {fileID: 758432015}
   inventoryAndObjectives: {fileID: 758432018}
-  clickSound: {fileID: 1879611861}
+  clickSound: {fileID: 334007468}
   animatorForIO: {fileID: 758432017}
 --- !u!114 &1420137541
 MonoBehaviour:
@@ -7275,6 +7275,7 @@ GameObject:
   - component: {fileID: 1825452605}
   - component: {fileID: 1825452606}
   - component: {fileID: 1825452607}
+  - component: {fileID: 1825452608}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -7336,23 +7337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d938942b721a042ba17c99bddebb16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1825452603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1825452595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9032d08066a9964a8170cf0fd8e75e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inventoryText: {fileID: 758432016}
-  objectivesText: {fileID: 758432015}
-  inventoryAndObjectives: {fileID: 758432018}
-  clickSound: {fileID: 334007468}
-  animatorForIO: {fileID: 758432017}
 --- !u!114 &1825452604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7430,6 +7414,42 @@ MonoBehaviour:
   rb: {fileID: 1420137536}
   testing: 0
   insane: 0
+--- !u!114 &1825452608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825452595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5fdb19cb5ca74948a692c708b3391ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meter_image: {fileID: 673649790}
+  meter_sprites:
+  - {fileID: 21300000, guid: 0346cd8782ae1f04687a72b07d3e9736, type: 3}
+  - {fileID: 21300000, guid: e1625950d73347740b1b220a45804eb8, type: 3}
+  - {fileID: 21300000, guid: 12e14882470e3b54fb686b93199d0827, type: 3}
+  - {fileID: 21300000, guid: 66074fd4eabfe1947805724c2b8bfd0b, type: 3}
+  - {fileID: 21300000, guid: fcee7f2ee0624d3419bf84d4d143dfa5, type: 3}
+  - {fileID: 21300000, guid: b5fefa4a00b9bac4bbac39d0ee430138, type: 3}
+  - {fileID: 21300000, guid: f21a72dbaa960cf43a21335f111fbeb7, type: 3}
+  - {fileID: 21300000, guid: 9b4ec8e61d6544b4093ad0962c6150c3, type: 3}
+  - {fileID: 21300000, guid: 93cea10360a299b4a89fce4c7d87afff, type: 3}
+  - {fileID: 21300000, guid: 4e6b025c90f56a04fb6a9c026d3ec8db, type: 3}
+  - {fileID: 21300000, guid: c676e44672d98284c906b37906a47ba1, type: 3}
+  - {fileID: 21300000, guid: 267efd6c495054744b66c503648766af, type: 3}
+  - {fileID: 21300000, guid: 5fc6c915de5e68c4e85c849ac57c0d12, type: 3}
+  - {fileID: 21300000, guid: 9a9c4a70b509eee46b19ca3bcf2df23a, type: 3}
+  - {fileID: 21300000, guid: 7fd73610e04f4344586ffb45e7e523bc, type: 3}
+  - {fileID: 21300000, guid: 327b6033d15d028468e67fa4577f8990, type: 3}
+  - {fileID: 21300000, guid: 3816a5338f50a7f488d13a76eedcff99, type: 3}
+  - {fileID: 21300000, guid: 7789343dba72a084ba5fcc6ed05f3be5, type: 3}
+  - {fileID: 21300000, guid: cfff369e8bfd6834e9d2c19fd0c2c017, type: 3}
+  - {fileID: 21300000, guid: 84d1e6c75116242488de2cbfe26a2065, type: 3}
+  - {fileID: 21300000, guid: 514410d6c4264514682456452c880896, type: 3}
+  test: 0
 --- !u!82 &1883429031 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1884637907026658890, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
