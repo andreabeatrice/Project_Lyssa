@@ -7,6 +7,9 @@ public class Switchboard : MonoBehaviour
     [SerializeField]
     Texture2D cursor;
 
+    [SerializeField]
+    Texture2D cursor_pt;
+
     public Animator switchboard_animator;
 
     private bool open = false;
@@ -18,11 +21,11 @@ public class Switchboard : MonoBehaviour
     public void OnMouseDown()
     {
 
-        if (!open && this.name.Contains("Object - Switchboard")){
+        if (!open){
             switchboard_animator.SetTrigger("Change");
             open = true;
         } 
-        else if (!flipped && this.name == "Switch"){
+        else if (open && !flipped){
             switchboard_animator.SetTrigger("Change");
             flipped = true;
             Globals.LightSwitch = true;
@@ -31,9 +34,13 @@ public class Switchboard : MonoBehaviour
 
     public void OnMouseEnter()
     {
-        if (!flipped && this.name == "Switch"){
+        if ( !flipped && this.name == "Lever"){
             Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
         }
+        else {
+            Cursor.SetCursor(cursor_pt, Vector2.zero, CursorMode.Auto);
+        }
+
     }
 
     public void OnMouseExit()
@@ -45,6 +52,7 @@ public class Switchboard : MonoBehaviour
 
     public void PlaySwitchFlipNoise(){
         AllAudio.playLight_Switch();
+        Globals.LightSwitch = true;
     }
 
 }

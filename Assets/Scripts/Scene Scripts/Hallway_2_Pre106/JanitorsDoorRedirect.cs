@@ -44,6 +44,6 @@ public class JanitorsDoorRedirect : MonoBehaviour
 
         Sentence[] dialog = new Sentence[] {new Sentence("I don't need to do that again right now.", 1)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(dialog, "Okay", NoActionChoiceButton);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialog);
     }
 }

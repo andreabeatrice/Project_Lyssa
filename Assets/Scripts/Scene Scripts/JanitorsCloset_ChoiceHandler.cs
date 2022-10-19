@@ -7,11 +7,9 @@ using UnityEngine.SceneManagement;
 public class JanitorsCloset_ChoiceHandler : MonoBehaviour
 {
 
-    public GameObject insanityMeter;
-
     public Button Decision_TakeObject;
 
-    public GameObject mop, broom, rat, LeaveRoom_button;
+    public GameObject mop, broom, rat, LeaveRoom_button, InsanityMeter;
 
     public bool firstInteraction = true;
 
@@ -58,8 +56,9 @@ public class JanitorsCloset_ChoiceHandler : MonoBehaviour
             FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
             Globals.StorageRoom = true;
-            HelperMethods.ObjectivesDequeue("Go to the storage closet for supplies");
+            HelperMethods.ObjectivesDequeue("Go to the janitor's closet for supplies");
             HelperMethods.ObjectivesEnqueue("Go clean the patients' rooms");
+            InsanityMeter.SetActive(true);
 
             //Explains the insanity meter to the player
             //Explains dragging     

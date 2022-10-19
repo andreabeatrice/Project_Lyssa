@@ -27,18 +27,16 @@ public class BasementDoor : MonoBehaviour
     // }
 
 
-    public IEnumerator EnterDarkBasement(){
-        
-        //yield on a new YieldInstruction that waits for 1.5 seconds.
-        yield return new WaitForSeconds(1.5f);
-
-        FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_Dark", "crossfade_start");
-
-    }
 
     public void handle(){
         animator.Play("basement_door_open");
         //openDoorSound.Play();
-        StartCoroutine(EnterDarkBasement());
+
+        if(Globals.LightSwitch == true){
+            FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_1_LitUp", "crossfade_start");
+        }
+        else {
+            FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_Dark", "crossfade_start");
+        }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Room106_ChoiceHandler : MonoBehaviour
 {
     public AudioSources AllAudio;
-    public GameObject WallWritings, AntipsychoticPill, Keycard, Note;
+    public GameObject WallWritings, AntipsychoticPill, Keycard, Note, ManagerHolder;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,11 +36,11 @@ public class Room106_ChoiceHandler : MonoBehaviour
 
     public void KeepAntipsychotic(){
 
-        HelperMethods.InventoryEnqueue("Antipyschotic Pill");
+        HelperMethods.InventoryEnqueue("Antipsychotic Pill");
 
         AntipsychoticPill.SetActive(false);
 
-        FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
+        ManagerHolder.GetComponent<DialogueBoxHandler>().ClearDialogueBox();
     }
 
     public void KeepKeycard(){
@@ -56,11 +56,11 @@ public class Room106_ChoiceHandler : MonoBehaviour
         FindObjectOfType<AudioSources>().playFootsteps();
         //FindObjectOfType<DialogueManager>().TypeSentence("Someone's coming!");
 
-        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+        ManagerHolder.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
         Sentence[] se = new Sentence[]{new Sentence("Someone's coming!", null, "Fern", ColorCodes.fern)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(se, "", null);
+        ManagerHolder.GetComponent<DialogueManager>().StartDialogue(se, "", null);
 
         StartCoroutine(NurseScene());
 
@@ -79,11 +79,11 @@ public class Room106_ChoiceHandler : MonoBehaviour
         FindObjectOfType<AudioSources>().StopAllAudio();
         FindObjectOfType<AudioSources>().playFootsteps();
 
-        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+        ManagerHolder.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
         Sentence[] se = new Sentence[]{new Sentence("Someone's coming!", null, "Fern", ColorCodes.fern)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(se);
+        ManagerHolder.GetComponent<DialogueManager>().StartDialogue(se);
 
         FindObjectOfType<LevelLoader>().LoadNextLevelLong("Room106_Nurse", "crossfade_start", 4f);
 
@@ -93,7 +93,7 @@ public class Room106_ChoiceHandler : MonoBehaviour
     public void ExamineWall(){
         Globals.insanity +=1;
         DestroyImmediate(WallWritings.GetComponent<Collider2D>());
-        FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
+        ManagerHolder.GetComponent<DialogueBoxHandler>().ClearDialogueBox();
     }
 
     public IEnumerator NurseScene() //each sentence

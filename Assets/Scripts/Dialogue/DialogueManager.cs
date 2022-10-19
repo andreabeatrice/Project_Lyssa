@@ -44,7 +44,7 @@ public class DialogueManager : MonoBehaviour {
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && ContinueButton.activeSelf){
+        if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && ContinueButton != null && ContinueButton.activeSelf){
 
             if (Sentences != null){
                    
@@ -78,7 +78,8 @@ public class DialogueManager : MonoBehaviour {
                 TimeToClear = (i[i.Length-1].Words.ToCharArray().Length * Globals.typingSpeed) + 3;
 
             //4) show the continue button
-                ContinueButton.SetActive(true);
+                if (ContinueButton != null)
+                    ContinueButton.SetActive(true);
 
                 if (NamePlaceholder != null)
                     NamePlaceholder.text = "";
@@ -117,7 +118,9 @@ public class DialogueManager : MonoBehaviour {
                 ResponseButtons = new GameObject[]{b};
 
                 //4) show the continue button
-                ContinueButton.SetActive(true);
+                if (ContinueButton != null)
+                    ContinueButton.SetActive(true);
+
                 if (NamePlaceholder != null)
                     NamePlaceholder.text = "";
 
@@ -156,6 +159,7 @@ public class DialogueManager : MonoBehaviour {
                     ResponseButtons = b;
 
                 //4) show the continue button
+                if (ContinueButton != null)
                     ContinueButton.SetActive(true);
                     
                     if (NamePlaceholder != null)
@@ -247,7 +251,8 @@ public class DialogueManager : MonoBehaviour {
     //EndDialogue(): Shows any assigned responses
         void EndDialogue(){
 
-            ContinueButton.SetActive(false);
+                if (ContinueButton != null)
+                    ContinueButton.SetActive(false);
             
 
             if(ResponseButtons != null){

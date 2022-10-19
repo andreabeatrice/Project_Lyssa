@@ -8,6 +8,9 @@ public class PatientRoomRedirect : MonoBehaviour
     GameObject NoActionChoiceButton;
     public Collider2D PlayerCollider;
     public Collider2D ObjectAreaCollider;
+    public GameObject ManagerHolder;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,13 +27,13 @@ public class PatientRoomRedirect : MonoBehaviour
 
     void OnMouseDown()
     {
-        FindObjectOfType<DialogueBoxHandler>().ShowDialogueBox();
+        ManagerHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
         
         string[] bucketSentences = new string[] {};
 
         Sentence[] s = new Sentence[]{new Sentence("I should go get cleaning supplies first",1)};
 
-        FindObjectOfType<DialogueManager>().StartDialogue(s, "Yeah, okay", NoActionChoiceButton);
+        ManagerHolder.GetComponent<DialogueManager>().StartDialogue(s);
 
         allAudio.playErrorSound();
     }
