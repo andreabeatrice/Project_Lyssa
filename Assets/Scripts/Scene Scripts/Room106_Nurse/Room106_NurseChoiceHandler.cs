@@ -90,7 +90,7 @@ public class Room106_NurseChoiceHandler : MonoBehaviour
 
         FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
 
-        Sentence[] s = new Sentence[]{new Sentence("Oh, brilliant! We can't have anyone getting into the basement. Now get back to work!", allAudio.nurse_voice, "Nurse Tarr", tarr), new Sentence("Oh, and take this trash she was keeping under her pillow with you!", allAudio.nurse_voice, "Nurse Tarr", tarr)};
+        Sentence[] s = new Sentence[]{new Sentence("Oh, brilliant! We can't have anyone getting into the basement. Now get back to work!", allAudio.nurse_voice, "Nurse Tarr", tarr), new Sentence("Oh, and take this trash she was keeping under her pillow with you!", allAudio.nurse_voice, "Nurse Tarr", tarr), new Sentence("You sneak a glance at the paper she's handed you—it's not just trash; it's the note SHE wrote about in her diary.")};
 
         HelperMethods.InventoryEnqueue("Note from Otto");
         

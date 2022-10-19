@@ -61,6 +61,8 @@ public class DialogueAutoplayManager : MonoBehaviour {
             
             //1) assign the passed-in sentences to the Sentences queue
                 Sentences.Clear();
+
+                
             
                 foreach(Sentence s in i){
                     Sentences.Enqueue(s);
@@ -213,7 +215,10 @@ public class DialogueAutoplayManager : MonoBehaviour {
     //TypeSentence(string s): Runs the text animation and voice audio
         public IEnumerator TypeSentence(string s) //each sentence
         {
-            StartCoroutine(DNS());
+            if (Sentences.Count != 0){
+                StartCoroutine(DNS());
+            }
+            
 
             if(SpeakerVoice != null){
                 SpeakerVoice.time = Random.Range(0.01f, SpeakerVoice.clip.length);
@@ -291,12 +296,24 @@ public class DialogueAutoplayManager : MonoBehaviour {
 
 
     public IEnumerator DNS() {
+
+        if (Sentences.Count == 0){
+            EndDialogue();
+        }
         //0) If a Sentence already played, and it had an Animator attached, play the animation
             if(AnimationObject != null)
                 AnimationObject.Play(SentenceAnimation);
 
+        Sentence CurrentSentence = null;
         //1) Get the Sentence object we're going to be working with
-            Sentence CurrentSentence = Sentences.Dequeue();
+        if (Sentences.Peek() != null){
+            CurrentSentence = Sentences.Dequeue();
+        }
+        else {
+            EndDialogue();
+        }
+
+            
 
         float TimeToWait = (Globals.typingSpeed * CurrentSentence.Words.ToCharArray().Length) + 2;
         

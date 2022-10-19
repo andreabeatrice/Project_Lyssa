@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Basement_3_Win_CH : MonoBehaviour
+public class Basement_4_CH : MonoBehaviour
 {
     public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
-        rb.transform.position = new Vector3(-1.31f, 72.31f, 0f);
-        Globals.playerPositionOnMap = rb.transform.position;
+        rb.transform.position = Globals.playerPositionOnMap;
     }
 
     // Update is called once per frame
@@ -18,8 +17,16 @@ public class Basement_3_Win_CH : MonoBehaviour
         
     }
 
+    public void intoBoilerRoom(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("BoilerRoomNoMom", "crossfade_start");
+    }
+
     public void intoBoilerRoomMom(){
         FindObjectOfType<LevelLoader>().LoadNextLevel("BoilerRoomWithMom", "crossfade_start");
     }
 
+
+    public void into101(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Room101", "crossfade_start");
+    }
 }
