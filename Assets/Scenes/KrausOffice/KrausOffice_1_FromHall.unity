@@ -995,6 +995,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &278803314 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 278803311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &396608839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1325,7 +1330,6 @@ GameObject:
   - component: {fileID: 538071077}
   - component: {fileID: 538071078}
   - component: {fileID: 538071079}
-  - component: {fileID: 538071080}
   m_Layer: 0
   m_Name: Object - Switchboard
   m_TagString: Untagged
@@ -1466,7 +1470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: a902aaf19ddbd8d4e800f749501daa6e, type: 3}
   switchboard_animator: {fileID: 538071075}
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 278803313}
 --- !u!114 &538071079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1480,36 +1484,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
---- !u!114 &538071080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538071072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Interaction:
-  - Words: That will probably be useful later.
-    Voice: {fileID: 0}
-    Name: 
-    TextColor:
-      serializedVersion: 2
-      rgba: 4294967295
-    AnimationObject: {fileID: 0}
-    Play: 
-  AllAudio: {fileID: 0}
-  DialogueBox: {fileID: 1908098147}
-  ResponseStrings: []
-  ResponseButtons: []
-  identifier: infinite
-  Clickable: 1
-  enableProximityReactions: 0
-  PlayerCollider: {fileID: 0}
-  ObjectAreaCollider: {fileID: 0}
 --- !u!1 &542987713
 GameObject:
   m_ObjectHideFlags: 0
@@ -2899,8 +2873,9 @@ GameObject:
   - component: {fileID: 1234847890}
   - component: {fileID: 1234847891}
   - component: {fileID: 1234847893}
+  - component: {fileID: 1234847894}
   m_Layer: 0
-  m_Name: Switch
+  m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2961,7 +2936,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: a902aaf19ddbd8d4e800f749501daa6e, type: 3}
   switchboard_animator: {fileID: 538071075}
-  AllAudio: {fileID: 0}
+  AllAudio: {fileID: 278803313}
+--- !u!114 &1234847894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234847889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interaction:
+  - Words: That will probably be useful later.
+    Voice: {fileID: 0}
+    Name: 
+    TextColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    AnimationObject: {fileID: 0}
+    Play: 
+  AllAudio: {fileID: 278803313}
+  DialogueBox: {fileID: 1908098147}
+  ResponseStrings: []
+  ResponseButtons: []
+  identifier: infinite
+  Clickable: 1
+  enableProximityReactions: 0
+  PlayerCollider: {fileID: 0}
+  ObjectAreaCollider: {fileID: 0}
 --- !u!1001 &1269762263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4096,7 +4101,7 @@ PrefabInstance:
     - target: {fileID: 3964440556433673794, guid: 5c7e5e8b48052794ab71270a399a9acb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 278803313}
     - target: {fileID: 3964440556433673794, guid: 5c7e5e8b48052794ab71270a399a9acb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LeaveOfficeSnuckIn
@@ -5324,7 +5329,7 @@ MonoBehaviour:
   inventoryText: {fileID: 506768215}
   objectivesText: {fileID: 506768214}
   inventoryAndObjectives: {fileID: 506768216}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 278803314}
   animatorForIO: {fileID: 506768217}
 --- !u!114 &2138402405
 MonoBehaviour:

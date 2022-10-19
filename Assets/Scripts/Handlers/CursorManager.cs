@@ -8,6 +8,8 @@ public class CursorManager : MonoBehaviour
     [SerializeField]
     Texture2D cursor;
 
+    
+
     public void OnMouseEnter()
     {
 

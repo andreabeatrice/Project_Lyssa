@@ -92,6 +92,14 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+    public void StartGame(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_1_PreTutorial", "crossfade_start");
+    }
+
+    public void MainMenu(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("MainMenu", "crossfade_start");
+    }
+
 
     public void Quit()
     {

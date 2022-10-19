@@ -95,7 +95,7 @@ public class MainMenuScript : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
 
-        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_1_PreTutorial", "crossfade_start");
+        FindObjectOfType<LevelLoader>().LoadNextLevel("TriggerWarning", "crossfade_start");
     }
 
     public void OpenSettings(){

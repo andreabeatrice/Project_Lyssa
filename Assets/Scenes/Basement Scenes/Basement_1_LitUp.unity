@@ -2018,6 +2018,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3426104463049340470, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: AllAudio
+      value: 
+      objectReference: {fileID: 568769186}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
 --- !u!224 &929869283 stripped
@@ -2589,10 +2593,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107864423}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.38, y: -0.55, z: 0}
-  m_LocalScale: {x: 2.8244674, y: 2.8244674, z: 2.8244674}
-  m_ConstrainProportionsScale: 1
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1420137535}
   m_RootOrder: 0
@@ -3817,7 +3821,7 @@ MonoBehaviour:
   inventoryText: {fileID: 758432016}
   objectivesText: {fileID: 758432015}
   inventoryAndObjectives: {fileID: 758432018}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 1879611861}
   animatorForIO: {fileID: 758432017}
 --- !u!114 &1420137541
 MonoBehaviour:
@@ -7267,7 +7271,6 @@ GameObject:
   - component: {fileID: 1825452598}
   - component: {fileID: 1825452599}
   - component: {fileID: 1825452602}
-  - component: {fileID: 1825452603}
   - component: {fileID: 1825452604}
   - component: {fileID: 1825452605}
   - component: {fileID: 1825452606}
