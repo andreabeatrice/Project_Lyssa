@@ -6,7 +6,7 @@ public class KitchenScript : MonoBehaviour
 {
 
     public GameObject fern;
-    public Animator fern2;
+    public Animator FernAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class KitchenScript : MonoBehaviour
 
     public void DrinkMilk(){
         fern.SetActive(true);
-        fern2.Play("rotten_milk");
+        FernAnimator.Play("Player_Drinking_Milk");
         FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
 
         Globals.deaths.Add("'No outside food' isn't just a suggestion.");
