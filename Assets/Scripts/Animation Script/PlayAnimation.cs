@@ -6,7 +6,7 @@ public class PlayAnimation : MonoBehaviour
 {
 
     public Animator ObjectAnimator;
-
+    public AudioSource tvStatic;
     public string Trigger;
 
     public string AnimationName;
@@ -29,16 +29,15 @@ public class PlayAnimation : MonoBehaviour
             if(AnimatedObject != null){
                 AnimatedObject.SetActive(true);
             }
-
             ObjectAnimator.SetTrigger(Trigger);
-
-
         }
         else if (AnimationName != null){
             if(AnimatedObject != null){
                 AnimatedObject.SetActive(true);
             }
+           
             ObjectAnimator.Play(AnimationName);
+            
         }
     }
 
