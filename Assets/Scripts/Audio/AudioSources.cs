@@ -356,7 +356,7 @@ public class AudioSources : MonoBehaviour
                 crickets.Play();
             break;
             case "Room106":
-                StopAllAudio();
+                //StopAllAudio();
                 background106.Play();
                 break;
             case "Room106_Post":
