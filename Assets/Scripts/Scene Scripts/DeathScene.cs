@@ -7,11 +7,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.IO;
 
+
 public class DeathScene : MonoBehaviour
 {
     public TMP_Text causeOfDeath;
     public TMP_Text timeOfDeath;
-
+    public AudioSources allAudio;
     public Sprite title1, title2, title3, title4, title5;
 
     public GameObject title;
@@ -40,7 +41,19 @@ public class DeathScene : MonoBehaviour
 
         causeOfDeath_str = Globals.deaths.Last();
 
-        DisplayNextSentence();
+        if (Globals.deaths.Last().Contains("meditation")){//insane
+            allAudio.playInsaneEnding();
+        }
+        else if (Globals.deaths.Last().Contains("proud")){
+            allAudio.playWinSound();
+        }
+        else if (Globals.deaths.Last().Contains("throw")){//success
+            allAudio.playWinSound();
+        }
+        else {//death
+            allAudio.playFailSound();
+        }
+         DisplayNextSentence();
     }
 
     public void DisplayNextSentence(){
@@ -111,17 +124,17 @@ public class DeathScene : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         //switch (Globals.deaths.Last())
-        if (Globals.deaths.Last().Contains("meditation")){
+        if (Globals.deaths.Last().Contains("meditation")){//insane
             title.GetComponent<Image>().sprite = title2;
         }
         else if (Globals.deaths.Last().Contains("proud")){
             title.GetComponent<Image>().sprite = title1;
         }
-        else if (Globals.deaths.Last().Contains("throw")){
+        else if (Globals.deaths.Last().Contains("throw")){//success
             title.GetComponent<Image>().sprite = title5;
         }
         else {
-            title.GetComponent<Image>().sprite = title3;
+            title.GetComponent<Image>().sprite = title3;//dead
         }
         
     }

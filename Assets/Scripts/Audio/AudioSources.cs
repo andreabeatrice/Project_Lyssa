@@ -75,6 +75,12 @@ public class AudioSources : MonoBehaviour
     public AudioSource fan;
     public AudioSource tvStatic;
     public AudioSource basementDoors;
+    public AudioSource failSound;
+    public AudioSource insaneEnding;
+    public AudioSource fernFright;
+    public AudioSource syringe;
+    public AudioSource painfulBreathing;
+    
 
     private AudioSource[] allAudioSources;
     public void Start()
@@ -269,6 +275,24 @@ public class AudioSources : MonoBehaviour
                 case "DrKrause_3":
                     DrKrause_3 = sound;
                 break;
+                case "WinSound":
+                    WinSound = sound;
+                break;
+                 case "failSound":
+                    failSound = sound;
+                break;
+                 case "insaneEnding":
+                    insaneEnding = sound;
+                break;
+                case "fernFright":
+                    fernFright = sound;
+                break;
+                case "syringe":
+                    syringe = sound;
+                break;
+                case "painfulBreathing":
+                    painfulBreathing= sound;
+                break;
 
             }
         }
@@ -387,12 +411,16 @@ public class AudioSources : MonoBehaviour
                 panting.Play();
                 basement_Background.Play();
                 break;
+            
                 
             default:
             break;
         }
     }
 
+    public void stopMetalDrag(){
+        metalDrag.Stop();
+    }
     public void playClickSound(){
         click_sound.Play();
     }
@@ -586,6 +614,21 @@ public class AudioSources : MonoBehaviour
      public void playTVStatic()
     {
        tvStatic.Play();
+    }
+    public void playInsaneEnding(){
+        insaneEnding.Play();
+    }
+    public void playFailSound(){
+        failSound.Play();
+    }
+    public void playFernFright(){
+        fernFright.Play();
+    }
+    public void playSyringe(){
+        syringe.Play();
+    }
+    public void playPainfulBreathing(){
+        painfulBreathing.Play();
     }
 
     public void StopAllAudio() {
