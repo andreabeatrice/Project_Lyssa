@@ -161,6 +161,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &127801787 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3759904008276439817, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2101611240}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &369033608
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,6 +329,7 @@ GameObject:
   - component: {fileID: 1112664481}
   - component: {fileID: 1112664480}
   - component: {fileID: 1112664479}
+  - component: {fileID: 1112664482}
   m_Layer: 0
   m_Name: YouWinNewspaper
   m_TagString: Untagged
@@ -418,6 +424,86 @@ Transform:
   m_Father: {fileID: 15738903}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 81.709}
+--- !u!114 &1112664482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112664477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click_sound: {fileID: 2101611305}
+  open_door: {fileID: 2101611304}
+  footsteps: {fileID: 2101611303}
+  hallway_sounds: {fileID: 2101611302}
+  receptionist_voice: {fileID: 2101611301}
+  fern_voice: {fileID: 2101611300}
+  nurse_voice: {fileID: 2101611299}
+  nurse_voice_2: {fileID: 2101611298}
+  nurse_voice_3: {fileID: 2101611297}
+  background_music: {fileID: 2101611296}
+  menu_background_with_crickets: {fileID: 2101611295}
+  crickets: {fileID: 2101611294}
+  pick_up_object: {fileID: 2101611293}
+  release_object: {fileID: 2101611292}
+  janitors_closet_background_music: {fileID: 2101611291}
+  close_door: {fileID: 2101611290}
+  vent_drip: {fileID: 2101611289}
+  page_turn: {fileID: 2101611288}
+  book_close: {fileID: 2101611287}
+  background106: {fileID: 2101611286}
+  intercom: {fileID: 2101611285}
+  mopping_sound: {fileID: 2101611284}
+  error_sound: {fileID: 2101611283}
+  puff: {fileID: 2101611282}
+  drawer_open: {fileID: 2101611281}
+  drawer_close: {fileID: 2101611280}
+  mirror_squeak: {fileID: 2101611279}
+  cabinet_Open: {fileID: 2101611278}
+  cabinet_Close: {fileID: 2101611277}
+  glass_Clink: {fileID: 2101611276}
+  basement_Background: {fileID: 2101611275}
+  pickUpBook: {fileID: 2101611274}
+  putDownBook: {fileID: 2101611273}
+  light_Switch: {fileID: 2101611272}
+  footsteps_Concrete: {fileID: 2101611271}
+  closeKitchenCupboard: {fileID: 2101611270}
+  openKitchenCupboard: {fileID: 2101611269}
+  punch: {fileID: 2101611268}
+  doublePunch: {fileID: 2101611267}
+  kick: {fileID: 2101611266}
+  fridgeDoorOpening: {fileID: 2101611265}
+  fridgeDoorClosing: {fileID: 2101611264}
+  fridgeBeingOpen: {fileID: 2101611263}
+  fridgeHum: {fileID: 2101611262}
+  pot: {fileID: 2101611261}
+  potsAndPans: {fileID: 2101611260}
+  fightBell: {fileID: 2101611259}
+  tickingTimer: {fileID: 2101611258}
+  metalDrag: {fileID: 2101611257}
+  manHoleDrop: {fileID: 2101611256}
+  boilerRoomBackground: {fileID: 2101611255}
+  burning: {fileID: 2101611254}
+  screamingMale: {fileID: 2101611253}
+  fightBackground: {fileID: 2101611252}
+  panting: {fileID: 2101611251}
+  roadAndBirds: {fileID: 2101611250}
+  newspaperSpin: {fileID: 2101611249}
+  OttoNormal: {fileID: 2101611248}
+  OttoFreak: {fileID: 2101611247}
+  Dahlia: {fileID: 2101611246}
+  DrKrause: {fileID: 2101611245}
+  DrKrause_2: {fileID: 0}
+  DrKrause_3: {fileID: 0}
+  WinSound: {fileID: 2101611244}
+  RadioBackground: {fileID: 2101611243}
+  fan: {fileID: 2101611242}
+  tvStatic: {fileID: 1346321149}
+  basementDoors: {fileID: 127801787}
 --- !u!1 &1213154814
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,9 +691,13 @@ MonoBehaviour:
   OttoFreak: {fileID: 2101611247}
   Dahlia: {fileID: 2101611246}
   DrKrause: {fileID: 2101611245}
+  DrKrause_2: {fileID: 0}
+  DrKrause_3: {fileID: 0}
   WinSound: {fileID: 2101611244}
   RadioBackground: {fileID: 2101611243}
   fan: {fileID: 2101611242}
+  tvStatic: {fileID: 0}
+  basementDoors: {fileID: 0}
 --- !u!1001 &1218199759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -681,6 +771,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6de5f1d2f4b11184ebcd5d18705f9238, type: 3}
+--- !u!82 &1346321149 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2421056048147085754, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2101611240}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1665389748
 GameObject:
   m_ObjectHideFlags: 0
