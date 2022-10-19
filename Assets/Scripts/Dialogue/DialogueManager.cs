@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour {
 
     public AudioSource clickSound;
 
+    public GameObject DialogueManagerHolder;
+
     private AudioSource SpeakerVoice;
 
     public AudioSources AllAudio;
@@ -28,6 +30,8 @@ public class DialogueManager : MonoBehaviour {
     private GameObject choice1;
     private GameObject choice2;
     private GameObject choice3;
+
+    
 
     private float TimeToClear;
 
@@ -125,7 +129,7 @@ public class DialogueManager : MonoBehaviour {
                     NamePlaceholder.text = "";
 
                 //5) Hide all previous Response buttons
-                    FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+                    DialogueManagerHolder.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
                 //6) Start the first sentence
                 DisplayNextSentence();
@@ -166,7 +170,7 @@ public class DialogueManager : MonoBehaviour {
                         NamePlaceholder.text = "";
 
                 //5) Hide all previous Response buttons
-                        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+                        DialogueManagerHolder.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
                 //6) Start the first sentence
                     DisplayNextSentence();
@@ -210,7 +214,7 @@ public class DialogueManager : MonoBehaviour {
                 string NextLine = CurrentSentence.Words;
 
             //5) Hide all previous Response buttons
-                FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+                DialogueManagerHolder.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
             //6) If a previous sentence was typing, stop it
                 StopAllCoroutines();
@@ -306,7 +310,7 @@ public class DialogueManager : MonoBehaviour {
                     StopAllCoroutines();
 
                 //5) Hide all previous Response buttons
-                    FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+                    DialogueManagerHolder.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
                 //6) If a previous sentence was typing, stop it
                     SpeechPlaceholder.text = NextLine;
@@ -325,7 +329,7 @@ public class DialogueManager : MonoBehaviour {
 
             yield return new WaitForSeconds(TimeToClear);
 
-            FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
+            DialogueManagerHolder.GetComponent<DialogueBoxHandler>().ClearDialogueBox();
         }
 
 

@@ -6,7 +6,7 @@ public class PlayAnimation : MonoBehaviour
 {
 
     public Animator ObjectAnimator;
-    public AudioSource tvStatic;
+    public AudioSource PlaySound;
     public string Trigger;
 
     public string AnimationName;
