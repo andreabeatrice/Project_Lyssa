@@ -24,7 +24,6 @@ public class DialogueAutoStart_Fight : MonoBehaviour
     // Start(): is called before the first frame update - calls TriggerDialogue() or TriggerDialogueNoWait()
         void Start()
         {
-            HelperMethods.InventoryEnqueue("Antipsychotic Pill");
             if (HelperMethods.CheckInventory("antipsychotic")){
                 Sentence[] temp = new Sentence[10];
 
@@ -36,7 +35,9 @@ public class DialogueAutoStart_Fight : MonoBehaviour
                 temp[8] = new Sentence("Remember that antipsychotic pill you picked up earlier?");
                 temp[9] = new Sentence("If you're worried about your insanity levels, this might be a good time to take it.");
 
-                FindObjectOfType<DialogueManager>().StartDialogue(temp, ResponseStrings, ResponseButtons);
+                DialogueBox.SetActive(true);
+
+                DialogueBox.GetComponent<DialogueManager>().StartDialogue(temp, ResponseStrings, ResponseButtons);
             }
             else {
 
@@ -62,14 +63,14 @@ public class DialogueAutoStart_Fight : MonoBehaviour
             if (DialogueBox != null)
                 DialogueBox.SetActive(true);
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction);
+            DialogueBox.GetComponent<DialogueManager>().StartDialogue(interaction);
 
             
         }
 
         IEnumerator FIGHT(){
     
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(2f);
 
             //FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_2_Fight", "crossfade_start");
             crosshair.SetActive(true);
@@ -78,7 +79,7 @@ public class DialogueAutoStart_Fight : MonoBehaviour
         }
 
     public void TakeAntipsychotic(){
-        FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
+        DialogueBox.GetComponent<DialogueBoxHandler>().ClearDialogueBox();
         PlayerAnimator.Play("player_takepill");
 
         if (Globals.insanity >= 9){
