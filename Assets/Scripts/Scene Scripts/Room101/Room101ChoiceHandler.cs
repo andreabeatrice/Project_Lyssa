@@ -42,10 +42,10 @@ public class Room101ChoiceHandler : MonoBehaviour
         Color32 blu3 = new Color32( r, g, 255, 255);
 
         convincingDialogue[0] = new Sentence("Mommy, please. We can't stay here. You have to leave with me.", AllAudio.fern_voice, "Fern", ColorCodes.fern);
-        convincingDialogue[1] = new Sentence("Unfortunately, young lady, that is not what will be happening here.", null, "???", blu1);
-        convincingDialogue[2] = new Sentence("We're so close to success, you know. These experiments will bring millions to the institution", null, "???", blu2);
-        convincingDialogue[3] = new Sentence("And to me, but that's peripheral.", null, "???", blu3);
-        convincingDialogue[4] = new Sentence("Think of how much your sacrifice is going to help people like your mother.", null, "???", blu3);
+        convincingDialogue[1] = new Sentence("Unfortunately, young lady, that is not what will be happening here.", AllAudio.DrKrause, "???", blu1);
+        convincingDialogue[2] = new Sentence("We're so close to success, you know. These experiments will bring millions to the institution", AllAudio.DrKrause, "???", blu2);
+        convincingDialogue[3] = new Sentence("And to me, but that's peripheral.", AllAudio.DrKrause, "???", blu3);
+        convincingDialogue[4] = new Sentence("Think of how much your sacrifice is going to help people like your mother.", AllAudio.DrKrause, "???", blu3);
 
         FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, restext, responses);
 
@@ -64,7 +64,7 @@ public class Room101ChoiceHandler : MonoBehaviour
         Color32 blu1 = new Color32( r, g, 255, 255);
 
         convincingDialogue[0] = new Sentence("You won't get away with this. Someone will come looking.", AllAudio.fern_voice, "Fern", ColorCodes.fern);
-        convincingDialogue[1] = new Sentence("My dear, who even knows you're here?", null, "???", blu1);
+        convincingDialogue[1] = new Sentence("My dear, who even knows you're here?", AllAudio.DrKrause, "???", blu1);
 
         FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, "", null);
 

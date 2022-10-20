@@ -330,7 +330,8 @@ public class AudioSources : MonoBehaviour
                 menu_background_with_crickets.Play();
             break;
             case "mainMenu_Settings":
-                menu_background_with_crickets.Play();    
+                menu_background_with_crickets.Play();
+                    
             break;
                 case "Hallway_1_PreTutorial":
                 StopAllAudio();
