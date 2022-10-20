@@ -313,7 +313,11 @@ public class AudioSources : MonoBehaviour
 
 
         if (scenename.Contains("Room1") && !scenename.Contains("106")){
-            background106.Play();
+            if(background106!=null)
+            {
+                background106.time = Random.Range(0.01f, background106.clip.length);
+                background106.Play();
+            }
         }
          if (scenename.Contains("CommonRoom")){
              RadioBackground.Play();
@@ -331,7 +335,7 @@ public class AudioSources : MonoBehaviour
             break;
             case "mainMenu_Settings":
                 menu_background_with_crickets.Play();
-                    
+
             break;
                 case "Hallway_1_PreTutorial":
                 StopAllAudio();
