@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PatientRoomRedirect : MonoBehaviour
 {
-    AudioSources allAudio;
+    public AudioSources allAudio;
     GameObject NoActionChoiceButton;
     public Collider2D PlayerCollider;
     public Collider2D ObjectAreaCollider;
