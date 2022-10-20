@@ -40,6 +40,7 @@ public class AudioSources : MonoBehaviour
     public AudioSource putDownBook;
     public AudioSource light_Switch;
     public AudioSource footsteps_Concrete;
+    public AudioSource dies_irae;
 
     public AudioSource closeKitchenCupboard;
     public AudioSource openKitchenCupboard;
@@ -94,6 +95,9 @@ public class AudioSources : MonoBehaviour
             switch(sound.name){
                 case "click_sound":
                     click_sound = sound;
+                break;
+                case "dies_irae":
+                    dies_irae = sound;
                 break;
                 case "open_door":
                     open_door = sound;
@@ -651,6 +655,10 @@ public class AudioSources : MonoBehaviour
     }
      public void playFernFreak(){
         fernFreak.Play();
+    }
+
+    public void playDiesIrae(){
+        dies_irae.Play();
     }
 
     public void StopAllAudio() {
