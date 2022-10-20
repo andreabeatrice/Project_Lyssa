@@ -121,6 +121,16 @@ public class CreateVariables : MonoBehaviour
                     rb.position = new Vector2(13, -43);
                     check = true;
                 break;
+                case "Kitchen_1_Base":
+                    HelperMethods.InventoryEnqueue("Mop");
+                    HelperMethods.InventoryEnqueue("HER Diary");
+                    HelperMethods.InventoryEnqueue("Note from Otto");
+                    HelperMethods.ObjectivesEnqueue("Don't get fired");
+                    HelperMethods.ObjectivesEnqueue("Find HER");
+                    HelperMethods.ObjectivesEnqueue("Find the rat???");
+                    Globals.insanity = 5;
+                    check = true;
+                break;
             }
 
     }
