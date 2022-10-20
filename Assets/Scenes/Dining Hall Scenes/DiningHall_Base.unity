@@ -5803,6 +5803,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!82 &1921480166 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942924713599, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2058328834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1941400618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5930,12 +5935,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Interaction:
-  - Words: 
-    Voice: {fileID: 0}
-    Name: 
+  - Words: Absolutely disgusting! There are rats all over the kitchen!
+    Voice: {fileID: 1921480166}
+    Name: Mrs Pattel
     TextColor:
       serializedVersion: 2
-      rgba: 0
+      rgba: 4289043952
+    AnimationObject: {fileID: 0}
+    Play: 
+  - Words: ' I thought you were hired to clean!'
+    Voice: {fileID: 1921480166}
+    Name: Mrs Pattel
+    TextColor:
+      serializedVersion: 2
+      rgba: 4289043952
+    AnimationObject: {fileID: 0}
+    Play: 
+  - Words: I don't know how anyone could stand to be in there let alone cook!
+    Voice: {fileID: 1921480166}
+    Name: Mrs Pattel
+    TextColor:
+      serializedVersion: 2
+      rgba: 4289043952
     AnimationObject: {fileID: 0}
     Play: 
   AllAudio: {fileID: 2058328840}
