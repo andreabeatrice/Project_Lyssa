@@ -112,6 +112,39 @@ public class RatScript : MonoBehaviour
         DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask it to elaborate (+2)","Ask where (+1)"}, AddCatchChoice);
     }
 
+    public void CommunicateWithTheRat_Elaborate(){
+        Globals.insanity += 2;
+        
+        convincingDialogue = new Sentence[]{ 
+                new Sentence("But why?", AllAudio.fern_voice, "Fern", ColorCodes.fern),
+                //new Sentence("Before Lyssa Psychiatric Instituion was ever conceived of, ", null, "Rat", ColorCodes.rat),
+        };
+
+        GameObject[] AddCatchChoice = new GameObject[]{RatChoices[3], RatChoices[4]};
+
+        DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
+        
+        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask it to elaborate (+2)","Ask where (+1)"}, AddCatchChoice);
+    }
+
+    public void CommunicateWithTheRat_AskWhere(){
+        Globals.insanity += 1;
+        
+        convincingDialogue = new Sentence[]{ 
+                new Sentence("How can I find her?", AllAudio.fern_voice, "Fern", ColorCodes.fern),
+                new Sentence("The answer has been around you all along.", null, "Rat", ColorCodes.rat),
+                new Sentence("On the subway walls, like the words of the prophet.", null, "Rat", ColorCodes.rat),
+                new Sentence("Pinned up like a formula.", null, "Rat", ColorCodes.rat),
+                new Sentence("It announced itself all the time.", null, "Rat", ColorCodes.rat),
+        };
+
+        GameObject[] AddCatchChoice = new GameObject[]{RatChoices[3], RatChoices[4]};
+
+        DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
+        
+        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask it to elaborate (+2)","Ask where (+1)"}, AddCatchChoice);
+    }
+
     public void RatTesting(){
         Debug.Log(Globals.insanity);
         Debug.Log("End of conversation");
