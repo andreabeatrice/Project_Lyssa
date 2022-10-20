@@ -25,6 +25,8 @@ public class PlayAnimation : MonoBehaviour
     }
 
     public void OnMouseDown(){
+        PlaySound.Play();
+        Debug.Log("soundsssssssssssssssssssssssssssssss");
         if(Trigger != null){
             if(AnimatedObject != null){
                 AnimatedObject.SetActive(true);
@@ -35,9 +37,8 @@ public class PlayAnimation : MonoBehaviour
             if(AnimatedObject != null){
                 AnimatedObject.SetActive(true);
             }
-           
-            ObjectAnimator.Play(AnimationName);
             
+            ObjectAnimator.Play(AnimationName);
         }
     }
 
