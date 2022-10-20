@@ -53,13 +53,11 @@ public class RatScript : MonoBehaviour
     }
     
     public void CatchRat(){
-        RatAnimator.Play("RatRuns");
-        FindObjectOfType<AudioSources>().StopAllAudio();
-        FindObjectOfType<AudioSources>().playFootsteps();
-
         DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ClearDialogueBox();
+        RatAnimator.Play("RatRuns");
 
         StartCoroutine(Death());
+        
     }
 
     public void CommunicateWithTheRat(){
@@ -195,16 +193,32 @@ public class RatScript : MonoBehaviour
     public IEnumerator BackToDiningHall(){
         float TimeToClear = (convincingDialogue[convincingDialogue.Length-1].Words.ToCharArray().Length * Globals.typingSpeed) + 3;
         yield return new WaitForSeconds(TimeToClear);
-        FindObjectOfType<LevelLoader>().LoadNextLevel("DiningHall_Base", "crossfade_start");
+        FindObjectOfType<LevelLoader>().LoadNextLevel("DiningHall_2_AfterKitchen", "crossfade_start");
     }
 
     public IEnumerator Death() //each sentence
     {
 
+        yield return new WaitForSeconds(3);
+        DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
+
+        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(new Sentence[]{new Sentence("Damn!! Wait- who's there?", AllAudio.fern_voice, "Fern", ColorCodes.fern)});
+
+        //
+        FindObjectOfType<AudioSources>().StopAllAudio();
+        FindObjectOfType<AudioSources>().playFootsteps();
+
+        //DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(new Sentence[]{new Sentence("Damn!! Wait- who's there?", AllAudio.fern_voice, "Fern", ColorCodes.fern)});
+
+        StartCoroutine(ExperimentationScene());
+        
+    }
+
+    public IEnumerator ExperimentationScene() //each sentence
+    {
         yield return new WaitForSeconds(2);
 
         SceneManager.LoadScene("ExperimentationDeath_CutScene");
-        
     }
 
 
