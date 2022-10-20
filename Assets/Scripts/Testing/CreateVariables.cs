@@ -117,6 +117,10 @@ public class CreateVariables : MonoBehaviour
                     rb.position = new Vector2(-34, -10);
                     check = true;
                 break;
+                case "DiningHall_Base":
+                    rb.position = new Vector2(13, -43);
+                    check = true;
+                break;
             }
 
     }

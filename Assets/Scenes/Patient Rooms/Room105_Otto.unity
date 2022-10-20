@@ -1878,6 +1878,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 3759904008276439817, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
   m_PrefabInstance: {fileID: 1900517912}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &359557809 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1559693117079670524, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1900517912}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &375198770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,6 +2191,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3426104463049340470, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: AllAudio
+      value: 
+      objectReference: {fileID: 297386377}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
 --- !u!224 &392301775 stripped
@@ -11005,6 +11014,9 @@ MonoBehaviour:
   fernFright: {fileID: 0}
   syringe: {fileID: 0}
   painfulBreathing: {fileID: 0}
+  fernFreak: {fileID: 0}
+  kettle: {fileID: 0}
+  beep: {fileID: 0}
 --- !u!1 &1516813147
 GameObject:
   m_ObjectHideFlags: 0
@@ -13535,6 +13547,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 176746942238241886, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: beep
+      value: 
+      objectReference: {fileID: 359557809}
+    - target: {fileID: 3287833671470746244, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ab2a385ed7ea9aa488aef858113e0ee3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
 --- !u!4 &1900517913 stripped

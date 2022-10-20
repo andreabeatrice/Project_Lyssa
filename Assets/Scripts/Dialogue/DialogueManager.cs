@@ -179,6 +179,10 @@ public class DialogueManager : MonoBehaviour {
     //DisplayNextSentence(): the key routine in DialogueManager, starts the next string in the Sentence array
         public void DisplayNextSentence()
         {
+            if(SpeakerVoice != null){
+                SpeakerVoice.Stop();
+            }
+
             Debug.Log(Sentences);
             //0) If a Sentence already played, and it had an Animator attached, play the animation
                 if(AnimationObject != null)
@@ -276,6 +280,10 @@ public class DialogueManager : MonoBehaviour {
 
     //DisplayNextSentenceNoAnimation(): shows the next line without playing the text animation
         public void DisplayNextSentenceNoAnimation(){
+            if(SpeakerVoice != null){
+                SpeakerVoice.Stop();
+            }
+
             //0) If a Sentence already played, and it had an Animator attached, play the animation
                     if(AnimationObject != null)
                         AnimationObject.Play(SentenceAnimation);
