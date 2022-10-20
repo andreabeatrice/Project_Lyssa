@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RatScript : MonoBehaviour
 {
@@ -49,6 +50,16 @@ public class RatScript : MonoBehaviour
 
         
 
+    }
+    
+    public void CatchRat(){
+        RatAnimator.Play("RatRuns");
+        FindObjectOfType<AudioSources>().StopAllAudio();
+        FindObjectOfType<AudioSources>().playFootsteps();
+
+        DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ClearDialogueBox();
+
+        StartCoroutine(Death());
     }
 
     public void CommunicateWithTheRat(){
@@ -128,7 +139,7 @@ public class RatScript : MonoBehaviour
 
         DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
         
-        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"How do I open the passage? (+2)","Stop Talking to It (+0)"}, AddCatchChoice);
+        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"How to open the passage (+2)","Stop Talking to It (+0)"}, AddCatchChoice);
     }
 
     public void CommunicateWithTheRat_AskWhere(){
@@ -185,6 +196,15 @@ public class RatScript : MonoBehaviour
         float TimeToClear = (convincingDialogue[convincingDialogue.Length-1].Words.ToCharArray().Length * Globals.typingSpeed) + 3;
         yield return new WaitForSeconds(TimeToClear);
         FindObjectOfType<LevelLoader>().LoadNextLevel("DiningHall_Base", "crossfade_start");
+    }
+
+    public IEnumerator Death() //each sentence
+    {
+
+        yield return new WaitForSeconds(2);
+
+        SceneManager.LoadScene("ExperimentationDeath_CutScene");
+        
     }
 
 
