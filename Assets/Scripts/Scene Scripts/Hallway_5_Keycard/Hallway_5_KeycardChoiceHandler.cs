@@ -34,6 +34,11 @@ public class Hallway_5_KeycardChoiceHandler : MonoBehaviour
 
             played = true;
         }
+        if (cm2!= null && PlayerCollider.IsTouching(cm2) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))){
+            commonroom_empty();
+
+            played = true;
+        }
         if (kitchen != null && PlayerCollider.IsTouching(kitchen) && played == false && (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))){
             toKitchen();
 

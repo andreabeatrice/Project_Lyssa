@@ -22,7 +22,7 @@ public class InvisibleWalls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerCollider.IsTouching(BasementCollider) && poppedB == false)
+        if (BasementCollider != null && PlayerCollider.IsTouching(BasementCollider) && poppedB == false)
         {
             poppedB = true;
 
@@ -30,11 +30,11 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("It looks like I need a key card to open this door.", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", Action_DoNothing);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction);
 
         }
 
-        if (PlayerCollider.IsTouching(DiningHallCollider) && poppedD == false)
+        if (DiningHallCollider != null && PlayerCollider.IsTouching(DiningHallCollider) && poppedD == false)
         {
             poppedD = true;
 
@@ -42,11 +42,11 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("The patients are busy eating. I'll disturb them if I go in now.", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", Action_DoNothing);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction);
 
         }
 
-        if (PlayerCollider.IsTouching(CommonRoomCollider) && poppedR == false)
+        if (CommonRoomCollider != null && PlayerCollider.IsTouching(CommonRoomCollider) && poppedR == false)
         {
             poppedR = true;
 
@@ -54,11 +54,11 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("I'm not supposed to clean here today.", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", Action_DoNothing);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction);
 
         }
 
-        if (PlayerCollider.IsTouching(KrausOfficeCollider) && poppedK == false)
+        if (KrausOfficeCollider != null && PlayerCollider.IsTouching(KrausOfficeCollider) && poppedK == false)
         {
             poppedK = true;
 
@@ -66,23 +66,23 @@ public class InvisibleWalls : MonoBehaviour
 
             Sentence[] interaction = new Sentence[] {new Sentence("I'm definitely not allowed into Dr Kraus's office! He doesn't even let anyone else clean it!", 1)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(interaction,  "Okay", Action_DoNothing);
+            FindObjectOfType<DialogueManager>().StartDialogue(interaction);
 
         }
 
-        if (!PlayerCollider.IsTouching(BasementCollider) && poppedB == true){
+        if (BasementCollider != null &&  !PlayerCollider.IsTouching(BasementCollider) && poppedB == true){
             poppedB = false;
         }
 
-        if (!PlayerCollider.IsTouching(CommonRoomCollider) && poppedR == true){
+        if (CommonRoomCollider != null && !PlayerCollider.IsTouching(CommonRoomCollider) && poppedR == true){
             poppedR = false;
         }
 
-        if (!PlayerCollider.IsTouching(KrausOfficeCollider) && poppedK == true){
+        if (KrausOfficeCollider != null &&  !PlayerCollider.IsTouching(KrausOfficeCollider) && poppedK == true){
             poppedK = false;
         }
 
-        if (!PlayerCollider.IsTouching(DiningHallCollider) && poppedD == true){
+        if (DiningHallCollider != null && !PlayerCollider.IsTouching(DiningHallCollider) && poppedD == true){
             poppedD = false;
         }
         
