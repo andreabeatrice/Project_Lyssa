@@ -319,7 +319,7 @@ public class AudioSources : MonoBehaviour
                 background106.Play();
             }
         }
-         if (scenename.Contains("CommonRoom")){
+         if (scenename.Contains("CommonRoom") || scenename.Contains("Dining")){
              RadioBackground.Play();
         }
        
@@ -430,6 +430,7 @@ public class AudioSources : MonoBehaviour
             case "Kitchen_1_BaseScene":
                 kettle.Play();
                 break;
+           
             
             default:
             break;
