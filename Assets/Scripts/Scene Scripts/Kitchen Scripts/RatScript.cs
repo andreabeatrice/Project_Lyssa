@@ -109,22 +109,26 @@ public class RatScript : MonoBehaviour
 
         DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
         
-        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask it to elaborate (+2)","Ask where (+1)"}, AddCatchChoice);
+        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask it to elaborate (+3)","Ask where (+1)"}, AddCatchChoice);
     }
 
     public void CommunicateWithTheRat_Elaborate(){
-        Globals.insanity += 2;
+        Globals.insanity += 3;
         
         convincingDialogue = new Sentence[]{ 
-                new Sentence("But why?", AllAudio.fern_voice, "Fern", ColorCodes.fern),
-                //new Sentence("Before Lyssa Psychiatric Instituion was ever conceived of, ", null, "Rat", ColorCodes.rat),
+                new Sentence("What's happening to her? What's happening here?", AllAudio.fern_voice, "Fern", ColorCodes.fern),
+                new Sentence("Before Lyssa Psychiatric Instituion was ever conceived of, this property belonged to a wealthy family with many secrets.", null, "Rat", ColorCodes.rat),
+                new Sentence("Their son discovered secret passages between some rooms, and set up a secret laboratory under ground.", null, "Rat", ColorCodes.rat),
+                new Sentence("As the family's money drained away with time, he worked to establish the mansion as a private asylum, ", null, "Rat", ColorCodes.rat),
+                new Sentence("so that he could continue his work away from prying eyes...", null, "Rat", ColorCodes.rat),
+                new Sentence("...down in the basement that he used to sneak into through the secret passages, when he was meant to be practising his music.", null, "Rat", ColorCodes.rat),
         };
 
-        GameObject[] AddCatchChoice = new GameObject[]{RatChoices[3], RatChoices[4]};
+        GameObject[] AddCatchChoice = new GameObject[]{RatChoices[6], RatChoices[5]};
 
         DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
         
-        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask it to elaborate (+2)","Ask where (+1)"}, AddCatchChoice);
+        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"How do I open the passage? (+2)","Stop Talking to It (+0)"}, AddCatchChoice);
     }
 
     public void CommunicateWithTheRat_AskWhere(){
@@ -135,20 +139,52 @@ public class RatScript : MonoBehaviour
                 new Sentence("The answer has been around you all along.", null, "Rat", ColorCodes.rat),
                 new Sentence("On the subway walls, like the words of the prophet.", null, "Rat", ColorCodes.rat),
                 new Sentence("Pinned up like a formula.", null, "Rat", ColorCodes.rat),
-                new Sentence("It announced itself all the time.", null, "Rat", ColorCodes.rat),
+                new Sentence("It announces itself all the time.", null, "Rat", ColorCodes.rat),
         };
 
-        GameObject[] AddCatchChoice = new GameObject[]{RatChoices[3], RatChoices[4]};
+        GameObject[] AddCatchChoice = new GameObject[]{RatChoices[3], RatChoices[5]};
 
         DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
         
-        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask it to elaborate (+2)","Ask where (+1)"}, AddCatchChoice);
+        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask it to elaborate (+3)","Stop Talking to It (+0)"}, AddCatchChoice);
+    }
+
+    public void CommunicateWithTheRat_HowToGetThere(){
+        Globals.insanity += 2;
+        
+        convincingDialogue = new Sentence[]{ 
+                new Sentence("How can I get to her?", AllAudio.fern_voice, "Fern", ColorCodes.fern),
+                new Sentence("Play just four notes. He's a forgetful sort; he usually keeps them stuck up somewhere.", null, "Rat", ColorCodes.rat)
+        };
+
+        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue);
+
+        StartCoroutine(BackToDiningHall());
+
+        //Take player put of kitchen
+        //GameObject[] AddCatchChoice = new GameObject[]{RatChoices[3], RatChoices[5]};
+
+
+
+        //DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
+        
+        //DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask it to elaborate (+3)","Stop Talking to It (+0)"}, AddCatchChoice);
+    }
+
+    public void CommunicateWithTheRat_StopTalkingToIt(){
+        FindObjectOfType<LevelLoader>().LoadNextLevel("DiningHall_Base", "crossfade_start");
     }
 
     public void RatTesting(){
         Debug.Log(Globals.insanity);
         Debug.Log("End of conversation");
         DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ClearDialogueBox();
+    }
+
+    public IEnumerator BackToDiningHall(){
+        float TimeToClear = (convincingDialogue[convincingDialogue.Length-1].Words.ToCharArray().Length * Globals.typingSpeed) + 3;
+        yield return new WaitForSeconds(TimeToClear);
+        FindObjectOfType<LevelLoader>().LoadNextLevel("DiningHall_Base", "crossfade_start");
     }
 
 
