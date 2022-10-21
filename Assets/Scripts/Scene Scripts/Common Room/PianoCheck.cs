@@ -6,6 +6,8 @@ public class PianoCheck : MonoBehaviour
 {
     public TextMeshProUGUI keys; 
     public Animator piano;
+
+    public GameObject DialogueBoxHolder;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,11 +24,11 @@ public class PianoCheck : MonoBehaviour
             keys.text = "";
             piano.Play("piano");
 
-            FindObjectOfType<DialogueBoxHandler>().ShowDialogueBox();
+            DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
 
             Sentence[] convincingDialogue = new Sentence[]{ new Sentence("A secret passage??", null, "Fern", ColorCodes.fern)};
 
-            FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue);
+            DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue);
 
             StartCoroutine(SecretPassage());
         }
@@ -36,6 +38,6 @@ public class PianoCheck : MonoBehaviour
     public IEnumerator SecretPassage(){
         yield return new WaitForSeconds(3f);
 
-        FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_4_LeavesBoiler", "crossfade_start");
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_6_ThroughPiano", "crossfade_start");
     }
 }

@@ -7,6 +7,8 @@ public class CommonRoom_CH : MonoBehaviour
 
     public AudioSources AllAudio;
 
+    public Animator Otto;
+
     public GameObject[] choices;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,11 @@ public class CommonRoom_CH : MonoBehaviour
 
         Globals.deaths.Add("Sometimes, you do the right things and you still don't win. This time, you were fired for causing the patients distress.");
 
-        FindObjectOfType<LevelLoader>().LoadNextLevel("DeathScreen", "crossfade_start");
+        Otto.Play("otto_tackled");
+
+        //FindObjectOfType<LevelLoader>().LoadNextLevel("DeathScreen", "crossfade_start");
+
+        StartCoroutine(DeathScreen());
 
     }
 
@@ -57,5 +63,11 @@ public class CommonRoom_CH : MonoBehaviour
 
     public void toHallway(){
         FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_5_Keycard", "crossfade_start");
+    }
+
+    public IEnumerator DeathScreen(){
+        yield return new WaitForSeconds(2f);
+
+        FindObjectOfType<LevelLoader>().LoadNextLevel("DeathScreen", "crossfade_start");
     }
 }

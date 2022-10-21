@@ -11,6 +11,7 @@ public static class ColorCodes
     public static Color32 tarr = new Color32(126,179,189, 255);
     public static Color32 kraus = new Color32(203,225,249, 255);
     public static Color32 patients = new Color32(90,99,57, 255);
+    public static Color32 rat = new Color32(154,123,79, 255);
 
 }
 

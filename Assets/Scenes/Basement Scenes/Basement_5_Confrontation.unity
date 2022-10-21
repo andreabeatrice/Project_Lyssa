@@ -468,6 +468,21 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
   m_PrefabInstance: {fileID: 246002747}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &246002750 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4843395590475669058, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 246002747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &246002751 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 42792677516163967, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 246002747}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &246002752 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1884637907026658890, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 246002747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &267756885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -572,6 +587,11 @@ PrefabInstance:
 --- !u!224 &267756886 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1714896571131185866, guid: fa3a9745fd6d63f4fbd14702cbd3046f, type: 3}
+  m_PrefabInstance: {fileID: 267756885}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &267756887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1714896569350666831, guid: fa3a9745fd6d63f4fbd14702cbd3046f, type: 3}
   m_PrefabInstance: {fileID: 267756885}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &404622384
@@ -9396,6 +9416,7 @@ GameObject:
   - component: {fileID: 2143158864}
   - component: {fileID: 2143158863}
   - component: {fileID: 2143158868}
+  - component: {fileID: 2143158869}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -9518,7 +9539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interaction:
   - Words: Ah, Fern. I'm glad to have found you.
-    Voice: {fileID: 0}
+    Voice: {fileID: 246002752}
     Name: Dr Kraus
     TextColor:
       serializedVersion: 2
@@ -9526,7 +9547,7 @@ MonoBehaviour:
     AnimationObject: {fileID: 0}
     Play: 
   - Words: You caused quite a stir upstairs when you disappeared.
-    Voice: {fileID: 0}
+    Voice: {fileID: 246002751}
     Name: Dr Kraus
     TextColor:
       serializedVersion: 2
@@ -9534,7 +9555,7 @@ MonoBehaviour:
     AnimationObject: {fileID: 0}
     Play: 
   - Words: I imagine it will cause more of a stir when they never find you.
-    Voice: {fileID: 0}
+    Voice: {fileID: 246002750}
     Name: Dr Kraus
     TextColor:
       serializedVersion: 2
@@ -9543,7 +9564,7 @@ MonoBehaviour:
     Play: 
   - Words: I'm so close to success, you see. All I need is a couple more tests. And
       I'm afraid I'll be needing Dahlia for those.
-    Voice: {fileID: 0}
+    Voice: {fileID: 246002751}
     Name: Dr Kraus
     TextColor:
       serializedVersion: 2
@@ -9552,7 +9573,7 @@ MonoBehaviour:
     Play: 
   - Words: It's really such a shame. The hiring process is so tedious, I hate to
       lose another janitor.
-    Voice: {fileID: 0}
+    Voice: {fileID: 246002752}
     Name: Dr Kraus
     TextColor:
       serializedVersion: 2
@@ -9563,3 +9584,39 @@ MonoBehaviour:
   ResponseStrings: []
   ResponseButtons: []
   waitfor: 3
+--- !u!114 &2143158869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143158859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5fdb19cb5ca74948a692c708b3391ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meter_image: {fileID: 267756887}
+  meter_sprites:
+  - {fileID: 21300000, guid: 0346cd8782ae1f04687a72b07d3e9736, type: 3}
+  - {fileID: 21300000, guid: e1625950d73347740b1b220a45804eb8, type: 3}
+  - {fileID: 21300000, guid: 12e14882470e3b54fb686b93199d0827, type: 3}
+  - {fileID: 21300000, guid: 66074fd4eabfe1947805724c2b8bfd0b, type: 3}
+  - {fileID: 21300000, guid: fcee7f2ee0624d3419bf84d4d143dfa5, type: 3}
+  - {fileID: 21300000, guid: b5fefa4a00b9bac4bbac39d0ee430138, type: 3}
+  - {fileID: 21300000, guid: f21a72dbaa960cf43a21335f111fbeb7, type: 3}
+  - {fileID: 21300000, guid: 9b4ec8e61d6544b4093ad0962c6150c3, type: 3}
+  - {fileID: 21300000, guid: 93cea10360a299b4a89fce4c7d87afff, type: 3}
+  - {fileID: 21300000, guid: 4e6b025c90f56a04fb6a9c026d3ec8db, type: 3}
+  - {fileID: 21300000, guid: c676e44672d98284c906b37906a47ba1, type: 3}
+  - {fileID: 21300000, guid: 267efd6c495054744b66c503648766af, type: 3}
+  - {fileID: 21300000, guid: 5fc6c915de5e68c4e85c849ac57c0d12, type: 3}
+  - {fileID: 21300000, guid: 9a9c4a70b509eee46b19ca3bcf2df23a, type: 3}
+  - {fileID: 21300000, guid: 7fd73610e04f4344586ffb45e7e523bc, type: 3}
+  - {fileID: 21300000, guid: 327b6033d15d028468e67fa4577f8990, type: 3}
+  - {fileID: 21300000, guid: 3816a5338f50a7f488d13a76eedcff99, type: 3}
+  - {fileID: 21300000, guid: 7789343dba72a084ba5fcc6ed05f3be5, type: 3}
+  - {fileID: 21300000, guid: cfff369e8bfd6834e9d2c19fd0c2c017, type: 3}
+  - {fileID: 21300000, guid: 84d1e6c75116242488de2cbfe26a2065, type: 3}
+  - {fileID: 21300000, guid: 514410d6c4264514682456452c880896, type: 3}
+  test: 0

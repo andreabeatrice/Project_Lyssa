@@ -40,6 +40,7 @@ public class AudioSources : MonoBehaviour
     public AudioSource putDownBook;
     public AudioSource light_Switch;
     public AudioSource footsteps_Concrete;
+    public AudioSource dies_irae;
 
     public AudioSource closeKitchenCupboard;
     public AudioSource openKitchenCupboard;
@@ -80,6 +81,9 @@ public class AudioSources : MonoBehaviour
     public AudioSource fernFright;
     public AudioSource syringe;
     public AudioSource painfulBreathing;
+    public AudioSource fernFreak;
+    public AudioSource kettle;
+    public AudioSource beep;
     
 
     private AudioSource[] allAudioSources;
@@ -91,6 +95,9 @@ public class AudioSources : MonoBehaviour
             switch(sound.name){
                 case "click_sound":
                     click_sound = sound;
+                break;
+                case "dies_irae":
+                    dies_irae = sound;
                 break;
                 case "open_door":
                     open_door = sound;
@@ -293,6 +300,15 @@ public class AudioSources : MonoBehaviour
                 case "painfulBreathing":
                     painfulBreathing= sound;
                 break;
+                 case "fernFreak":
+                    fernFreak= sound;
+                break;
+                case "kettle":
+                    kettle = sound;
+                break;
+                case "beep":
+                    beep = sound;
+                break;
 
             }
         }
@@ -301,9 +317,13 @@ public class AudioSources : MonoBehaviour
 
 
         if (scenename.Contains("Room1") && !scenename.Contains("106")){
-            background106.Play();
+            if(background106!=null)
+            {
+                background106.time = Random.Range(0.01f, background106.clip.length);
+                background106.Play();
+            }
         }
-         if (scenename.Contains("CommonRoom")){
+         if (scenename.Contains("CommonRoom") || scenename.Contains("Dining")){
              RadioBackground.Play();
         }
        
@@ -314,7 +334,14 @@ public class AudioSources : MonoBehaviour
             case "MainMenu":
                 menu_background_with_crickets.Play();
             break;
-            case "Hallway_1_PreTutorial":
+            case "mainMenu_Help":
+                menu_background_with_crickets.Play();
+            break;
+            case "mainMenu_Settings":
+                menu_background_with_crickets.Play();
+
+            break;
+                case "Hallway_1_PreTutorial":
                 StopAllAudio();
                 hallway_sounds.Play();
             break;
@@ -343,16 +370,8 @@ public class AudioSources : MonoBehaviour
                 janitors_closet_background_music.Play();
                 vent_drip.Play();
             break;
-            case "mainMenu_Settings":
-                //StopAllAudio();
-                crickets.Play();
-            break;
-            case "mainMenu_Help":
-                //StopAllAudio();
-                crickets.Play();
-            break;
             case "Room106":
-                StopAllAudio();
+                //StopAllAudio();
                 background106.Play();
                 break;
             case "Room106_Post":
@@ -364,7 +383,7 @@ public class AudioSources : MonoBehaviour
                 break;
             case "Room106_Nurse":
                 //StopAllAudio();
-                background106.Play();
+                //background106.Play();
                 break;
             case "Basement_DarkScript":
                 StopAllAudio();
@@ -398,6 +417,7 @@ public class AudioSources : MonoBehaviour
             case "Room101":
                 StopAllAudio();
                 fightBackground.Play();
+                beep.Play();
                 break;
             case "Basement_5_Confrontation":
                 fightBackground.Play();
@@ -411,8 +431,11 @@ public class AudioSources : MonoBehaviour
                 panting.Play();
                 basement_Background.Play();
                 break;
+            case "Kitchen_1_BaseScene":
+                kettle.Play();
+                break;
+           
             
-                
             default:
             break;
         }
@@ -629,6 +652,13 @@ public class AudioSources : MonoBehaviour
     }
     public void playPainfulBreathing(){
         painfulBreathing.Play();
+    }
+     public void playFernFreak(){
+        fernFreak.Play();
+    }
+
+    public void playDiesIrae(){
+        dies_irae.Play();
     }
 
     public void StopAllAudio() {
