@@ -29,6 +29,7 @@ public class BasementDoor : MonoBehaviour
 
 
     public void handle(){
+        HelperMethods.InventoryDequeue("Nurse's Keycard");
         animator.Play("basement_door_open");
         //openDoorSound.Play();
 

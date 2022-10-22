@@ -2392,6 +2392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 1403642734}
   dropSound: {fileID: 1403642735}
+  allAudio: {fileID: 0}
   canDrag: 0
 --- !u!225 &508875306
 CanvasGroup:
@@ -3675,6 +3676,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnMouseExit
       objectReference: {fileID: 0}
+    - target: {fileID: 3426104463049340470, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: AllAudio
+      value: 
+      objectReference: {fileID: 1403642733}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
 --- !u!224 &865435690 stripped

@@ -85,6 +85,26 @@ public class AudioSources : MonoBehaviour
     public AudioSource kettle;
     public AudioSource beep;
     
+        public void StopAllAudio() {
+            foreach (AudioSource audioS in allAudioSources) {
+                audioS.Stop();
+            }
+        }
+
+     public void StopAllVoices(){
+        fern_voice.Stop();
+        nurse_voice.Stop();
+        nurse_voice_2.Stop();
+        nurse_voice_3.Stop();
+
+        DrKrause.Stop();
+        DrKrause_2.Stop();
+        DrKrause_3.Stop();
+
+        receptionist_voice.Stop();
+        Dahlia.Stop();
+        OttoNormal.Stop();
+     }
 
     private AudioSource[] allAudioSources;
     public void Start()
@@ -672,11 +692,7 @@ public class AudioSources : MonoBehaviour
         kettle.Stop();
     }
 
-    public void StopAllAudio() {
-        foreach (AudioSource audioS in allAudioSources) {
-            audioS.Stop();
-        }
-    }
+
 
 
 }

@@ -1482,7 +1482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Interaction:
-  - Words: There's a rumour amongst the nurses that it's a one way mirror... that
+  - Words: There's a rumour amongst the nurses that it's a two- way mirror... that
       the doctors sometimes watch the patients without their knowledge.
     Voice: {fileID: 0}
     Name: Fern
@@ -5499,6 +5499,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnMouseExit
       objectReference: {fileID: 0}
+    - target: {fileID: 3426104463049340470, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: AllAudio
+      value: 
+      objectReference: {fileID: 432927951}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
 --- !u!224 &1073901454 stripped
@@ -7695,6 +7699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AllAudio: {fileID: 432927951}
+  Otto: {fileID: 0}
   choices:
   - {fileID: 1028479061}
   - {fileID: 23689724}

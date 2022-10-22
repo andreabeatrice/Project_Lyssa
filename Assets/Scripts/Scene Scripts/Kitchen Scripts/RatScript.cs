@@ -13,7 +13,7 @@ public class RatScript : MonoBehaviour
 
     public AudioSources AllAudio;
 
-    public GameObject DialogueBoxHolder;
+    public GameObject DialogueBoxHolder, Rat;
     // Start is called before the first frame update
 
     Sentence[] convincingDialogue;
@@ -31,7 +31,7 @@ public class RatScript : MonoBehaviour
     public void OnMouseDown()
     {
          
-         
+        Rat.GetComponent<PolygonCollider2D>().enabled = false;
          HelperMethods.ObjectivesDequeue("Find the rats that are cooking something up?");
 
 
