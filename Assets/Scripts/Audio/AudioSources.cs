@@ -407,6 +407,10 @@ public class AudioSources : MonoBehaviour
                 janitors_closet_background_music.Play();
                 fan.Play();
                 break;
+            case "KrausOffice_3_NotePath":
+                janitors_closet_background_music.Play();
+                fan.Play();
+                break;
             case "BoilerRoomNoMom":
                 boilerRoomBackground.Play();
                 vent_drip.Play();
@@ -671,6 +675,24 @@ public class AudioSources : MonoBehaviour
     public void kettleStop(){
         kettle.Stop();
     }
+   /* public void StopAllBabbles(){
+        if(DrKrause!=null)
+        {
+            DrKrause.Stop();
+        }
+        if(fer!=null)
+        {
+            fern.Stop();
+        }
+        if(OttoFreak!=null)
+        {
+            ottoFreak.Stop();
+        }
+        if(ottoNormal!=null)
+        {
+
+        }
+    }*/
 
     public void StopAllAudio() {
         foreach (AudioSource audioS in allAudioSources) {
