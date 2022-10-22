@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 883219}
   - component: {fileID: 883218}
   - component: {fileID: 883217}
-  - component: {fileID: 883216}
+  - component: {fileID: 883220}
   m_Layer: 0
   m_Name: Room105
   m_TagString: rnd
@@ -158,20 +158,6 @@ Transform:
   m_Father: {fileID: 467113507}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &883216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f7dba455375d5f41bac852b2c1ce5f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerCollider: {fileID: 2115122456}
-  ObjectAreaCollider: {fileID: 883218}
 --- !u!114 &883217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +249,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &883220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interaction:
+  - Words: I should leave him in peace for a bit.
+    Voice: {fileID: 0}
+    Name: Fern
+    TextColor:
+      serializedVersion: 2
+      rgba: 4294823559
+    AnimationObject: {fileID: 0}
+    Play: 
+  AllAudio: {fileID: 1927582565}
+  DialogueBox: {fileID: 1044115872}
+  ResponseStrings: []
+  ResponseButtons: []
+  identifier: infinite
+  Clickable: 1
+  enableProximityReactions: 1
+  PlayerCollider: {fileID: 2115122456}
+  ObjectAreaCollider: {fileID: 1206271537}
 --- !u!1 &12222234
 GameObject:
   m_ObjectHideFlags: 0
@@ -8918,7 +8934,7 @@ GameObject:
   - component: {fileID: 1206271538}
   - component: {fileID: 1206271537}
   - component: {fileID: 1206271536}
-  - component: {fileID: 1206271535}
+  - component: {fileID: 1206271539}
   m_Layer: 0
   m_Name: Room106_Post
   m_TagString: rnd
@@ -8941,20 +8957,6 @@ Transform:
   m_Father: {fileID: 467113507}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1206271535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206271533}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f7dba455375d5f41bac852b2c1ce5f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerCollider: {fileID: 2115122456}
-  ObjectAreaCollider: {fileID: 1206271537}
 --- !u!114 &1206271536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9046,6 +9048,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1206271539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206271533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7dba455375d5f41bac852b2c1ce5f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCollider: {fileID: 2115122456}
+  ObjectAreaCollider: {fileID: 1206271537}
 --- !u!1 &1309122867
 GameObject:
   m_ObjectHideFlags: 0
