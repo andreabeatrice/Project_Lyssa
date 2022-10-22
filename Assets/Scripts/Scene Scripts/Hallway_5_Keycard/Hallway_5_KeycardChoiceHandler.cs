@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Hallway_5_KeycardChoiceHandler : MonoBehaviour
 {
 
@@ -59,7 +59,14 @@ public class Hallway_5_KeycardChoiceHandler : MonoBehaviour
     }
 
     public void toKitchen(){
-        FindObjectOfType<LevelLoader>().LoadNextLevel("Kitchen", "crossfade_start");
+
+        if (SceneManager.GetActiveScene().name ==  "Hallway_5_Keycard"){
+            FindObjectOfType<LevelLoader>().LoadNextLevel("DiningHall_3_KeycardPath", "crossfade_start");
+        }
+        else {
+            FindObjectOfType<LevelLoader>().LoadNextLevel("DiningHall_Base", "crossfade_start");
+        }
+        
     }
 
  

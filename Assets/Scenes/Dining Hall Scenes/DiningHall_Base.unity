@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 333024676}
   m_Layer: 0
   m_Name: Decor - Table
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 471165097}
   m_Layer: 0
   m_Name: Decor -Lemons
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 492547370}
   m_Layer: 0
   m_Name: Decor - Table (2)
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1137,7 +1137,7 @@ GameObject:
   - component: {fileID: 637242958}
   m_Layer: 0
   m_Name: Decor - Fruit bowl
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1341,7 +1341,7 @@ GameObject:
   - component: {fileID: 746683936}
   m_Layer: 0
   m_Name: Decor - Cabinet2
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 810257040}
   m_Layer: 0
   m_Name: Decor - Table (1)
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4150,7 +4150,7 @@ GameObject:
   - component: {fileID: 928682468}
   m_Layer: 0
   m_Name: Decor - Cereal Dispensers
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4240,7 +4240,7 @@ GameObject:
   - component: {fileID: 1029456582}
   m_Layer: 0
   m_Name: Decor - Cabinet 1
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4351,7 +4351,7 @@ GameObject:
   - component: {fileID: 1290394553}
   m_Layer: 0
   m_Name: Decor - Cabinet4
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4460,6 +4460,7 @@ GameObject:
   - component: {fileID: 1328006536}
   - component: {fileID: 1328006538}
   - component: {fileID: 1328006537}
+  - component: {fileID: 1328006539}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -4963,6 +4964,32 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!61 &1328006539
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328006535}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 11.998539, y: -45.04067}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.9941559, y: 4.1405716}
+  m_EdgeRadius: 0
 --- !u!1001 &1362423790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5196,7 +5223,7 @@ GameObject:
   - component: {fileID: 1506986575}
   m_Layer: 0
   m_Name: Decor - Cabinet3
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5564,6 +5591,7 @@ GameObject:
   - component: {fileID: 1865580488}
   - component: {fileID: 1865580491}
   - component: {fileID: 1865580490}
+  - component: {fileID: 1865580492}
   m_Layer: 0
   m_Name: Kitchen Doors
   m_TagString: Untagged
@@ -5677,6 +5705,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.05542, y: 5.291478}
   m_EdgeRadius: 0
+--- !u!114 &1865580492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865580487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75fff16a7eecc7749840fc79d4ce8a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCollider: {fileID: 0}
+  HallwayCollider: {fileID: 0}
 --- !u!1 &1870925042
 GameObject:
   m_ObjectHideFlags: 0
@@ -5763,6 +5805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75fff16a7eecc7749840fc79d4ce8a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerCollider: {fileID: 432077486}
+  HallwayCollider: {fileID: 1328006539}
 --- !u!114 &1870925046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5824,7 +5868,7 @@ GameObject:
   - component: {fileID: 1941400621}
   m_Layer: 0
   m_Name: Character - Receptionist
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6017,7 +6061,7 @@ GameObject:
   - component: {fileID: 1961935565}
   m_Layer: 0
   m_Name: Decor - Cabinet5
-  m_TagString: Untagged
+  m_TagString: rnd
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

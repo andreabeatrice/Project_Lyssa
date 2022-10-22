@@ -63,4 +63,10 @@ public class ExplorationHandler : MonoBehaviour
 
     }
 
+    public void BackToDiningHall(){
+        if(HelperMethods.CheckInventory("Nurse's Keycard")){
+             FindObjectOfType<LevelLoader>().LoadNextLevel("DiningHall_3_KeycardPath", "crossfade_start");
+        }
+    }
+
 }
