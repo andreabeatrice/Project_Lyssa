@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class KrausCollider : MonoBehaviour
 {
     public Animator fern, kraus;
@@ -52,7 +52,14 @@ public class KrausCollider : MonoBehaviour
             kraus.Play("kraus_kick");
             fern.Play("player_knockout");
             crosshair_object.SetActive(false);
-            Globals.deaths.Add("You know, if you just click all over the place, he's gonna get a few hits in.");
+
+            if (SceneManager.GetActiveScene().name == "Basement_2_Fight"){
+                Globals.deaths.Add("You know, if you just click all over the place, he's gonna get a few hits in.");
+            }
+            else {
+                Globals.deaths.Add("Whatever happened to workers of the world unite? You kind of deserve this, you know.");
+            }
+            
 
             FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 3f);
         }

@@ -16,6 +16,8 @@ public class DialougeAutoSceneSwitch : MonoBehaviour
     public float waitfor = 0.5f;
 
     private bool willFight = false;
+
+    public string scene;
     
     // Start is called before the first frame update
     void Start()
@@ -53,7 +55,7 @@ public class DialougeAutoSceneSwitch : MonoBehaviour
 
             yield return new WaitForSeconds(ttw);
 
-            FindObjectOfType<LevelLoader>().LoadNextLevel("Basement_2_Fight", "crossfade_start");
+            FindObjectOfType<LevelLoader>().LoadNextLevel(scene, "crossfade_start");
 
         }
 }

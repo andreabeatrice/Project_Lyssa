@@ -38,10 +38,11 @@ public class DialogueAutoplayManager : MonoBehaviour {
     void Start()
     {
         Globals.currentScene = SceneManager.GetActiveScene().name;
+        ContinueButton.SetActive(false);
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused && ContinueButton.activeSelf){
+        if(Input.GetKeyDown(KeyCode.Space) && !Globals.paused){
             
             if (Sentences.Count == 0){
                 EndDialogue();

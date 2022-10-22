@@ -95,6 +95,16 @@ public static class HelperMethods{
             
         }
 
+        public static bool CheckObjectives(string lookFor){
+            foreach(string item in Globals.objectives){
+                if (item.Contains(lookFor, StringComparison.OrdinalIgnoreCase)){
+                    return true;
+                }
+            }
+            return false;
+            
+        }
+
         public static void PrintObjectives(){
             foreach(string item in Globals.objectives){
                 Debug.Log(item);

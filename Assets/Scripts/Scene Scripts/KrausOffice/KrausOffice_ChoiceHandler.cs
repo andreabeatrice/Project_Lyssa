@@ -24,6 +24,16 @@ public class KrausOffice_ChoiceHandler : MonoBehaviour
         FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_5_Keycard", "crossfade_start");
     }
 
+    public void LeaveOfficeNotePath(){
+        if (HelperMethods.CheckObjectives("Find the secret entrance to the basement.")){
+            FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_10_Piano", "crossfade_start");
+        }
+        else {
+            FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_9_Kitchen", "crossfade_start");
+        }
+        
+    }
+
 
     public void SheTakesAWhiskeyDrink(){
         Globals.insanity += 1;

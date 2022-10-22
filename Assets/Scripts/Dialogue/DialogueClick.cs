@@ -96,7 +96,7 @@ public class DialogueClick : MonoBehaviour
             DialogueBox.SetActive(true);
 
 
-        FindObjectOfType<DialogueManager>().StartDialogue(Interaction, ResponseStrings, ResponseButtons);
+        DialogueBox.GetComponent<DialogueManager>().StartDialogue(Interaction, ResponseStrings, ResponseButtons);
         
     }
    

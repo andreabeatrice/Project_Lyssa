@@ -458,6 +458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &60726869
 GameObject:
@@ -1066,6 +1067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &160974580 stripped
 AudioSource:
@@ -1402,6 +1404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &213043046 stripped
 AudioSource:
@@ -1593,6 +1596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &251797162 stripped
 AudioSource:
@@ -1779,6 +1783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &276023549 stripped
 AudioSource:
@@ -1900,6 +1905,7 @@ GameObject:
   - component: {fileID: 375198782}
   - component: {fileID: 375198783}
   - component: {fileID: 375198784}
+  - component: {fileID: 375198785}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -2087,6 +2093,42 @@ MonoBehaviour:
   rb: {fileID: 0}
   testing: 0
   insane: 0
+--- !u!114 &375198785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375198770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5fdb19cb5ca74948a692c708b3391ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meter_image: {fileID: 1656355013}
+  meter_sprites:
+  - {fileID: 21300000, guid: 0346cd8782ae1f04687a72b07d3e9736, type: 3}
+  - {fileID: 21300000, guid: e1625950d73347740b1b220a45804eb8, type: 3}
+  - {fileID: 21300000, guid: 12e14882470e3b54fb686b93199d0827, type: 3}
+  - {fileID: 21300000, guid: 66074fd4eabfe1947805724c2b8bfd0b, type: 3}
+  - {fileID: 21300000, guid: fcee7f2ee0624d3419bf84d4d143dfa5, type: 3}
+  - {fileID: 21300000, guid: b5fefa4a00b9bac4bbac39d0ee430138, type: 3}
+  - {fileID: 21300000, guid: f21a72dbaa960cf43a21335f111fbeb7, type: 3}
+  - {fileID: 21300000, guid: 9b4ec8e61d6544b4093ad0962c6150c3, type: 3}
+  - {fileID: 21300000, guid: 93cea10360a299b4a89fce4c7d87afff, type: 3}
+  - {fileID: 21300000, guid: 4e6b025c90f56a04fb6a9c026d3ec8db, type: 3}
+  - {fileID: 21300000, guid: c676e44672d98284c906b37906a47ba1, type: 3}
+  - {fileID: 21300000, guid: 267efd6c495054744b66c503648766af, type: 3}
+  - {fileID: 21300000, guid: 5fc6c915de5e68c4e85c849ac57c0d12, type: 3}
+  - {fileID: 21300000, guid: 9a9c4a70b509eee46b19ca3bcf2df23a, type: 3}
+  - {fileID: 21300000, guid: 7fd73610e04f4344586ffb45e7e523bc, type: 3}
+  - {fileID: 21300000, guid: 327b6033d15d028468e67fa4577f8990, type: 3}
+  - {fileID: 21300000, guid: 3816a5338f50a7f488d13a76eedcff99, type: 3}
+  - {fileID: 21300000, guid: 7789343dba72a084ba5fcc6ed05f3be5, type: 3}
+  - {fileID: 21300000, guid: cfff369e8bfd6834e9d2c19fd0c2c017, type: 3}
+  - {fileID: 21300000, guid: 84d1e6c75116242488de2cbfe26a2065, type: 3}
+  - {fileID: 21300000, guid: 514410d6c4264514682456452c880896, type: 3}
+  test: 0
 --- !u!82 &387039683 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5671338687068651481, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
@@ -2402,6 +2444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &433567517
 GameObject:
@@ -2583,6 +2626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &445886156 stripped
 AudioSource:
@@ -3464,6 +3508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 1900517916}
   dropSound: {fileID: 1900517914}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!225 &508875306
 CanvasGroup:
@@ -3874,6 +3919,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &545236148
 GameObject:
@@ -4055,6 +4101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1001 &547010188
 PrefabInstance:
@@ -4379,6 +4426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &589176751 stripped
 AudioSource:
@@ -4570,6 +4618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &594759086
 GameObject:
@@ -4751,6 +4800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &601793583 stripped
 AudioSource:
@@ -5044,6 +5094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &657819900
 GameObject:
@@ -5387,6 +5438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &736845150
 GameObject:
@@ -6413,6 +6465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &849337873
 GameObject:
@@ -6594,6 +6647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &850746465
 GameObject:
@@ -7255,6 +7309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &912688899 stripped
 AudioSource:
@@ -7774,6 +7829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &958597329
 GameObject:
@@ -8137,6 +8193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &989316119
 GameObject:
@@ -8660,6 +8717,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &1063903574
 GameObject:
@@ -9721,6 +9779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &1292340646 stripped
 AudioSource:
@@ -9912,6 +9971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &1330142881
 GameObject:
@@ -10093,6 +10153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &1341222159 stripped
 AudioSource:
@@ -10279,6 +10340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &1358259214 stripped
 AudioSource:
@@ -10520,6 +10582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &1413781467
 GameObject:
@@ -10822,6 +10885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &1507096774
 GameObject:
@@ -10976,6 +11040,7 @@ MonoBehaviour:
   putDownBook: {fileID: 1341222159}
   light_Switch: {fileID: 19360341}
   footsteps_Concrete: {fileID: 2101832974}
+  dies_irae: {fileID: 0}
   closeKitchenCupboard: {fileID: 1662094177}
   openKitchenCupboard: {fileID: 541308206}
   punch: {fileID: 173629815}
@@ -11197,6 +11262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &1540637343
 GameObject:
@@ -11378,6 +11444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &1557137368
 GameObject:
@@ -11559,6 +11626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &1559145158 stripped
 AudioSource:
@@ -11755,6 +11823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &1632895788 stripped
 AudioSource:
@@ -11945,6 +12014,11 @@ PrefabInstance:
 --- !u!224 &1656355012 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1714896571131185866, guid: fa3a9745fd6d63f4fbd14702cbd3046f, type: 3}
+  m_PrefabInstance: {fileID: 1656355011}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1656355013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1714896569350666831, guid: fa3a9745fd6d63f4fbd14702cbd3046f, type: 3}
   m_PrefabInstance: {fileID: 1656355011}
   m_PrefabAsset: {fileID: 0}
 --- !u!82 &1662094177 stripped
@@ -12308,6 +12382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &1717930698
 GameObject:
@@ -12599,6 +12674,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &1774874188
 GameObject:
@@ -12780,6 +12856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &1793599464 stripped
 AudioSource:
@@ -13071,6 +13148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!82 &1834592518 stripped
 AudioSource:
@@ -13257,6 +13335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &1877098822
 GameObject:
@@ -13935,6 +14014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSound: {fileID: 160974580}
   dropSound: {fileID: 1341222159}
+  allAudio: {fileID: 0}
   canDrag: 1
 --- !u!1 &1990562660
 GameObject:

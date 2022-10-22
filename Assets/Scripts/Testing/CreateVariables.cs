@@ -119,6 +119,7 @@ public class CreateVariables : MonoBehaviour
                 break;
                 case "DiningHall_Base":
                     rb.position = new Vector2(13, -43);
+                    //Globals.blamed_receptionist = true;
                     check = true;
                 break;
                 case "Kitchen_1_Base":

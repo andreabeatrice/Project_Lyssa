@@ -1545,6 +1545,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1871762226}
     - target: {fileID: 253457465109374892, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1655242556}
+    - target: {fileID: 253457465109374892, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: playClickSound
       objectReference: {fileID: 0}
@@ -1553,8 +1557,16 @@ PrefabInstance:
       value: LowerSpeedText
       objectReference: {fileID: 0}
     - target: {fileID: 253457465109374892, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Type
+      objectReference: {fileID: 0}
+    - target: {fileID: 253457465109374892, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: SettingsMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 253457465109374892, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: SettingsTextDisplay, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 253457465377733673, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
       propertyPath: m_IsActive
@@ -1577,6 +1589,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 221611079}
     - target: {fileID: 253457465408657896, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1655242556}
+    - target: {fileID: 253457465408657896, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RaiseSpeedText
       objectReference: {fileID: 0}
@@ -1585,12 +1601,20 @@ PrefabInstance:
       value: playClickSound
       objectReference: {fileID: 0}
     - target: {fileID: 253457465408657896, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Type
+      objectReference: {fileID: 0}
+    - target: {fileID: 253457465408657896, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SettingsMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 253457465408657896, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: AudioSources, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 253457465408657896, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: SettingsTextDisplay, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 253457465408657903, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1705,6 +1729,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 253457464705375187, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
   m_PrefabInstance: {fileID: 1655242546}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1655242556 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8986663786408362815, guid: 22274a05293c45144b45f0f4e98ace23, type: 3}
+  m_PrefabInstance: {fileID: 1655242546}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655242551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dedecf9ee8d538948a06577daaabad11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1665404179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1875,7 +1910,6 @@ MonoBehaviour:
   SpeechPlaceholder: {fileID: 1516921454}
   ContinueButton: {fileID: 0}
   clickSound: {fileID: 0}
-  DialogueManagerHolder: {fileID: 1871762222}
   AllAudio: {fileID: 221611079}
 --- !u!114 &1871762228
 MonoBehaviour:

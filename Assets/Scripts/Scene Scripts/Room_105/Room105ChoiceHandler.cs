@@ -12,10 +12,14 @@ public class Room105ChoiceHandler : MonoBehaviour
     public GameObject[] flames = new GameObject[10];
 
     public GameObject[] lowInsanitychoices, highInsanityChoices = new GameObject[3];
+
+     bool makesmoresense = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        HelperMethods.ObjectivesDequeue("Find the note writer");
+        HelperMethods.InventoryDequeue("Pack of Cigarettes");
+        HelperMethods.ObjectivesEnqueue("Find out from Otto what's happening at Lyssa");
     }
 
     // Update is called once per frame
@@ -75,7 +79,7 @@ public class Room105ChoiceHandler : MonoBehaviour
             choices[0] = "Thank Otto (-1)";
 
             FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, choices, highInsanityChoices);
-
+            makesmoresense = true;
         }
 
         
@@ -109,9 +113,19 @@ public class Room105ChoiceHandler : MonoBehaviour
     }
 
     public void BackToHallway_Kitchen(){
-    Globals.playerPositionOnMap = new Vector2(-48, -8);
-       FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_9_Kitchen", "crossfade_start");
-       Debug.Log("leaving now...");
+        HelperMethods.ObjectivesDequeue("Find out from Otto what's happening at Lyssa");
+
+        if (!makesmoresense){
+            HelperMethods.ObjectivesEnqueue("Find the rats that are cooking something up?");
+        }
+        else {
+            HelperMethods.ObjectivesEnqueue("Speak to the rat in the kitchen.");
+        }
+        //
+        
+        Globals.playerPositionOnMap = new Vector2(-48, -8);
+        FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_9_Kitchen", "crossfade_start");
+        Debug.Log("leaving now...");
     }
 
     public void InsanityIncreaseExit(){
