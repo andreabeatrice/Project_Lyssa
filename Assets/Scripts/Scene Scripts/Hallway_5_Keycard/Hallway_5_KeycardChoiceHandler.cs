@@ -10,6 +10,8 @@ public class Hallway_5_KeycardChoiceHandler : MonoBehaviour
     public Collider2D OfficeDoor, commonroom, kitchen, cm2;
 
     public bool played = false;
+
+    public GameObject DialogueBoxHolder;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,18 @@ public class Hallway_5_KeycardChoiceHandler : MonoBehaviour
                 FindObjectOfType<LevelLoader>().LoadNextLevel("KrausOffice_3_NotePath", "crossfade_start");
             }
             else {
-                OfficeDoor.GetComponent<DialogueClick>().TriggerDialogue();
+                if (InteractionsCounter.krausoffice == 0){
+                    OfficeDoor.GetComponent<DialogueClick>().TriggerDialogue();
+                }
+                else {
+                    Sentence[] convincingDialogue = new Sentence[]{ 
+                            new Sentence("Don't you think that's enough for one day?", null, "", new Color32(255,255,255,255)),
+                    };
+
+                    DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue);
+
+                }
+                
 
                 played = true;
             }
