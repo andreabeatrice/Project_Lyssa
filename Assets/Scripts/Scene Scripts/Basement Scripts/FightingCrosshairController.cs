@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class FightingCrosshairController : MonoBehaviour
 {
     public int hit = 0;
@@ -124,20 +124,38 @@ public class FightingCrosshairController : MonoBehaviour
 
             hit++;
 
-            FindObjectOfType<KrausCollider>().hit = 0;
+            if (SceneManager.GetActiveScene().name == "Basement_2_Fight"){
+                FindObjectOfType<KrausCollider>().hit = 0;
+            }
+            else {
+                //FindObjectOfType<KrausCollider>().hit = 0;
+            }
+            
         } 
 
         else {
-            //Change scne
-            AllAudio.playKick();
-            fern.Play("Player_Kick");
-            kraus.Play("kraus_knockedout");
 
-            Debug.Log("You win!");
-            crosshair_object.SetActive(false);
-            KrausBody.enabled = false;
-            Globals.playerPositionOnMap = new Vector2(-1.31f, 72.31f);
-            FindObjectOfType<LevelLoader>().LoadNextLevelLong("Basement_3_Win", "crossfade_start", 4f);
+
+            if (SceneManager.GetActiveScene().name == "Basement_2_Fight"){
+                FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 3f);
+                //Change scne
+                AllAudio.playKick();
+                kraus.Play("kraus_knockedout");
+                fern.Play("Player_Jab_Cross");
+
+                Debug.Log("You win!");
+                crosshair_object.SetActive(false);
+                KrausBody.enabled = false;
+                Globals.playerPositionOnMap = new Vector2(-1.31f, 72.31f);
+                FindObjectOfType<LevelLoader>().LoadNextLevelLong("Basement_3_Win", "crossfade_start", 4f);
+            }
+            else {
+                kraus.Play("kraus_kick");
+                fern.Play("player_knockout");
+                crosshair_object.SetActive(false);
+                Globals.deaths.Add("Whatever happened to workers of the world unite? You kind of deserve this, you know.");
+                FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 3f);
+            }
         }
        
         

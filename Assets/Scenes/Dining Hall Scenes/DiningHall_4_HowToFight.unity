@@ -4220,9 +4220,9 @@ GameObject:
   m_Component:
   - component: {fileID: 999235582}
   - component: {fileID: 999235581}
-  - component: {fileID: 999235580}
   - component: {fileID: 999235579}
   - component: {fileID: 999235578}
+  - component: {fileID: 999235583}
   m_Layer: 0
   m_Name: Receptionist
   m_TagString: rnd
@@ -4243,10 +4243,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fern: {fileID: 2050234789}
-  kraus: {fileID: 999235580}
+  kraus: {fileID: 999235583}
   AllAudio: {fileID: 2058328840}
   crosshair_object: {fileID: 2103941316}
-  hit: 0
+  hit: 3
 --- !u!60 &999235579
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4254,7 +4254,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999235577}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -4272,48 +4272,29 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.4, y: 0.4}
-      - {x: 1.7, y: 0.65000004}
-      - {x: 1.7, y: 1.8000001}
-      - {x: 1.65, y: 2.25}
-      - {x: 1.2, y: 2.9}
-      - {x: 0.55, y: 3.2}
-      - {x: -0.25, y: 3.2}
-      - {x: -0.55, y: 3.15}
-      - {x: -1.1, y: 2.65}
-      - {x: -1.15, y: 2.05}
-      - {x: -1.3000001, y: 0.7}
-      - {x: -0.75, y: -0.05}
-      - {x: -1, y: -0.05}
-      - {x: -1.3000001, y: -0.2}
-      - {x: -1.3000001, y: -0.55}
-      - {x: -0.75, y: -1.25}
-      - {x: -0.75, y: -2.25}
-      - {x: -0.65000004, y: -3.2}
-      - {x: 0.85, y: -3.2}
-      - {x: 0.85, y: -2.7}
-      - {x: 0.75, y: -0.85}
-      - {x: 0.8, y: -0.05}
---- !u!95 &999235580
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 999235577}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1b3c4f5bb03e0c14e85ef7e47a8119b4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+    - - {x: 1.1, y: -0.15}
+      - {x: 1.6, y: 0.75}
+      - {x: 1.75, y: 1.1}
+      - {x: 1.75, y: 2.15}
+      - {x: 1.65, y: 2.65}
+      - {x: 1.0500001, y: 3.1000001}
+      - {x: 0.05, y: 3.1000001}
+      - {x: -0.25, y: 2.65}
+      - {x: -0.5, y: 2.1000001}
+      - {x: -0.6, y: 1.65}
+      - {x: -0.6, y: 0.15}
+      - {x: -0.55, y: 0.05}
+      - {x: -0.6, y: -0.1}
+      - {x: -0.6, y: -0.7}
+      - {x: -0.25, y: -1}
+      - {x: -0.5, y: -3}
+      - {x: -0.45000002, y: -3.05}
+      - {x: 0.1, y: -3.05}
+      - {x: 0.25, y: -3}
+      - {x: 0.4, y: -3.05}
+      - {x: 1.0500001, y: -3.05}
+      - {x: 1.1, y: -2.5}
+      - {x: 0.95, y: -2.15}
 --- !u!212 &999235581
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4355,7 +4336,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3387e6541369c7a4eab1d40b99537fa9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: edd71f8e58c1b524ca9f43ce9b44eb1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4382,6 +4363,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &999235583
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999235577}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6bec364da0b38c741adffcd8e4d6e1cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1029456579
 GameObject:
   m_ObjectHideFlags: 0
@@ -6920,15 +6921,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a951119bf194c439259b4ca78f5c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hit: 0
-  AllAudio: {fileID: 0}
+  hit: -2
+  AllAudio: {fileID: 2058328840}
   KrausBody: {fileID: 999235579}
   crosshair: {fileID: 2103941317}
   crosshair_object: {fileID: 2103941316}
   none: {fileID: 0}
   crosshair_sprote: {fileID: 21300000, guid: 4575202f77c915249a72cfeda603f0fa, type: 3}
-  fern: {fileID: 0}
-  kraus: {fileID: 999235580}
+  fern: {fileID: 2050234789}
+  kraus: {fileID: 999235583}
 --- !u!114 &2103941319
 MonoBehaviour:
   m_ObjectHideFlags: 0
