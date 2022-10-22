@@ -84,7 +84,9 @@ public class AudioSources : MonoBehaviour
     public AudioSource fernFreak;
     public AudioSource kettle;
     public AudioSource beep;
-    
+    public AudioSource falling;
+    public AudioSource FernFallCry;
+    public AudioSource FernGulping;
 
     private AudioSource[] allAudioSources;
     public void Start()
@@ -309,7 +311,15 @@ public class AudioSources : MonoBehaviour
                 case "beep":
                     beep = sound;
                 break;
-
+                case "falling":
+                    falling = sound;
+                break;
+                case "FernFallCry":
+                    FernFallCry=sound;
+                break;
+                  case "FernGulping":
+                    FernGulping=sound;
+                break;
             }
         }
         
@@ -674,6 +684,15 @@ public class AudioSources : MonoBehaviour
     }
     public void kettleStop(){
         kettle.Stop();
+    }
+     public void playFalling(){
+        falling.Play();
+    }
+    public void playFernFallCry(){
+        FernFallCry.Play();
+    }
+    public void playFernGulping(){
+        FernGulping.Play();
     }
    /* public void StopAllBabbles(){
         if(DrKrause!=null)
