@@ -40,10 +40,8 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
     //TutorialObjective1(): The OnClick() method for the response to the receptionist
         public void TutorialObjective1()
         {
-            int temp = (int) typeof(InteractionsCounter).GetField("receptionist").GetValue(this);
-            
-            if (temp == 1)
-            {
+
+            if (!HelperMethods.CheckObjectives("Go to the janitor's closet for supplies")){
                 HelperMethods.ObjectivesEnqueue("Go to the janitor's closet for supplies");
 
                 //
@@ -66,6 +64,7 @@ public class Hallway_1_PreTutorialChoiceHandler : MonoBehaviour
             }
             else
             {
+                Debug.Log("Do nothing");
                 FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
             }
 

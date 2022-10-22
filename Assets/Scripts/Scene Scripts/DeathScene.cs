@@ -13,7 +13,7 @@ public class DeathScene : MonoBehaviour
     public TMP_Text causeOfDeath;
     public TMP_Text timeOfDeath;
     public AudioSources allAudio;
-    public Sprite title1, title2, title3, title4, title5;
+    public Sprite title1, title2, title3, title4, title5, title6;
 
     public GameObject title;
 
@@ -127,11 +127,17 @@ public class DeathScene : MonoBehaviour
         if (Globals.deaths.Last().Contains("meditation")){//insane
             title.GetComponent<Image>().sprite = title2;
         }
-        else if (Globals.deaths.Last().Contains("proud")){
+        else if (Globals.deaths.Last().Contains("proud")){ // escape no mom
             title.GetComponent<Image>().sprite = title1;
         }
         else if (Globals.deaths.Last().Contains("throw")){//success
+            title.GetComponent<Image>().sprite = title6;
+        }
+        else if (Globals.deaths.Last().Contains("cigarettes")){//fire
             title.GetComponent<Image>().sprite = title5;
+        }
+        else if (Globals.deaths.Last().Contains("unite")){//killed by receptionist
+            title.GetComponent<Image>().sprite = title4;
         }
         else {
             title.GetComponent<Image>().sprite = title3;//dead
