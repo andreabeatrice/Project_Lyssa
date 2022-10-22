@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 16260417}
   - component: {fileID: 16260418}
   - component: {fileID: 16260419}
+  - component: {fileID: 16260420}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -540,6 +541,23 @@ MonoBehaviour:
   rb: {fileID: 0}
   testing: 1
   insane: 6
+--- !u!114 &16260420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16260403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91afb9f471aac8243aaf0fd2305d4010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RatAnimator: {fileID: 1388876040}
+  InsaneChoices: []
+  RatChoices: []
+  AllAudio: {fileID: 2010402775}
+  DialogueBoxHolder: {fileID: 598751815}
 --- !u!82 &47901179 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2657309576819361042, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
@@ -4980,6 +4998,7 @@ GameObject:
   - component: {fileID: 1388876040}
   - component: {fileID: 1388876041}
   - component: {fileID: 1388876042}
+  - component: {fileID: 1388876043}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -5123,6 +5142,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &1388876043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388876037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interaction:
+  - Words: Who even cares anymore?
+    Voice: {fileID: 0}
+    Name: Fern
+    TextColor:
+      serializedVersion: 2
+      rgba: 4294823559
+    AnimationObject: {fileID: 0}
+    Play: 
+  AllAudio: {fileID: 2010402775}
+  DialogueBox: {fileID: 598751815}
+  ResponseStrings:
+  - Leave The Rat Alone (+0)
+  - Try Catch the Rat (+0)
+  ResponseButtons:
+  - {fileID: 2126172165}
+  - {fileID: 1718478590}
+  identifier: infinite
+  Clickable: 1
+  enableProximityReactions: 0
+  PlayerCollider: {fileID: 0}
+  ObjectAreaCollider: {fileID: 0}
 --- !u!1 &1427878890
 GameObject:
   m_ObjectHideFlags: 0
@@ -6381,7 +6434,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 16260420}
         m_TargetAssemblyTypeName: RatScript, Assembly-CSharp
         m_MethodName: CatchRat
         m_Mode: 1

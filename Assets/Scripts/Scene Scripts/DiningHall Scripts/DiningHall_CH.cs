@@ -17,8 +17,11 @@ public class DiningHall_CH : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)){
+        if (PlayerCollider != null && HallwayCollider != null && Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)){
             if (PlayerCollider.IsTouching(HallwayCollider) && SceneManager.GetActiveScene().name == "DiningHall_2_AfterKitchen"){
+                FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_10_Piano", "crossfade_start");
+            }
+            if (PlayerCollider.IsTouching(HallwayCollider) &&  HelperMethods.CheckObjectives("Find the secret entrance to the basement.")){
                 FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_10_Piano", "crossfade_start");
             }
 

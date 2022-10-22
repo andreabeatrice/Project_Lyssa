@@ -31,6 +31,9 @@ public class RatScript : MonoBehaviour
     public void OnMouseDown()
     {
          
+         
+         HelperMethods.ObjectivesDequeue("Find the rats that are cooking something up?");
+
 
         if (Globals.insanity >= 5){
             convincingDialogue = new Sentence[]{ 
@@ -45,7 +48,13 @@ public class RatScript : MonoBehaviour
             DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Speak to the rat (+3)","Try catch it (-1)"}, InsaneChoices);
         }
         else {
+            convincingDialogue = new Sentence[]{ 
+                new Sentence("You should probably try catch that rat, right?.", null, "", new Color32(255,255,255,255))
+            };
 
+            DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
+        
+            DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, "Try catch it (-1)", InsaneChoices[1]);
         }
 
         
@@ -61,6 +70,7 @@ public class RatScript : MonoBehaviour
     }
 
     public void CommunicateWithTheRat(){
+        HelperMethods.ObjectivesDequeue("Speak to the rat in the kitchen.");
         Globals.insanity += 3;
         
         convincingDialogue = new Sentence[]{ 
@@ -118,7 +128,7 @@ public class RatScript : MonoBehaviour
 
         DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
         
-        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask it to elaborate (+3)","Ask where (+1)"}, AddCatchChoice);
+        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask to explain (+3)","Ask where (+1)"}, AddCatchChoice);
     }
 
     public void CommunicateWithTheRat_Elaborate(){
@@ -137,7 +147,7 @@ public class RatScript : MonoBehaviour
 
         DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
         
-        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"How to open the passage (+2)","Stop Talking to It (+0)"}, AddCatchChoice);
+        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"How to open passage (+2)","Stop Talking to It (+0)"}, AddCatchChoice);
     }
 
     public void CommunicateWithTheRat_AskWhere(){
@@ -170,14 +180,8 @@ public class RatScript : MonoBehaviour
 
         StartCoroutine(BackToDiningHall());
 
-        //Take player put of kitchen
-        //GameObject[] AddCatchChoice = new GameObject[]{RatChoices[3], RatChoices[5]};
+        HelperMethods.ObjectivesDequeue("Find the secret entrance to the basement.");
 
-
-
-        //DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
-        
-        //DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, new string[]{"Ask it to elaborate (+3)","Stop Talking to It (+0)"}, AddCatchChoice);
     }
 
     public void CommunicateWithTheRat_StopTalkingToIt(){
@@ -218,7 +222,7 @@ public class RatScript : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
 
-        SceneManager.LoadScene("ExperimentationDeath_CutScene");
+        SceneManager.LoadScene("ExperimentationDeath_CutScene_Kitchen");
     }
 
 

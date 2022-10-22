@@ -25,8 +25,12 @@ public class PlayAnimation : MonoBehaviour
     }
 
     public void OnMouseDown(){
-        PlaySound.Play();
-        Debug.Log("soundsssssssssssssssssssssssssssssss");
+        if (PlaySound != null){
+            PlaySound.Play();
+            Debug.Log("soundsssssssssssssssssssssssssssssss");
+
+        }
+        
         if(Trigger != null){
             if(AnimatedObject != null){
                 AnimatedObject.SetActive(true);

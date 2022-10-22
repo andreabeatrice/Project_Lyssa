@@ -24,11 +24,18 @@ public class Hallway_5_KeycardChoiceHandler : MonoBehaviour
 
     public void CheckWhatPlayersTouching()
     {
-        if (commonroom!= OfficeDoor && PlayerCollider.IsTouching(OfficeDoor) && played == false && !Globals.LightSwitch ){
-            OfficeDoor.GetComponent<DialogueClick>().TriggerDialogue();
+        if (OfficeDoor!= null && PlayerCollider.IsTouching(OfficeDoor) && played == false && !Globals.LightSwitch && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))){
+            if (SceneManager.GetActiveScene().name == "Hallway_9_Kitchen" || SceneManager.GetActiveScene().name == "Hallway_10_Piano"){
+                FindObjectOfType<LevelLoader>().LoadNextLevel("KrausOffice_3_NotePath", "crossfade_start");
+            }
+            else {
+                OfficeDoor.GetComponent<DialogueClick>().TriggerDialogue();
 
-            played = true;
+                played = true;
+            }
+
         }
+        
         if (commonroom!= null && PlayerCollider.IsTouching(commonroom) && (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))){
             commonroom_innocent();
 
@@ -44,6 +51,7 @@ public class Hallway_5_KeycardChoiceHandler : MonoBehaviour
 
             played = true;
         }
+
     }
 
     public void EnterOffice(){

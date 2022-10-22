@@ -22,6 +22,8 @@ public static  class InteractionsCounter
    public static bool intro = false;
 
    public static int krausyelling = 0;
+
+   public static int receptionistInDiningHall = 0;
     
 }
 
