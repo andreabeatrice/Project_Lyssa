@@ -87,6 +87,7 @@ public class AudioSources : MonoBehaviour
     public AudioSource falling;
     public AudioSource FernFallCry;
     public AudioSource FernGulping;
+    public AudioSource ratSqueak;
 
     private AudioSource[] allAudioSources;
     public void Start()
@@ -319,6 +320,9 @@ public class AudioSources : MonoBehaviour
                 break;
                   case "FernGulping":
                     FernGulping=sound;
+                break;
+                case "ratSqueak":
+                    ratSqueak=sound;
                 break;
             }
         }
@@ -693,6 +697,9 @@ public class AudioSources : MonoBehaviour
     }
     public void playFernGulping(){
         FernGulping.Play();
+    }
+    public void playRatSqueak(){
+        ratSqueak.Play();
     }
    /* public void StopAllBabbles(){
         if(DrKrause!=null)

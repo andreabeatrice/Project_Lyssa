@@ -3488,6 +3488,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4970498925076773059, guid: 2b5c854d54ff3ea4b98be02aace5473a, type: 3}
   m_PrefabInstance: {fileID: 716534101}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &718129745 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3803745892280369698, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 2010402772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &755800903
 GameObject:
   m_ObjectHideFlags: 0
@@ -5106,6 +5111,7 @@ GameObject:
   - component: {fileID: 1388876041}
   - component: {fileID: 1388876042}
   - component: {fileID: 1388876043}
+  - component: {fileID: 1388876044}
   m_Layer: 0
   m_Name: Rat
   m_TagString: Untagged
@@ -5275,6 +5281,99 @@ MonoBehaviour:
   - {fileID: 195554737}
   AllAudio: {fileID: 2010402775}
   DialogueBoxHolder: {fileID: 598751815}
+--- !u!114 &1388876044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388876037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click_sound: {fileID: 2010402774}
+  open_door: {fileID: 2010402850}
+  footsteps: {fileID: 2010402849}
+  hallway_sounds: {fileID: 2010402848}
+  receptionist_voice: {fileID: 2010402847}
+  fern_voice: {fileID: 2010402846}
+  nurse_voice: {fileID: 2010402845}
+  nurse_voice_2: {fileID: 2010402844}
+  nurse_voice_3: {fileID: 2010402843}
+  background_music: {fileID: 2010402842}
+  menu_background_with_crickets: {fileID: 2010402841}
+  crickets: {fileID: 2010402840}
+  pick_up_object: {fileID: 47901179}
+  release_object: {fileID: 1446509571}
+  janitors_closet_background_music: {fileID: 2010402839}
+  close_door: {fileID: 2010402838}
+  vent_drip: {fileID: 2010402837}
+  page_turn: {fileID: 2010402836}
+  book_close: {fileID: 2010402835}
+  background106: {fileID: 2010402834}
+  intercom: {fileID: 2010402833}
+  mopping_sound: {fileID: 2010402832}
+  error_sound: {fileID: 2010402831}
+  puff: {fileID: 2010402830}
+  drawer_open: {fileID: 2010402829}
+  drawer_close: {fileID: 2010402828}
+  mirror_squeak: {fileID: 2010402827}
+  cabinet_Open: {fileID: 1098316173}
+  cabinet_Close: {fileID: 2010402826}
+  glass_Clink: {fileID: 2010402825}
+  basement_Background: {fileID: 2010402824}
+  pickUpBook: {fileID: 2010402823}
+  putDownBook: {fileID: 2010402822}
+  light_Switch: {fileID: 2010402821}
+  footsteps_Concrete: {fileID: 2010402820}
+  dies_irae: {fileID: 2010402819}
+  closeKitchenCupboard: {fileID: 2010402818}
+  openKitchenCupboard: {fileID: 2010402817}
+  punch: {fileID: 2010402816}
+  doublePunch: {fileID: 2010402815}
+  kick: {fileID: 2010402814}
+  fridgeDoorOpening: {fileID: 2098253081}
+  fridgeDoorClosing: {fileID: 2010402813}
+  fridgeBeingOpen: {fileID: 2010402812}
+  fridgeHum: {fileID: 2010402811}
+  pot: {fileID: 2010402810}
+  potsAndPans: {fileID: 2010402809}
+  fightBell: {fileID: 2010402808}
+  tickingTimer: {fileID: 2010402807}
+  metalDrag: {fileID: 2010402806}
+  manHoleDrop: {fileID: 2010402805}
+  boilerRoomBackground: {fileID: 2010402804}
+  burning: {fileID: 2010402803}
+  screamingMale: {fileID: 2010402802}
+  fightBackground: {fileID: 2010402801}
+  panting: {fileID: 2010402800}
+  roadAndBirds: {fileID: 2010402799}
+  newspaperSpin: {fileID: 2010402798}
+  OttoNormal: {fileID: 2010402797}
+  OttoFreak: {fileID: 2010402796}
+  Dahlia: {fileID: 2010402795}
+  DrKrause: {fileID: 2010402794}
+  DrKrause_2: {fileID: 2010402793}
+  DrKrause_3: {fileID: 2010402792}
+  WinSound: {fileID: 2010402791}
+  RadioBackground: {fileID: 2010402790}
+  fan: {fileID: 2010402789}
+  tvStatic: {fileID: 2010402788}
+  basementDoors: {fileID: 2010402787}
+  failSound: {fileID: 2010402786}
+  insaneEnding: {fileID: 2010402785}
+  fernFright: {fileID: 2010402784}
+  syringe: {fileID: 2010402783}
+  painfulBreathing: {fileID: 2010402782}
+  fernFreak: {fileID: 2010402781}
+  kettle: {fileID: 2010402780}
+  beep: {fileID: 2010402779}
+  falling: {fileID: 2010402778}
+  FernFallCry: {fileID: 2010402777}
+  FernGulping: {fileID: 2010402776}
+  ratSqueak: {fileID: 718129745}
 --- !u!1 &1427878890
 GameObject:
   m_ObjectHideFlags: 0
@@ -5293,7 +5392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1427878891
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5473,6 +5572,7 @@ MonoBehaviour:
   falling: {fileID: 2010402778}
   FernFallCry: {fileID: 2010402777}
   FernGulping: {fileID: 2010402776}
+  ratSqueak: {fileID: 0}
 --- !u!1 &1440907449
 GameObject:
   m_ObjectHideFlags: 0
