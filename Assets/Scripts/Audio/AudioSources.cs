@@ -389,6 +389,10 @@ public class AudioSources : MonoBehaviour
                 StopAllAudio();
                 basement_Background.Play();
                 break;
+            case "Basement_6_ThroughPiano":
+                StopAllAudio();
+                basement_Background.Play();
+                break;
              case "Basement_1_LitUp":
                 StopAllAudio();
                 basementDoors.Play();
@@ -433,6 +437,11 @@ public class AudioSources : MonoBehaviour
                 break;
             case "Kitchen_1_BaseScene":
                 kettle.Play();
+                fridgeHum.Play();
+                break;
+            case "Kitchen_2_Empty":
+                kettle.Play();
+                fridgeHum.Play();
                 break;
            
             
@@ -656,9 +665,11 @@ public class AudioSources : MonoBehaviour
      public void playFernFreak(){
         fernFreak.Play();
     }
-
     public void playDiesIrae(){
         dies_irae.Play();
+    }
+    public void kettleStop(){
+        kettle.Stop();
     }
 
     public void StopAllAudio() {

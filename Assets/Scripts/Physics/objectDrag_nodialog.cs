@@ -14,6 +14,7 @@ public class objectDrag_nodialog : MonoBehaviour
     private bool isBeingHeld = false;
     public AudioSource dragSound;
     public AudioSource dropSound;
+    public AudioSources allAudio;
     public bool canDrag = false;
 
 
@@ -39,7 +40,14 @@ public class objectDrag_nodialog : MonoBehaviour
         if (Input.GetMouseButtonDown(Globals.primaryMouseButton) && canDrag && !Globals.paused)
         {
             if (dragSound != null)
+            {
+                if(allAudio!=null)
+                {
+                   allAudio.kettleStop();
+                }
                 dragSound.Play();
+            }
+                
 
             Vector3 mousePos;
             mousePos = Input.mousePosition;
