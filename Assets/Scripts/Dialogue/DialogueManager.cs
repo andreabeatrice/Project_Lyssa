@@ -63,6 +63,7 @@ public class DialogueManager : MonoBehaviour {
 
     //StartDialogue(Sentence[] i): takes in an array of sentences, one response, and the button that response will be assigned to 
         public void StartDialogue(Sentence[] i){
+            AllAudio.StopAllBabbles();
             //0) Clear any assigned animations
                 AnimationObject = null;
                 SentenceAnimation = "";
@@ -99,6 +100,7 @@ public class DialogueManager : MonoBehaviour {
 
     //StartDialogue(Sentence[] i, string c, GameObject b): takes in an array of sentences, one response, and the button that response will be assigned to 
         public void StartDialogue(Sentence[] i, string c, GameObject b){
+            AllAudio.StopAllBabbles();
             if(c == null || c == ""){
                 StartDialogue(i);
             }
@@ -142,6 +144,7 @@ public class DialogueManager : MonoBehaviour {
 
     //StartDialogue(Sentence[] i, string[] c, GameObject[] b): takes in an array of sentences, the possible responses, and the buttons that responses will be assigned to 
         public void StartDialogue(Sentence[] i, string[] c, GameObject[] b){
+            AllAudio.StopAllBabbles();
 
             if(c == null || c.Length == 0){
                 StartDialogue(i);
