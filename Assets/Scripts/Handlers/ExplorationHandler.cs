@@ -56,6 +56,9 @@ public class ExplorationHandler : MonoBehaviour
         else if (SceneManager.GetActiveScene().name.Contains("CommonRoom_3_Empty")){
             FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_9_Kitchen", "crossfade_start");
         }
+        else if (HelperMethods.CheckObjectives("rats")){
+            FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_9_Kitchen", "crossfade_start");
+        }
         else {
             FindObjectOfType<LevelLoader>().LoadNextLevel("Hallway_2_Pre106", "crossfade_start");
         }

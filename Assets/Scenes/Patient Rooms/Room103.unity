@@ -242,6 +242,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5171170257725893667, guid: cf34c2a4fb885c24493c473b15e7cc82, type: 3}
   m_PrefabInstance: {fileID: 22979218}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &75353719 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 246004915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &112411922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,7 +1345,7 @@ MonoBehaviour:
   inventoryText: {fileID: 449654311}
   objectivesText: {fileID: 449654310}
   inventoryAndObjectives: {fileID: 449654313}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 75353719}
   animatorForIO: {fileID: 449654312}
 --- !u!114 &375198779
 MonoBehaviour:
@@ -2853,6 +2858,7 @@ GameObject:
   - component: {fileID: 1158167421}
   - component: {fileID: 1158167420}
   - component: {fileID: 1158167422}
+  - component: {fileID: 1158167423}
   m_Layer: 0
   m_Name: Decor - Golden Snitch
   m_TagString: Untagged
@@ -3009,6 +3015,26 @@ PolygonCollider2D:
       - {x: 1.0625, y: 0.375}
       - {x: 1.25, y: 1.875}
       - {x: 1.25, y: 2.1875}
+--- !u!95 &1158167423
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158167419}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0eed192f05fbccb4ebf410afa94f6b93, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1191464811
 GameObject:
   m_ObjectHideFlags: 0
@@ -3293,6 +3319,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3426104463049340470, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: AllAudio
+      value: 
+      objectReference: {fileID: 246004917}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
 --- !u!224 &1236141222 stripped

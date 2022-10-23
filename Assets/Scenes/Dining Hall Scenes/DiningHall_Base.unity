@@ -1696,6 +1696,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599242452}
   m_CullTransparentMesh: 1
+--- !u!1 &636368434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1083865238992787527, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+  m_PrefabInstance: {fileID: 1362423790}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &636368435
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636368434}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &637242957
 GameObject:
   m_ObjectHideFlags: 0
@@ -6788,7 +6805,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865580487}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -6835,6 +6852,7 @@ GameObject:
   - component: {fileID: 1870925046}
   - component: {fileID: 1870925047}
   - component: {fileID: 1870925048}
+  - component: {fileID: 1870925049}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -6949,6 +6967,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &1870925049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870925042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d938942b721a042ba17c99bddebb16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1941400618
 GameObject:
   m_ObjectHideFlags: 0
@@ -7116,6 +7146,7 @@ MonoBehaviour:
   AllAudio: {fileID: 2058328840}
   DialogueBoxHolder: {fileID: 986749003}
   Receptionist: {fileID: 1941400618}
+  KitchenDoors: {fileID: 1865580487}
   PlayerCollider: {fileID: 432077486}
   ReceptionistCollider: {fileID: 1941400621}
   Choices:

@@ -18,6 +18,7 @@ public class Room105ChoiceHandler : MonoBehaviour
     void Start()
     {
         HelperMethods.ObjectivesDequeue("Find the note writer");
+        HelperMethods.InventoryDequeue("Pack of Cigarettes");
         HelperMethods.ObjectivesEnqueue("Find out from Otto what's happening at Lyssa");
     }
 

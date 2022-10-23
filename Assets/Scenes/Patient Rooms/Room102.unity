@@ -1427,7 +1427,7 @@ MonoBehaviour:
   inventoryText: {fileID: 288240834}
   objectivesText: {fileID: 288240833}
   inventoryAndObjectives: {fileID: 288240836}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 1490015100}
   animatorForIO: {fileID: 288240835}
 --- !u!114 &375198779
 MonoBehaviour:
@@ -4302,6 +4302,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnMouseExit
       objectReference: {fileID: 0}
+    - target: {fileID: 3426104463049340470, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: AllAudio
+      value: 
+      objectReference: {fileID: 1490015099}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
 --- !u!224 &1321291485 stripped
@@ -4796,6 +4800,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1490015100 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 176746942602008975, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1490015095}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &1490015101 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 2136626542117941155, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}

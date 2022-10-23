@@ -7335,7 +7335,7 @@ MonoBehaviour:
   Clickable: 1
   enableProximityReactions: 1
   PlayerCollider: {fileID: 2115122456}
-  ObjectAreaCollider: {fileID: 836173597}
+  ObjectAreaCollider: {fileID: 836173598}
 --- !u!61 &836173597
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7346,7 +7346,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.63706386, y: -1.4134502}
@@ -7372,12 +7372,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8178144, y: -2.3940182}
+  m_Offset: {x: 2.1419928, y: -2.3940182}
   serializedVersion: 2
-  m_Radius: 3.0301108
+  m_Radius: 3.354292
 --- !u!212 &836173599
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8546,6 +8546,10 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnMouseExit
       objectReference: {fileID: 0}
+    - target: {fileID: 3426104463049340470, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
+      propertyPath: AllAudio
+      value: 
+      objectReference: {fileID: 2113452645}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc9f1b4d64305684dad74a8018ce187b, type: 3}
 --- !u!224 &1044115871 stripped
@@ -23673,7 +23677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482721630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.45, y: -43.58, z: 0}
+  m_LocalPosition: {x: 11.1, y: -44.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -7,7 +7,7 @@ public class ReceptionistScript : MonoBehaviour
 
     public AudioSources AllAudio;
 
-    public GameObject DialogueBoxHolder, Receptionist;
+    public GameObject DialogueBoxHolder, Receptionist, KitchenDoors;
     // Start is called before the first frame update
 
     Sentence[] convincingDialogue;
@@ -103,7 +103,7 @@ public class ReceptionistScript : MonoBehaviour
         };
 
         DialogueBoxHolder.GetComponent<DialogueBoxHandler>().ShowDialogueBox();
-        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, "Thank her for the info (+0)", Choices[2]);
+        DialogueBoxHolder.GetComponent<DialogueManager>().StartDialogue(convincingDialogue, "Thank for info (+0)", Choices[2]);
     }
 
     public void FernIsKindOfBusy(){
@@ -122,9 +122,11 @@ public class ReceptionistScript : MonoBehaviour
         yield return new WaitForSeconds(4f);
 
         HelperMethods.ObjectivesEnqueue("Catch the rat in the kitchen");
+        KitchenDoors.GetComponent<Collider2D>().enabled = true;
     }
 
     public void ThanksForTheMemories(){
         HelperMethods.ObjectivesEnqueue("Find the secret entrance to the basement.");
+        KitchenDoors.GetComponent<Collider2D>().enabled = true;
     }
 }
