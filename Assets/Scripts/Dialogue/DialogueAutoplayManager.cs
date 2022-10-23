@@ -13,7 +13,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
 
     public TMP_Text SpeechPlaceholder;
    // public AudioSources allAudio;
-    public GameObject ContinueButton;
+    public GameObject ContinueButton, DialogueBox;
 
     public AudioSource clickSound;
 
@@ -76,7 +76,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
                // ContinueButton.SetActive(true);
 
             //5) Hide all previous Response buttons
-                FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+                DialogueBox.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
 
 
@@ -112,7 +112,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
                 //ContinueButton.SetActive(true);
 
                 //5) Hide all previous Response buttons
-                    FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+                    DialogueBox.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
                 //6) Start the first sentence
                     DisplayNextSentence();
@@ -157,7 +157,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
                     //ContinueButton.SetActive(true);
 
                 //5) Hide all previous Response buttons
-                        FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+                        DialogueBox.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
                 //6) Start the first sentence
                     DisplayNextSentence();
@@ -197,7 +197,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
                 string NextLine = CurrentSentence.Words;
 
             //5) Hide all previous Response buttons
-                FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+                DialogueBox.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
             //6) If a previous sentence was typing, stop it
                 StopAllCoroutines();
@@ -283,7 +283,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
                     string NextLine = CurrentSentence.Words;
 
                 //5) Hide all previous Response buttons
-                    FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+                    DialogueBox.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
                 //6) Show this sentence
                 SpeechPlaceholder.text = NextLine;
@@ -339,7 +339,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
             string NextLine = CurrentSentence.Words;
 
         //5) Hide all previous Response buttons
-            FindObjectOfType<DialogueBoxHandler>().ClearChoiceButtons();
+            DialogueBox.GetComponent<DialogueBoxHandler>().ClearChoiceButtons();
 
         //6) If a previous sentence was typing, stop it
             StopAllCoroutines();
@@ -367,7 +367,7 @@ public class DialogueAutoplayManager : MonoBehaviour {
         public IEnumerator ClearHeadsUp(){
             yield return new WaitForSeconds(TimeToClear);
 
-            FindObjectOfType<DialogueBoxHandler>().ClearDialogueBox();
+            DialogueBox.GetComponent<DialogueBoxHandler>().ClearDialogueBox();
         }
 
 

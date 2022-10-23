@@ -22454,12 +22454,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f062e97a4b2bbcd48ae7ca4e123e9ca6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Interaction: []
-  AllAudio: {fileID: 0}
-  DialogueBox: {fileID: 0}
+  Interaction:
+  - Words: Lyssa personified mad rage and frenzy. She took a temperate, measured
+      approach to her role, and had no joy in visiting the homes of men.
+    Voice: {fileID: 0}
+    Name: 
+    TextColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    AnimationObject: {fileID: 0}
+    Play: 
+  AllAudio: {fileID: 778316798}
+  DialogueBox: {fileID: 1632102975}
   ResponseStrings: []
   ResponseButtons: []
-  identifier: statue
+  identifier: infinite
   Clickable: 1
   enableProximityReactions: 1
   PlayerCollider: {fileID: 1088111250}
@@ -28997,6 +29006,7 @@ MonoBehaviour:
   NamePlaceholder: {fileID: 1632102974}
   SpeechPlaceholder: {fileID: 1632102973}
   ContinueButton: {fileID: 1632102972}
+  DialogueBox: {fileID: 1632102975}
   clickSound: {fileID: 778316799}
 --- !u!114 &1930653519
 MonoBehaviour:

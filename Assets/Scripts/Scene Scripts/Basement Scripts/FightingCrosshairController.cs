@@ -137,7 +137,6 @@ public class FightingCrosshairController : MonoBehaviour
 
 
             if (SceneManager.GetActiveScene().name == "Basement_2_Fight"){
-                FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 3f);
                 //Change scne
                 AllAudio.playKick();
                 kraus.Play("kraus_knockedout");

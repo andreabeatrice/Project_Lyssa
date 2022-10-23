@@ -133,7 +133,7 @@ public class DeathScene : MonoBehaviour
         else if (Globals.deaths.Last().Contains("throw")){//success
             title.GetComponent<Image>().sprite = title5;
         }
-        else if (Globals.deaths.Last().Contains("cigarettes")){//fire
+        else if (Globals.deaths.Last().Contains("Cigarettes")){//fire
             title.GetComponent<Image>().sprite = title6;
         }
         else if (Globals.deaths.Last().Contains("unite")){//killed by receptionist
