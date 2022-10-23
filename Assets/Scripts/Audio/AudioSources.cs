@@ -84,6 +84,13 @@ public class AudioSources : MonoBehaviour
     public AudioSource fernFreak;
     public AudioSource kettle;
     public AudioSource beep;
+
+    public AudioSource falling;
+    public AudioSource FernFallCry;
+    public AudioSource FernGulping;
+    public AudioSource ratSqueak;
+
+    private AudioSource[] allAudioSources;
     
         public void StopAllAudio() {
             foreach (AudioSource audioS in allAudioSources) {
@@ -91,7 +98,7 @@ public class AudioSources : MonoBehaviour
             }
         }
 
-     public void StopAllVoices(){
+     public void StopAllBabbles(){
         fern_voice.Stop();
         nurse_voice.Stop();
         nurse_voice_2.Stop();
@@ -106,7 +113,6 @@ public class AudioSources : MonoBehaviour
         OttoNormal.Stop();
      }
 
-    private AudioSource[] allAudioSources;
     public void Start()
     {
         allAudioSources = FindObjectsOfType<AudioSource>();
@@ -329,7 +335,18 @@ public class AudioSources : MonoBehaviour
                 case "beep":
                     beep = sound;
                 break;
-
+                case "falling":
+                    falling = sound;
+                break;
+                case "FernFallCry":
+                    FernFallCry=sound;
+                break;
+                  case "FernGulping":
+                    FernGulping=sound;
+                break;
+                case "ratSqueak":
+                    ratSqueak=sound;
+                break;
             }
         }
         
@@ -424,6 +441,10 @@ public class AudioSources : MonoBehaviour
                 fan.Play();
                 break;
             case "KrausOffice_2_LightSwitch":
+                janitors_closet_background_music.Play();
+                fan.Play();
+                break;
+            case "KrausOffice_3_NotePath":
                 janitors_closet_background_music.Play();
                 fan.Play();
                 break;
@@ -691,6 +712,36 @@ public class AudioSources : MonoBehaviour
     public void kettleStop(){
         kettle.Stop();
     }
+     public void playFalling(){
+        falling.Play();
+    }
+    public void playFernFallCry(){
+        FernFallCry.Play();
+    }
+    public void playFernGulping(){
+        FernGulping.Play();
+    }
+    public void playRatSqueak(){
+        ratSqueak.Play();
+    }
+   /* public void StopAllBabbles(){
+        if(DrKrause!=null)
+        {
+            DrKrause.Stop();
+        }
+        if(fer!=null)
+        {
+            fern.Stop();
+        }
+        if(OttoFreak!=null)
+        {
+            ottoFreak.Stop();
+        }
+        if(ottoNormal!=null)
+        {
+
+        }
+    }*/
 
 
 

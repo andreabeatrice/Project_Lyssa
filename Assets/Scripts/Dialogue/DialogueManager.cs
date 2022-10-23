@@ -109,6 +109,8 @@ public class DialogueManager : MonoBehaviour {
                 
                 //1) assign the passed-in sentences to the Sentences queue
                 Sentences.Clear();
+               // Debug.Log("stop babbles");
+               // AllAudio.StopAllAudio();
             
                 foreach(Sentence s in i){
                     Sentences.Enqueue(s);

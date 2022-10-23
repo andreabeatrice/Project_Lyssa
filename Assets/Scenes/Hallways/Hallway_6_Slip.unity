@@ -912,7 +912,7 @@ MonoBehaviour:
   putDownBook: {fileID: 188741661}
   light_Switch: {fileID: 188741660}
   footsteps_Concrete: {fileID: 188741659}
-  dies_irae: {fileID: 0}
+  dies_irae: {fileID: 778120238}
   closeKitchenCupboard: {fileID: 188741658}
   openKitchenCupboard: {fileID: 188741657}
   punch: {fileID: 188741656}
@@ -939,21 +939,22 @@ MonoBehaviour:
   OttoFreak: {fileID: 188741635}
   Dahlia: {fileID: 188741634}
   DrKrause: {fileID: 188741633}
-  DrKrause_2: {fileID: 0}
-  DrKrause_3: {fileID: 0}
+  DrKrause_2: {fileID: 778120237}
+  DrKrause_3: {fileID: 778120236}
   WinSound: {fileID: 188741632}
   RadioBackground: {fileID: 188741631}
   fan: {fileID: 188741630}
-  tvStatic: {fileID: 0}
-  basementDoors: {fileID: 0}
-  failSound: {fileID: 0}
-  insaneEnding: {fileID: 0}
-  fernFright: {fileID: 0}
-  syringe: {fileID: 0}
-  painfulBreathing: {fileID: 0}
-  fernFreak: {fileID: 0}
-  kettle: {fileID: 0}
+  tvStatic: {fileID: 778120235}
+  basementDoors: {fileID: 778120234}
+  failSound: {fileID: 778120233}
+  insaneEnding: {fileID: 778120232}
+  fernFright: {fileID: 778120231}
+  syringe: {fileID: 778120230}
+  painfulBreathing: {fileID: 778120229}
+  fernFreak: {fileID: 778120228}
+  kettle: {fileID: 778120227}
   beep: {fileID: 0}
+  falling: {fileID: 778120226}
 --- !u!1 &375612671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1069,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 588350353}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &415935288
 SpriteRenderer:
@@ -1537,6 +1538,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 761119060}
   - {fileID: 1711183497}
   - {fileID: 415935287}
   - {fileID: 960869536}
@@ -1701,6 +1703,155 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &761119059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761119060}
+  - component: {fileID: 761119061}
+  m_Layer: 0
+  m_Name: Direction SIgn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &761119060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761119059}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -28.62, y: 13.6, z: 2.0358353}
+  m_LocalScale: {x: 0.7240608, y: 0.7240608, z: 0.7240608}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 588350353}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &761119061
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761119059}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 8340367c09779154086c164e2e4fc964, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!82 &778120226 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6130994533670976231, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120227 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 96127536866832371, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120228 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2969655073467349573, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120229 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 485636408957658178, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120230 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2457018023244627468, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120231 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3865072609393003494, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120232 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8832793443226765871, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120233 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2561312084249331112, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120234 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3759904008276439817, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120235 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2421056048147085754, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120236 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4843395590475669058, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120237 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 42792677516163967, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &778120238 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1593459243546526301, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 188741627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &875134021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,7 +1971,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 588350353}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &960869537
 SpriteRenderer:
@@ -3275,7 +3426,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 588350353}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1711183498
 SpriteRenderer:
@@ -3340,6 +3491,7 @@ GameObject:
   - component: {fileID: 1750283935}
   - component: {fileID: 1750283937}
   - component: {fileID: 1750283936}
+  - component: {fileID: 1750283938}
   m_Layer: 0
   m_Name: WaterDispenserLeft
   m_TagString: rnd
@@ -3434,90 +3586,96 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1761835470
-GameObject:
+--- !u!114 &1750283938
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1761835472}
-  - component: {fileID: 1761835471}
-  m_Layer: 0
-  m_Name: Direction SIgn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1761835471
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761835470}
+  m_GameObject: {fileID: 1750283934}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 72270b451aee9ce419906b6c35bde71d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1761835472
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761835470}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -19.0098, y: -3.170248, z: 0}
-  m_LocalScale: {x: 0.72406, y: 0.72406, z: 0.72406}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e6a1ac1e43f2b429ab12ce069c4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click_sound: {fileID: 188741693}
+  open_door: {fileID: 188741692}
+  footsteps: {fileID: 188741691}
+  hallway_sounds: {fileID: 188741690}
+  receptionist_voice: {fileID: 188741689}
+  fern_voice: {fileID: 188741688}
+  nurse_voice: {fileID: 188741687}
+  nurse_voice_2: {fileID: 188741686}
+  nurse_voice_3: {fileID: 188741685}
+  background_music: {fileID: 188741684}
+  menu_background_with_crickets: {fileID: 188741683}
+  crickets: {fileID: 188741682}
+  pick_up_object: {fileID: 188741681}
+  release_object: {fileID: 188741680}
+  janitors_closet_background_music: {fileID: 188741679}
+  close_door: {fileID: 188741678}
+  vent_drip: {fileID: 188741677}
+  page_turn: {fileID: 188741676}
+  book_close: {fileID: 188741675}
+  background106: {fileID: 188741674}
+  intercom: {fileID: 188741673}
+  mopping_sound: {fileID: 188741672}
+  error_sound: {fileID: 188741671}
+  puff: {fileID: 188741670}
+  drawer_open: {fileID: 188741669}
+  drawer_close: {fileID: 188741668}
+  mirror_squeak: {fileID: 188741667}
+  cabinet_Open: {fileID: 188741666}
+  cabinet_Close: {fileID: 188741665}
+  glass_Clink: {fileID: 188741664}
+  basement_Background: {fileID: 188741663}
+  pickUpBook: {fileID: 188741662}
+  putDownBook: {fileID: 188741661}
+  light_Switch: {fileID: 188741660}
+  footsteps_Concrete: {fileID: 188741659}
+  dies_irae: {fileID: 778120238}
+  closeKitchenCupboard: {fileID: 188741658}
+  openKitchenCupboard: {fileID: 188741657}
+  punch: {fileID: 188741656}
+  doublePunch: {fileID: 188741655}
+  kick: {fileID: 188741654}
+  fridgeDoorOpening: {fileID: 188741653}
+  fridgeDoorClosing: {fileID: 188741652}
+  fridgeBeingOpen: {fileID: 188741651}
+  fridgeHum: {fileID: 188741650}
+  pot: {fileID: 188741649}
+  potsAndPans: {fileID: 188741648}
+  fightBell: {fileID: 188741647}
+  tickingTimer: {fileID: 188741646}
+  metalDrag: {fileID: 188741645}
+  manHoleDrop: {fileID: 188741644}
+  boilerRoomBackground: {fileID: 188741643}
+  burning: {fileID: 188741642}
+  screamingMale: {fileID: 188741641}
+  fightBackground: {fileID: 188741640}
+  panting: {fileID: 188741639}
+  roadAndBirds: {fileID: 188741638}
+  newspaperSpin: {fileID: 188741637}
+  OttoNormal: {fileID: 188741636}
+  OttoFreak: {fileID: 188741635}
+  Dahlia: {fileID: 188741634}
+  DrKrause: {fileID: 188741633}
+  DrKrause_2: {fileID: 778120237}
+  DrKrause_3: {fileID: 778120236}
+  WinSound: {fileID: 188741632}
+  RadioBackground: {fileID: 188741631}
+  fan: {fileID: 188741630}
+  tvStatic: {fileID: 778120235}
+  basementDoors: {fileID: 778120234}
+  failSound: {fileID: 778120233}
+  insaneEnding: {fileID: 778120232}
+  fernFright: {fileID: 778120231}
+  syringe: {fileID: 778120230}
+  painfulBreathing: {fileID: 778120229}
+  fernFreak: {fileID: 778120228}
+  kettle: {fileID: 778120227}
+  beep: {fileID: 0}
+  falling: {fileID: 778120226}
 --- !u!1 &1858778646
 GameObject:
   m_ObjectHideFlags: 0
