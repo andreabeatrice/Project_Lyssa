@@ -13,7 +13,7 @@ public class DeathScene : MonoBehaviour
     public TMP_Text causeOfDeath;
     public TMP_Text timeOfDeath;
     public AudioSources allAudio;
-    public Sprite title1, title2, title3, title4, title5, title6;
+    public Sprite title1, title2, title3, title4, title5, title6, title7, title8;
 
     public GameObject title;
 
@@ -129,6 +129,12 @@ public class DeathScene : MonoBehaviour
         }
         else if (Globals.deaths.Last().Contains("proud")){ // escape no mom
             title.GetComponent<Image>().sprite = title1;
+        }
+        else if (Globals.deaths.Last().Contains("unite")){//killed by receptionist
+            title.GetComponent<Image>().sprite = title7;
+        }
+        else if (Globals.deaths.Last().Contains("food")){//poisoned
+            title.GetComponent<Image>().sprite = title8;
         }
         else if (Globals.deaths.Last().Contains("throw")){//success
             title.GetComponent<Image>().sprite = title5;
