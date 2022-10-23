@@ -190,7 +190,6 @@ public class DialogueManager : MonoBehaviour {
         public void DisplayNextSentence()
         {
 
-            Debug.Log(Sentences);
             //0) If a Sentence already played, and it had an Animator attached, play the animation
                 if(AnimationObject != null)
                     AnimationObject.Play(SentenceAnimation);
