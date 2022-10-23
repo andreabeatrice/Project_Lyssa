@@ -30,7 +30,7 @@ public class Room105ChoiceHandler : MonoBehaviour
 
     public void ResponseToAskingAboutPatients(){
         Globals.insanity += 1;
-        Sentence[] convincingDialogue = new Sentence[]{ new Sentence("No No No No No No No No No No If I talk about it they'll take me next that's why they took—", null, "Otto", ColorCodes.patients)};
+        Sentence[] convincingDialogue = new Sentence[]{ new Sentence("No No No No No No No No No No If I talk about it they'll take me next that's why they took—", AllAudio.OttoFreak, "Otto", ColorCodes.patients)};
 
         Globals.deaths.Add("(1) Cigarettes are against the rules. (2) They're very bad for you. (3) Don't ask people questions that make them uncomfortable.");
 
@@ -50,10 +50,10 @@ public class Room105ChoiceHandler : MonoBehaviour
         string[] choices = new string[2];
 
         if (Globals.insanity < 5){
-            convincingDialogue = new Sentence[]{new Sentence("The rats told me they're cooking something up.", null, "Otto", ColorCodes.patients), 
-                                                            new Sentence("You... spoke to one of the rats?", null, "Fern", ColorCodes.fern),
-                                                            new Sentence("/You/ wouldn't understand. Just like the rest of them. Think I'm insane. Think I'm /dumb/.", null, "Otto", ColorCodes.patients),
-                                                            new Sentence("Not gonna talk to you anymore. You're just as mean.", null, "Otto", ColorCodes.patients)};
+            convincingDialogue = new Sentence[]{new Sentence("The rats told me they're cooking something up.", AllAudio.OttoNormal, "Otto", ColorCodes.patients), 
+                                                            new Sentence("You... spoke to one of the rats?", AllAudio.fern_voice, "Fern", ColorCodes.fern),
+                                                            new Sentence("/You/ wouldn't understand. Just like the rest of them. Think I'm insane. Think I'm /dumb/.", AllAudio.OttoNormal, "Otto", ColorCodes.patients),
+                                                            new Sentence("Not gonna talk to you anymore. You're just as mean.", AllAudio.OttoNormal, "Otto", ColorCodes.patients)};
         
             choices[0] = "Apologize and Leave (+0)";
 
@@ -72,9 +72,9 @@ public class Room105ChoiceHandler : MonoBehaviour
         FindObjectOfType<DialogueManager>().StartDialogue(convincingDialogue, choices, lowInsanitychoices);
         }
         else{
-            convincingDialogue = new Sentence[]{new Sentence("They've got a rat. She speaks to me sometimes, tell me what's happening.", null, "Otto", ColorCodes.patients), 
-                                                            new Sentence("Will she talk to me?", null, "Fern", ColorCodes.fern),
-                                                            new Sentence("Dunno. She might. Usually see her when I'm eating.", null, "Otto", ColorCodes.patients)};
+            convincingDialogue = new Sentence[]{new Sentence("They've got a rat. She speaks to me sometimes, tell me what's happening.", AllAudio.OttoNormal, "Otto", ColorCodes.patients), 
+                                                            new Sentence("Will she talk to me?", AllAudio.fern_voice, "Fern", ColorCodes.fern),
+                                                            new Sentence("Dunno. She might. Usually see her when I'm eating.", AllAudio.OttoNormal, "Otto", ColorCodes.patients)};
 
             choices[0] = "Thank Otto (-1)";
 

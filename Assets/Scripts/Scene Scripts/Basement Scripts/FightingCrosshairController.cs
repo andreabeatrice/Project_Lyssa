@@ -55,7 +55,7 @@ public class FightingCrosshairController : MonoBehaviour
             fern.Play("player_knockout");
             crosshair_object.SetActive(false);
 
-            Globals.deaths.Add("Did you read the instructions? They ~said~ that you had a limited time.");
+            Globals.deaths.Add("Did you read the instructions? They /said/ that you had a limited time.");
 
             FindObjectOfType<LevelLoader>().LoadNextLevelLong("DeathScreen", "crossfade_start", 3f);
         }
