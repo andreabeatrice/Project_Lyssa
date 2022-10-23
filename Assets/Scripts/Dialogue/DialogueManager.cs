@@ -196,8 +196,12 @@ public class DialogueManager : MonoBehaviour {
                 Sentence CurrentSentence = Sentences.Dequeue();
 
             //2) If the Sentence object has a voice attached, assign the voice
+            AllAudio.StopAllBabbles();
             if(CurrentSentence.Voice !=null){
                 SpeakerVoice = CurrentSentence.Voice;
+            }
+            else {
+                SpeakerVoice = null;
             }
                 
 

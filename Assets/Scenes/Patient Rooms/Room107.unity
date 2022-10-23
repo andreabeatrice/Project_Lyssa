@@ -714,6 +714,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2638102149328519307, guid: 1d473b992c67f39428528e285996640d, type: 3}
   m_PrefabInstance: {fileID: 686094756}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &252640895 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5671338687068651481, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1916860798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &252640896 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2657309576819361042, guid: d033857e9c3f5684c99bc0643bc345ed, type: 3}
+  m_PrefabInstance: {fileID: 1916860798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &283142681
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,6 +983,7 @@ GameObject:
   - component: {fileID: 375198780}
   - component: {fileID: 375198781}
   - component: {fileID: 375198782}
+  - component: {fileID: 375198783}
   m_Layer: 0
   m_Name: GlobalHandlers
   m_TagString: Untagged
@@ -1102,6 +1113,32 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 84d1e6c75116242488de2cbfe26a2065, type: 3}
   - {fileID: 21300000, guid: 514410d6c4264514682456452c880896, type: 3}
   test: 0
+--- !u!114 &375198783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375198770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4c4dc781cb8d947bfa4c954f917c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Interaction:
+  - Words: Looks like this room's already clean...
+    Voice: {fileID: 0}
+    Name: Fern
+    TextColor:
+      serializedVersion: 2
+      rgba: 4294823559
+    AnimationObject: {fileID: 0}
+    Play: 
+  DialogueBox: {fileID: 147893939}
+  ResponseStrings: []
+  ResponseButtons: []
+  wait: 0
+  TimeToWait: 0
 --- !u!1 &450316302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,6 +1546,11 @@ GameObject:
   - component: {fileID: 487735220}
   - component: {fileID: 487735219}
   - component: {fileID: 487735221}
+  - component: {fileID: 487735222}
+  - component: {fileID: 487735223}
+  - component: {fileID: 487735224}
+  - component: {fileID: 487735225}
+  - component: {fileID: 487735226}
   m_Layer: 0
   m_Name: Object - Green Pill Bottle
   m_TagString: Untagged
@@ -1615,6 +1657,107 @@ MonoBehaviour:
   enableProximityReactions: 0
   PlayerCollider: {fileID: 0}
   ObjectAreaCollider: {fileID: 0}
+--- !u!60 &487735222
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487735218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8, y: 8}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.6249417, y: -1.5000578}
+      - {x: -0.626128, y: -1.6270145}
+      - {x: -0.5621357, y: -1.6288506}
+      - {x: -0.5633154, y: -2.0686166}
+      - {x: -0.50488645, y: -2.0657768}
+      - {x: -0.5008043, y: -2.124942}
+      - {x: -0.2525881, y: -2.121607}
+      - {x: -0.2534508, y: -2.0607748}
+      - {x: -0.19595821, y: -2.0618515}
+      - {x: -0.18780474, y: -1.6246467}
+      - {x: -0.12591577, y: -1.6247662}
+      - {x: -0.12172289, y: -1.5017253}
+--- !u!114 &487735223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487735218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a92a27e64b077a94fa3f9c31d41c547c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursor: {fileID: 2800000, guid: d97a058242e0cee47845b54ee21a2c80, type: 3}
+--- !u!114 &487735224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487735218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c7a0140c9efbd4db4d3462be18e585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragSound: {fileID: 252640896}
+  dropSound: {fileID: 252640895}
+  allAudio: {fileID: 1590597789}
+  canDrag: 1
+--- !u!114 &487735225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487735218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46858f146e295384a9017c3ccd5c3342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minGroundNormalY: 0.65
+  gravityModifier: 1
+--- !u!50 &487735226
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487735218}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &508875297
 GameObject:
   m_ObjectHideFlags: 0
