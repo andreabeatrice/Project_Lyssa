@@ -235,9 +235,11 @@ public class DialogueManager : MonoBehaviour {
 
             //8) If this method was called but there's nothing left in the Sentences queue, end the dialogue
                 if (Sentences.Count == 0){
+                     
                     EndDialogue();
                     return;
                 }
+               // AllAudio.StopAllBabbles();//angela
 
         }
         
@@ -260,12 +262,13 @@ public class DialogueManager : MonoBehaviour {
             if(SpeakerVoice != null){
                 SpeakerVoice.Stop();
             }
+           // AllAudio.StopAllBabbles();//angela
             
         }
 
     //EndDialogue(): Shows any assigned responses
         void EndDialogue(){
-
+            
                 if (ContinueButton != null)
                     ContinueButton.SetActive(false);
             
@@ -283,10 +286,6 @@ public class DialogueManager : MonoBehaviour {
             else {
                 StartCoroutine(ClearHeadsUp());
             }
-
-
-            
-            
         }
 
     //DisplayNextSentenceNoAnimation(): shows the next line without playing the text animation
@@ -342,7 +341,8 @@ public class DialogueManager : MonoBehaviour {
     //ClearHeadsUp(): clears the Dialogue Box from the screen if there were no given responses
         public IEnumerator ClearHeadsUp(){
             Debug.Log(TimeToClear);
-
+            AllAudio.StopAllBabbles();//angela
+            Debug.Log("stoppppp when clear");
             yield return new WaitForSeconds(TimeToClear);
 
             DialogueBox.GetComponent<DialogueBoxHandler>().ClearDialogueBox();

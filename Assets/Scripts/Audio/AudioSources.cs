@@ -100,6 +100,7 @@ public class AudioSources : MonoBehaviour
 
      public void StopAllBabbles(){
         fern_voice.Stop();
+        fernFreak.Stop();
         nurse_voice.Stop();
         nurse_voice_2.Stop();
         nurse_voice_3.Stop();
@@ -111,6 +112,7 @@ public class AudioSources : MonoBehaviour
         receptionist_voice.Stop();
         Dahlia.Stop();
         OttoNormal.Stop();
+        OttoFreak.Stop();
      }
 
     public void Start()
@@ -724,25 +726,6 @@ public class AudioSources : MonoBehaviour
     public void playRatSqueak(){
         ratSqueak.Play();
     }
-   /* public void StopAllBabbles(){
-        if(DrKrause!=null)
-        {
-            DrKrause.Stop();
-        }
-        if(fer!=null)
-        {
-            fern.Stop();
-        }
-        if(OttoFreak!=null)
-        {
-            ottoFreak.Stop();
-        }
-        if(ottoNormal!=null)
-        {
-
-        }
-    }*/
-
 
 
 

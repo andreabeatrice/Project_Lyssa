@@ -11,6 +11,7 @@ public class DialogueAutoStart : MonoBehaviour
     public string[] ResponseStrings;
 
     public GameObject[] ResponseButtons;
+     public AudioSources AllAudio;
 
     public bool wait;
 
