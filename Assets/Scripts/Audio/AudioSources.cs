@@ -340,21 +340,28 @@ public class AudioSources : MonoBehaviour
          if (scenename.Contains("CommonRoom") || scenename.Contains("Dining")){
              RadioBackground.Play();
         }
+          if (scenename.Contains("mainMenu")){
+            if(menu_background_with_crickets!=null)
+            {
+                menu_background_with_crickets.time = Random.Range(0.01f, menu_background_with_crickets.clip.length);
+                menu_background_with_crickets.Play();
+            }
+        }
        
 
 
 
         switch(scenename){//background noises
-            case "MainMenu":
+           case "MainMenu":
                 menu_background_with_crickets.Play();
             break;
-            case "mainMenu_Help":
+            /* case "mainMenu_Help":
                 menu_background_with_crickets.Play();
             break;
             case "mainMenu_Settings":
                 menu_background_with_crickets.Play();
 
-            break;
+            break;*/
                 case "Hallway_1_PreTutorial":
                 StopAllAudio();
                 hallway_sounds.Play();
@@ -399,7 +406,7 @@ public class AudioSources : MonoBehaviour
                 //StopAllAudio();
                 //background106.Play();
                 break;
-            case "Basement_DarkScript":
+            case "Basement_dark":
                 StopAllAudio();
                 basement_Background.Play();
                 break;
