@@ -63,6 +63,7 @@ public class DialogueManager : MonoBehaviour {
 
     //StartDialogue(Sentence[] i): takes in an array of sentences, one response, and the button that response will be assigned to 
         public void StartDialogue(Sentence[] i){
+            AllAudio.StopAllBabbles();
             //0) Clear any assigned animations
                 AnimationObject = null;
                 SentenceAnimation = "";
@@ -99,6 +100,7 @@ public class DialogueManager : MonoBehaviour {
 
     //StartDialogue(Sentence[] i, string c, GameObject b): takes in an array of sentences, one response, and the button that response will be assigned to 
         public void StartDialogue(Sentence[] i, string c, GameObject b){
+            AllAudio.StopAllBabbles();
             if(c == null || c == ""){
                 StartDialogue(i);
             }
@@ -109,6 +111,8 @@ public class DialogueManager : MonoBehaviour {
                 
                 //1) assign the passed-in sentences to the Sentences queue
                 Sentences.Clear();
+               // Debug.Log("stop babbles");
+               // AllAudio.StopAllAudio();
             
                 foreach(Sentence s in i){
                     Sentences.Enqueue(s);
@@ -140,6 +144,7 @@ public class DialogueManager : MonoBehaviour {
 
     //StartDialogue(Sentence[] i, string[] c, GameObject[] b): takes in an array of sentences, the possible responses, and the buttons that responses will be assigned to 
         public void StartDialogue(Sentence[] i, string[] c, GameObject[] b){
+            AllAudio.StopAllBabbles();
 
             if(c == null || c.Length == 0){
                 StartDialogue(i);
@@ -185,7 +190,6 @@ public class DialogueManager : MonoBehaviour {
         public void DisplayNextSentence()
         {
 
-            Debug.Log(Sentences);
             //0) If a Sentence already played, and it had an Animator attached, play the animation
                 if(AnimationObject != null)
                     AnimationObject.Play(SentenceAnimation);
@@ -194,8 +198,12 @@ public class DialogueManager : MonoBehaviour {
                 Sentence CurrentSentence = Sentences.Dequeue();
 
             //2) If the Sentence object has a voice attached, assign the voice
+            AllAudio.StopAllBabbles();
             if(CurrentSentence.Voice !=null){
                 SpeakerVoice = CurrentSentence.Voice;
+            }
+            else {
+                SpeakerVoice = null;
             }
                 
 

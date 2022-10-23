@@ -109,7 +109,7 @@ public class ReceptionistScript : MonoBehaviour
     public void FernIsKindOfBusy(){
         convincingDialogue = new Sentence[]{ 
                 new Sentence("Well, in that case, at /least/ go do your job. There are rats in the kitchen!", AllAudio.receptionist_voice, "Mrs Pattel", ColorCodes.receptionist),
-                new Sentence("...", null, "Fern", ColorCodes.fern),
+                new Sentence("...", AllAudio.fern_voice, "Fern", ColorCodes.fern),
                 new Sentence("Well? Go catch them!", AllAudio.receptionist_voice, "Mrs Pattel", ColorCodes.receptionist),
         };
 

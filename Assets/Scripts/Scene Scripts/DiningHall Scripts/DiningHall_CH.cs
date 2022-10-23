@@ -40,5 +40,8 @@ public class DiningHall_CH : MonoBehaviour
         if (this.name == "Kitchen Doors" && SceneManager.GetActiveScene().name == "DiningHall_Base"){
             FindObjectOfType<LevelLoader>().LoadNextLevel("Kitchen_1_BaseScene", "crossfade_start");
         }
+        else {
+            FindObjectOfType<LevelLoader>().LoadNextLevel("Kitchen_2_Empty", "crossfade_start");
+        }
     }
 }
