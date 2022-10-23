@@ -113,6 +113,7 @@ public class AudioSources : MonoBehaviour
         Dahlia.Stop();
         OttoNormal.Stop();
         OttoFreak.Stop();
+        Debug.Log("all stopped yayayyayaya");
      }
 
     public void Start()
