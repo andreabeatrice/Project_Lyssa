@@ -1,35 +1,42 @@
-# Project_Lyssa
+# Introduction and background 
+This document is aimed to guide players through the mechanics and multiple storylines of the HER game. 
 
-## Set Up Git LFS for a Unity Project:
-- Go to  [the git Windows download](https://git-scm.com/download/win)
-- Download + run the installer. Make sure you set "default editor" to your default editor and not the nano editor or vim.
-- navigate in Git bash to the folder where you want to keep the project (e.g. ```cd D:/documents```)
-- run the command ```git lfs install```
-  - You should receive the response ```Git LFS initialized.```
-  
-  
-### Creating a New Git LFS Repository
-- run ```git init```
-- run ```git lfs track "*.psd"```
-- open the ```.gitattributes``` file created by the previous command
-  - paste the text from [this GitHub repository](https://gist.github.com/Srfigie/77b5c15bc5eb61733a74d34d10b3ed87)
-- run ```git add .gitattributes``` to make your first commit
-- run ```git commit -m "commit message"```
-- run ```git remote add origin <git@github.com:username/new_repo>```
-- run ```git push -u origin <branch name>```
+HER is a player-choice-based game that puts the story's outcome into the player’s hands. We developed and designed this game with the intent of allowing players to feel in control and to have multiple opportunities to play the game with different outcomes based on the choices that they make.
 
-### Cloning an existing Git LFS Repository
-- run ```git lfs clone <https://github.com/USERNAME/REPOSITORY.git>``` 
-  - for this repository: https://github.com/andreabeatrice/Project_Lyssa.git
-  
-Use ```git pull``` in the project folder to ensure the code you have locally is up-to-date
+The game is inspired by hidden object games such as the Agatha Christie game series and choice-based games/series such as the game House and the Netflix series Bandersnatch.  
 
-### To Commit New Code
-- make sure you're in the repository folder (for this project, you should be in Project_Lyssa)
-- Change to a non-main branch (create them on GitHub): ```git switch <branch_name>```
-- ```git add <directory/file/*> ```
-- ```git commit -m "commit message"```
-- ```git push origin <branch name>```
+The style of the game is inspired by games that use pixel art such as Undertale and Mario. It also has some influence from television shows such as Gravity falls and Courage the Cowardly Dog.
 
-### To Commit New Sprites
-- Just use Github Desktop
+This game is aimed at those who enjoy mystery and thriller-based games/stories and those who enjoy narrative gameplay. 
+
+Due to the nature of this game, please be aware of the following content that some may be sensitive to:
+
+- Blood 
+- Violence 
+- Substance abuse
+- Injury and Death
+
+Our team, The Femme Fatales, is passionate about our game and we appreciate all feedback and positive criticism as it will only improve our understanding and user experience for players. 
+
+# Game Mechanics/Controls
+This game has a combination of clicking, keyboard input and dragging mechanics.
+
+## Character movement: 
+To move the character around the map, the player can make use of either the arrow keys or the WASD keys on their keyboard.
+
+## Item interaction: 
+Players can interact with objects in the game by left-clicking and/or dragging items by holding down the left click.
+
+## Software used: 
+### Coding: 
+- Unity 
+- Visual Studio Code 
+- C# 
+
+### Illustration and Animation:
+- Aseprite
+- Adobe Illustrator + PhotoShop (earlier version of graphics)
+
+### Audio:
+ - Adobe Audition
+
