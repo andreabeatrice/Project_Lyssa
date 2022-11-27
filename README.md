@@ -1,4 +1,4 @@
-## Introduction and background 
+## Introduction and Background 
 This document is aimed to guide players through the mechanics and multiple storylines of the HER game. 
 
 HER is a player-choice-based game that puts the story's outcome into the player’s hands. We developed and designed this game with the intent of allowing players to feel in control and to have multiple opportunities to play the game with different outcomes based on the choices that they make.
@@ -21,10 +21,10 @@ Our team, The Femme Fatales, is passionate about our game and we appreciate all 
 ## Game Mechanics/Controls
 This game has a combination of clicking, keyboard input and dragging mechanics.
 
-### Character movement: 
+### Character movement
 To move the character around the map, the player can make use of either the arrow keys or the WASD keys on their keyboard.
 
-### Item interaction: 
+### Item interaction
 Players can interact with objects in the game by left-clicking and/or dragging items by holding down the left click.
 
 ### Software used: 
