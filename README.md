@@ -21,13 +21,13 @@ Our team, The Femme Fatales, is passionate about our game and we appreciate all 
 ## Game Mechanics/Controls
 This game has a combination of clicking, keyboard input and dragging mechanics.
 
-### Character movement
+### Character Movement
 To move the character around the map, the player can make use of either the arrow keys or the WASD keys on their keyboard.
 
-### Item interaction
+### Item Interaction
 Players can interact with objects in the game by left-clicking and/or dragging items by holding down the left click.
 
-### Software used: 
+### Software Used: 
 #### Coding: 
 - Unity 
 - Visual Studio Code 
